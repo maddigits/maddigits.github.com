@@ -3,7 +3,7 @@ layout: post
 title: "Modular Persistence"
 description: "with JPA2, EclipseLink and Google Guice"
 category: "code"
-tags: [java, persistence, dependency injection]
+tags: [java, guice, jpa]
 ---
 {% include JB/setup %}
 
@@ -11,7 +11,7 @@ One of the classes of my post-graduate was the Java Persistence API ([JPA](http:
 
 The teacher used the "normal" way to create the projects: Eclipse, create libraries with jars that's needed and create the EntityManagerFactory by hand.
 
-I never liked this model and, in my examples and work, I used a standard architecture that I built. It's using Maven, JPA2, EclipseLink, and MySQL Google Guice.
+It works, but IMHO, should never be used in production. In my examples and work, I used a standard architecture that I built. It's using Maven, JPA2, EclipseLink, and MySQL Google Guice.
 
 This structure decreased a lot time I would take to do several things, and as I found it very useful, I decided to put it on [github](https://github.com/caarlos0/persistence-base).
 
