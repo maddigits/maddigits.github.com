@@ -9,14 +9,14 @@ pygments: true
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : caarlos0 blog
-tagline: Just Code.
+title : Carlos Alexandro Becker (caarlos0) Blog
+tagline: Code, Code and, hurr, yeah, Code!
 author :
   name : Carlos Alexandro Becker
   email : caarlos0@gmail.com
   github : caarlos0
   twitter : caarlos0
-  feedburner : caarlos0
+  feedburner : feedname
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 

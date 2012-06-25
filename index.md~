@@ -18,6 +18,8 @@ tagline: my blog :)
                 <p><a href="{{ post.url }}">Read more...</a></p>
             </div>
         </li>
+      
+        
     {% endfor %}
 </ul>
 
