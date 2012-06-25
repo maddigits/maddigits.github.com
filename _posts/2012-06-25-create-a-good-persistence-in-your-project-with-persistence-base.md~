@@ -1,0 +1,8 @@
+---
+layout: post
+title: "Create a good persistence in your project with 'Persistence Base'"
+description: ""
+category: 
+tags: []
+---
+{% include JB/setup %}
