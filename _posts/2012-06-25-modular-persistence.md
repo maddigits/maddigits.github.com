@@ -17,11 +17,17 @@ This structure decreased a lot time I would take to do several things, and as I 
 
 To show hot it works, let's do a little example.
 
+## Step-by-step tutorial
+
+### Get the base code
+
 First, clone the repo:
 
 ```
 git clone https://github.com/caarlos0/persistence-base sample
 ```
+
+### Do your hacks
 
 Then, open the project in your preffered IDE, then, open the `pom.xml` file and change the project name to "sample". Save.
 
@@ -93,10 +99,15 @@ We have to add classes, configure the database and etc in the `src/main/resource
       </persistence-unit>
     </persistence>
 
+
+### Create the database
+
 Now, we have to create the database in our MySQL:
 
     [carlos@caarlos-archlinux sample]$ mysql -u root -p
     mysql> create database foodb;
+
+### Test it
 
 Now, let's write a test. Open `src/main/java/com/github/caarlos0/App.java` and do some code.
 
