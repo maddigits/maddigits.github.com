@@ -9,7 +9,7 @@ pygments: true
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : caarlos0 blog
+title : caarlos0
 tagline: Just Code.
 author :
   name : Carlos Alexandro Becker
@@ -99,7 +99,7 @@ JB :
   analytics :
     provider : google 
     google : 
-        tracking_id : 'UA-123-12'
+        tracking_id : 'UA-32899481-1'
     getclicky :
       site_id : 
     mixpanel :
