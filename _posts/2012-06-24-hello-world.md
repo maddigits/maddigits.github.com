@@ -3,7 +3,7 @@ layout: post
 title: "Hello World"
 description: "first post :)"
 tagline: "oee"
-category: 
+category: "junk"
 tags: [dummy]
 ---
 {% include JB/setup %}
