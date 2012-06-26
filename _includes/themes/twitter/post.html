@@ -5,6 +5,7 @@
 <div class="row-fluid">
   <div class="span8">
     {{ content }}
+
     <hr>
     <div class="pagination">
       <ul>
@@ -36,16 +37,20 @@
     {% include JB/comments %}
   </div>
   
-  <div class="span4">
-    <h4>Published</h4>
-    <div class="date"><span>{{ page.date | date_to_long_string }}</span></div>
-
-  {% unless page.tags == empty %}
-    <h4>Tags</h4>
-    <ul class="tag_box">
-    {% assign tags_list = page.tags %}
-    {% include JB/tags_list %}
+  <div class="span4 well" style="padding: 8px">
+    <ul class="nav nav-list">
+        <li class="nav-header">Author</li>
+        <li><a href="http://github.com/caarlos0">Carlos Alexandro Becker</a></li>
+        <li class="nav-header">Published</li>
+        <li><div class="date"><span>{{ page.date | date_to_long_string }}</span></div></li>
+        {% unless page.tags == empty %}
+            <li class="divider"></li>
+            <li class="nav-header">Tags</li>
+            <ul class="tag_box">
+                {% assign tags_list = page.tags %}
+                {% include JB/tags_list %}
+            </ul>
+        {% endunless %} 
     </ul>
-  {% endunless %} 
   </div>
 </div>
