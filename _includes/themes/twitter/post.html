@@ -40,9 +40,24 @@
   <div class="span4 well" style="padding: 8px">
     <ul class="nav nav-list">
         <li class="nav-header">Author</li>
-        <li><a href="http://github.com/caarlos0">Carlos Alexandro Becker</a></li>
+        <li>
+            <a href="http://github.com/caarlos0">Carlos Alexandro Becker</a>
+            <iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=caarlos0&type=follow&count=true"
+  allowtransparency="true" frameborder="0" scrolling="0" width="165px" height="20px"></iframe>
+        </li>
         <li class="nav-header">Published</li>
         <li><div class="date"><span>{{ page.date | date_to_long_string }}</span></div></li>
+        
+        {% unless page.github_user == null and page.github_repo == null %}
+            <li class="divider">        
+            <li class="nav-header">Get the code</li>
+            <li>
+                {% assign github_user = page.github_user %}
+                {% assign github_repo = page.github_repo %}
+                {% include JB/github %}
+            </li>
+        {% endunless %}
+
         {% unless page.tags == empty %}
             <li class="divider"></li>
             <li class="nav-header">Tags</li>
@@ -50,5 +65,4 @@
             {% include JB/tags_list %}
         {% endunless %} 
     </ul>
-  </div>
 </div>
