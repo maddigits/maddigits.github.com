@@ -4,6 +4,9 @@ title: "Modular Persistence"
 description: "with JPA2, EclipseLink and Google Guice"
 category: "code"
 tags: [java, guice, jpa]
+github_user: "caarlos0"
+github_repo: "persistence-base"
+
 ---
 {% include JB/setup %}
 
