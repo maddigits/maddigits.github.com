@@ -4,6 +4,8 @@ title: "Using a custom TwBootstrap's theme in GWT-Bootstrap"
 description: "Yeah, you will want it!"
 category: code
 tags: [java, gwt, gwt-bootstrap, twitter-bootstrap]
+github_user: "gwtbootstrap"
+github_repo: "custom-theme-example"
 ---
 {% include JB/setup %}
 
@@ -256,3 +258,10 @@ If it still dont working, do this:
 * Uncomment the line again, and run you app again.
 
 For me, this process always works.
+
+
+# Download the code
+
+Look at the right sidebar :)
+
+
