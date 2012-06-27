@@ -46,10 +46,8 @@
         {% unless page.tags == empty %}
             <li class="divider"></li>
             <li class="nav-header">Tags</li>
-            <ul class="tag_box">
-                {% assign tags_list = page.tags %}
-                {% include JB/tags_list %}
-            </ul>
+            {% assign tags_list = page.tags %}
+            {% include JB/tags_list %}
         {% endunless %} 
     </ul>
   </div>
