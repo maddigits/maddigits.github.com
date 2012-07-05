@@ -25,28 +25,6 @@ description: "Curriculum Vitae"
 					<a href="http://br.linkedin.com/in/caarlos0" rel="tooltip" title="see my linkedin profile :)">LinkedIn</a> - 
 					<a href="http://careers.stackoverflow.com/caarlos0" rel="tooltip" title="see my stackoverflow careers profile :)">StackOverflow Careers</a>
 				</h6>
-				<p />
-				<h6>
-					<span class="label label-info">java</span> 
-					<span class="label label-info">jsf</span>
-					<span class="label label-info">javascript</span>
-					<span class="label label-info">jquery</span>
-					<span class="label label-info">css</span>
-					<span class="label label-info">mongodb</span>
-					<span class="label label-info">postgresql</span>
-					<span class="label label-info">mysql</span>
-					<span class="label label-info">python</span>
-					<span class="label label-info">gwt</span>
-					<span class="label label-info">gwt-platform</span>
-					<span class="label label-info">guice</span>
-					<span class="label label-info">hibernate</span>
-					<span class="label label-info">eclipselink</span>
-					<span class="label label-info">jpa2</span>
-					<span class="label label-info">aop</span>
-					<span class="label label-info">java ee</span>
-					<span class="label label-info">ruby</span>
-					<span class="label label-info">ruby on rails</span>
-				</h6>
       </li>
     </ul>
 </div>
