@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Carlos Alexandro Becker
-tagline: my blog :)
+title: 
+tagline: 
 ---
 {% include JB/setup %}
 

@@ -45,12 +45,13 @@
             <iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=caarlos0&type=follow&count=true"
   allowtransparency="true" frameborder="0" scrolling="0" width="165px" height="20px"></iframe>
         </li>
+        <li class="divider">
         <li class="nav-header">Published</li>
         <li><div class="date"><span>{{ page.date | date_to_long_string }}</span></div></li>
         
         {% unless page.github_user == null and page.github_repo == null %}
             <li class="divider">        
-            <li class="nav-header">Get the code</li>
+            <li class="nav-header">Get the related code</li>
             <li>
                 {% assign github_user = page.github_user %}
                 {% assign github_repo = page.github_repo %}
