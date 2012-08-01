@@ -16,15 +16,15 @@ So, you can see this is a good thing, uh? I'll show you the steps needed to acti
 
 If the following command return `1`, your KMS module is already active, and you can go and drink a coffee. Otherwise, goto the next steps.
 
-    $ cat /sys/module/i915/parameters/modeset
+	$ cat /sys/module/i915/parameters/modeset
 
 ## Install required packages
 
 Before continue, be sure that the following packages are installed:
 
-    xf86-video-fbdev
-    xf86-video-intel
-    xf86-video-vesa
+	xf86-video-fbdev
+	xf86-video-intel
+	xf86-video-vesa
 
 
 You can install it in a archlinux box with `$ pacman -Sy xf86-video-{fbdev,intel,vesa}`
@@ -34,7 +34,7 @@ You can install it in a archlinux box with `$ pacman -Sy xf86-video-{fbdev,intel
 You will need to change several files. Starting with `/etc/modprobe.d/modprobe.conf`.
 Add (or create the file, if it doesn't exist) the following:
 
-   options i915 modeset=1
+	options i915 modeset=1
 
 Also, edit `/etc/mkinitcpio.conf`.
 
@@ -43,20 +43,20 @@ Also, edit `/etc/mkinitcpio.conf`.
 
 Create the `/etc/X11/xorg.conf.d/20-intel.conf` file with the following content:
 
-    Section "Device"
-      Identifier "card0"
-      Driver "intel"
-      VendorName  "Intel Corporation"
-      BoardName   "Intel Corporation N10 Family Integrated Graphics Controller"
-      BusID       "PCI:0:2:0"
-      Option      "SwapbuffersWait"    "false"
-    EndSection
+	Section "Device"
+		Identifier "card0"
+		Driver "intel"
+		VendorName  "Intel Corporation"
+		BoardName   "Intel Corporation N10 Family Integrated Graphics Controller"
+		BusID       "PCI:0:2:0"
+		Option      "SwapbuffersWait"    "false"
+	EndSection
 
 ## Regenerate initframs
 
 Now, we can regen initframs with
 
-    $ sudo mkinitcpio -p linux
+	$ sudo mkinitcpio -p linux
 
 ## Reboot
 
@@ -64,8 +64,8 @@ Now, reboot your system, and when it cames up, run the first command again, and 
 
 Also, this is my `lspci`:
 
-    $ lspci | grep -i vga
-      00:02.0 VGA compatible controller: Intel Corporation Core Processor Integrated Graphics Controller (rev 18)
+	$ lspci | grep -i vga
+		00:02.0 VGA compatible controller: Intel Corporation Core Processor Integrated Graphics Controller (rev 18)
 
 That's it. See ya.
 
