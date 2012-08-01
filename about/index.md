@@ -7,27 +7,25 @@ description: "Curriculum Vitae"
 
 
 
-<div class="row">
-    <ul class="thumbnails">
-      <li class="span2">
-        <a href="http://www.gravatar.com/avatar/ee2df2ff14a3bfdd3fd5c0611160c103?rating=PG&amp;size=1000" class="thumbnail" rel="tooltip" title="nope, I don't have a better photo :(">
-          <img src="http://www.gravatar.com/avatar/ee2df2ff14a3bfdd3fd5c0611160c103?rating=PG&amp;size=200" alt="Avatar">
-        </a>
-      </li>
-      <li class="span7">
-        <h1>Carlos Alexandro Becker</h1>
-        <h6>Software Developer</h6>
-        <h6>Brazilian, 22 years. <a href="#" rel="tooltip" title="until 1/set :D @carinemeyer &hearts;">Single.</a></h6>
-        <h6>Joinville - Santa Catarina - Brazil</h6>
-        <h6>
-					<a rel="tooltip" title="mail me :)" href="mailto:caarlos0@gmail.com">email</a>  -  
-					<a href="http://github.com/caarlos0" rel="tooltip" title="see my github profile :)">GitHub</a> - 
-					<a href="http://br.linkedin.com/in/caarlos0" rel="tooltip" title="see my linkedin profile :)">LinkedIn</a> - 
-					<a href="http://careers.stackoverflow.com/caarlos0" rel="tooltip" title="see my stackoverflow careers profile :)">StackOverflow Careers</a>
-				</h6>
-      </li>
-    </ul>
-</div>
+<ul class="thumbnails">
+  <li class="span2">
+    <a href="http://www.gravatar.com/avatar/ee2df2ff14a3bfdd3fd5c0611160c103?rating=PG&amp;size=1000" class="thumbnail" rel="tooltip" title="nope, I don't have a better photo :(">
+      <img src="http://www.gravatar.com/avatar/ee2df2ff14a3bfdd3fd5c0611160c103?rating=PG&amp;size=200" alt="Avatar">
+    </a>
+  </li>
+  <li class="span7">
+    <h1>Carlos Alexandro Becker</h1>
+    <h6>Software Developer</h6>
+    <h6>Brazilian, 22 years. <a href="#" rel="tooltip" title="until 1/set :D @carinemeyer &hearts;">Single.</a></h6>
+    <h6>Joinville - Santa Catarina - Brazil</h6>
+    <h6>
+			<a rel="tooltip" title="mail me :)" href="mailto:caarlos0@gmail.com">email</a>  -  
+			<a href="http://github.com/caarlos0" rel="tooltip" title="see my github profile :)">GitHub</a> - 
+			<a href="http://br.linkedin.com/in/caarlos0" rel="tooltip" title="see my linkedin profile :)">LinkedIn</a> - 
+			<a href="http://careers.stackoverflow.com/caarlos0" rel="tooltip" title="see my stackoverflow careers profile :)">StackOverflow Careers</a>
+		</h6>
+  </li>
+</ul>
 
 ___
 
