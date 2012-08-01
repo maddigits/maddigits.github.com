@@ -22,14 +22,12 @@ Usage:
 {% else %}
   {% if tags_list.first[0] == null %}
     {% for tag in tags_list %} 
-    	<li><a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag }}-ref"><span class="label label-info">{{ tag }} <span class="tag">{{ site.tags[tag].size }}</span></span></a></li>
+    	
+    	<a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag }}-ref" rel="tooltip" title="see all posts about {{ tag }}"><span class="label label-info">{{ tag }} <span class="tag">{{ site.tags[tag].size }}</span></span></a>
     {% endfor %}
   {% else %}
     {% for tag in tags_list %} 
-        <li><a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag[0] }}-ref"><span class="label label-info">{{ tag[0] }} <span class="tag">{{ tag[1].size }}</span></span></a></li>
-    	{% comment %} <!--
-    	    <li><a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag[0] }}-ref">{{ tag[0] }} <span>{{ tag[1].size }}</span></a></li>
-    	-->{% endcomment %}
+        <a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag[0] }}-ref" rel="tooltip" title="see all posts about {{ tag }}"><span class="label label-info">{{ tag[0] }} <span class="tag">{{ tag[1].size }}</span></span></a>
     {% endfor %}
   {% endif %}
 {% endif %}

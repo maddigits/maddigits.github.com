@@ -75,8 +75,10 @@
 	<script src="{{ ASSET_PATH }}/js/jquery.min.js"></script>
 	<script src="{{ ASSET_PATH }}/bootstrap/js/bootstrap.min.js"></script>
 	<script>
-    $('.content a[title]').each(function(){ $(this).attr('rel', 'tooltip'); });
-    $('[rel=tooltip]').tooltip();
+    $(document).load(function(){
+      $('.content a[title]').each(function(){ $(this).attr('rel', 'tooltip'); });
+      $('[rel=tooltip]').tooltip();
+    });
 	</script>
   </body>
 </html>
