@@ -31,6 +31,5 @@ Usage:
     {% endif %}
   {% endfor %}
 {% endif %}
-<li><a href="{{ BASE_PATH }}/about"><b>About</b></a></li>
 {% assign pages_list = nil %}
 {% assign group = nil %}

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>{{ page.title }}</title>
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.author.name }} - Blog{% endif %}</title>
     {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
     <meta name="author" content="{{ site.author.name }}">
 
@@ -30,11 +30,11 @@
 			<div class="navbar-inner">
 				<div class="container">
 			 
-					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</a>
+					<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
 			 
 					<a class="brand" href="{{ HOME_PATH }}">{{ site.title }}</a>
 			 
@@ -50,13 +50,11 @@
 		</div>
 	
 
-		<div class="container container-fluid">
+		<div class="container">
 
-			<div class="content">
-				{{ content }}
-			</div>
+			{{ content }}
 	
-      <hr />
+      <hr class="soften" />
       <footer align="center">
         &copy; 2012. All rights reserved <br />
         <iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=caarlos0&type=follow&count=true"

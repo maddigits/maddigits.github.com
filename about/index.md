@@ -1,7 +1,8 @@
 ---
 layout: page
-title: "About caarlos0"
+title: "About"
 description: "Curriculum Vitae"
+group: navigation
 ---
 {% include JB/setup %}
 
