@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Guice and JUnit"
-description: "it could be a lovy story &hearts;"
+description: "it could be a love story &hearts;"
 category: code
 tags: [guice, java, junit]
 ---
