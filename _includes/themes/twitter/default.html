@@ -59,18 +59,16 @@
 	
       <hr class="soften" />
       <footer align="center">
-        &copy; 2012. All rights reserved <br />
-        <a href="https://twitter.com/caarlos0" class="twitter-follow-button" data-show-count="false">Follow @caarlos0</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-         <p> Thanks to <a href="http://jekyllbootstrap.com" target="_blank" rel="tooltip" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
-          , <a href="http://twitter.github.com/bootstrap/" target="_blank" rel="tooltip" title="Simple and flexible HTML, CSS, and Javascript for popular user interface components and interactions.">Twitter Bootstrap</a> 
-          and <a href="http://fortawesome.github.com/Font-Awesome" title="The iconic font designed for use with Twitter Bootstrap" rel="tooltip" target="_blank">Font Awesome</a>
-        </p>
+    		&copy; 2012. All rights reserved <br />
+      	<p> 
+      		Thanks to <a href="http://jekyllbootstrap.com" target="_blank" rel="tooltip" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+        	and <a href="http://twitter.github.com/bootstrap/" target="_blank" rel="tooltip" title="Simple and flexible HTML, CSS, and Javascript for popular user interface components and interactions.">Twitter Bootstrap</a> 
+      	</p>
       </footer>
 
     </div> <!-- /container -->
 
-    {% include JB/analytics %}
+  {% include JB/analytics %}
 
 	<script src="{{ ASSET_PATH }}/js/jquery.min.js"></script>
 	<script src="{{ ASSET_PATH }}/bootstrap/js/bootstrap.min.js"></script>
@@ -78,7 +76,6 @@
     $('.content a[title]').each(function(){ $(this).attr('rel', 'tooltip'); });
     $('.navbar a[title]').each(function(){$(this).attr('rel', 'tooltip'); $(this).attr('data-placement', 'bottom');});
     $('[rel=tooltip]').tooltip();
-
 	</script>
   </body>
 </html>
