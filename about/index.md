@@ -20,8 +20,8 @@ group: navigation
     <h6>Brazilian, 22 years. <a href="#" rel="tooltip" title="until 1/set :D @carinemeyer &hearts;">Single.</a></h6>
     <h6>Joinville - Santa Catarina - Brazil</h6>
     <h6>
-			<a rel="tooltip" title="mail me :)" href="mailto:caarlos0@gmail.com">email</a>  -  
-			<a href="http://github.com/caarlos0" rel="tooltip" title="see my github profile :)">GitHub</a> - 
+			<a href="http://github.com/caarlos0" rel="tooltip" title="see my github profile :)">GitHub</a> -
+			<a href="http://twitter.com/caarlos0" rel="tooltip" title="see my twitter profile :)">Twitter</a> -  
 			<a href="http://br.linkedin.com/in/caarlos0" rel="tooltip" title="see my linkedin profile :)">LinkedIn</a> - 
 			<a href="http://careers.stackoverflow.com/caarlos0" rel="tooltip" title="see my stackoverflow careers profile :)">StackOverflow Careers</a>
 		</h6>
