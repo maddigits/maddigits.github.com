@@ -98,6 +98,7 @@ ___
 * Development and colaboration in several OpenSource projects.
 * Creator, Leader, Architect and Developer of [**GWT-Bootstrap** Project](http://gwtbootstrap.github.com/ "Using Twitter's interface library with Google Web Toolkit.")
 * Worked for some time translating Ubuntu apps from English to Portuguese-BR.
+
 ___
 
 ## Additional Information
