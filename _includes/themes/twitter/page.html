@@ -1,13 +1,15 @@
-{% unless page.title == null %}
-<div class="page-header">
-  <h1>{{ page.title }} {% if page.tagline %} <small><br />{{ page.tagline }}</small>{% endif %}</h1>
-</div>
-{% else %}
-<p />
-{% endunless %}
+<div class="container">
+  {% unless page.title == null %}
+    <div class="page-header">
+      <h1>{{ page.title }} {% if page.tagline %} <small><br />{{ page.tagline }}</small>{% endif %}</h1>
+    </div>
+  {% else %}
+    <p />
+  {% endunless %}
 
-<div class="row-fluid">
-  <div class="span12">
-    {{ content }}
+  <div class="row-fluid">
+    <div class="span12">
+      {{ content }}
+    </div>
   </div>
 </div>

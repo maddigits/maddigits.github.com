@@ -1,34 +1,63 @@
 ---
-layout: page
+layout: about
 title: "About"
 description: "Curriculum Vitae"
 group: navigation
 ---
 {% include JB/setup %}
 
-
-
-<ul class="thumbnails">
-  <li class="span2">
-    <a href="http://www.gravatar.com/avatar/ee2df2ff14a3bfdd3fd5c0611160c103?rating=PG&amp;size=1000" class="thumbnail" rel="tooltip" title="nope, I don't have a better photo :(">
-      <img src="http://www.gravatar.com/avatar/ee2df2ff14a3bfdd3fd5c0611160c103?rating=PG&amp;size=200" alt="Avatar">
-    </a>
-  </li>
-  <li class="span7">
+<div class="jumbotron masthead">
+  <div class="container">
+    <img src="http://www.gravatar.com/avatar/7ef3cd04888c6d17f34d43e29ec3d46f?rating=PG&amp;size=150" alt="Avatar" class="img-polaroid">
     <h1>Carlos Alexandro Becker</h1>
-    <h6>Software Developer</h6>
-    <h6>Brazilian, 22 years. <a href="#" rel="tooltip" title="until 1/set :D @carinemeyer &hearts;">Single.</a></h6>
-    <h6>Joinville - Santa Catarina - Brazil</h6>
-    <h6>
-			<a href="http://github.com/caarlos0" rel="tooltip" title="see my github profile :)">GitHub</a> -
-			<a href="http://twitter.com/caarlos0" rel="tooltip" title="see my twitter profile :)">Twitter</a> -  
-			<a href="http://br.linkedin.com/in/caarlos0" rel="tooltip" title="see my linkedin profile :)">LinkedIn</a> - 
-			<a href="http://careers.stackoverflow.com/caarlos0" rel="tooltip" title="see my stackoverflow careers profile :)">StackOverflow Careers</a>
-		</h6>
-  </li>
-</ul>
+    <p>Sofware Developer at Cipher Security</p>
+    <p>Brazilian, 22 years. <a href="#" rel="tooltip" title="until 1/set :D @carinemeyer &hearts;">Single.</a></p>
+    <p>Joinville - Santa Catarina - Brazil.</p>
+    <p><a href="#" onclick="$('html, body').animate({scrollTop: $('#more-info').offset().top - 40 }, 2000);" id="see-more-btn" class="btn btn-primary btn-large">See more!!</a></p>
+    <ul class="masthead-links">
+      <li>
+	<a href="http://github.com/caarlos0" rel="tooltip" title="see my github profile. lot of projects, including this blog">GitHub</a>
+      </li>
+      <li>
+	<a href="http://twitter.com/caarlos0" rel="tooltip" title="see my twitter profile. posts about mostly anything.">Twitter</a>
+      </li>
+      <li>
+	<a href="http://br.linkedin.com/in/caarlos0" rel="tooltip" title="see my linkedin profile.">LinkedIn</a>
+      </li>
+      <li>
+	<a href="http://careers.stackoverflow.com/caarlos0" rel="tooltip" title="see my stackoverflow careers profile. a 'linkedin' for developers. you shall take a look.">StackOverflow Careers</a>
+      </li>
+      <li>
+      <a href="http://careers.stackoverflow.com/caarlos0" rel="tooltip" title="see my coderwall careers profile.">Coderwall</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="bs-docs-social">
+  <div class="container">
+    <ul class="bs-docs-social-buttons">
+      <li>
+	<b>Some projects I've been working last days: </b>
+      </li>
+      <li>
+	<a href="http://gwtbootstrap.github.com/">GWT-Bootstrap</a>
+      </li>
+      <li>
+	<a href="https://github.com/caarlos0/gunit">GUnit</a>
+      </li>
+      <li>
+	<a href="https://github.com/namekusei/persistence">Namekusei / Persistence</a>
+      </li>
+      <li>
+	<a href="https://github.com/caarlos0/vimfiles">Vim Files</a>
+      </li>
+      
+    </ul>
+  </div>
+</div>
 
-___
+<div markdown="1" id="more-info" class="container">
+
 
 ## Education
 
@@ -44,28 +73,40 @@ ___
 
 
 * #### Software Developer - [Cipher](http://www.ciphersec.com.br) - Jul/2012 - Current
+	* Development of security applications using mostly Java, and Python sometimes. Also, using Guava, Guice, JBoss AS and Maven.
 
-* #### Developmente Manager / Software Architect - [Digitaldoc](http://www.digitaldoc.com.br) - May/2010 - Jul/2012   
-	* Development of a Web GED software. Tecnologies: Java/JSF + XHTML, RichFaces, JavaScript/jQuery/prototype/script.aculo.us and CSS2/3.
-	* Development of a Desktop GED Software. Tecnologies: Eclipse-RCP and DB4O.
+* #### Developmente Manager / Software Architect - [Anix Sistemas / Digitaldoc](http://www.digitaldoc.com.br) - Jan/2012 - Jul/2012   
+	* App architecture and development using GWT, Guice, EclipseLink (JPA2), PostgreSQL and Maven. Internal software.
+	* Manage the team and the tasks that should be done.
+
+* #### Software Architect - [Anix Sistemas / Digitaldoc](http://www.digitaldoc.com.br) - Jun/2011 - Jan/2012
 	* [App](http://www.publicacoesmunicipais.com.br) architecture and development using GWT,  MongoDB + Morphia and PostgreSQL + Hibernate.
 	* App architecture and development using GWT, Hibernate and Oracle/PostgreSQL. Not published yet.
-	* App architecture and development using GWT, Guice, EclipseLink (JPA2), PostgreSQL and Maven. Internal software.
+	
+* #### Software Developer - [Anix Sistemas / Digitaldoc](http://www.digitaldoc.com.br) - Dez/2010 - Jun/2011
+	* Same activities as in traineeship.
+	
+* #### Software Developer (traineeship) - [Anix Sistemas / Digitaldoc](http://www.digitaldoc.com.br) - May/2010 - Dez/2010
+	* Maintenance and developing of new features of a Web GED software. Tecnologies: Java/JSF + XHTML, RichFaces, JavaScript/jQuery/prototype/script.aculo.us and CSS2/3.
+	* Development of a Desktop GED Software. Tecnologies: Eclipse-RCP and DB4O.
 
 ___
 
 ## Additional Activities
 
-* Ministered mini-course titled "[*Getting Productivity in Web Development with GWT*](https://speakerdeck.com/u/caarlos0/p/produtividade-no-desenvolvimento-web-com-gwt "See the slides of this presentation")" ("*Obtendo Produtividade no Desenvolvimento Web com GWT*"), in III Meditec - Medianeira in Tecnology - 2012. Also published a poster entitled "*Aspect Oriented Programming with Guice-AOP*" ("*Programação Orientada à Aspectos com Guice-AOP*") in the same event.
+* Ministered mini-course titled "[*Getting Productivity in Web Development with GWT*](https://speakerdeck.com/u/caarlos0/p/produtividade-no-desenvolvimento-web-com-gwt "See the slides of this presentation")" ("*Obtendo Produtividade no Desenvolvimento Web com GWT*"), in III Meditec - Medianeira in Tecnology - 2012. Also published a poster entitled ["*Aspect Oriented Programming with Guice-AOP*"](https://speakerdeck.com/u/caarlos0/p/programacao-orientada-a-aspectos-com-guice-aop "See the poster in speakerdeck.") ("*Programação Orientada à Aspectos com Guice-AOP*") in the same event.
 * Development and colaboration in several OpenSource projects.
 * Creator, Leader, Architect and Developer of [**GWT-Bootstrap** Project](http://gwtbootstrap.github.com/ "Using Twitter's interface library with Google Web Toolkit.")
-
+* Worked for some time translating Ubuntu apps from English to Portuguese-BR.
 ___
 
 ## Additional Information
 * Experience using CVS’s (GIT and SVN, also GitHub and Google Code).
 * Knowledge in Linux / Unix.
 * Knowledge in configuration management with Apache Maven.
-* Knowledge in EJB, JSF2 and PrimeFaces.
+* Knowledge in EJB, JSF2 and PrimeFaces, JEE6 as well, with JBoss AS and Glassfish.
+* Knowledge about Javascript, jQuery, CSS, and other web "tools".
+* High skills in Google Guava, Guice and Google Web Toolkit.
+* Basic skills in Python, Ruby and Ruby on Rails.
 
-
+</div>
