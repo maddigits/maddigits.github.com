@@ -20,30 +20,30 @@
 </head>
 
 <body data-spy="scroll" data-offset="50" data-target=".navbar-fixed-top">
-  <div class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-      <div class="container">
-	<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-	  <span class="icon-bar"></span>
-	  <span class="icon-bar"></span>
-	  <span class="icon-bar"></span>
-	</button>
 
-	<a class="brand" title="Home" href="{{ HOME_PATH }}">{{ site.title }}</a>
-
-	<div class="nav-collapse collapse">
-	  <ul class="nav">
-	    {% assign pages_list = site.pages %}
-	    {% assign group = 'navigation' %}
-	    {% include JB/pages_list %}
-	  </ul>
-	  <ul class="nav pull-right">
-	    <li><a href="/atom.xml" title="Atom Feed"><i class="icon-signal"></i> Feed</a></li>
-	  </ul>
+<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="brand" title="Home" href="{{ HOME_PATH }}">{{ site.title }}</a>
+			<div class="nav-collapse collapse">
+				<ul class="nav">
+					{% assign pages_list = site.pages %}
+					{% assign group = 'navigation' %}
+					{% include JB/pages_list %}
+				</ul>
+				<ul class="nav pull-right">
+					<li><a href="/atom.xml" title="Atom Feed"><i class="icon-signal"></i> Feed</a></li>
+				</ul>
+			</div>
+		</div>
 	</div>
-      </div>
-    </div>
-  </div>
+</div>
+
 
   {{ content }}
   

@@ -13,7 +13,7 @@ group: navigation
     <p>Sofware Developer at Cipher Security</p>
     <p>Brazilian, 22 years. <a href="#" rel="tooltip" title="until 1/set :D @carinemeyer &hearts;">Single.</a></p>
     <p>Joinville - Santa Catarina - Brazil.</p>
-    <p><a href="#" onclick="$('html, body').animate({scrollTop: $('#more-info').offset().top - 40 }, 2000);" id="see-more-btn" class="btn btn-primary btn-large">See more!!</a></p>
+    <p><a href="#" onclick="$('html, body').animate({scrollTop: $('#more-info').offset().top - 40 }, 2000);" id="see-more-btn" class="btn btn-primary btn-large">See more!</a></p>
     <ul class="masthead-links">
       <li>
 	<a href="http://github.com/caarlos0" rel="tooltip" title="see my github profile. lot of projects, including this blog">GitHub</a>
@@ -72,7 +72,7 @@ ___
 ## Experience
 
 
-* #### Software Developer - [Cipher](http://www.ciphersec.com.br) - Jul/2012 - Current
+* #### Software Developer - [Cipher Security](http://www.ciphersec.com.br) - Jul/2012 - Current
 	* Development of security applications using mostly Java, and Python sometimes. Also, using Guava, Guice, JBoss AS and Maven.
 
 * #### Developmente Manager / Software Architect - [Anix Sistemas / Digitaldoc](http://www.digitaldoc.com.br) - Jan/2012 - Jul/2012   
