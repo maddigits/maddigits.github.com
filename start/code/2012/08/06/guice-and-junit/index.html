@@ -1,0 +1,297 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Guice and JUnit</title>
+  <meta name="description" content="it could be a love story &hearts;">
+  <meta name="author" content="Carlos Alexandro Becker">
+
+  <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link href="/assets/themes/twitter/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/assets/themes/twitter/css/body.css" rel="stylesheet">	
+  <link href="/assets/themes/twitter/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+  <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+  <link href="/assets/themes/twitter/bootstrap/css/docs.css" rel="stylesheet">
+  <script src="/assets/themes/twitter/js/jquery.min.js"></script>
+</head>
+
+<body data-spy="scroll" data-offset="50" data-target=".navbar-fixed-top">
+
+<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="brand" title="Home" href="/">caarlos0</a>
+			<div class="nav-collapse collapse">
+				<ul class="nav">
+					
+					
+					
+
+
+  
+    
+      
+      	<li><a href="/about/index.html" title="About">About</a></li>
+      
+    
+  
+    
+      
+      	<li><a href="/archive.html" title="Archive">Archive</a></li>
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	<li><a href="/categories.html" title="Categories">Categories</a></li>
+      
+    
+  
+    
+  
+    
+      
+      	<li><a href="/pages.html" title="Pages">Pages</a></li>
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	<li><a href="/tags.html" title="Tags">Tags</a></li>
+      
+    
+  
+
+
+
+
+				</ul>
+				<ul class="nav pull-right">
+					<li><a href="/atom.xml" title="Atom Feed"><i class="icon-signal"></i> Feed</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+  
+<header class="jumbotron subhead" id="overview">
+  <div class="container">
+    <h1>Guice and JUnit</h1>
+    <p class="lead">it could be a love story &hearts;</p>
+    <h6>
+      Published
+      
+      
+      tagged with 
+
+
+  
+     
+    	<a href="/tags.html#guice-ref" rel="tooltip" title="see all posts about guice"><span class="label label-info">guice <span class="tag">3</span></span></a>
+     
+    	<a href="/tags.html#java-ref" rel="tooltip" title="see all posts about java"><span class="label label-info">java <span class="tag">7</span></span></a>
+     
+    	<a href="/tags.html#junit-ref" rel="tooltip" title="see all posts about junit"><span class="label label-info">junit <span class="tag">2</span></span></a>
+    
+  
+
+
+
+       
+      at 06 August 2012
+    </h6>
+  </div>
+</header>
+<p />
+<div class="container">
+  
+  <p>First of all: <strong>Do you use Guice as Depency Injection Container in your Apps? If no, why not?</strong></p>
+
+<p>Well, Guice is a lightweight depency injection container made by Google, for Java 5 and above.</p>
+
+<p>I will not explain much more about Guice in this post, maybe another day, in another post.</p>
+
+<p>But, if you use Guice in your apps, you of course has doubts about <em>how do I test this thing?</em>, am I right?</p>
+
+<p>Yep, I has these doubts too, then, most of time, I just made something like this:</p>
+
+<pre><code>public class FooTests {
+  Injector i = Guice.createInjector(new FooModule());
+  
+  @Test
+  public void testBar(){
+    Bar b = i.getInstance(Bar.class);
+    assertTrue(bar.thisShouldReturnTrue());
+  }
+}</code></pre>
+
+<p>Pretty easy, <strong>but</strong>, when you want to inject some generic thing, like <code>Foo&lt;Bar&gt;</code>, e.g., the things start to be ugly. So, you start look around, trying to found some framework&#8230; and found it, but these frameworks come with a lot of thing you dont need, like mockito or anything else. What could you do, so?</p>
+
+<p>Well, I found a great way to solve this.</p>
+
+<p>I&#8217;ll push it to github soon, but, I can tell you that the use is pretty simple, and it only depends on JUnit 4.10. With my lib, you will do tests just like this:</p>
+
+<pre><code>@RunWith(GuiceTestRunner.class)
+@GuiceModules(FooModule.class)
+public class FooTests {
+  
+  @Inject Bar bar;
+
+  @Test
+  public void testBar(){
+    assertTrue(bar.thisShouldReturnTrue());
+  }
+}</code></pre>
+
+<p>I just dont made the push right now, because I&#8217;m using 3g, and, in Brazil, it&#8217;s damn slow and expensive, so, wait until tomorrow, please :)</p>
+
+<p>Cheers.</p>
+
+  
+
+  <hr class="soften">
+  <h2>Related Posts</h2>
+    
+      <a href="/code/2012/08/07/gunit---guice-and-junit-fall-in-love">GUnit - Guice and JUnit fall in love</a><br />
+    
+      <a href="/code/2012/06/25/modular-persistence">Modular Persistence</a><br />
+    
+      <a href="/code/2012/08/14/gwt-bootstrap-2040-released">GWT Bootstrap 2.0.4.0 released</a><br />
+    
+      <a href="/code/2012/08/08/rocking-out-with-google-guava">Rocking out with Google Guava</a><br />
+    
+      <a href="/code/2012/06/27/using-a-custom-bootstrap-theme-in-gwt-bootstrap">Using a custom TwBootstrap's theme in GWT-Bootstrap</a><br />
+    
+  </hr>
+
+
+  <hr class="soften">
+
+  <div class="well row-fluid">
+    <ul class="thumbnails">
+      <li class="span2 avatar-span2" >
+	<a href="/about" class="thumbnail" rel="tooltip" title="see more info...">
+	  <img src="http://www.gravatar.com/avatar/7ef3cd04888c6d17f34d43e29ec3d46f?rating=PG&amp;size=150" alt="Avatar">
+	</a>
+      </li>
+      <li class="span10">
+	<h2>About the Author</h2>
+	<br />
+	<p>
+	  <a href="/about" title="see more info">Carlos</a> works in a <a href="http://www.ciphersec.com.br/"> security information company</a>, coding mostly Java (2+ years exp). 
+	  He also worked in a lot of other projects using GWT, JSF, and others.
+	  Like to pass some hours hacking around Maven and having ideas of cool and helpfull thing to code, but, have no much time to do this...
+	  Creator, Architect and developer of <a title="see the demo!" href="http://gwtbootstrap.github.com">GWT-Bootstrap</a> Project. 
+	  At the moment, studying Ruby and Ruby on Rails. 
+	  He's also Linux and Android user.
+	</p>
+      </li>
+    </ul>
+  </div>
+
+  <div class="pagination">
+    <ul>
+      
+	<li class="prev"><a href="/linux/2012/08/02/linux-and-mtp-just-a-hell" title="Linux and MTP: Just a hell">&larr; Previous</a></li>
+      
+	<li><a href="/archive.html">Archive</a></li>
+      
+	<li class="next"><a href="/code/2012/08/07/gunit---guice-and-junit-fall-in-love" title="GUnit - Guice and JUnit fall in love">Next &rarr;</a></li>
+      
+    </ul>
+  </div>
+
+  <hr class="soften">
+
+  <!-- AddThis Button BEGIN -->
+  <div class="addthis_toolbox addthis_default_style ">
+    <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+    <a class="addthis_button_tweet"></a>
+    <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+    <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+
+  <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=caarlos0"></script>
+  <!-- AddThis Button END -->
+
+  <hr class="soften" />
+
+  
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'caarlos0blog'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+</div> <!-- /container --> 
+
+
+<style type="text/css">body{padding-top: 30px; }</style>
+
+  
+  <footer class="footer">
+    <div class="container">
+		  <p class="pull-right"><a href="#" onclick="$('html, body').animate({scrollTop: $('body').offset().top }, 2000);">Back to top</a></p>
+		  <p>
+		    All posts are written by <a href="/about">Carlos Alexandro Becker</a>
+		    and are licenced under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>
+		  </p>
+		  <p>
+		    Thanks to <a href="http://jekyllbootstrap.com" target="_blank" rel="tooltip" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a> and 
+		    <a href="http://twitter.github.com/bootstrap/" target="_blank" rel="tooltip" title="Simple and flexible HTML, CSS, and Javascript for popular user interface components and interactions.">Twitter Bootstrap</a>
+		  </p>
+		  <h4>Blogroll</h4>
+		  <ul class="footer-links">
+		    <li><a href="http://www.carlos.inf.br/">Carlos Cabelo</a></li>
+		    <li><a href="http://byfat.xxx/">By Fat</a></li>
+		    <li><a href="http://blog.getbootstrap.com/">Twitter Bootstrap</a></li>
+		  </ul>
+    </div>
+  </footer>
+
+  
+
+  <script src="/assets/themes/twitter/bootstrap/js/bootstrap.min.js"></script>
+  <script>
+    $('.content a[title]').each(function(){ $(this).attr('rel', 'tooltip'); });
+    $('.navbar a[title]').each(function(){$(this).attr('rel', 'tooltip'); $(this).attr('data-placement', 'bottom');});
+    $('[rel=tooltip]').tooltip();
+  </script>
+</body>
+</html>
+

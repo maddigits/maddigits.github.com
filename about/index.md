@@ -11,7 +11,7 @@ group: navigation
     <img src="http://www.gravatar.com/avatar/7ef3cd04888c6d17f34d43e29ec3d46f?rating=PG&amp;size=150" alt="Avatar" class="img-polaroid">
     <h1>Carlos Alexandro Becker</h1>
     <p>Sofware Developer at Cipher Security</p>
-    <p>Brazilian, 22 years. <a href="#" rel="tooltip" title="until 1/set :D @carinemeyer &hearts;">Single.</a></p>
+    <p>Brazilian, 22 years. <a href="#" rel="tooltip" title="since 01/set/2012 :D @carinemeyer &hearts;">Married.</a></p>
     <p>Joinville - Santa Catarina - Brazil.</p>
     <p><a href="#" onclick="$('html, body').animate({scrollTop: $('#more-info').offset().top - 40 }, 2000);" id="see-more-btn" class="btn btn-primary btn-large">See more!</a></p>
     <ul class="masthead-links">

@@ -1,0 +1,1082 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>caarlos0</title>
+ <link href="http://caarlos0.github.com/atom.xml" rel="self"/>
+ <link href="http://caarlos0.github.com"/>
+ <updated>2012-09-02T16:43:29-03:00</updated>
+ <id>http://caarlos0.github.com</id>
+ <author>
+   <name>Carlos Alexandro Becker</name>
+   <email>caarlos0@gmail.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>GWT Bootstrap 2.0.4.0 released</title>
+   <link href="http://caarlos0.github.com/code/2012/08/14/gwt-bootstrap-2040-released"/>
+   <updated>2012-08-14T00:00:00-03:00</updated>
+   <id>http://caarlos0.github.com/code/2012/08/14/gwt-bootstrap-2040-released</id>
+   <content type="html">&lt;p&gt;For those wo don&amp;#8217;t know, &lt;a href='http://gwtbootstrap.github.com'&gt;GWT-Bootstrap&lt;/a&gt; wants to port the &lt;a href=''&gt;Twitter Bootstrap&lt;/a&gt; widgets to GWT compatible and easy to use components/widgets.&lt;/p&gt;
+
+&lt;p&gt;I started this project earlier this year, and we finally released our first version.&lt;/p&gt;
+
+&lt;p&gt;You can see the official announcements &lt;a href='https://groups.google.com/forum/?fromgroups#!topic/google-web-toolkit/3139Fyc_x3o%5B1-25%5D'&gt;here&lt;/a&gt; and &lt;a href='https://groups.google.com/forum/?fromgroups#!topic/gwt-bootstrap/yTjUxMe9eUg%5B1-25%5D'&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#8217;ll just copy and paste what I said in the first announcement linked here.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;As the creator of the project, I&amp;#39;ll like to say something, if you guys don&amp;#39;t mind =D
+
+First, I would like to apologize. Last months my life was changing too much, I don&amp;#39;t has the time and willpower to contribute as much I want to.
+Second, I would like to thank very much some persons:
+
+Keisuke aka &amp;#39;Soundtricker&amp;#39; - He just take the lead of the project when I&amp;#39;m not with time to do that, and made a lot of  other very good contributions. Thank you very much bro, you&amp;#39;re awesome.
+Dominik Mayer - he&amp;#39;s the first guy who give some importance to the project, when it is just a &amp;#39;test&amp;#39;, and he talk with keisuke and yusuke to help the project, thank you very much bro, you&amp;#39;re awesome.
+Yusuke - he give a lot of help around the project. Thank you bro, you&amp;#39;re awesome!
+All the other commiters and all the people that use GWT-Bootstrap and report bugs, give suggestions, etc - You, guys, are the people that made we believe in our project, and give us a reason to continue it. Thanks, you&amp;#39;re awesome.
+
+I think that that&amp;#39;s it.
+
+Thanks everyone, I hope you enjoy this first release, and hope that more releases come soon :)
+
+
+Cheers.
+--
+Carlos Alexandro Becker aka &amp;#39;caarlos0&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I want to, again, thank everyone that made this happens, you guys are just awesome.&lt;/p&gt;
+
+&lt;p&gt;Right now, GWT-Bootstrap is for the first time disponible in the &lt;a href='http://search.maven.org/#artifactdetails%7Ccom.github.gwtbootstrap%7Cgwt-bootstrap%7C2.0.4.0%7Cjar'&gt;Maven Central Repositories&lt;/a&gt;, you can change your &lt;code&gt;pom.xml&lt;/code&gt; to use the stable version like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;dependency&amp;gt;
+		&amp;lt;groupId&amp;gt;com.github.gwtbootstrap&amp;lt;/groupId&amp;gt;
+		&amp;lt;artifactId&amp;gt;gwt-bootstrap&amp;lt;/artifactId&amp;gt;
+		&amp;lt;version&amp;gt;2.0.4.0&amp;lt;/version&amp;gt;
+&amp;lt;/dependency&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now, we will work to port the components that wasn&amp;#8217;t in this first release, and also update to Twitter Bootstrap 2.1.0 (&lt;a href='/code/2012/08/11/saturday-hack-upgrading-jekyll-bootstrap-to-upcoming-twitter-bootstrap-210/'&gt;that this blog is already using&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;I also want to, again, apologize. Last weeks my life was changing in much ways, and I didn&amp;#8217;t has all the time and energy that I like, so, I didn&amp;#8217;t made much contributions&amp;#8230; but, in few weeks it will be more &amp;#8216;stable&amp;#8217;, and them I&amp;#8217;ll back with the fury of a hundred billion suns.&lt;/p&gt;
+
+&lt;p&gt;Thats all.&lt;/p&gt;
+
+&lt;p&gt;Cheers.&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Saturday hack: Upgrading Jekyll Bootstrap to upcoming Twitter Bootstrap 2.1.0</title>
+   <link href="http://caarlos0.github.com/code/2012/08/11/saturday-hack-upgrading-jekyll-bootstrap-to-upcoming-twitter-bootstrap-210"/>
+   <updated>2012-08-11T00:00:00-03:00</updated>
+   <id>http://caarlos0.github.com/code/2012/08/11/saturday-hack-upgrading-jekyll-bootstrap-to-upcoming-twitter-bootstrap-210</id>
+   <content type="html">&lt;p&gt;As you may know, this blog uses &lt;a href='http://jekyllbootstrap.com'&gt;Jekyll Bootstrap&lt;/a&gt; as engine. Yeah, Jekyll Bootstrap uses Twitter-Bootstrap, but, it uses the version 2.0.x (mine is 2.0.4, don&amp;#8217;t remember if I update or if it hsa like this since the begin of times), and the version 2.1.0 is comming! Like you can see in the @&lt;a href='https://twitter.com/twbootstrap'&gt;twbootstrap&lt;/a&gt; twitter profile, 2.1.0 will be released a few days!&lt;/p&gt;
+&lt;blockquote class='twitter-tweet tw-align-center' lang='pt'&gt;&lt;p&gt;Just a quick heads up, Bootstrap 2.1 will be released in roughly three weeks. More details to come!&lt;/p&gt;&amp;mdash; Twitter Bootstrap (@twbootstrap) &lt;a data-datetime='2012-08-01T01:08:52+00:00' href='https://twitter.com/twbootstrap/status/230470118562484224'&gt;agosto 1, 2012&lt;/a&gt;&lt;/blockquote&gt;
+&lt;p&gt;HELL YEAH, finally a new version!&lt;/p&gt;
+
+&lt;p&gt;So, today is saturday and I has nothing to do that could made the world a better place. Let&amp;#8217;s do this!&lt;/p&gt;
+
+&lt;p&gt;I&amp;#8217;ll describe here my &amp;#8216;steps&amp;#8217; to update jekyll to the new version!&lt;/p&gt;
+
+&lt;h3 id='no_more_talks_lets_do_this'&gt;No more talks, let&amp;#8217;s do this!&lt;/h3&gt;
+
+&lt;p&gt;First of all, you will need the Node.js Package Manager (NPM), so, install nodejs! In my archlinux box, it was simple like that:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pacman -Sy nodejs&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then, clone the bootstrap repo somewhere:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/twitter/bootstrap.git
+cd bootstrap&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Also, let&amp;#8217;s use the correct branch!&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git checkout 2.1.0-wip&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Ok! Now, we have to install the dependencies to build bootstrap. According to bootstrap github project, we will need recess (a less compiler), uglify-js, and jshint. So, run this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo npm install recess uglify-js jshint -g&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now, the big one! Let&amp;#8217;s make it!&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;make&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It should provide you a output like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[carlos@charmander bootstrap]$ make
+\n##################################################
+Building Bootstrap...
+##################################################\n
+Running JSHint on javascript...             \033[32m✔\033[39m Done
+Compiling LESS with Recess...               \033[32m✔\033[39m Done
+Compiling documentation...                  \033[32m✔\033[39m Done
+Compiling and minifying javascript...       \033[32m✔\033[39m Done
+\n##################################################
+Bootstrap successfully built at 09:51PM.
+##################################################\n
+Thanks for using Bootstrap,
+&amp;lt;3 @mdo and @fat\n&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Hell yeah dudes! It&amp;#8217;s much more easy than I think! So now, we have to upgrade Jekyll! Let&amp;#8217;s go?&lt;/p&gt;
+
+&lt;h3 id='upgrading_jekyll'&gt;Upgrading Jekyll&lt;/h3&gt;
+
+&lt;p&gt;The compiled and minified files will be at &lt;code&gt;**bootstrap home**/docs/assets&lt;/code&gt;, and we will have to put them in &lt;code&gt;**jekyll home**/assets/themes/twitter/bootstrap&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;So, will made it easy for you :)&lt;/p&gt;
+
+&lt;h4 id='css'&gt;css&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;bootstrap-responsive.css&lt;/li&gt;
+
+&lt;li&gt;bootstrap.css&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id='js'&gt;js&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;bootstrap.min.js&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id='img'&gt;img&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;glyphicons-halflings-white.png&lt;/li&gt;
+
+&lt;li&gt;glyphicons-halflings.png&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Place these files in the correct folder (like I said earlier). Now, check your &lt;code&gt;**jekyll home**/_includes/themes/twitter/default.html&lt;/code&gt; for the imports of the css and js files, check if the filename is correct, etc.&lt;/p&gt;
+
+&lt;p&gt;Now, you should be able to run a &lt;code&gt;jekyll --server&lt;/code&gt;, in my case it works just fine, but, my layout was modified a lot&amp;#8230; don&amp;#8217;t sure if it works in a default jekyll. So, test it, and tell me what you got :)&lt;/p&gt;
+
+&lt;p&gt;I also do a lot of other hacks, using &lt;code&gt;docs.css&lt;/code&gt; file as example, tweak footer, &lt;a href='/about'&gt;about&lt;/a&gt; page and other things&amp;#8230;&lt;/p&gt;
+
+&lt;p&gt;Cheers!&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Rocking out with Google Guava</title>
+   <link href="http://caarlos0.github.com/code/2012/08/08/rocking-out-with-google-guava"/>
+   <updated>2012-08-08T00:00:00-03:00</updated>
+   <id>http://caarlos0.github.com/code/2012/08/08/rocking-out-with-google-guava</id>
+   <content type="html">&lt;p&gt;According to the &lt;a href='http://code.google.com/p/guava-libraries/'&gt;project site on Google Code&lt;/a&gt;, &lt;em&gt;The Guava project contains several of Google&amp;#8217;s core libraries that we rely on in our Java-based projects: collections, caching, primitives support, concurrency libraries, common annotations, string processing, I/O, and so forth&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#8217;ll show you some cool features that could make you like Guava Libraries even more:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href='http://guava-libraries.googlecode.com/svn/tags/release09/javadoc/com/google/common/collect/Multimap.html'&gt;Multimaps&lt;/a&gt; - I&amp;#8217;m pretty sure that at least one time in you life you have needed a &lt;code&gt;Map&amp;lt;Foo, Collection&amp;lt;Bar&amp;gt;&amp;gt;&lt;/code&gt; or something similar, huh? If not, someday you will need it, and when you need, you will see the crap that is doing a lot of checks for a existing collection with some key and creating and adding it if it isn&amp;#8217;t there.&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;&lt;a href='http://code.google.com/p/guava-libraries/wiki/OrderingExplained'&gt;Ordering&lt;/a&gt; - Basically, a &lt;em&gt;fluent&lt;/em&gt; comparator class, with a lot of utilities&amp;#8230; you will be surprised when you see how cow it is, and will ask yourself &lt;em&gt;how could I live without it until now?&lt;/em&gt;, you can bet.&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Objects#equal&lt;/code&gt; - A null safe equals method. Never write &lt;code&gt;if(foo != null &amp;amp;&amp;amp; bar != null &amp;amp;&amp;amp; foo.equals(bar))&lt;/code&gt; in your life again. BTW, take a look in all &lt;a href='https://code.google.com/p/guava-libraries/wiki/CommonObjectUtilitiesExplained'&gt;Object commom methods&lt;/a&gt;, you can use &lt;code&gt;Objects#firstNonNull(Object, Object)&lt;/code&gt;, as example, while elvis operator and Java 8 are not ready :)&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;&lt;a href='https://code.google.com/p/guava-libraries/wiki/UsingAndAvoidingNullExplained'&gt;@Nullable and other utilities&lt;/a&gt; to help you follow the &lt;a href='http://en.wikipedia.org/wiki/Null_Object_pattern#Java'&gt;Null Object Pattern&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;&lt;a href='https://code.google.com/p/guava-libraries/wiki/IOExplained'&gt;IO Handling&lt;/a&gt;, the &lt;code&gt;Files&lt;/code&gt; class e.g.. Want to read the lines of a text file? Are you opening a BufferedReader? Don&amp;#8217;t do that:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Collection&amp;lt;String&amp;gt; lines = Files.readLines(mytxtFile, Charsets.UTF8);&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Simple, uh?&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;&lt;a href='https://code.google.com/p/guava-libraries/wiki/StringsExplained#Splitter'&gt;Splitters&lt;/a&gt; and &lt;a href='https://code.google.com/p/guava-libraries/wiki/StringsExplained#Joiner'&gt;Joinners&lt;/a&gt; - Suppose that our text filed used in the other example contains a lot of columns divided by a pipe (&lt;code&gt;|&lt;/code&gt;), now, how can we parse it? Simple! Iterate the collection of string provided by &lt;code&gt;Files.readLines&lt;/code&gt;, and do something like:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; Iterable&amp;lt;String&amp;gt; columns = Splitter.on(&amp;#39;|&amp;#39;).trimResults().omitEmptyStrings().split(line);&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Pretty easy :)&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;&lt;a href='https://code.google.com/p/guava-libraries/wiki/PreconditionsExplained'&gt;Preconditions&lt;/a&gt; plus a &lt;code&gt;static import&lt;/code&gt; made your arguments, state and null check easy and clean, throwing the respective exceptions (&lt;code&gt;IllegalStateException&lt;/code&gt;, &lt;code&gt;IllegalArgumentException&lt;/code&gt;, &lt;code&gt;NullPointerException&lt;/code&gt;, etc&amp;#8230;).&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;&lt;a href='https://code.google.com/p/guava-libraries/wiki/ImmutableCollectionsExplained'&gt;Immutable collections&lt;/a&gt; types (Immutable Maps, Lists, Sets, etc&amp;#8230;).&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;&lt;a href='https://code.google.com/p/guava-libraries/wiki/StringsExplained#CharMatcher'&gt;CharMatcher&lt;/a&gt; - pretty easy way to match characteres sequences, eg:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;String phoneNumber = CharMatcher.DIGIT.retainFrom(&amp;quot;my phone number is 123456789&amp;quot;);
+CharMatcher.inRange(&amp;#39;a&amp;#39;,&amp;#39;z&amp;#39;).or(inRange(&amp;#39;A&amp;#39;,&amp;#39;Z&amp;#39;));&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;There is also &lt;a href='https://code.google.com/p/guava-libraries/wiki/FunctionalExplained'&gt;Functional&lt;/a&gt; classes, maybe you will want to use them.&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;&lt;a href='https://code.google.com/p/guava-libraries/wiki/EventBusExplained'&gt;EventBus&lt;/a&gt; - Basically, a better EventListener.&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;&lt;a href='https://code.google.com/p/guava-libraries/wiki/CachesExplained'&gt;Caching&lt;/a&gt; - Made your app more fast.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These are, IMHO, the best features in Guava. But, &lt;a href='https://code.google.com/p/guava-libraries/wiki'&gt;there is much more&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you want to use it in a maven project, just add to your &lt;code&gt;pom.xml&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;dependency&amp;gt;
+	&amp;lt;groupId&amp;gt;com.google.guava&amp;lt;/groupId&amp;gt;
+	&amp;lt;artifactId&amp;gt;guava&amp;lt;/artifactId&amp;gt;
+	&amp;lt;version&amp;gt;13.0&amp;lt;/version&amp;gt;
+&amp;lt;/dependency&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you are not using maven, you can download the last version in &lt;a href='https://code.google.com/p/guava-libraries/'&gt;this page&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id='cool_links'&gt;Cool links&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href='http://stackoverflow.com/questions/3759440/the-guava-library-for-java-what-are-its-most-useful-and-or-hidden-features#_=_'&gt;A question in stackoverflow&lt;/a&gt;, talking about some Guava Features;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href='https://code.google.com/p/guava-libraries/downloads/list'&gt;Some PDF&amp;#8217;s&lt;/a&gt;, mostly is from talks somewhere by someone, good stuff.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The project still active, the last release (13) is from August 3, 2012.&lt;/p&gt;
+
+&lt;p&gt;That&amp;#8217;s all. Cheers.&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>GUnit - Guice and JUnit fall in love</title>
+   <link href="http://caarlos0.github.com/code/2012/08/07/gunit---guice-and-junit-fall-in-love"/>
+   <updated>2012-08-07T00:00:00-03:00</updated>
+   <id>http://caarlos0.github.com/code/2012/08/07/gunit---guice-and-junit-fall-in-love</id>
+   <content type="html">&lt;p&gt;Yesterday, I wrote a &lt;a href='http://caarlos0.github.com/code/2012/08/06/guice-and-junit/'&gt;small article&lt;/a&gt; talking about Guice and JUnit, so, this time, I&amp;#8217;ll just say how to use the small lib that I build (not big deal, one class, one annotation =] )&lt;/p&gt;
+
+&lt;p&gt;So, I dont push it to maven central yet, so, you will need to do some work to made it work. Yep, you will need to build and install it to your local repo.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone git://github.com/caarlos0/gunit.git
+cd gunit
+mvn install&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now, just add it in your &lt;code&gt;pom.xml&lt;/code&gt; dependencies:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;dependency&amp;gt;
+	&amp;lt;groupId&amp;gt;com.github.caarlos0&amp;lt;/groupId&amp;gt;
+	&amp;lt;artifactId&amp;gt;gunit&amp;lt;/artifactId&amp;gt;
+	&amp;lt;version&amp;gt;1.0.0&amp;lt;/version&amp;gt;
+	&amp;lt;scope&amp;gt;test&amp;lt;/scope&amp;gt;
+&amp;lt;/dependency&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And follow the instructions code example and the motivation of doing this in &lt;a href='http://caarlos0.github.com/code/2012/08/06/guice-and-junit/'&gt;this article&lt;/a&gt;, but, basically, your tests will look like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@RunWith(GuiceTestRunner.class)
+@GuiceModules(FooModule.class)
+public class FooTests {
+	
+	@Inject Bar bar;
+
+	@Test
+	public void testBar(){
+	  assertTrue(bar.thisShouldReturnTrue());
+	}
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Pretty simple, yes?&lt;/p&gt;
+
+&lt;p&gt;Cheers.&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Guice and JUnit</title>
+   <link href="http://caarlos0.github.com/code/2012/08/06/guice-and-junit"/>
+   <updated>2012-08-06T00:00:00-03:00</updated>
+   <id>http://caarlos0.github.com/code/2012/08/06/guice-and-junit</id>
+   <content type="html">&lt;p&gt;First of all: &lt;strong&gt;Do you use Guice as Depency Injection Container in your Apps? If no, why not?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Well, Guice is a lightweight depency injection container made by Google, for Java 5 and above.&lt;/p&gt;
+
+&lt;p&gt;I will not explain much more about Guice in this post, maybe another day, in another post.&lt;/p&gt;
+
+&lt;p&gt;But, if you use Guice in your apps, you of course has doubts about &lt;em&gt;how do I test this thing?&lt;/em&gt;, am I right?&lt;/p&gt;
+
+&lt;p&gt;Yep, I has these doubts too, then, most of time, I just made something like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public class FooTests {
+  Injector i = Guice.createInjector(new FooModule());
+  
+  @Test
+  public void testBar(){
+    Bar b = i.getInstance(Bar.class);
+    assertTrue(bar.thisShouldReturnTrue());
+  }
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Pretty easy, &lt;strong&gt;but&lt;/strong&gt;, when you want to inject some generic thing, like &lt;code&gt;Foo&amp;lt;Bar&amp;gt;&lt;/code&gt;, e.g., the things start to be ugly. So, you start look around, trying to found some framework&amp;#8230; and found it, but these frameworks come with a lot of thing you dont need, like mockito or anything else. What could you do, so?&lt;/p&gt;
+
+&lt;p&gt;Well, I found a great way to solve this.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#8217;ll push it to github soon, but, I can tell you that the use is pretty simple, and it only depends on JUnit 4.10. With my lib, you will do tests just like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@RunWith(GuiceTestRunner.class)
+@GuiceModules(FooModule.class)
+public class FooTests {
+  
+  @Inject Bar bar;
+
+  @Test
+  public void testBar(){
+    assertTrue(bar.thisShouldReturnTrue());
+  }
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I just dont made the push right now, because I&amp;#8217;m using 3g, and, in Brazil, it&amp;#8217;s damn slow and expensive, so, wait until tomorrow, please :)&lt;/p&gt;
+
+&lt;p&gt;Cheers.&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Linux and MTP: Just a hell</title>
+   <link href="http://caarlos0.github.com/linux/2012/08/02/linux-and-mtp-just-a-hell"/>
+   <updated>2012-08-02T00:00:00-03:00</updated>
+   <id>http://caarlos0.github.com/linux/2012/08/02/linux-and-mtp-just-a-hell</id>
+   <content type="html">&lt;p&gt;Recently I bought a Samsung Galaxy X phone (brazilian Nexus). Yeah, it is a pretty cool device, fast, etc etc&amp;#8230; oh, yep, a little expensive too&amp;#8230;&lt;/p&gt;
+
+&lt;p&gt;I was pretty happy with it, until I tried to copy some files to it (basically, music). Then, I discover that nexus android force you to use something called &lt;a href='http://en.wikipedia.org/wiki/Media_Transfer_Protocol'&gt;MTP (Media Transfer Protocol)&lt;/a&gt;. According to them, this decision is to made android better, but, I believe that force the user to use it, is not.&lt;/p&gt;
+
+&lt;p&gt;User who use Linux, Mac OS and Windows XP have to install aditional packages/softwares to put it to work. And the worst part is that installing these aditional softwares not solve the problem at all.&lt;/p&gt;
+
+&lt;p&gt;I end up with a tecnical easy solution for arch linux, after follow a thousand tutorials.&lt;/p&gt;
+
+&lt;h2 id='the_ugly_solution'&gt;The &lt;strong&gt;UGLY&lt;/strong&gt; solution&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Get &lt;a href='https://aur.archlinux.org/packages.php?ID=51476'&gt;this package (android-udev)&lt;/a&gt; from aur. (it will install libmtpfs and all other deps)&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Install &lt;strong&gt;gvfs-gphoto2&lt;/strong&gt; via pacman.&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Reboot&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;PS&lt;/strong&gt;: If you have yaourt, you can do all this with one command:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;yaourt -S android-udev gvfs-gphoto2 --noconfirm&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Then, if you have some luck, you can connect you device via some media player (I used &lt;a href='http://code.google.com/p/clementine-player/'&gt;clementine&lt;/a&gt;) and copy at least some music to your device.&lt;/p&gt;
+
+&lt;p&gt;Also, you can transfer files via bluetooth (hell slow) or via wireless (using something like &lt;a href='https://play.google.com/store/apps/details?id=com.sand.airdroid'&gt;airdroid&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;I&amp;#8217;ll try to mantain this post updated with new info, if you have something to share, please leave a comment.&lt;/p&gt;
+
+&lt;p&gt;See ya.&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Improving Vim and Gedit</title>
+   <link href="http://caarlos0.github.com/ide/2012/08/01/improving-vim-and-gedit"/>
+   <updated>2012-08-01T00:00:00-03:00</updated>
+   <id>http://caarlos0.github.com/ide/2012/08/01/improving-vim-and-gedit</id>
+   <content type="html">&lt;p&gt;I just started to learn Ruby and Ruby on Rails, and, as I read somewhere, most Ruby/RoR developers don&amp;#8217;t like IDEs to do their work.&lt;/p&gt;
+
+&lt;p&gt;Curious, I tried to use some IDEs, like IntelliJ, Netbeans and others&amp;#8230; and really, it just slow you. A good text editor is incredibile better. For exempla, in my VIm config, I could simply type &lt;code&gt;def[TAB]&lt;/code&gt; and VIm create for me:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;def method
+	
+end&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;with &lt;code&gt;method&lt;/code&gt; already selected. So, I type the name, parameters, press &lt;code&gt;[TAB]&lt;/code&gt; again, and I inside the method, then I just write it. It&amp;#8217;s really good. Also, gedit have the same functionallity, but, with the &lt;code&gt;[CTRL]+[SPACE]&lt;/code&gt; combo.&lt;/p&gt;
+
+&lt;h2 id='gedit_powered_by_gmate'&gt;Gedit powered by GMate&lt;/h2&gt;
+
+&lt;p&gt;GMate is a set of plugins that try to &amp;#8216;transform&amp;#8217; gedit in a &amp;#8216;textmate for linux&amp;#8217;.&lt;/p&gt;
+
+&lt;p&gt;The installation is pretty simple:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git clone git://github.com/gmate/gmate.git
+$ cd gmate
+$ ./install.sh&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then close and open your gedit, go to settings, and take a look at themes and plugins. About themes, I &lt;strong&gt;strongly&lt;/strong&gt; recomend &lt;em&gt;Molokai&lt;/em&gt;. For me, this is the best theme ever.&lt;/p&gt;
+
+&lt;h2 id='vim_powered_by_a_gorgeus_vimfiles_setup'&gt;Vim powered by a gorgeus vimfiles setup&lt;/h2&gt;
+
+&lt;p&gt;This &amp;#8217;&lt;em&gt;vimfiles&lt;/em&gt;&amp;#8217; project is nothing more than a lot of plugins and some hacks in &lt;em&gt;vimrc&lt;/em&gt; file, plus some themes, like Monokai (I already said thats the best theme ever!).&lt;/p&gt;
+
+&lt;p&gt;The installation is a little more complex than GMate, but, is not like build a Boing-747 :)&lt;/p&gt;
+
+&lt;p&gt;Just follow these steps:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Clone the project from github:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git clone git://github.com/caarlos0/vimfiles.git ~/.vim&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Edit/Create your main &lt;code&gt;vimrc&lt;/code&gt; file&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ vim ~/.vimrc&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;With the the following content:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;source ~/.vim/vimrc
+colorscheme molokai&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then save and exit;&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Update the submodules:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ cd ~/.vim
+$ git submodule update --init&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Done. Now, do your own tests and made your choice. I prefer VIm :)&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Updating Arch Linux from a Core Install</title>
+   <link href="http://caarlos0.github.com/linux/2012/07/31/updating-arch-linux-from-a-core-install"/>
+   <updated>2012-07-31T00:00:00-03:00</updated>
+   <id>http://caarlos0.github.com/linux/2012/07/31/updating-arch-linux-from-a-core-install</id>
+   <content type="html">&lt;p&gt;Recently I tried to made a fresh archlinux installation, with my old iso (don&amp;#8217;t remember exactly what version is)&amp;#8230; Yo, first, I instaled it with the local mirror only, without any update. The installation was ok, I rebooted, then try to update, using the arch linux home help about the &lt;em&gt;/lib turn into a symlink to /usr/lib&lt;/em&gt;. &lt;strong&gt;Sweet&lt;/strong&gt; mistake. That crap just dont work.&lt;/p&gt;
+
+&lt;p&gt;In last times, we have a lot of big arch linux changes:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href='http://www.archlinux.org/news/changes-to-rcconf-and-crypttab/'&gt;changes in rc.conf and crypttab&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href='http://www.archlinux.org/news/grub-legacy-no-longer-supported/'&gt;grub legacy no longer supported&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href='http://www.archlinux.org/news/the-lib-directory-becomes-a-symlink/'&gt;/lib becomes a symlink&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href='http://www.archlinux.org/news/filesystem-upgrade-manual-intervention-required-1/'&gt;filesystem upgrade that needs manual intervention&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href='http://www.archlinux.org/news/having-pacman-verify-packages/'&gt;pacman-key&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;All these itens have man pages helping you to pass throug the most errors&amp;#8230; but, the lib symlink made a lot of people angry &lt;strong&gt;never use the force (-f) in pacman, NEVER&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;So, I tried to reinstall, but, this time, using the remote mirrors (getting all the new packages), and it was ok, until the bootloader install part. Seem like the installer lost the GRUB config file somewhere&amp;#8230;&lt;/p&gt;
+
+&lt;p&gt;Then, I do my research, and found a &lt;a href='http://allanmcrae.com/2012/07/updating-arch-linux-from-a-core-install/'&gt;very helpful article by Allan McRae&lt;/a&gt;. I will just &amp;#8220;rewrite&amp;#8221; it here with some througt, but you can also read the original if you want.&lt;/p&gt;
+
+&lt;p&gt;Remember, if you get the &lt;a href='http://www.archlinux.org/download/'&gt;new ISO from arch linux site&lt;/a&gt;, everything gonna be ok without any hacks.&lt;/p&gt;
+
+&lt;p&gt;So, after arch installed and loaded, do the following commands:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ pacman -Sy
+$ rm -rf /var/run /var/lock &amp;amp;&amp;amp; pacman -Sf filesystem&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Reboot.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ pacman -S tzdata
+$ pacman -U http://pkgbuild.com/~allan/glibc-2.16.0-1-i686.pkg.tar.xz
+$ rm /etc/profile.d/locale.sh&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In this next accept, when promped to update pacman, say &lt;strong&gt;NO&lt;/strong&gt;, and, when promped to any replacement, say &lt;strong&gt;YES&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ pacman -Su --ignore glibc
+$ pacman -Su&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Reboot&lt;/strong&gt; again.&lt;/p&gt;
+
+&lt;p&gt;So, at this point, everything should work like a boss. See ya.&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>How to enable KMS on i915 GraphicCard (archlinux)</title>
+   <link href="http://caarlos0.github.com/linux/2012/07/27/how-to-enable-kms-on-i915-graphiccard-archlinux"/>
+   <updated>2012-07-27T00:00:00-03:00</updated>
+   <id>http://caarlos0.github.com/linux/2012/07/27/how-to-enable-kms-on-i915-graphiccard-archlinux</id>
+   <content type="html">&lt;p&gt;Acccording to &lt;a href='https://wiki.archlinux.org/index.php/Kernel_Mode_Setting'&gt;Arch Linux wiki&lt;/a&gt;, Kernel Mode Setting (KMS) is a method for setting display resolution and depth in the kernel space rather than user space. KMS enables native resolution in the framebuffer and allows for instant console (tty) switching. KMS also enables newer technologies (such as DRI2) which will help reduce artifacts and increase 3D performance, even kernel space power-saving.&lt;/p&gt;
+
+&lt;p&gt;So, you can see this is a good thing, uh? I&amp;#8217;ll show you the steps needed to activate this for my GraphicCard.&lt;/p&gt;
+
+&lt;h2 id='check_if_kms_is_active'&gt;Check if KMS is active&lt;/h2&gt;
+
+&lt;p&gt;If the following command return &lt;code&gt;1&lt;/code&gt;, your KMS module is already active, and you can go and drink a coffee. Otherwise, goto the next steps.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ cat /sys/module/i915/parameters/modeset&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id='install_required_packages'&gt;Install required packages&lt;/h2&gt;
+
+&lt;p&gt;Before continue, be sure that the following packages are installed:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;xf86-video-fbdev
+xf86-video-intel
+xf86-video-vesa&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can install it in a archlinux box with &lt;code&gt;$ pacman -Sy xf86-video-{fbdev,intel,vesa}&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id='edit_files'&gt;Edit files&lt;/h2&gt;
+
+&lt;p&gt;You will need to change several files. Starting with &lt;code&gt;/etc/modprobe.d/modprobe.conf&lt;/code&gt;. Add (or create the file, if it doesn&amp;#8217;t exist) the following:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;options i915 modeset=1&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Also, edit &lt;code&gt;/etc/mkinitcpio.conf&lt;/code&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Edit the &lt;code&gt;MODULES&lt;/code&gt; line, like in &lt;code&gt;MODULES=&amp;quot;intel_agp i915&amp;quot;&lt;/code&gt;&lt;/li&gt;
+
+&lt;li&gt;Uncoment the line &lt;code&gt;FILES=&amp;quot;/etc/modprobe.d/modprobe.conf&amp;quot;&lt;/code&gt; and comment the &lt;code&gt;FILES=&amp;quot;&amp;quot;&lt;/code&gt; if it exists.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Create the &lt;code&gt;/etc/X11/xorg.conf.d/20-intel.conf&lt;/code&gt; file with the following content:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Section &amp;quot;Device&amp;quot;
+	Identifier &amp;quot;card0&amp;quot;
+	Driver &amp;quot;intel&amp;quot;
+	VendorName  &amp;quot;Intel Corporation&amp;quot;
+	BoardName   &amp;quot;Intel Corporation N10 Family Integrated Graphics Controller&amp;quot;
+	BusID       &amp;quot;PCI:0:2:0&amp;quot;
+	Option      &amp;quot;SwapbuffersWait&amp;quot;    &amp;quot;false&amp;quot;
+EndSection&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id='regenerate_initframs'&gt;Regenerate initframs&lt;/h2&gt;
+
+&lt;p&gt;Now, we can regen initframs with&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ sudo mkinitcpio -p linux&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id='reboot'&gt;Reboot&lt;/h2&gt;
+
+&lt;p&gt;Now, reboot your system, and when it cames up, run the first command again, and see if it returns &lt;code&gt;1&lt;/code&gt; this time.&lt;/p&gt;
+
+&lt;p&gt;Also, this is my &lt;code&gt;lspci&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ lspci | grep -i vga
+	00:02.0 VGA compatible controller: Intel Corporation Core Processor Integrated Graphics Controller (rev 18)&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;That&amp;#8217;s it. See ya.&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Using a custom TwBootstrap's theme in GWT-Bootstrap</title>
+   <link href="http://caarlos0.github.com/code/2012/06/27/using-a-custom-bootstrap-theme-in-gwt-bootstrap"/>
+   <updated>2012-06-27T00:00:00-03:00</updated>
+   <id>http://caarlos0.github.com/code/2012/06/27/using-a-custom-bootstrap-theme-in-gwt-bootstrap</id>
+   <content type="html">&lt;p&gt;First of all, if you haven&amp;#8217;t done it yet, read &lt;a href='/code/2012/06/26/getting-started-with-gwt-bootstrap/'&gt;Getting started with GWT-Bootstrap&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id='create_the_gwtproject'&gt;Create the GWT-Project&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;mvn archetype:generate \
+   -DarchetypeRepository=repo1.maven.org \
+   -DarchetypeGroupId=org.codehaus.mojo \
+   -DarchetypeArtifactId=gwt-maven-plugin \
+   -DarchetypeVersion=2.4.0&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I created my project with the following properties:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Define value for property &amp;#39;groupId&amp;#39;: : com.github.caarlos0
+Define value for property &amp;#39;artifactId&amp;#39;: : Example
+Define value for property &amp;#39;version&amp;#39;:  1.0-SNAPSHOT: : 
+Define value for property &amp;#39;package&amp;#39;:  com.github.caarlos0: :  
+Define value for property &amp;#39;module&amp;#39;: : Example&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now, lets add the &lt;code&gt;GWT-Bootstrap&lt;/code&gt; dependency to the &lt;code&gt;pom.xml&lt;/code&gt; file:&lt;/p&gt;
+
+&lt;h4 id='add_the_repository'&gt;Add the repository:&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;repositories&amp;gt;
+    &amp;lt;repository&amp;gt;
+        &amp;lt;id&amp;gt;gwt-bootstrap&amp;lt;/id&amp;gt;
+        &amp;lt;name&amp;gt;GWT-Bootstrap SNAPSHOTS&amp;lt;/name&amp;gt;
+        &amp;lt;url&amp;gt;http://gwtbootstrap.github.com/maven/snapshots&amp;lt;/url&amp;gt;
+    &amp;lt;/repository&amp;gt;
+&amp;lt;/repositories&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id='and_the_dependency_itself'&gt;And the dependency itself:&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;dependency&amp;gt;
+    &amp;lt;groupId&amp;gt;com.github.gwtbootstrap&amp;lt;/groupId&amp;gt;
+    &amp;lt;artifactId&amp;gt;gwt-bootstrap&amp;lt;/artifactId&amp;gt;
+    &amp;lt;version&amp;gt;2.0.4.0-SNAPSHOT&amp;lt;/version&amp;gt;
+&amp;lt;/dependency&amp;gt;    &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And then, update your project with a &lt;code&gt;$ mvn clean install&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id='configure_gwtbootstrap'&gt;Configure GWT-Bootstrap&lt;/h2&gt;
+
+&lt;p&gt;In this point, we have to setup the &lt;code&gt;*.gwt.xml&lt;/code&gt; file and our &lt;code&gt;UIBinder&lt;/code&gt; XML file. You can follow &lt;a href='/code/2012/06/26/getting-started-with-gwt-bootstrap/'&gt;getting started tutorial&lt;/a&gt; to do that in the right way.&lt;/p&gt;
+
+&lt;h2 id='get_a_custom_bootstrap_theme'&gt;Get a custom Bootstrap Theme&lt;/h2&gt;
+
+&lt;p&gt;You can get a custom &lt;code&gt;bootstrap.min.css&lt;/code&gt; file in several ways:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Making your own CSS changing the &lt;code&gt;.less&lt;/code&gt; files and re-generating the files&lt;/li&gt;
+
+&lt;li&gt;&lt;a href='http://twitter.github.com/bootstrap/download.html'&gt;Customizing your download&lt;/a&gt; (Basically the option above in a easy way)&lt;/li&gt;
+
+&lt;li&gt;&lt;a href='https://www.google.com.br/search?q=twitter+bootstrap+themes'&gt;Downloading it somewhere&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For this example, I&amp;#8217;ll use &lt;a href='http://bootswatch.com/slate/'&gt;this theme&lt;/a&gt;. Download the &lt;code&gt;bootstrap.min.css&lt;/code&gt; from the site.&lt;/p&gt;
+
+&lt;h2 id='clean_the_example'&gt;Clean the example&lt;/h2&gt;
+
+&lt;p&gt;By default, the Maven GWT Archetype will generate a lot of junk, &amp;#8220;by example&amp;#8221;, for you. You can clean it up.&lt;/p&gt;
+
+&lt;p&gt;You can remove:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;All classes inside &lt;code&gt;shared&lt;/code&gt; folder;&lt;/li&gt;
+
+&lt;li&gt;All classes inside &lt;code&gt;server&lt;/code&gt; folder;&lt;/li&gt;
+
+&lt;li&gt;All the content in the &lt;code&gt;EntryPoint&lt;/code&gt; class (&lt;code&gt;Example&lt;/code&gt;, in our case);&lt;/li&gt;
+
+&lt;li&gt;The servlet declarations from &lt;code&gt;web.xml&lt;/code&gt; file;&lt;/li&gt;
+
+&lt;li&gt;Test related classes and files;&lt;/li&gt;
+
+&lt;li&gt;Messages files in &lt;code&gt;resources/client&lt;/code&gt; folder.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;At this point we will have a structure like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;|-- src
+|   |-- main
+|   |   |-- java
+|   |   |   `-- com
+|   |   |       `-- github
+|   |   |           `-- caarlos0
+|   |   |               |-- client
+|   |   |               |   |-- Example.java
+|   |   |               |-- server
+|   |   |               `-- shared
+|   |   |-- resources
+|   |   |   `-- com
+|   |   |       `-- github
+|   |   |           `-- caarlos0
+|   |   |               `-- Example.gwt.xml
+|   |   `-- webapp
+|   |       |-- Example.css
+|   |       |-- Example.html
+|   |       `-- WEB-INF
+|   |           `-- web.xml
+|   `-- test
+`-- target&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id='create_our_example'&gt;Create our example&lt;/h2&gt;
+
+&lt;p&gt;Now, lets create a UIBinder class to made our amazing test widget! Create a new UiBinder class/xml combo called &lt;code&gt;ExampleUiBinder&lt;/code&gt;, with the following content:&lt;/p&gt;
+
+&lt;h4 id='exampleuibinderuixml'&gt;ExampleUiBinder.ui.xml:&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;ui:UiBinder xmlns:ui=&amp;#39;urn:ui:com.google.gwt.uibinder&amp;#39;
+             xmlns:g=&amp;#39;urn:import:com.google.gwt.user.client.ui&amp;#39;
+             xmlns:b=&amp;quot;urn:import:com.github.gwtbootstrap.client.ui&amp;quot;&amp;gt;
+    &amp;lt;g:HTMLPanel&amp;gt;
+        &amp;lt;b:Container&amp;gt;
+            &amp;lt;b:Navbar&amp;gt;
+                &amp;lt;b:Brand&amp;gt;Bootstrap&amp;lt;/b:Brand&amp;gt;
+                &amp;lt;b:Nav&amp;gt;
+                    &amp;lt;b:NavLink&amp;gt;Test&amp;lt;/b:NavLink&amp;gt;
+                    &amp;lt;b:NavLink href=&amp;quot;http://www.google.com&amp;quot;&amp;gt;Another Test&amp;lt;/b:NavLink&amp;gt;
+                &amp;lt;/b:Nav&amp;gt;
+                &amp;lt;b:NavForm size=&amp;quot;1&amp;quot;/&amp;gt;
+                &amp;lt;b:Nav alignment=&amp;quot;RIGHT&amp;quot;&amp;gt;
+                    &amp;lt;b:NavLink&amp;gt;Test&amp;lt;/b:NavLink&amp;gt;
+                &amp;lt;/b:Nav&amp;gt;
+                &amp;lt;b:NavText alignment=&amp;quot;RIGHT&amp;quot;&amp;gt;Right&amp;lt;/b:NavText&amp;gt;
+                &amp;lt;b:NavSearch size=&amp;quot;2&amp;quot; placeholder=&amp;quot;Search&amp;quot; alignment=&amp;quot;RIGHT&amp;quot;/&amp;gt;
+            &amp;lt;/b:Navbar&amp;gt;
+
+            &amp;lt;b:Hero&amp;gt;
+                &amp;lt;b:Heading size=&amp;quot;1&amp;quot;&amp;gt;Hello Custom Theme!&amp;lt;/b:Heading&amp;gt;
+                &amp;lt;b:Button type=&amp;quot;WARNING&amp;quot;&amp;gt;Warning&amp;lt;/b:Button&amp;gt;
+            &amp;lt;/b:Hero&amp;gt;
+        &amp;lt;/b:Container&amp;gt;
+    &amp;lt;/g:HTMLPanel&amp;gt;
+&amp;lt;/ui:UiBinder&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id='exampleuibinderjava'&gt;ExampleUiBinder.java&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;public class ExampleUiBinder extends Composite {
+    interface ExampleUiBinderUiBinder extends UiBinder&amp;lt;HTMLPanel, ExampleUiBinder&amp;gt; {
+    }
+
+    private static ExampleUiBinderUiBinder ourUiBinder = GWT.create(ExampleUiBinderUiBinder.class);
+
+    public ExampleUiBinder() {
+        initWidget(ourUiBinder.createAndBindUi(this));
+    }
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;At this point, if everything is ok, we will get a window like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt='The no-themed version' src='http://dl.dropbox.com/u/247142/caarlos0.github.com/Captura%20de%20tela%20de%202012-06-26%2020%3A11%3A18.png' /&gt;&lt;/p&gt;
+
+&lt;h2 id='hacking'&gt;Hacking&lt;/h2&gt;
+
+&lt;p&gt;Right now, we will have to write our own &lt;code&gt;Resources&lt;/code&gt; and &lt;code&gt;Configuration&lt;/code&gt; classes. I&amp;#8217;ll advise you that it&amp;#8217;s a boring thing to do, but the result could be really awesome. So, let&amp;#8217;s go.&lt;/p&gt;
+
+&lt;h3 id='dir_structure'&gt;Dir structure&lt;/h3&gt;
+
+&lt;p&gt;We will have to create a &lt;code&gt;resources&lt;/code&gt; folder under the same folder of our &lt;code&gt;*.gwt.xml&lt;/code&gt; file. Just to you understand better, the folders &lt;code&gt;client&lt;/code&gt;, &lt;code&gt;shared&lt;/code&gt;, &lt;code&gt;server&lt;/code&gt; and &lt;code&gt;resources&lt;/code&gt; &lt;strong&gt;must be&lt;/strong&gt; in the same hierarchical level, just like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;src/main/java/com/github/caarlos0/
+|-- client
+|-- resources
+|-- server
+`-- shared&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id='creating_the_needed_files'&gt;Creating the needed files&lt;/h3&gt;
+
+&lt;p&gt;Assuming that we will only change the CSS file, inside your &lt;code&gt;resources&lt;/code&gt; file, create a &lt;code&gt;css&lt;/code&gt; folder, and paste the &lt;code&gt;bootstrap.min.css&lt;/code&gt; file downloaded before inside it. Yes, the file name &lt;strong&gt;must&lt;/strong&gt; be &lt;code&gt;bootstrap.min.css&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;As said before, we also need a &lt;code&gt;Resources&lt;/code&gt; and &lt;code&gt;Configuration&lt;/code&gt; files. This files must be inside our &lt;code&gt;resources&lt;/code&gt; folder too. The content is the following:&lt;/p&gt;
+
+&lt;h4 id='exampleresourcesjava'&gt;ExampleResources.java&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;package com.github.caarlos0.resources;
+
+import com.github.gwtbootstrap.client.ui.resources.Resources;
+import com.google.gwt.resources.client.TextResource;
+
+public interface ExampleResources extends Resources {
+    @Source(&amp;quot;css/bootstrap.min.css&amp;quot;)
+    TextResource bootstrapCss();
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id='exampleconfiguratorjava'&gt;ExampleConfigurator.java&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;package com.github.caarlos0.resources;
+
+import com.github.gwtbootstrap.client.ui.config.Configurator;
+import com.github.gwtbootstrap.client.ui.resources.Resources;
+import com.google.gwt.core.client.GWT;
+
+public class ExampleConfigurator implements Configurator {
+    public Resources getResources() {
+        return GWT.create(ExampleResources.class);
+    }
+
+    public boolean hasResponsiveDesign() {
+        return false;
+    }
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;At this point, the structure should be something like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;src/main/java/com/github/caarlos0/
+|-- client
+|   |-- Example.java
+|   |-- ExampleUiBinder.java
+|   |-- ExampleUiBinder.ui.xml
+|-- resources
+|   |-- css
+|   |   `-- bootstrap.min.css
+|   |-- ExampleConfigurator.java
+|   `-- ExampleResources.java
+|-- server
+`-- shared&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now, we have to do a little hack in our &lt;code&gt;*.gwt.xml&lt;/code&gt;. We will need to replace &lt;code&gt;com.github.gwtbootstrap.client.ui.config.Configurator&lt;/code&gt; with our Configurator, and setup the resources dir. So, in the end, we will have something like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;
+&amp;lt;module rename-to=&amp;#39;Example&amp;#39;&amp;gt;
+    &amp;lt;inherits name=&amp;#39;com.google.gwt.user.User&amp;#39;/&amp;gt;
+    &amp;lt;inherits name=&amp;#39;com.google.gwt.junit.JUnit&amp;#39;/&amp;gt;
+    &amp;lt;inherits name=&amp;#39;com.google.gwt.user.theme.standard.Standard&amp;#39;/&amp;gt;
+    &amp;lt;inherits name=&amp;quot;com.github.gwtbootstrap.Bootstrap&amp;quot;/&amp;gt;
+    &amp;lt;entry-point class=&amp;#39;com.github.caarlos0.client.Example&amp;#39;/&amp;gt;
+    &amp;lt;source path=&amp;#39;client&amp;#39;/&amp;gt;
+    &amp;lt;source path=&amp;#39;shared&amp;#39;/&amp;gt;
+
+    &amp;lt;!--pay attention in this part--&amp;gt;
+    &amp;lt;source path=&amp;#39;resources&amp;#39;/&amp;gt;
+    &amp;lt;replace-with class=&amp;quot;com.github.caarlos0.resources.ExampleConfigurator&amp;quot;&amp;gt;
+        &amp;lt;when-type-is class=&amp;quot;com.github.gwtbootstrap.client.ui.config.Configurator&amp;quot;/&amp;gt;
+    &amp;lt;/replace-with&amp;gt;
+    &amp;lt;public path=&amp;quot;resources&amp;quot;&amp;gt;
+        &amp;lt;exclude name=&amp;quot;** /*.java&amp;quot;/&amp;gt;
+        &amp;lt;exclude name=&amp;quot;** /*.class&amp;quot;/&amp;gt;
+    &amp;lt;/public&amp;gt;
+
+&amp;lt;/module&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;That&amp;#8217;s it :)&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt='The Themed Version' src='http://dl.dropbox.com/u/247142/caarlos0.github.com/Captura%20de%20tela%20de%202012-06-26%2020%3A58%3A45.png' /&gt;&lt;/p&gt;
+
+&lt;h2 id='considerations'&gt;Considerations&lt;/h2&gt;
+
+&lt;p&gt;Sometimes GWT caches everything, and seems like it doesn&amp;#8217;t work. In this cases, do the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;mvn clean&lt;/code&gt;;&lt;/li&gt;
+
+&lt;li&gt;Delete the &lt;code&gt;webapp/Example&lt;/code&gt; folder (in our case, &lt;code&gt;Example&lt;/code&gt; is the Module name);&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If it still dont working, do this:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Comment the &lt;code&gt;&amp;lt;source path=&amp;#39;resources&amp;#39;/&amp;gt;&lt;/code&gt; tag in your &lt;code&gt;*.gwt.xml&lt;/code&gt;;&lt;/li&gt;
+
+&lt;li&gt;Run the app, you will got a exception;&lt;/li&gt;
+
+&lt;li&gt;Uncomment the line again, and run you app again.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For me, this process always works.&lt;/p&gt;
+
+&lt;h1 id='download_the_code'&gt;Download the code&lt;/h1&gt;
+
+&lt;p&gt;Look at the right sidebar :)&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Getting started with GWT-Bootstrap</title>
+   <link href="http://caarlos0.github.com/code/2012/06/26/getting-started-with-gwt-bootstrap"/>
+   <updated>2012-06-26T00:00:00-03:00</updated>
+   <id>http://caarlos0.github.com/code/2012/06/26/getting-started-with-gwt-bootstrap</id>
+   <content type="html">&lt;p&gt;&lt;a href='http://gwtbootstrap.github.com'&gt;GWT-Bootstrap&lt;/a&gt; is a project that aims to provide all the &lt;a href='http://twitter.github.com/bootstrap'&gt;Twitter Bootstrap&lt;/a&gt; styles and widgets to GWT applications. I have this idea in Jan/2012, and it was not a library, initally, I just made a simple &lt;code&gt;InputText&lt;/code&gt; and &lt;code&gt;Button&lt;/code&gt; widgets, and I think: &lt;em&gt;&amp;#8220;Why not?&amp;#8221;&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;So, here we go. The &lt;a href='https://github.com/gwtbootstrap/gwt-bootstrap/issues?milestone=3&amp;amp;page=1&amp;amp;state=open'&gt;initial release is almost done&lt;/a&gt;, and has a lot of widgets and functionaly ported and working, including the awesome &lt;em&gt;responsiveness&lt;/em&gt; and the great &lt;em&gt;NavBar&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;So, let&amp;#8217;s start using it.&lt;/p&gt;
+
+&lt;h2 id='get_the_jar'&gt;Get the jar&lt;/h2&gt;
+
+&lt;p&gt;There are 2 ways to get the jar:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href='https://github.com/gwtbootstrap/gwt-bootstrap/wiki/Using-GWT-Bootstrap-Maven-Repository'&gt;Maven&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href='https://github.com/gwtbootstrap/gwt-bootstrap/downloads'&gt;Downloading the jar by hand and put it in you app classpath&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='configuring_you_module'&gt;Configuring you module&lt;/h2&gt;
+
+&lt;p&gt;You will have to configure your &lt;em&gt;App.gwt.xml&lt;/em&gt; file to &lt;em&gt;inherit&lt;/em&gt; the GWT-Bootstrap widget library. You can do it like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+&amp;lt;inherits name=&amp;quot;com.github.gwtbootstrap.Bootstrap&amp;quot;/&amp;gt;
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id='uibinder_usage'&gt;UiBinder usage&lt;/h2&gt;
+
+&lt;p&gt;Assuming that you&amp;#8217;re using UIBinder, add the following namespace to the &lt;code&gt;&amp;lt;ui:UIBinder&amp;gt;&lt;/code&gt; element:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+xmlns:b=&amp;quot;urn:import:com.github.gwtbootstrap.client.ui&amp;quot;
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Then you can easily use the &lt;code&gt;b&lt;/code&gt; namespace in your widget design, like &lt;code&gt;Heading&lt;/code&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+&amp;lt;b:heading size=&amp;quot;2&amp;quot;&amp;gt;Hello World GWT-Bootstrap&amp;lt;/b:heading&amp;gt;
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id='datepicker'&gt;Datepicker&lt;/h2&gt;
+
+&lt;p&gt;We also have the &lt;a href='https://github.com/eternicode/bootstrap-datepicker'&gt;bootstrap datepicker&lt;/a&gt; ported into GWT-Bootstrap, but, in a different module and namespace.&lt;/p&gt;
+
+&lt;p&gt;Add to your &lt;em&gt;App.gwt.xml&lt;/em&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+&amp;lt;inherits name=&amp;#39;com.github.gwtbootstrap.datepicker.Datepicker&amp;#39; /&amp;gt;
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;And in your &lt;em&gt;Widget.ui.xml&lt;/em&gt; file:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+ xmlns:b2=&amp;quot;urn:import:com.github.gwtbootstrap.datepicker.client.ui&amp;quot;
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;The, just use the widget like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+&amp;lt;b2:DateBox format=&amp;quot;dd/mm/yyyy&amp;quot; autoClose=&amp;quot;true&amp;quot; /&amp;gt;
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id='pros_and_cons'&gt;Pros and Cons&lt;/h2&gt;
+
+&lt;h3 id='pros'&gt;Pros&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Easy to setup and use&lt;/li&gt;
+
+&lt;li&gt;Themeable&lt;/li&gt;
+
+&lt;li&gt;Almost all widgets ported&lt;/li&gt;
+
+&lt;li&gt;Active forum and development&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id='cons'&gt;Cons&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Doesn&amp;#8217;t support for &lt;code&gt;less&lt;/code&gt; files (&lt;a href='https://github.com/gwtbootstrap/gwt-bootstrap/issues/29'&gt;#29&lt;/a&gt;)&lt;/li&gt;
+
+&lt;li&gt;Load all the &lt;em&gt;JavaScript&lt;/em&gt; files in the bootstrap of the app (&lt;a href='https://github.com/gwtbootstrap/gwt-bootstrap/issues/70'&gt;#70&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Happy coding!&lt;/strong&gt;&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Modular Persistence</title>
+   <link href="http://caarlos0.github.com/code/2012/06/25/modular-persistence"/>
+   <updated>2012-06-25T00:00:00-03:00</updated>
+   <id>http://caarlos0.github.com/code/2012/06/25/modular-persistence</id>
+   <content type="html">&lt;p&gt;One of the classes of my post-graduate was the Java Persistence API (&lt;a href='http://jcp.org/en/jsr/detail?id=317'&gt;JPA&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;The teacher used the &amp;#8220;normal&amp;#8221; way to create the projects: Eclipse, create libraries with jars that&amp;#8217;s needed and create the EntityManagerFactory by hand.&lt;/p&gt;
+
+&lt;p&gt;It works, but IMHO, should never be used in production. In my examples and work, I used a standard architecture that I built. It&amp;#8217;s using Maven, JPA2, EclipseLink, and MySQL Google Guice.&lt;/p&gt;
+
+&lt;p&gt;This structure decreased a lot time I would take to do several things, and as I found it very useful, I decided to put it on &lt;a href='https://github.com/caarlos0/persistence-base'&gt;github&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;To show hot it works, let&amp;#8217;s do a little example.&lt;/p&gt;
+
+&lt;h2 id='stepbystep_tutorial'&gt;Step-by-step tutorial&lt;/h2&gt;
+
+&lt;h3 id='get_the_base_code'&gt;Get the base code&lt;/h3&gt;
+
+&lt;p&gt;First, clone the repo:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+git clone https://github.com/caarlos0/persistence-base sample
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id='do_your_hacks'&gt;Do your hacks&lt;/h3&gt;
+
+&lt;p&gt;Then, open the project in your preffered IDE, then, open the &lt;code&gt;pom.xml&lt;/code&gt; file and change the project name to &amp;#8220;sample&amp;#8221;. Save.&lt;/p&gt;
+
+&lt;p&gt;Open &lt;code&gt;src/main/java/com/github/caarlos0/model&lt;/code&gt; and create a class called &lt;code&gt;Foo&lt;/code&gt; with the following code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@Entity
+public class Foo extends Bean {
+    
+    private String bar;
+
+    public Foo() {
+    }
+
+    public Foo(Long id, Long version, String bar) {
+        super(id, version);
+        this.bar = bar;
+    }
+
+    public String getBar() {
+        return bar;
+    }
+
+    public void setBar(String bar) {
+        this.bar = bar;
+    }
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now, we have to create the specific DAO for this entity. Go into &lt;code&gt;src/main/java/com/github/caarlos0/dao&lt;/code&gt; and create a &lt;code&gt;FooDao.java&lt;/code&gt;, with this code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public class FooDao extends AbstractDao&amp;lt;Foo&amp;gt; {
+    @Inject
+    public FooDao(Provider&amp;lt;EntityManager&amp;gt; emf) {
+        super(emf, Foo.class);
+    }
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;We also need to setup our &lt;code&gt;PersistenceModule&lt;/code&gt; to bind this DAO. Open &lt;code&gt;src/main/java/com/github/caarlos0/dao/inject/PersistenceModule.java&lt;/code&gt; adding the bind to &lt;code&gt;FooDao&lt;/code&gt; to look like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public class PersistenceModule extends AbstractModule {
+
+    @Override
+    protected void configure() {
+        install(new JpaPersistModule(&amp;quot;base&amp;quot;)); // base has to be the PU in persistence.xml
+        
+        bind(PersistenceInitializer.class);
+
+        bind(FooDao.class);
+    }
+    
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you want to change the &lt;em&gt;Persistence Unit&lt;/em&gt; name, you will have to do this in the &lt;code&gt;install(new JpaPersistModule(&amp;quot;base&amp;quot;));&lt;/code&gt; changing &lt;em&gt;base&lt;/em&gt; to the name that you want, put the same name in &lt;code&gt;src/main/resources/META-INF/persistence.xml&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;We have to add classes, configure the database and etc in the &lt;code&gt;src/main/resources/META-INF/persistence.xml&lt;/code&gt; file:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;
+&amp;lt;persistence version=&amp;quot;2.0&amp;quot; xmlns=&amp;quot;http://java.sun.com/xml/ns/persistence&amp;quot; xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot; xsi:schemaLocation=&amp;quot;http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd&amp;quot;&amp;gt;
+  &amp;lt;persistence-unit name=&amp;quot;base&amp;quot; transaction-type=&amp;quot;RESOURCE_LOCAL&amp;quot;&amp;gt;
+    &amp;lt;provider&amp;gt;org.eclipse.persistence.jpa.PersistenceProvider&amp;lt;/provider&amp;gt;
+    &amp;lt;class&amp;gt;com.github.caarlos0.model.Foo&amp;lt;/class&amp;gt;
+    &amp;lt;properties&amp;gt;
+      &amp;lt;property name=&amp;quot;javax.persistence.jdbc.url&amp;quot; value=&amp;quot;jdbc:mysql://localhost:3306/foodb&amp;quot;/&amp;gt;
+      &amp;lt;property name=&amp;quot;javax.persistence.jdbc.password&amp;quot; value=&amp;quot;&amp;quot;/&amp;gt;
+      &amp;lt;property name=&amp;quot;javax.persistence.jdbc.driver&amp;quot; value=&amp;quot;com.mysql.jdbc.Driver&amp;quot;/&amp;gt;
+      &amp;lt;property name=&amp;quot;javax.persistence.jdbc.user&amp;quot; value=&amp;quot;root&amp;quot;/&amp;gt;
+      &amp;lt;property name=&amp;quot;eclipselink.ddl-generation&amp;quot; value=&amp;quot;create-tables&amp;quot;/&amp;gt;
+    &amp;lt;/properties&amp;gt;
+  &amp;lt;/persistence-unit&amp;gt;
+&amp;lt;/persistence&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id='create_the_database'&gt;Create the database&lt;/h3&gt;
+
+&lt;p&gt;Now, we have to create the database in our MySQL:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[carlos@caarlos-archlinux sample]$ mysql -u root -p
+mysql&amp;gt; create database foodb;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id='test_it'&gt;Test it&lt;/h3&gt;
+
+&lt;p&gt;Now, let&amp;#8217;s write a test. Open &lt;code&gt;src/main/java/com/github/caarlos0/App.java&lt;/code&gt; and do some code.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public class App {
+    public static void main(String[] args) {
+        Injector i = PersistenceHelper.getInjector();
+
+        FooDao dao = i.getInstance(FooDao.class);
+        Foo foo = new Foo();
+        foo.setBar(&amp;quot;Beer!&amp;quot;);
+        dao.save(foo);
+    }
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Run the tests with &lt;code&gt;mvn exec:java -Dexec.mainClass=&amp;quot;com.github.caarlos0.App&amp;quot; -Dexec.classpathScope=runtime&lt;/code&gt; or direct in your IDE.&lt;/p&gt;
+
+&lt;p&gt;BOOM, it works :)&lt;/p&gt;
+
+&lt;p&gt;Good hack.&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Hello World</title>
+   <link href="http://caarlos0.github.com/junk/2012/06/24/hello-world"/>
+   <updated>2012-06-24T00:00:00-03:00</updated>
+   <id>http://caarlos0.github.com/junk/2012/06/24/hello-world</id>
+   <content type="html">&lt;div align='center'&gt;&lt;img src='http://www.clutchtees.com/images/W/Hello-World-Shirt-Black-01.jpg' width='300px' /&gt;&lt;/div&gt;
+&lt;p&gt;Hello everyone :)&lt;/p&gt;
+
+&lt;p&gt;I just decided to start posting in my own blog, in english. I already have a &lt;a href='http://www.geekvigarista.com'&gt;blog&lt;/a&gt; with some friends. The posts are written in portuguese, it&amp;#8217;s wordpress, and I my last blog was a long time ago (because It&amp;#8217;s boring post in wordpress).&lt;/p&gt;
+
+&lt;p&gt;I don&amp;#8217;t realy like wordpress. Yeah, I just don&amp;#8217;t like it. I think thats is heavy and slow. So, I decided to give a chance to &lt;a href='http://jekyllbootstrap.com/'&gt;Jekyll Bootstrap&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#8217;ll not blog about &amp;#8221;&lt;em&gt;how to setup jekyll&lt;/em&gt;&amp;#8221;, you can read it &lt;a href='http://jekyllbootstrap.com/'&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;It&amp;#8217;s realy simple to configure, put to work, write posts, pages, and I can see the modifications easy in my local server :) And yeah, it&amp;#8217;s realy fast.&lt;/p&gt;
+
+&lt;p&gt;In some minutes, I&amp;#8217;ll update the &lt;a href='http://twitter.github.com/bootstrap'&gt;twitter bootstrap&lt;/a&gt; version, hack jekyll to be responsive, clean home listing the lastest posts and setup author and other things. It also have built-in support for Disqus and Twitter/G+/Facebook/etc (aka addthis) buttons.&lt;/p&gt;
+
+&lt;p&gt;In short: Jekyll is great, and I realy like it!&lt;/p&gt;</content>
+ </entry>
+ 
+ 
+</feed>
