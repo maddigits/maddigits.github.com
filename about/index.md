@@ -71,7 +71,7 @@ ___
 
 ## Experience
 
-* #### 2nd System Analyst - [Totvs S/A](http://www.totvs.com/home) - Out/2012 - Current
+* #### Systems Analyst II - [Totvs S/A](http://www.totvs.com) - Out/2012 - Current
 
 * #### Software Developer - [Cipher Security](http://www.ciphersec.com.br) - Jul/2012 - Out/2012
 	* Development of security applications using mostly Java, and Python sometimes. Also, using Guava, Guice, JBoss AS and Maven.
