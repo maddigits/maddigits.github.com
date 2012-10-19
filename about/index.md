@@ -10,7 +10,7 @@ group: navigation
   <div class="container">
     <img src="http://www.gravatar.com/avatar/7ef3cd04888c6d17f34d43e29ec3d46f?rating=PG&amp;size=150" alt="Avatar" class="img-polaroid">
     <h1>Carlos Alexandro Becker</h1>
-    <p>Sofware Developer at Cipher Security</p>
+    <p>Systems Analyst at TOTVS S/A</p>
     <p>Brazilian, 22 years. <a href="#" rel="tooltip" title="since 01/set/2012 :D @carinemeyer &hearts;">Married.</a></p>
     <p>Joinville - Santa Catarina - Brazil.</p>
     <p><a href="#" onclick="$('html, body').animate({scrollTop: $('#more-info').offset().top - 40 }, 2000);" id="see-more-btn" class="btn btn-primary btn-large">See more!</a></p>
@@ -71,7 +71,7 @@ ___
 
 ## Experience
 
-* #### 2nd System Analyst - [Totvs S/A](http://www.totvs.com/home) - Out/2012 - Current
+* #### Systems Analyst II - [Totvs S/A](http://www.totvs.com) - Out/2012 - Current
 
 * #### Software Developer - [Cipher Security](http://www.ciphersec.com.br) - Jul/2012 - Out/2012
 	* Development of security applications using mostly Java, and Python sometimes. Also, using Guava, Guice, JBoss AS and Maven.
