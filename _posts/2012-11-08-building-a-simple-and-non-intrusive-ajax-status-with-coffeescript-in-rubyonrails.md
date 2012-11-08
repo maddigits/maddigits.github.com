@@ -8,12 +8,22 @@ tags: [coffeescript, rails, ruby]
 ---
 {% include JB/setup %}
 
-So, I just built a simple AJAX status indicator with [spin.js]() and [CoffeeScript]().
-In theory, you will just have to add the `.coffee` file to your assets path, and it shall work.
+## Hi
+
+I just built a simple and non intrusive AJAX status indicator with [spin.js](http://fgnass.github.com/spin.js/) and [CoffeeScript](http://coffeescript.org), and I think that you people may like it :)
+
+By simple, I meant that the code itself is simple. You don't need to know JS/Coffee
+like a ninja.
+
+By non intrusive, I meant that the indicator does not block user interaction with the app,
+and you will see that you don't need to change your code to fit in my indicator ~rules~, so,
+it's also code-non-intrusive. (LOL)
+
+Let's do it!
 
 ## What we need
 
-Basically, the only dependency is the [spin.js]() library. You probably use something
+Basically, the only dependency is the spin.js library. You probably use something
 like `jquery-ujs`, `turbolinks` or even the `jQuery` API itself to made ajax calls.
 
 In my case, I use all of them.
