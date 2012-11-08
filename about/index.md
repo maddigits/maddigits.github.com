@@ -33,28 +33,6 @@ group: navigation
     </ul>
   </div>
 </div>
-<div class="bs-docs-social">
-  <div class="container">
-    <ul class="bs-docs-social-buttons">
-      <li>
-	<b>Some projects I've been working last days: </b>
-      </li>
-      <li>
-	<a href="http://gwtbootstrap.github.com/">GWT-Bootstrap</a>
-      </li>
-      <li>
-	<a href="https://github.com/caarlos0/gunit">GUnit</a>
-      </li>
-      <li>
-	<a href="https://github.com/namekusei/persistence">Namekusei / Persistence</a>
-      </li>
-      <li>
-	<a href="https://github.com/caarlos0/vimfiles">Vim Files</a>
-      </li>
-      
-    </ul>
-  </div>
-</div>
 
 <div markdown="1" id="more-info" class="container">
 
@@ -72,21 +50,22 @@ ___
 ## Experience
 
 * #### Systems Analyst II - [Totvs S/A](http://www.totvs.com) - Out/2012 - Current
+  * Working in the ECM innovation team, researching and implementing new tecnologies to made a better product.
 
 * #### Software Developer - [Cipher Security](http://www.ciphersec.com.br) - Jul/2012 - Out/2012
 	* Development of security applications using mostly Java, and Python sometimes. Also, using Guava, Guice, JBoss AS and Maven.
 
-* #### Developmente Manager / Software Architect - [Anix Sistemas / Digitaldoc](http://www.digitaldoc.com.br) - Jan/2012 - Jul/2012   
+* #### Developmente Manager / Software Architect - [Anix Sistemas / Digitaldoc](http://www.digitaldoc.com.br) - Jan/2012 - Jul/2012
 	* App architecture and development using GWT, Guice, EclipseLink (JPA2), PostgreSQL and Maven. Internal software.
 	* Manage the team and the tasks that should be done.
 
 * #### Software Architect - [Anix Sistemas / Digitaldoc](http://www.digitaldoc.com.br) - Jun/2011 - Jan/2012
 	* [App](http://www.publicacoesmunicipais.com.br) architecture and development using GWT,  MongoDB + Morphia and PostgreSQL + Hibernate.
 	* App architecture and development using GWT, Hibernate and Oracle/PostgreSQL. Not published yet.
-	
+
 * #### Software Developer - [Anix Sistemas / Digitaldoc](http://www.digitaldoc.com.br) - Dez/2010 - Jun/2011
 	* Same activities as in traineeship.
-	
+
 * #### Software Developer (traineeship) - [Anix Sistemas / Digitaldoc](http://www.digitaldoc.com.br) - May/2010 - Dez/2010
 	* Maintenance and developing of new features of a Web GED software. Tecnologies: Java/JSF + XHTML, RichFaces, JavaScript/jQuery/prototype/script.aculo.us and CSS2/3.
 	* Development of a Desktop GED Software. Tecnologies: Eclipse-RCP and DB4O.
@@ -103,12 +82,14 @@ ___
 ___
 
 ## Additional Information
-* Experience using CVS’s (GIT and SVN, also GitHub and Google Code).
-* Knowledge in Linux / Unix.
-* Knowledge in configuration management with Apache Maven.
-* Knowledge in EJB, JSF2 and PrimeFaces, JEE6 as well, with JBoss AS and Glassfish.
-* Knowledge about Javascript, jQuery, CSS, and other web "tools".
-* High skills in Google Guava, Guice and Google Web Toolkit.
-* Basic skills in Python, Ruby and Ruby on Rails.
+* CVSs: GIT and SVN, also GitHub and Google Code.
+* SOs: Linux/Unix, Windows.
+* Shell: BASH, ZSH.
+* Configuration management with Apache Maven.
+* EJB, JSF2 and PrimeFaces, JEE6 as well, with JBoss AS and Glassfish.
+* Javascript, jQuery, CSS, and other web "tools".
+* Google Guava, Guice and Google Web Toolkit.
+* Ruby, Ruby on Rails, CoffeeScript and SASS/LESS.
+* Python.
 
 </div>
