@@ -87,6 +87,7 @@ ___
 	* CVSs: GIT, SVN;
 	* SOs: Linux, Windows;
 	* Shells: BASH, ZSH;
+	* DBs: MySQL, PostgreSQL, MongoDB, Redis;
 	* DI with Google Guice;
 	* Google Guava;
 	* JS, jQuery, CoffeeScript;
