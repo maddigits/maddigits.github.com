@@ -83,7 +83,7 @@ ___
 
 ## Additional Information
 
-* Known technologies:
+* #### Known technologies:
 	* CVSs: GIT, SVN;
 	* SOs: Linux, Windows;
 	* Shells: BASH, ZSH;
@@ -93,13 +93,20 @@ ___
 	* CSS, LESS, SASS;
 	* Ruby/Ruby on Rails Ecosystem.
 
-
-
-* Things I'm learning and/or planning to learn (random order):
+* #### Things I'm learning and/or planning to learn (random order):
 	* Erlang;
 	* Haskell;
 	* Scala;
 	* Lisp;
 	* Deutsch.
+
+* #### Projects:
+	You can see all my opensource projects on my [github profile](https://github.com/caarlos0), anyway, here is my favs and/or the "closed" ones:
+	
+	* [GWT-Bootstrap](http://gwtbootstrap.github.com/);
+	* [todozen](http://tdzen.com);
+	* [MilkManager (provisory name)](208.68.36.164);
+	* Also, there's my [ruby gems](http://rubygems.org/profiles/caarlos0).
+
 
 </div>
