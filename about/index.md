@@ -50,10 +50,10 @@ ___
 ## Experience
 
 * #### Systems Analyst II - [Totvs S/A](http://www.totvs.com) - Out/2012 - Current
-  * Working in the ECM innovation team, researching and implementing new tecnologies to made a better product.
+  * Working in the ECM innovation team, researching and implementing new tecnologies to made a better product. Tecnologies: Java EE6 (JBoss AS), Maven, Ant, Hibernate.
 
 * #### Software Developer - [Cipher Security](http://www.ciphersec.com.br) - Jul/2012 - Out/2012
-	* Development of security applications using mostly Java, and Python sometimes. Also, using Guava, Guice, JBoss AS and Maven.
+	* Development of security applications using mostly Java, and Python sometimes. Also, using Guava, Guice, Java EE6 (JBoss AS), Maven, JPA, EclipseLink and Hibernate.
 
 * #### Developmente Manager / Software Architect - [Anix Sistemas / Digitaldoc](http://www.digitaldoc.com.br) - Jan/2012 - Jul/2012
 	* App architecture and development using GWT, Guice, EclipseLink (JPA2), PostgreSQL and Maven. Internal software.
@@ -82,14 +82,23 @@ ___
 ___
 
 ## Additional Information
-* CVSs: GIT and SVN, also GitHub and Google Code.
-* SOs: Linux/Unix, Windows.
-* Shell: BASH, ZSH.
-* Configuration management with Apache Maven.
-* EJB, JSF2 and PrimeFaces, JEE6 as well, with JBoss AS and Glassfish.
-* Javascript, jQuery, CSS, and other web "tools".
-* Google Guava, Guice and Google Web Toolkit.
-* Ruby, Ruby on Rails, CoffeeScript and SASS/LESS.
-* Python.
+
+* Known technologies:
+	* CVSs: GIT, SVN;
+	* SOs: Linux, Windows;
+	* Shells: BASH, ZSH;
+	* DI with Google Guice;
+	* Google Guava;
+	* JS, jQuery, CoffeeScript;
+	* CSS, LESS, SASS;
+	* Ruby/Ruby on Rails Ecosystem.
+
+
+* Things I'm learning and/or planning to learn (random order):
+	* Erlang;
+	* Haskell;
+	* Scala;
+	* Lisp;
+	* Deutsch.
 
 </div>
