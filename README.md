@@ -1,1 +1,0 @@
-[Just my blog](http://caarlos0.github.com), powered by [Jekyll Bootstrap 0.2.13](https://github.com/plusjade/jekyll-bootstrap).

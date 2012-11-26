@@ -1,14 +1,9 @@
 ---
 layout: post
-title: "Modular Persistence"
-description: "with JPA2, EclipseLink and Google Guice"
-category: "code"
-tags: [java, guice, jpa]
-github_user: "caarlos0"
-github_repo: "persistence-base"
+title: "Modular Persistence with JPA2, EclipseLink and Google Guice"
 
 ---
-{% include JB/setup %}
+Hi everybody!
 
 One of the classes of my post-graduate was the Java Persistence API ([JPA](http://jcp.org/en/jsr/detail?id=317)).
 
@@ -35,10 +30,10 @@ git clone https://github.com/caarlos0/persistence-base sample
 Then, open the project in your preffered IDE, then, open the `pom.xml` file and change the project name to "sample". Save.
 
 Open `src/main/java/com/github/caarlos0/model` and create a class called `Foo` with the following code:
-    
+
     @Entity
     public class Foo extends Bean {
-        
+
         private String bar;
 
         public Foo() {
@@ -75,14 +70,14 @@ We also need to setup our `PersistenceModule` to bind this DAO. Open `src/main/j
         @Override
         protected void configure() {
             install(new JpaPersistModule("base")); // base has to be the PU in persistence.xml
-            
+
             bind(PersistenceInitializer.class);
 
             bind(FooDao.class);
         }
-        
+
     }
-    
+
 If you want to change the _Persistence Unit_ name, you will have to do this in the `install(new JpaPersistModule("base"));` changing _base_ to the name that you want, put the same name in `src/main/resources/META-INF/persistence.xml`.
 
 We have to add classes, configure the database and etc in the `src/main/resources/META-INF/persistence.xml` file:

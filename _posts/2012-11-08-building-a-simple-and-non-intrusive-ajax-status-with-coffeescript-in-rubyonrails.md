@@ -1,12 +1,11 @@
 ---
 layout: post
 title: "Building a simple and non intrusive AJAX status with CoffeeScript in RubyOnRails"
-description: "A simple tutorial explaining how to made a simple coffeescript
-that can automagically show and hide a loading spin while doing a ajax call."
-category: code
-tags: [coffeescript, rails, ruby]
 ---
-{% include JB/setup %}
+
+## tl;dr
+
+> A simple tutorial explaining how to made a simple coffeescript that can automagically show and hide a loading spin while doing a ajax call.
 
 ## Hi
 

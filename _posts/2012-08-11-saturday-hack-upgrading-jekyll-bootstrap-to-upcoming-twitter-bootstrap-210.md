@@ -1,11 +1,7 @@
 ---
 layout: post
 title: "Saturday hack: Upgrading Jekyll Bootstrap to upcoming Twitter Bootstrap 2.1.0"
-description: ""
-category: code
-tags: [twitter-bootstrap, jekyll]
 ---
-{% include JB/setup %}
 
 As you may know, this blog uses [Jekyll Bootstrap](http://jekyllbootstrap.com) as engine. Yeah, Jekyll Bootstrap uses Twitter-Bootstrap, but, it uses the version 2.0.x (mine is 2.0.4, don't remember if I update or if it hsa like this since the begin of times), and the version 2.1.0 is comming!
 Like you can see in the @[twbootstrap](https://twitter.com/twbootstrap) twitter profile, 2.1.0 will be released a few days!
@@ -24,24 +20,24 @@ I'll describe here my 'steps' to update jekyll to the new version!
 First of all, you will need the Node.js Package Manager (NPM), so, install nodejs! In my archlinux box, it was simple like that:
 
     pacman -Sy nodejs
-  
+
 Then, clone the bootstrap repo somewhere:
 
     git clone https://github.com/twitter/bootstrap.git
     cd bootstrap
-  
+
 Also, let's use the correct branch!
 
     git checkout 2.1.0-wip
-  
+
 Ok! Now, we have to install the dependencies to build bootstrap. According to bootstrap github project, we will need recess (a less compiler), uglify-js, and jshint. So, run this:
-  
+
     sudo npm install recess uglify-js jshint -g
 
 Now, the big one! Let's make it!
 
     make
-  
+
 It should provide you a output like this:
 
     [carlos@charmander bootstrap]$ make
@@ -61,11 +57,11 @@ It should provide you a output like this:
 
 Hell yeah dudes! It's much more easy than I think!
 So now, we have to upgrade Jekyll! Let's go?
-  
-  
+
+
 ### Upgrading Jekyll
 
-The compiled and minified files will be at `**bootstrap home**/docs/assets`, and we will have to put them in `**jekyll home**/assets/themes/twitter/bootstrap`. 
+The compiled and minified files will be at `**bootstrap home**/docs/assets`, and we will have to put them in `**jekyll home**/assets/themes/twitter/bootstrap`.
 
 So, will made it easy for you :)
 
@@ -73,17 +69,17 @@ So, will made it easy for you :)
 
 * bootstrap-responsive.css
 * bootstrap.css
-  
+
 #### js
-  
+
 * bootstrap.min.js
-  
+
 #### img
 
 * glyphicons-halflings-white.png
 * glyphicons-halflings.png
 
-Place these files in the correct folder (like I said earlier). 
+Place these files in the correct folder (like I said earlier).
 Now, check your `**jekyll home**/_includes/themes/twitter/default.html` for the imports of the css and js files, check if the filename is correct, etc.
 
 Now, you should be able to run a `jekyll --server`, in my case it works just fine, but, my layout was modified a lot... don't sure if it works in a default jekyll.

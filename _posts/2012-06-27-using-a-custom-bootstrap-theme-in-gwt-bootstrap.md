@@ -1,13 +1,7 @@
 ---
 layout: post
 title: "Using a custom TwBootstrap's theme in GWT-Bootstrap"
-description: "Yeah, you will want it!"
-category: code
-tags: [java, gwt, gwt-bootstrap, twitter-bootstrap]
-github_user: "gwtbootstrap"
-github_repo: "custom-theme-example"
 ---
-{% include JB/setup %}
 
 First of all, if you haven't done it yet, read [Getting started with GWT-Bootstrap](/code/2012/06/26/getting-started-with-gwt-bootstrap/).
 
@@ -18,13 +12,13 @@ First of all, if you haven't done it yet, read [Getting started with GWT-Bootstr
        -DarchetypeGroupId=org.codehaus.mojo \
        -DarchetypeArtifactId=gwt-maven-plugin \
        -DarchetypeVersion=2.4.0
-       
+
 I created my project with the following properties:
 
     Define value for property 'groupId': : com.github.caarlos0
     Define value for property 'artifactId': : Example
-    Define value for property 'version':  1.0-SNAPSHOT: : 
-    Define value for property 'package':  com.github.caarlos0: :  
+    Define value for property 'version':  1.0-SNAPSHOT: :
+    Define value for property 'package':  com.github.caarlos0: :
     Define value for property 'module': : Example
 
 Now, lets add the `GWT-Bootstrap` dependency to the `pom.xml` file:
@@ -38,15 +32,15 @@ Now, lets add the `GWT-Bootstrap` dependency to the `pom.xml` file:
             <url>http://gwtbootstrap.github.com/maven/snapshots</url>
         </repository>
     </repositories>
-    
+
 #### And the dependency itself:
 
     <dependency>
         <groupId>com.github.gwtbootstrap</groupId>
         <artifactId>gwt-bootstrap</artifactId>
         <version>2.0.4.0-SNAPSHOT</version>
-    </dependency>    
-    
+    </dependency>
+
 And then, update your project with a `$ mvn clean install`.
 
 ## Configure GWT-Bootstrap
@@ -147,7 +141,7 @@ Create a new UiBinder class/xml combo called `ExampleUiBinder`, with the followi
             initWidget(ourUiBinder.createAndBindUi(this));
         }
     }
-    
+
 At this point, if everything is ok, we will get a window like this:
 
 ![The no-themed version](http://dl.dropbox.com/u/247142/caarlos0.github.com/Captura%20de%20tela%20de%202012-06-26%2020%3A11%3A18.png)
@@ -260,8 +254,8 @@ If it still dont working, do this:
 For me, this process always works.
 
 
-# Download the code
+# [Download the code](http://github.com/gwtbootstrap/custom-theme-example)
 
-Look at the right sidebar :)
+
 
 

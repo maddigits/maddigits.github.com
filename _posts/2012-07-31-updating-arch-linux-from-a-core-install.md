@@ -1,14 +1,10 @@
 ---
 layout: post
 title: "Updating Arch Linux from a Core Install"
-description: "easy, if you know how to do it..."
-category: linux 
-tags: [archlinux]
 ---
-{% include JB/setup %}
 
 Recently I tried to made a fresh archlinux installation, with my old iso (don't remember exactly what version is)...
-Yo, first, I instaled it with the local mirror only, without any update. 
+Yo, first, I instaled it with the local mirror only, without any update.
 The installation was ok, I rebooted, then try to update, using the arch linux home help about the */lib turn into a symlink to /usr/lib*. **Sweet** mistake. That crap just dont work.
 
 In last times, we have a lot of big arch linux changes:
@@ -31,18 +27,18 @@ So, after arch installed and loaded, do the following commands:
 
 	$ pacman -Sy
 	$ rm -rf /var/run /var/lock && pacman -Sf filesystem
-		
+
 **Reboot.**
 
 	$ pacman -S tzdata
 	$ pacman -U http://pkgbuild.com/~allan/glibc-2.16.0-1-i686.pkg.tar.xz
 	$ rm /etc/profile.d/locale.sh
-		
+
 In this next accept, when promped to update pacman, say **NO**, and, when promped to any replacement, say **YES**.
 
 	$ pacman -Su --ignore glibc
 	$ pacman -Su
-		
+
 **Reboot** again.
 
 So, at this point, everything should work like a boss.

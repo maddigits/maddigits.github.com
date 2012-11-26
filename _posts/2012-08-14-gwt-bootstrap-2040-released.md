@@ -1,11 +1,7 @@
 ---
 layout: post
-title: "GWT Bootstrap 2.0.4.0 released"
-description: "our first version coming out! take a look!"
-category: code
-tags: [gwt-bootstrap, java, gwt, twitter-bootstrap, maven]
+title: "GWT Bootstrap 2.0.4.0 released - our first version coming out! take a look!"
 ---
-{% include JB/setup %}
 
 For those wo don't know, [GWT-Bootstrap](http://gwtbootstrap.github.com) wants to port the [Twitter Bootstrap]() widgets to GWT compatible and easy to use components/widgets.
 
@@ -33,7 +29,7 @@ I'll just copy and paste what I said in the first announcement linked here.
 	Cheers.
 	--
 	Carlos Alexandro Becker aka 'caarlos0'
-		
+
 I want to, again, thank everyone that made this happens, you guys are just awesome.
 
 Right now, GWT-Bootstrap is for the first time disponible in the [Maven Central Repositories](http://search.maven.org/#artifactdetails%7Ccom.github.gwtbootstrap%7Cgwt-bootstrap%7C2.0.4.0%7Cjar), you can change your `pom.xml` to use the stable version like this:
@@ -44,7 +40,7 @@ Right now, GWT-Bootstrap is for the first time disponible in the [Maven Central 
 			<artifactId>gwt-bootstrap</artifactId>
 			<version>2.0.4.0</version>
 	</dependency>
-		
+
 Now, we will work to port the components that wasn't in this first release, and also update to Twitter Bootstrap 2.1.0 ([that this blog is already using](/code/2012/08/11/saturday-hack-upgrading-jekyll-bootstrap-to-upcoming-twitter-bootstrap-210/)).
 
 I also want to, again, apologize. Last weeks my life was changing in much ways, and I didn't has all the time and energy that I like, so, I didn't made much contributions... but, in few weeks it will be more 'stable', and them I'll back with the fury of a hundred billion suns.

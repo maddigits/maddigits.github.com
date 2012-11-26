@@ -1,11 +1,7 @@
 ---
 layout: post
-title: "Getting started with GWT-Bootstrap"
-description: "Have Twitter Bootstrap styles in your GWT application"
-category: code
-tags: [java, gwt, gwt-bootstrap, twitter-bootstrap]
+title: "Getting started with GWT-Bootstrap - Have Twitter Bootstrap styles in your GWT application"
 ---
-{% include JB/setup %}
 
 [GWT-Bootstrap](http://gwtbootstrap.github.com) is a project that aims to provide all the [Twitter Bootstrap](http://twitter.github.com/bootstrap) styles and widgets to GWT applications.
 I have this idea in Jan/2012, and it was not a library, initally, I just made a simple `InputText` and `Button` widgets, and I think: _"Why not?"_.

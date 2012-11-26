@@ -1,11 +1,7 @@
 ---
 layout: post
-title: "Howto setup a git server"
-description: "with gitolite"
-category: code
-tags: [git, server]
+title: "Howto setup a git server with gitolite"
 ---
-{% include JB/setup %}
 
 ## Setup
 You will need:
@@ -80,7 +76,7 @@ Now, you will be able to clone the `foo` repo from the configured machines, wich
 
 ### Final throughts
 
-In this tutorial, I used a `ubuntu-12.10-beta2` box, but I believe that it works with older versions too. 
+In this tutorial, I used a `ubuntu-12.10-beta2` box, but I believe that it works with older versions too.
 
 If you have any doubt, please share in the comment box above.
 

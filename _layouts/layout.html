@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>{{ page.title }}</title>
+  <meta name="author" content="Carlos Alexandro Becker" />
+  <meta name="description" content="Writings, tutorials, tips and other things related to software development." />
+  <link rel="alternate" type="application/rss+xml" href="http://feeds.feedburner.com/caarlos0" />
+  <link rel="stylesheet" href="/css/compiled/base.css" type="text/css" media="screen, projection" />
+  <link rel="stylesheet" href="/css/plugins/pygments.css" type="text/css" />
+  <link href="/webfonts/ss-social.css" rel="stylesheet" />
+  <link media="only screen and (max-device-width: 480px)" href="/css/compiled/iphone.css" type="text/css" rel="stylesheet" />
+  <link media="only screen and (device-width: 768px)" href="/css/compiled/iphone.css" type="text/css" rel="stylesheet" />
+  <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+  <script type="text/javascript" src="/js/compiled/application.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      {{ page.script }}
+    });
+  </script>
+</head>
+
+<body>
+  <section class="sidebar">
+    <a href="/">
+      <img src="http://gravatar.com/avatar/7ef3cd04888c6d17f34d43e29ec3d46f?s=142" height="125" width="125" class="avatar" />
+    </a>
+
+    <section class="name">
+      <a href="/">
+        <span id="name">Carlos</span>
+        <span id="surname">Becker</span>
+      </a>
+    </section>
+
+    <section class="meta">
+      <a href="https://github.com/caarlos0" class="ss-icon ss-social-circle">github</a>
+      <a href="https://twitter.com/caarlos0" class="ss-icon ss-social-circle">twitter</a>
+      <a href="http://feeds.feedburner.com/caarlos0" class="ss-icon ss-social-circle">rss</a>
+    </section>
+
+    <section class="sections">
+      <ul>
+        <li><a href="/about.html">about</a></li>
+        <li><a href="/projects.html">projects</a></li>
+      </ul>
+    </section>
+  </section>
+
+  {{ content }}
+
+
+</body>
+
+</html>

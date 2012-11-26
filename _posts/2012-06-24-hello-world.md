@@ -1,12 +1,7 @@
 ---
 layout: post
 title: "Hello World"
-description: "first post :)"
-tagline: "oee"
-category: "junk"
-tags: [dummy]
 ---
-{% include JB/setup %}
 
 
 <div align="center"><img width="300px" src="http://www.clutchtees.com/images/W/Hello-World-Shirt-Black-01.jpg" /></div>

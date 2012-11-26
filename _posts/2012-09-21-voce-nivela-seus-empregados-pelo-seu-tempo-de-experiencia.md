@@ -1,11 +1,7 @@
 ---
 layout: post
 title: "Você nivela seus empregados pelo seu tempo de experiência?"
-description: "WHAT?"
-category: career
-tags: [talk]
 ---
-{% include JB/setup %}
 
 Olá! Yep, eu decidi escrever este post em português, pelo simples fato de que não sei se ele se aplica à outros países fora do Brasil-sil-sil.
 

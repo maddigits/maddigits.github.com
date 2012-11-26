@@ -1,11 +1,7 @@
 ---
 layout: post
 title: "Linux and MTP: Just a hell"
-description: "My tests with it, and maybe someday a solution..."
-category: linux
-tags: [android, archlinux]
 ---
-{% include JB/setup %}
 
 Recently I bought a Samsung Galaxy X phone (brazilian Nexus). Yeah, it is a pretty cool device, fast, etc etc... oh, yep, a little expensive too...
 
