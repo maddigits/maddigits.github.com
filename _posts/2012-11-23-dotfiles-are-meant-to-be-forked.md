@@ -4,11 +4,11 @@ title: "Dotfiles Are Meant to Be Forked"
 description: "zsh and vim on steroids"
 ---
 
-#### Notícias do dia
+## Notícias do dia
 
 > Não estou com vontade de blogar em inglês.
 
-#### fuck yeah zsh, automate all the things!
+## fuck yeah zsh, automate all the things!
 
 Bom, faz um tempinho que substituí meu bom e velho bash de guerra pelo ainda mais fabuloso ZSH. Também utilizo o VIm há um bom tempo, embora, ultimamente estaja utilizando mais o SublimeText.
 
@@ -16,19 +16,19 @@ Anyway, creio que todo desenvolvedor que se preze cria seus milhoes de scripts, 
 
 Yeah, os scripts mágicos geradores de build são os mais básicos, embora seja muito fácil "complicá-los".
 
-#### origins
+## origins
 
 Enfim, como agora tenho uma nova arma (zsh), alguns dias atrás, forkeei o projeto [holman/dotfiles](http://github.com/holman/dotfiles), pois estava achando o oh-my-zsh muito "pesado" (e não tinha diversas facilidades relacionadas a backup de configurações), e, realmente, os arquivos do holman estão bem mais enxutos e leves.
 
 Porém, ele é voltado ao OSX. Eu sou pobre. Logo, utilizo Linux (na minha mente isso é lógico, se na sua não é, azar seu :]). Os dotfiles do holman estavam diretamente acoplados a homebrew, funções e aplicativos exclusivos do SO da maçã. O que eu fiz? Of course, tunei!
 
-#### what?
+## what?
 
 Yeah bro, o fato de você utilizar os dotfiles de outra pessoa como base, não significa que você TENHA QUE FICAR COM ELES ASSIM PRA SEMPRE.
 
 Sendo assim, removi tudo relacionado ao OSX que consegui encontrar, adicionei algum maven/archlinux-love, alguma coisa que utilizo no trabalho, mudei algo ali, algo aqui, e.. BOOM, meu próprio [dotfiles](http://github.com/caarlos0/dotfiles).
 
-#### get it, bro
+## get it, bro
 
 Para instalar, é necessário ter o rbenv configurado e funcionando, com algum ruby > 1.8 instalado, após isso, siga o "tutorial" no readme do projeto, e tudo deverá funcionar ;)
 
