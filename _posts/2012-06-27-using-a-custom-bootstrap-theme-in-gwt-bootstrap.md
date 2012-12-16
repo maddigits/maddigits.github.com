@@ -1,9 +1,10 @@
 ---
 layout: post
-title: "Using a custom TwBootstrap's theme in GWT-Bootstrap"
+title: "Using a custom Bootstrap theme with GWT-Bootstrap"
 ---
 
-First of all, if you haven't done it yet, read [Getting started with GWT-Bootstrap](/code/2012/06/26/getting-started-with-gwt-bootstrap/).
+First of all, if you haven't done it yet, read
+[Getting started with GWT-Bootstrap](/code/2012/06/26/getting-started-with-gwt-bootstrap/).
 
 ## Create the GWT-Project
 
@@ -254,7 +255,7 @@ If it still dont working, do this:
 For me, this process always works.
 
 
-# [Download the code](http://github.com/gwtbootstrap/custom-theme-example)
+#### [Download the code](http://github.com/gwtbootstrap/custom-theme-example)
 
 
 

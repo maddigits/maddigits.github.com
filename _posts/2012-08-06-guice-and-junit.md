@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Guice and JUnit - it could be a love story &hearts;"
+title: "Guice and JUnit"
 ---
 
 First of all: **Do you use Guice as Depency Injection Container in your Apps? If no, why not?**

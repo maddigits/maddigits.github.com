@@ -21,9 +21,7 @@ To show hot it works, let's do a little example.
 
 First, clone the repo:
 
-```
-git clone https://github.com/caarlos0/persistence-base sample
-```
+    git clone https://github.com/caarlos0/persistence-base sample
 
 ### Do your hacks
 

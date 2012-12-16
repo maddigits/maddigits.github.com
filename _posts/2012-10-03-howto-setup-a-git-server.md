@@ -13,9 +13,7 @@ You will need:
 
 Install everything:
 
-```
-$ apt-get install git ssh gitolite git-daemon-run
-```
+		$ apt-get install git ssh gitolite git-daemon-run
 
 ## Configs
 

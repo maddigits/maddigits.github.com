@@ -5,11 +5,15 @@ title: "Building a simple and non intrusive AJAX status with CoffeeScript in Rub
 
 ## tl;dr
 
-> A simple tutorial explaining how to made a simple coffeescript that can automagically show and hide a loading spin while doing a ajax call.
+> A simple tutorial explaining how to made a simple coffeescript that can
+automagically show and hide a loading spin while doing a ajax call.
 
 ## Hi
 
-I just built a simple and non intrusive AJAX status indicator with [spin.js](http://fgnass.github.com/spin.js/) and [CoffeeScript](http://coffeescript.org), and I think that you people may like it :)
+I just built a simple and non intrusive AJAX status indicator with [
+spin.js](http://fgnass.github.com/spin.js/) and
+[CoffeeScript](http://coffeescript.org), and I think that you people may like
+it :)
 
 By simple, I meant that the code itself is simple. You don't need to know JS/Coffee
 like a ninja.

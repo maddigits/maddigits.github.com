@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Dotfiles Are Meant to Be Forked"
-description: "zsh and vim on steroids"
 ---
 
 ## Notícias do dia
