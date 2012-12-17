@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Rocking out with Google Guava - the first library you should add to your new projects"
+title: "Rocking out with Google Guava"
 ---
 
 According to the [project site on Google Code](http://code.google.com/p/guava-libraries/), *The Guava project contains several of Google's core libraries that we rely on in our Java-based projects: collections, caching, primitives support, concurrency libraries, common annotations, string processing, I/O, and so forth*.
