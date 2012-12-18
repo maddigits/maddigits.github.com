@@ -36,7 +36,7 @@ Except for the fact that it was full of Mac OSX-related things.
 So I tweaked, removed, tweaked, cleaned-up, tweaked, etc etc, and there it is, my all-new
 [dotfiles][dotfiles]!
 
-## so et it, bro
+## so get it, bro
 
 It has some dependencis, basically:
 
