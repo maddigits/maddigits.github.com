@@ -3,48 +3,67 @@ layout: post
 title: "Dotfiles Are Meant to Be Forked"
 ---
 
-## Notícias do dia
+Well, it been a while since I replaced my old but gold bash by the greatest zsh.
+I do also use vim for more time that I can remember, but, last days I'm using
+SublimeText most of time. 
 
-> Não estou com vontade de blogar em inglês.
+Anyway, I have my personal computer and my job computer, and, like every developer,
+I create aliases and scripts for everything I think I could use a lot of times.
 
-## fuck yeah zsh, automate all the things!
+![Automate all the things!](http://www.anchor.com.au/blog/wp-content/uploads/2011/08/automate-all-the-things1.png)
 
-Bom, faz um tempinho que substituí meu bom e velho bash de guerra pelo ainda mais fabuloso ZSH. Também utilizo o VIm há um bom tempo, embora, ultimamente estaja utilizando mais o SublimeText.
+Well... you can imagine.. my bashrc had about 300 lines. It was really big. Almost impossible
+to share with other. Bloated. etc...
 
-Anyway, creio que todo desenvolvedor que se preze cria seus milhoes de scripts, aliases, configurações e etc.. tudo para evitar retrabalhos (tipo ir em milhões de lugares executar um `mvn clean install`) e, creio que o motivo maior seja, AUMENTAR A PRODUTIVIDADE.
+Then, I just make a huge step in my life: move to [ZSH][zsh]!
 
-Yeah, os scripts mágicos geradores de build são os mais básicos, embora seja muito fácil "complicá-los".
+## ZSH
 
-## origins
+According to [Arch Wiki about ZSH][arch_zsh_wiki], _"Zsh is a powerful shell that
+operates as both an interactive shell and as a scripting language interpreter.
+While being compatible with Bash (not by default, only if you issue "emulate sh"),
+it offers many advantages such as: Faster, Improved tab completion, Improved globbing,
+Improved array handling, Fully customisable"_.
 
-Enfim, como agora tenho uma nova arma (zsh), alguns dias atrás, forkeei o projeto [holman/dotfiles](http://github.com/holman/dotfiles), pois estava achando o oh-my-zsh muito "pesado" (e não tinha diversas facilidades relacionadas a backup de configurações), e, realmente, os arquivos do holman estão bem mais enxutos e leves.
+But, well, I didn't know where to start. So, I forked [oh-my-zsh][ohmyzsh] project.
+I use it for a while, also did a contribution that troll everyone (that's another
+story), but well, it has so many thing I didn't use, and doesn't had a simple
+way to share config files across computeres.
 
-Porém, ele é voltado ao OSX. Eu sou pobre. Logo, utilizo Linux (na minha mente isso é lógico, se na sua não é, azar seu :]). Os dotfiles do holman estavam diretamente acoplados a homebrew, funções e aplicativos exclusivos do SO da maçã. O que eu fiz? Of course, tunei!
+Then I see [holman's dotfiles](http://github.com/holman/dotfiles) and it was perfect!
+Except for the fact that it was full of Mac OSX-related things.
 
-## what?
+So I tweaked, removed, tweaked, cleaned-up, tweaked, etc etc, and there it is, my all-new
+[dotfiles][dotfiles]!
 
-Yeah bro, o fato de você utilizar os dotfiles de outra pessoa como base, não significa que você TENHA QUE FICAR COM ELES ASSIM PRA SEMPRE.
+## so et it, bro
 
-Sendo assim, removi tudo relacionado ao OSX que consegui encontrar, adicionei algum maven/archlinux-love, alguma coisa que utilizo no trabalho, mudei algo ali, algo aqui, e.. BOOM, meu próprio [dotfiles](http://github.com/caarlos0/dotfiles).
+It has some dependencis, basically:
 
-## get it, bro
+- rbenv
+- ruby 1.9+
 
-Para instalar, é necessário ter o rbenv configurado e funcionando, com algum ruby > 1.8 instalado, após isso, siga o "tutorial" no readme do projeto, e tudo deverá funcionar ;)
+So, just follow the [readme][readme] (pretty simple), and, well, it should be working.
 
-Você pode alterar suas configurações e chamar `reload!` para atualizar o terminal atual (algo como `source ~/.zshrc`).
+If you change something, you'll not see the changes unless you open a new terminal window
+or call `reload!`.
 
-`h` é sua `~`.
-`c` é sua pasta `~/code`
+Some cool aliases:
 
-Diversos aliases.
+- `h` is your `~/` folder;
+- `c` is your `~/code` (change it in `.zshrc` file);
+- `d` is the `~/.dotfiles` folder
 
-Execute `alias` para ver todos :)
+You can run a `alias` to see all avaliable aliases. But, well, take a look inside the folder,
+there is a lot of standalone binaries too!
 
-(BTW, caso você não trabalhe na totvs, `rm -rf ~/.dotfiles/totvs`).
+If you want, you can also read the [holman's post about his dotfiles](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/).
 
-Tem mais umas dicas e coisas a respeito no [post original do zach](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/).
+If you wanna contribute with anything, made a ass-kicker pull-request. I'll be glad to see it!
 
-Caso tenha algo que gostaria de acrescentar, não deixe de fazer um pull-request ;)
+That's all folks, hope see you soon!
 
-That's all folks! Até mais.
-
+[dotfiles]: http://github.com/caarlos0/dotfiles
+[readme]: https://github.com/caarlos0/dotfiles#install
+[zsh]: http://www.zsh.org/
+[arch_zsh_wiki]: https://wiki.archlinux.org/index.php/Zsh
