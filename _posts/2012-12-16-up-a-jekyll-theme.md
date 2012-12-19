@@ -4,28 +4,39 @@ title: "UP: A Jekyll theme"
 category: posts
 ---
 
-After a while with Jekyll Bootstrap, I just decided it was very bloated. So,
-few days ago, I forked the old [Zach Holman's blog][zach]. Like at first, dislike after
-a while.
+After a while using [Jekyll Bootstrap][jekyll_bootstrap], I just realized that it was
+so much bloated. Then, few days ago, I forked the old [Zach Holman's blog][zach], and
+started to tweak my own theme based on theirs (that now is [opensource][left]). At first,
+I like it, but after a while, I just start thinking that it had a "old style" design.
 
-So, I just decided to work in my own layout, and then, [**up**][up] was born.
+So, I decided to work in my own layout, and then, [**up**][up] was born.
 
 ## [Up][up]
 
 [Up][up] is a clean and beautiful [Bootstrap](http://getbootstrap.com) based layout
 for [Jekyll](https://github.com/mojombo/jekyll).
 
-It's designed to be an easy layout to modify for your own blog. It was
-based on [zachholman's](http://zachholman.com/) blog themes: the "old" one, now
-opensourced as [left](http://github.com/holman/left) and in his actual
-theme, that's not opensource (I believe), but I steal some ideas anyway. I also
-took something from [jekyll-bootstrap](https://github.com/plusjade/jekyll-bootstrap),
-and, of course, I'm using [bootstrap](https://github.com/twitter/bootstrap) as
-a base for all the thing.
+It's designed to be an easy layout to modify for your own blog. It was based on
+[zachholman's][zach] blog themes: the "old" one, now opensourced as [left][left]
+and in his actual theme, that's not opensource (I believe), but I steal some ideas
+anyway. I also took something from
+[jekyll-bootstrap](https://github.com/plusjade/jekyll-bootstrap), and, of course,
+I'm using [bootstrap](https://github.com/twitter/bootstrap) as a base for all the thing.
 
 ![Up](http://i.imgur.com/4bKG5.png)
 
+It's fully-responsive (open it in your phone and/or tablet and you will see), with
+no JS at all (except twitter button, but you can remove it, of course), with a
+custom bootstrap build, compiled and minified with custom CSS in a very small CSS
+file (that's why it's really fast). Oh, I almost forgot: it also have an
+[atom feed](/atom.xml).
+
+I also steal-and-tweak a Rakefile to made you able to easily create new posts and start
+server in preview mode.
+
 ## Installation
+
+Up installation is not that hard. Just do this:
 
 - Install Jekyll: `gem install jekyll`
 - Fork [this repository][up]
@@ -94,3 +105,5 @@ all-new blog or tweet a shout out to us, well hey, sure we'll take it.
 
 [up]: https://github.com/caarlos0/up
 [zach]: http://zachholman.com
+[left]: http://github.com/holman/left
+[jekyll_bootstrap]: http://jekyllbootstrap.com/
