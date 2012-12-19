@@ -4,8 +4,9 @@ title: "Seven Languages in Seven Weeks -    Erlang"
 category: posts
 ---
 
-So, I just bought [_"Seven Languages in Seven Weeks"_][book], and read the Ruby
-chapter, not big deal at all, skip Io, Prolog and Scala, fall in Erlang!
+So, I just bought [_"Seven Languages in Seven Weeks"_][book]. I've read the Ruby
+chapter, not big deal at all, so I slipt it. I also skip Io, Prolog and Scala
+(for now), and then, fall in Erlang!
 
 I'll explain it better another day, but, as you may know, Erlang is a
 concurrency language, that used to turn difficult thing easy and easy
@@ -101,7 +102,7 @@ Well, day 3 was pretty big. We will now work with multi concurrency.
 
 #### Problem 1
 
-> Monitor the `translate_service` and restart it should it die.
+> Monitor the `translate_service` and restart if should it die.
 
 That is a more complex example, so I'll put the [entire file](https://github.com/caarlos0/erlang-playground/blob/master/day3_examples_exs/translate_service.erl):
 
