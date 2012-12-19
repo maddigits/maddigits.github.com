@@ -5,7 +5,7 @@ category: posts
 ---
 
 After a while with Jekyll Bootstrap, I just decided it was very bloated. So,
-somedays ago, I forked the old Zach Holman's blog. Like at first, dislike after
+few days ago, I forked the old [Zach Holman's blog][zach]. Like at first, dislike after
 a while.
 
 So, I just decided to work in my own layout, and then, [**up**][up] was born.
@@ -93,4 +93,4 @@ If you'd like give [me](http://github.com/caarlos0),
 all-new blog or tweet a shout out to us, well hey, sure we'll take it.
 
 [up]: https://github.com/caarlos0/up
-
+[zach]: http://zachholman.com
