@@ -71,12 +71,14 @@ above, `nil` are automagically evaluated to `false`, which also is an object
 That's the behavior I expect from Java. It would be really nice to use Java `null`
 like a object, isn't? Take another Ruby example:
 
-```ruby
+
+{% highlight ruby linenos %}
 t = nil
 puts t.class # NilClass
 puts t.nil? # true
 puts "t isn't nil" if t # nothing, t is nil
-```
+{% endhighlight %}
+
 
 In Ruby, [every object has a `nil?` method][rdoc_nil], and `nil` also is an
 object, which is awesome. I realy miss that behavior in Java.
