@@ -72,7 +72,12 @@
       </div>
     </section>
   </div>
-  {% include analytics.html %}
+  {% if site.analytics %}
+    {% include analytics.html %}
+  {% endif %}
+  {% if site.gauges %}
+    {% include gauges.html %}
+  {% endif %}
 </body>
 
 </html>
