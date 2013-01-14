@@ -50,7 +50,7 @@ genarally a dashboard). I commited this mistake too.
 <script type="text/javascript">
 Morris.Donut({
   element: "my-chart-placeholder",
-  data: <%= raw Model.chart_data.to_json %>
+  data: <%= raw ModelController.chart_data.to_json %>
 })
 </script>
 <div id="my-chart-placeholder"></div>
@@ -68,7 +68,7 @@ Use data attributes!
 > dashboard.html.erb
 
 {% highlight erb %}
-<div id="my-chart-placeholder" data-chart="<%= Model.chart_data.to_json %>">
+<div id="my-chart-placeholder" data-chart="<%= ModelController.chart_data.to_json %>">
 </div>
 {% endhighlight %}
 
