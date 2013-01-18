@@ -171,9 +171,9 @@ don't, like I just said above.
 **That's it.**
 
 
-## Inheretance
+## Inheritance
 
-Yeah, JS also has inheretance support, even if it much like a hack.
+Yeah, JS also has inheritance support, even if it much like a hack.
 
 Archieve that with CoffeeScript is **really** simple, pretty much like Java
 or other language:
