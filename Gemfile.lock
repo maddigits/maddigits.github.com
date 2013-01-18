@@ -1,8 +1,6 @@
 GEM
   remote: http://rubygems.org/
   specs:
-    bootstrap-sass (2.2.2.0)
-      sass (~> 3.2)
     classifier (1.3.3)
       fast-stemmer (>= 1.0.0)
     directory_watcher (1.4.1)
@@ -14,6 +12,9 @@ GEM
       liquid (~> 2.3)
       maruku (~> 0.5)
       pygments.rb (~> 0.3.2)
+    jekyll-asset-pipeline (0.1.5)
+      jekyll (~> 0.12)
+      liquid (~> 2.4)
     kramdown (0.13.8)
     liquid (2.4.1)
     maruku (0.6.1)
@@ -24,8 +25,6 @@ GEM
       yajl-ruby (~> 1.1.0)
     rdiscount (1.6.8)
     sass (3.2.5)
-    sass-twitter-bootstrap (2.2.2.1)
-      sass
     syntax (1.0.0)
     yajl-ruby (1.1.0)
 
@@ -33,8 +32,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bootstrap-sass
   jekyll
+  jekyll-asset-pipeline
   rdiscount
   sass
-  sass-twitter-bootstrap

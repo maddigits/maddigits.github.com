@@ -1,20 +1,21 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <title>{{ page.title }}</title>
 
   <meta name="author" content="{{ site.author.name }}" />
   <meta name="description" content="{{ site.description }}" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="alternate" type="application/rss+xml" href="/atom.xml" />
 
-  <link href="/css/up.min.css" rel="stylesheet">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300'
-  rel='stylesheet' type='text/css'>
+    rel='stylesheet' type='text/css'>
+
+  {% css_asset_tag global %}
+  - /_assets/up.less
+  {% endcss_asset_tag %}
 
   <!--[if lt IE 9]>
   <link href="/css/font-awesome-ie7.css" rel="stylesheet">
@@ -25,21 +26,26 @@
 </head>
 
 <body>
-  <div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="navbar-inner">
-      <div class="container">
-        <a class="brand" href="/">{{ site.title }}</a>
-        <ul class="nav">
-          <li><a href="/about">About</a></li>
-        </ul>
-        <ul class="nav pull-right">
-          <li>
-            <a href="/atom.xml" title="Atom Feed">
-              <i class="icon-rss icon-large"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
+  <div class="navbar navbar-fixed-top">
+    <div class="container">
+      <a class="brand" href="/">{{ site.title }}</a>
+      <ul class="nav pull-right hidden-phone">
+        <li>
+          <a href="http://github.com/caarlos0/up" title="Get this theme!">
+            <i class="icon-download icon-large"></i>
+          </a>
+        </li>
+        <li>
+          <a title="About me" href="/about">
+            <i class="icon-user icon-large"></i>
+          </a>
+        </li>
+        <li>
+          <a href="/atom.xml" title="Atom Feed">
+            <i class="icon-rss icon-large"></i>
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
 
