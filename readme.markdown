@@ -1,3 +1,7 @@
+Don't use this as a base for your blog right now. It's unstable.
+
+------------
+
 That's just my blog =)
 
 You can access it [here](http://caarlos0.github.com).
