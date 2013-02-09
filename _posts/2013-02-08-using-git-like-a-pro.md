@@ -118,6 +118,21 @@ much like SVN.
 
     git pull --rebase
 
+
+### Aliases
+(by [@derekstavis](https://github.com/derekstavis))
+
+You can setup aliases in git, so get smaller commands and save time. Examples:
+
+    # configuring...
+    git config --global alias.co checkout
+    git config --global alias.s status
+
+    # using
+    git s
+    git co https://github.com/caarlos0/up
+
+
 ---
 
 Let's make this list bigger! Have your own tip/trick? So share it with us!
