@@ -97,6 +97,27 @@ You can also specify something like `HEAD~3` to get back 3 commits from HEAD.
 
     git clean -df
 
+
+#### Stashing
+(by [@thiagolenz](https://github.com/thiagolenz))
+
+This is useful when you want to switch branches, but don't want to commit a
+half-done work just to get back to it later.
+
+    git stash # save the current state
+    # later...
+    git stash pop # apply the stash to your current HEAD and remove it from your stack.
+
+More info can be found [here](http://git-scm.com/book/en/Git-Tools-Stashing).
+
+#### Merge acting like it's an unique branch
+(by [@thiagolenz](https://github.com/thiagolenz))
+
+This will do the merge without creating the "merge commit", acting
+much like SVN.
+
+    git pull --rebase
+
 ---
 
 Let's make this list bigger! Have your own tip/trick? So share it with us!
