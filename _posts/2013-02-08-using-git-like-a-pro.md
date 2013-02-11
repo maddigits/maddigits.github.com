@@ -94,7 +94,7 @@ You can also specify something like `HEAD~3` to get back 3 commits from HEAD.
 
 
 #### Remove files that have not been added to staging area
-(by [@luizkowalski](https://github.com/luizkowalski))
+> by [@luizkowalski](https://github.com/luizkowalski)
 
     git clean -df
 
