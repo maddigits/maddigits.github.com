@@ -4,11 +4,12 @@ title: "Using git like a PRO"
 category: posts
 ---
 
-Git has a lot of features, but, well, 90% of who use it doesn't know half of
-them, and, well, maybe, someday, one of those features can "save your life".
+Git has a lot of features, and I bet that 90% of who use it (including me)
+doesn't know half of them. Well, maybe, someday, one of those _"unknown features"_
+can _"save your life"_.
 
 So, I decided to compile a small list of useful git commands, tips and tricks
-that use or used sometime in my work.
+that I use or used sometime in my work.
 
 Of course, if you have yours tricks/tips (and you probably have), comment above
 the post or ping me at twitter/mail/anything, I'll be glad to add your tip and
@@ -83,7 +84,7 @@ wrong branch)... this is how to move it to another branch.
 
 
 #### Revert your entire tree to the last commit state
-(by [@luizkowalski](https://github.com/luizkowalski))
+> by [@luizkowalski](https://github.com/luizkowalski)
 
 Useful when you do some crap and want to throw it all away.
 
@@ -99,7 +100,8 @@ You can also specify something like `HEAD~3` to get back 3 commits from HEAD.
 
 
 #### Stashing
-(by [@thiagolenz](https://github.com/thiagolenz))
+
+> by [@thiagolenz](https://github.com/thiagolenz)
 
 This is useful when you want to switch branches, but don't want to commit a
 half-done work just to get back to it later.
@@ -111,7 +113,8 @@ half-done work just to get back to it later.
 More info can be found [here](http://git-scm.com/book/en/Git-Tools-Stashing).
 
 #### Merge acting like it's an unique branch
-(by [@thiagolenz](https://github.com/thiagolenz))
+
+> by [@thiagolenz](https://github.com/thiagolenz)
 
 This will do the merge without creating the "merge commit", acting
 much like SVN.
@@ -120,7 +123,8 @@ much like SVN.
 
 
 ### Aliases
-(by [@derekstavis](https://github.com/derekstavis))
+
+> by [@derekstavis](https://github.com/derekstavis)
 
 You can setup aliases in git, so get smaller commands and save time. Examples:
 
@@ -135,4 +139,5 @@ You can setup aliases in git, so get smaller commands and save time. Examples:
 
 ---
 
-Let's make this list bigger! Have your own tip/trick? So share it with us!
+Let's make this list bigger! Have your own tip/trick? Something I forgot to add?
+Share it with us!
