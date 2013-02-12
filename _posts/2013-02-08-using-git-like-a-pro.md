@@ -29,7 +29,7 @@ Let's do this.
 This will show the log of your local operations in the git tree, useful to get
 revision code of a specific commit (see next item).
 
-    git revlog
+    git reflog
 
 #### Get revision code for anything
 
