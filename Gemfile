@@ -1,7 +1,7 @@
-source :rubygems
+source 'https://rubygems.org'
 
 gem 'rdiscount'
 gem 'jekyll'
 
-gem 'rmagick', git: 'https://github.com/rmagick/rmagick.git'
+gem 'rmagick'
 
