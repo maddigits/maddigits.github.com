@@ -71,9 +71,9 @@ it before.
 In this example, let's install [my dotfiles for mac][7] (basically, the
 holman's with some custom things):
 
-    git clone  https://github.com/caarlos0/dotfiles-mac
+    git clone  https://github.com/caarlos0/dotfiles-mac ~/.dotfiles
     cd ~/.dotfiles
-    script/install
+    script/bootstrap
     source ~/.zshrc
     dot
 
