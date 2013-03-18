@@ -120,6 +120,11 @@ And boom! It works =) Pretty tricky.
 
 - Everyone likes Emojis. Take this [cheat sheet][11];
 
+As suggested in comments and by some friends:
+
+- Install [iTerm2][12], a cool Terminal.app replacement;
+- Install [Alfred][13], a produtivity tool.
+
 ****
 
 Have your own tips? Share with the other fellows in comment box bellow.
@@ -138,3 +143,5 @@ Cheers!
 [9]: https://github.com/sstephenson/rbenv/
 [10]: https://github.com/defunkt/hub
 [11]: http://www.emoji-cheat-sheet.com
+[12]: http://www.iterm2.com/
+[13]: http://www.alfredapp.com/
