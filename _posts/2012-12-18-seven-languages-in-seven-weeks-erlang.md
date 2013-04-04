@@ -25,13 +25,15 @@ So, I'll share with you guys my solutions to the problems proposed by the book.
 
 Solution:
 
-    list_length([]) -> 0;
-    list_length(String) ->
-      [_ | Tail] = String,
-      1 + list_length(Tail).
-    count_words(Text) ->
-      R = re:split(Text, " "),
-      list_length(R).
+{% highlight erlang %}
+list_length([]) -> 0;
+list_length(String) ->
+  [_ | Tail] = String,
+  1 + list_length(Tail).
+count_words(Text) ->
+  R = re:split(Text, " "),
+  list_length(R).
+{% endhighlight %}
 
 Just a simple pattern matching and a tail recursion in list length, and in
 `count_words` we has regex to split the text by space, to actually get the words.
@@ -42,13 +44,15 @@ way. Erlang already has a function to count words, FYI.
 
 > Write a function that uses recursion to count to ten.
 
-    count_until(Val, Max) when Val < Max ->
-      io:fwrite("~w~n", [Val]),
-      count_until(Val + 1, Max);
-    count_until(_, Max) ->
-      io:fwrite("~w~n", [Max]).
-    count_until(Max) ->
-      count_until(0, Max).
+{% highlight erlang %}
+count_until(Val, Max) when Val < Max ->
+  io:fwrite("~w~n", [Val]),
+  count_until(Val + 1, Max);
+count_until(_, Max) ->
+  io:fwrite("~w~n", [Max]).
+count_until(Max) ->
+  count_until(0, Max).
+{% endhighlight %}
 
 Nothing new here. At all.
 
@@ -60,9 +64,11 @@ Nothing new here. At all.
 
 What a easy problem. Take the solution:
 
-    print_msg(success) -> io:fwrite("Success~n");
-    print_msg({error, Message}) ->
-      io:fwrite("sir... we got an error: ~s~n", [Message]).
+{% highlight erlang %}
+print_msg(success) -> io:fwrite("Success~n");
+print_msg({error, Message}) ->
+  io:fwrite("sir... we got an error: ~s~n", [Message]).
+{% endhighlight %}
 
 ## Day 2
 
@@ -74,8 +80,10 @@ What a easy problem. Take the solution:
 
 Solution with a simple list comprehension:
 
-    lang(Tuples, Key) ->
-      [TupleValue || {TupleKey, TupleValue} <- Tuples, (Key == TupleKey)].
+{% highlight erlang %}
+lang(Tuples, Key) ->
+  [TupleValue || {TupleKey, TupleValue} <- Tuples, (Key == TupleKey)].
+{% endhighlight %}
 
 #### Problem 2
 
@@ -85,9 +93,10 @@ Solution with a simple list comprehension:
 
 Pretty easy, huh? Solution:
 
-    full_price(List) ->
-      [{Name, Price*Quantity} || {Name, Quantity, Price} <- List].
-
+{% highlight erlang %}
+full_price(List) ->
+  [{Name, Price*Quantity} || {Name, Quantity, Price} <- List].
+{% endhighlight %}
 
 #### Problem 3
 
@@ -106,52 +115,54 @@ Well, day 3 was pretty big. We will now work with multi concurrency.
 
 That is a more complex example, so I'll put the [entire file](https://github.com/caarlos0/erlang-playground/blob/master/day3_examples_exs/translate_service.erl):
 
-    -module(translate_service).
-    -export([loop/0, translate/2, watch/0]).
+{% highlight erlang %}
+-module(translate_service).
+-export([loop/0, translate/2, watch/0]).
 
-    loop() ->
+loop() ->
 
-      receive
-        {From, "casa"} ->
-          From ! "house",
-          loop();
-        {From, "blanca"} ->
-          From ! "white",
-          loop();
-        {From, _} ->
-          From ! "Don't get your point..",
-          exit("Adiós muchacho!")
-    end.
+  receive
+    {From, "casa"} ->
+      From ! "house",
+      loop();
+    {From, "blanca"} ->
+      From ! "white",
+      loop();
+    {From, _} ->
+      From ! "Don't get your point..",
+      exit("Adiós muchacho!")
+end.
 
-    translate(To, Word) ->
-      To ! {self(), Word},
-      receive
-        Translation -> Translation
-    end.
+translate(To, Word) ->
+  To ! {self(), Word},
+  receive
+    Translation -> Translation
+end.
 
 
-    watch() ->
-      process_flag(trap_exit, true),
-      receive
-        new ->
-          io:format("~nCreating new etc..~n"),
-          register(translator, spawn_link(fun loop/0)),
-          watch();
-        {'EXIT', From, Reason} ->
-          io:format("~nTranslator ~p dies with the reason ~p", [From, Reason]),
-          io:format("~nRestarting this crap..."),
-          self() ! new,
-          watch()
-    end.
+watch() ->
+  process_flag(trap_exit, true),
+  receive
+    new ->
+      io:format("~nCreating new etc..~n"),
+      register(translator, spawn_link(fun loop/0)),
+      watch();
+    {'EXIT', From, Reason} ->
+      io:format("~nTranslator ~p dies with the reason ~p", [From, Reason]),
+      io:format("~nRestarting this crap..."),
+      self() ! new,
+      watch()
+end.
 
-    %
-    % Usage
-    %
-    % Translator = spawn(fun translate_service:watch/0).
-    % Translator ! new.
-    % translate_service:translate(translator, "casa").
-    % translate_service:translate(translator, "blanca").
-    % translate_service:translate(translator, "asdasd").
+%
+% Usage
+%
+% Translator = spawn(fun translate_service:watch/0).
+% Translator ! new.
+% translate_service:translate(translator, "casa").
+% translate_service:translate(translator, "blanca").
+% translate_service:translate(translator, "asdasd").
+{% endhighlight %}
 
 FYI: The original [translate_service](https://github.com/caarlos0/erlang-playground/blob/master/day3_examples/translate_service.erl) implementation.
 
@@ -162,46 +173,48 @@ FYI: The original [translate_service](https://github.com/caarlos0/erlang-playgro
 
 That's just like the example above:
 
-    -module(doctor).
-    -export([loop/0, watch/0]).
+{% highlight erlang %}
+-module(doctor).
+-export([loop/0, watch/0]).
 
-    loop() ->
-      process_flag(trap_exit, true),
-      receive
-        new ->
-          io:format("Creating and monitoring process.~n"),
-          register(revolver, spawn_link(fun roulette:loop/0)),
-          loop();
-        {'EXIT', From, Reason} ->
-          io:format("The shooter ~p died with reason ~p.~n", [From, Reason]),
-          io:format("Restarting... ~n"),
-          self() ! new,
-          loop()
-    end.
+loop() ->
+  process_flag(trap_exit, true),
+  receive
+    new ->
+      io:format("Creating and monitoring process.~n"),
+      register(revolver, spawn_link(fun roulette:loop/0)),
+      loop();
+    {'EXIT', From, Reason} ->
+      io:format("The shooter ~p died with reason ~p.~n", [From, Reason]),
+      io:format("Restarting... ~n"),
+      self() ! new,
+      loop()
+end.
 
-    watch() ->
-      process_flag(trap_exit, true),
-      receive
-        new ->
-          io:format("Creating and monitoring new Doctor process.~n"),
-          register(doctor, spawn_link(fun loop/0)),
-          doctor ! new,
-          watch();
-        {'EXIT', From, Reason} ->
-          io:format("The shooter doctor ~p died with reason ~p.~n", [From, Reason]),
-          io:format("Restarting... ~n"),
-          self() ! new,
-          watch()
-    end.
+watch() ->
+  process_flag(trap_exit, true),
+  receive
+    new ->
+      io:format("Creating and monitoring new Doctor process.~n"),
+      register(doctor, spawn_link(fun loop/0)),
+      doctor ! new,
+      watch();
+    {'EXIT', From, Reason} ->
+      io:format("The shooter doctor ~p died with reason ~p.~n", [From, Reason]),
+      io:format("Restarting... ~n"),
+      self() ! new,
+      watch()
+end.
 
-    % usage:
-    %
-    % Doc = spawn(fun doctor:loop/0).
-    % % we must create a new revolve before use it!
-    % Doc ! new.
-    % % there we go:
-    % revolver ! 2.
-    % revolver ! 3.
+% usage:
+%
+% Doc = spawn(fun doctor:loop/0).
+% % we must create a new revolve before use it!
+% Doc ! new.
+% % there we go:
+% revolver ! 2.
+% revolver ! 3.
+{% endhighlight %}
 
 FIY (again): The [original impl](https://github.com/caarlos0/erlang-playground/blob/master/day3_examples/doctor.erl).
 

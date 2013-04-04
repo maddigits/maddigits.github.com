@@ -35,11 +35,15 @@ Install [XCode command line tools][1]. You will always need it anyway.
 [Homebrew][2] is some kind of _ports_ for Mac. As a developer, you should
 install it:
 
-    ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+{% highlight sh %}
+ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+{% endhighlight %}
 
 So, to install, for example, git:
 
-    brew install git
+{% highlight sh %}
+brew install git
+{% endhighlight %}
 
 Yep, that easy.
 
@@ -53,8 +57,10 @@ Yep, that easy.
 changed my life. I don't even know how I lived before using it. No, really,
 install it NOW:
 
-    brew install zsh
-    chsh /bin/zsh
+{% highlight sh %}
+brew install zsh
+chsh /bin/zsh
+{% endhighlight %}
 
 ## Use some dotfiles
 
@@ -71,11 +77,13 @@ it before.
 In this example, let's install [my dotfiles for mac][7] (basically, the
 holman's with some custom things):
 
-    git clone  https://github.com/caarlos0/dotfiles-mac ~/.dotfiles
-    cd ~/.dotfiles
-    script/bootstrap
-    source ~/.zshrc
-    dot
+{% highlight sh %}
+git clone  https://github.com/caarlos0/dotfiles-mac ~/.dotfiles
+cd ~/.dotfiles
+script/bootstrap
+source ~/.zshrc
+dot
+{% endhighlight %}
 
 And you should be ready to go.
 
@@ -85,7 +93,9 @@ And you should be ready to go.
 as RVM, but I found it a little bit less intrusive. If you want, you can install
 it with brew:
 
-    brew install rbenv
+{% highlight sh %}
+brew install rbenv
+{% endhighlight %}
 
 Be sure to check your `~/.{zsh,bash}rc` file
 
@@ -94,11 +104,15 @@ Be sure to check your `~/.{zsh,bash}rc` file
 [hub][10] is a github command line tool written in Ruby to improve your
 git/github diary use. You can install it with `brew`:
 
-    brew install hub
+{% highlight sh %}
+brew install hub
+{% endhighlight %}
 
 Example usage:
 
-    hub clone caarlos0/up
+{% highlight sh %}
+hub clone caarlos0/up
+{% endhighlight %}
 
 Much less typing, imho =)
 
@@ -110,9 +124,11 @@ install.
 
 Well, here the steps:
 
-    brew install imagemagick
-    brew install pkg-config
-    C_INCLUDE_PATH=/usr/local/Cellar/imagemagick/6.8.0-10/include/ImageMagick gem install rmagick
+{% highlight sh %}
+brew install imagemagick
+brew install pkg-config
+C_INCLUDE_PATH=/usr/local/Cellar/imagemagick/6.8.0-10/include/ImageMagick gem install rmagick
+{% endhighlight %}
 
 And boom! It works =) Pretty tricky.
 
