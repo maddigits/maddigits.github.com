@@ -11,7 +11,7 @@
   <link rel="alternate" type="application/rss+xml" href="/atom.xml" />
 
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300'
-  rel='stylesheet' type='text/css'>
+    rel='stylesheet' type='text/css'>
 
   <link href="/css/up.css" rel="stylesheet">
 
@@ -28,26 +28,47 @@
 </head>
 
 <body>
-  <div class="navbar navbar-fixed-top">
+  <div class="navbar">
     <div class="container">
-      <a class="brand" href="/">{{ site.title }}</a>
-      <ul class="nav pull-right hidden-phone">
-        <li>
-          <a href="http://github.com/caarlos0/up" title="Get this theme!">
-            <i class="icon-download icon-large"></i>
-          </a>
-        </li>
-        <li>
-          <a title="About me" href="/about">
-            <i class="icon-user icon-large"></i>
-          </a>
-        </li>
-        <li>
-          <a href="/atom.xml" title="Atom Feed">
-            <i class="icon-rss icon-large"></i>
-          </a>
-        </li>
-      </ul>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">{{ site.title }}</a>
+      <div class="nav-collapse collapse navbar-responsive-collapse">
+        <ul class="nav pull-right hidden-print">
+          <li>
+            <a class="hidden-phone" href="http://github.com/caarlos0/up"
+              title="Get this theme!">
+              <i class="icon-download icon-large"></i>
+            </a>
+            <a class="visible-phone" href="http://github.com/caarlos0/up"
+              title="Get this theme!">
+              <i class="icon-download icon-large"></i>
+              Get this theme!
+            </a>
+          </li>
+          <li>
+            <a class="hidden-phone" title="About me" href="/about">
+              <i class="icon-user icon-large"></i>
+            </a>
+            <a class="visible-phone" title="About me" href="/about">
+              <i class="icon-user icon-large"></i>
+              About me
+            </a>
+          </li>
+          <li>
+            <a class="hidden-phone" href="/atom.xml" title="Atom Feed">
+              <i class="icon-rss icon-large"></i>
+            </a>
+            <a class="visible-phone" href="/atom.xml" title="Atom Feed">
+              <i class="icon-rss icon-large"></i>
+              Atom Feed
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 
@@ -55,7 +76,7 @@
     {{ content }}
   </div>
 
-  <div id="footer">
+  <div id="footer" class="hidden-print">
     <section class="meta">
       <div class="container">
         <div class="row">
@@ -83,5 +104,6 @@
   {% include analytics.html %}
   {% include gauges.html %}
 </body>
-
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="/js/up.js"></script>
 </html>
