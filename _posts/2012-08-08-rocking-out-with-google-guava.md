@@ -14,22 +14,27 @@ I'll show you some cool features that could make you like Guava Libraries even m
 * [IO Handling](https://code.google.com/p/guava-libraries/wiki/IOExplained), the `Files` class e.g..
 	Want to read the lines of a text file? Are you opening a BufferedReader? Don't do that:
 
-		Collection<String> lines = Files.readLines(mytxtFile, Charsets.UTF8);
+{% highlight java %}
+Collection<String> lines = Files.readLines(mytxtFile, Charsets.UTF8);
+{% endhighlight %}
 
 	Simple, uh?
 
 * [Splitters](https://code.google.com/p/guava-libraries/wiki/StringsExplained#Splitter) and [Joinners](https://code.google.com/p/guava-libraries/wiki/StringsExplained#Joiner) - Suppose that our text filed used in the other example contains a lot of columns divided by a pipe (`|`), now, how can we parse it? Simple! Iterate the collection of string provided by `Files.readLines`, and do something like:
 
-		 Iterable<String> columns = Splitter.on('|').trimResults().omitEmptyStrings().split(line);
-
-	 Pretty easy :)
+{% highlight java %}
+Iterable<String> columns = Splitter.on('|').trimResults().omitEmptyStrings().split(line);
+{% endhighlight %}
+Pretty easy :)
 
 * [Preconditions](https://code.google.com/p/guava-libraries/wiki/PreconditionsExplained) plus a `static import` made your arguments, state and null check easy and clean, throwing the respective exceptions (`IllegalStateException`, `IllegalArgumentException`, `NullPointerException`, etc...).
 * [Immutable collections](https://code.google.com/p/guava-libraries/wiki/ImmutableCollectionsExplained) types (Immutable Maps, Lists, Sets, etc...).
 * [CharMatcher](https://code.google.com/p/guava-libraries/wiki/StringsExplained#CharMatcher) - pretty easy way to match characteres sequences, eg:
 
-		String phoneNumber = CharMatcher.DIGIT.retainFrom("my phone number is 123456789");
-		CharMatcher.inRange('a','z').or(inRange('A','Z'));
+{% highlight java %}
+String phoneNumber = CharMatcher.DIGIT.retainFrom("my phone number is 123456789");
+CharMatcher.inRange('a','z').or(inRange('A','Z'));
+{% endhighlight %}
 
 * There is also [Functional](https://code.google.com/p/guava-libraries/wiki/FunctionalExplained) classes, maybe you will want to use them.
 * [EventBus](https://code.google.com/p/guava-libraries/wiki/EventBusExplained) - Basically, a better EventListener.
@@ -39,11 +44,13 @@ These are, IMHO, the best features in Guava. But, [there is much more](https://c
 
 If you want to use it in a maven project, just add to your `pom.xml`:
 
-	<dependency>
-		<groupId>com.google.guava</groupId>
-		<artifactId>guava</artifactId>
-		<version>13.0</version>
-	</dependency>
+{% highlight xml %}
+<dependency>
+	<groupId>com.google.guava</groupId>
+	<artifactId>guava</artifactId>
+	<version>13.0</version>
+</dependency>
+{% endhighlight %}
 
 If you are not using maven, you can download the last version in [this page](https://code.google.com/p/guava-libraries/).
 

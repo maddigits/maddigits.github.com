@@ -20,7 +20,9 @@ I end up with a tecnical easy solution for arch linux, after follow a thousand t
 
   **PS**: If you have yaourt, you can do all this with one command:
 
-      yaourt -S android-udev gvfs-gphoto2 --noconfirm
+{% highlight sh %}
+yaourt -S android-udev gvfs-gphoto2 --noconfirm
+{% endhighlight %}
 
 Then, if you have some luck, you can connect you device via some media player (I used [clementine](http://code.google.com/p/clementine-player/)) and copy at least some music to your device.
 

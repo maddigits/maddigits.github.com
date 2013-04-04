@@ -8,9 +8,11 @@ I just started to learn Ruby and Ruby on Rails, and, as I read somewhere, most R
 Curious, I tried to use some IDEs, like IntelliJ, Netbeans and others... and really, it just slow you.
 A good text editor is incredibile better. For exempla, in my VIm config, I could simply type `def[TAB]` and VIm create for me:
 
-	def method
+{% highlight ruby %}
+def method
 
-	end
+end
+{% endhighlight %}
 
 with `method` already selected. So, I type the name, parameters, press `[TAB]` again, and I inside the method, then I just write it. It's really good. Also, gedit have the same functionallity, but, with the `[CTRL]+[SPACE]` combo.
 
@@ -20,9 +22,11 @@ GMate is a set of plugins that try to 'transform' gedit in a 'textmate for linux
 
 The installation is pretty simple:
 
-	$ git clone git://github.com/gmate/gmate.git
-	$ cd gmate
-	$ ./install.sh
+{% highlight sh %}
+git clone git://github.com/gmate/gmate.git
+cd gmate
+./install.sh
+{% endhighlight %}
 
 Then close and open your gedit, go to settings, and take a look at themes and plugins. About themes, I **strongly** recomend *Molokai*. For me, this is the best theme ever.
 
@@ -37,23 +41,30 @@ Just follow these steps:
 
 1. Clone the project from github:
 
-		$ git clone git://github.com/caarlos0/vimfiles.git ~/.vim
+{% highlight sh %}
+git clone git://github.com/caarlos0/vimfiles.git ~/.vim
+{% endhighlight %}
 
 1. Edit/Create your main `vimrc` file
 
-		$ vim ~/.vimrc
+{% highlight sh %}
+vim ~/.vimrc
+{% endhighlight %}
 
 	With the the following content:
 
-		source ~/.vim/vimrc
-		colorscheme molokai
+{% highlight sh %}
+source ~/.vim/vimrc
+colorscheme molokai
+{% endhighlight %}
 
 	Then save and exit;
 
 1. Update the submodules:
 
-		$ cd ~/.vim
-		$ git submodule update --init
-
+{% highlight sh %}
+cd ~/.vim
+git submodule update --init
+{% endhighlight %}
 
 Done. Now, do your own tests and made your choice. I prefer VIm :)

@@ -21,7 +21,9 @@ To show hot it works, let's do a little example.
 
 First, clone the repo:
 
-    git clone https://github.com/caarlos0/persistence-base sample
+{% highlight sh %}
+git clone https://github.com/caarlos0/persistence-base sample
+{% endhighlight %}
 
 ### Do your hacks
 
@@ -29,96 +31,110 @@ Then, open the project in your preffered IDE, then, open the `pom.xml` file and 
 
 Open `src/main/java/com/github/caarlos0/model` and create a class called `Foo` with the following code:
 
-    @Entity
-    public class Foo extends Bean {
+{% highlight java %}
+@Entity
+public class Foo extends Bean {
 
-        private String bar;
+  private String bar;
 
-        public Foo() {
-        }
+  public Foo() {
+  }
 
-        public Foo(Long id, Long version, String bar) {
-            super(id, version);
-            this.bar = bar;
-        }
+  public Foo(Long id, Long version, String bar) {
+    super(id, version);
+    this.bar = bar;
+  }
 
-        public String getBar() {
-            return bar;
-        }
+  public String getBar() {
+    return bar;
+  }
 
-        public void setBar(String bar) {
-            this.bar = bar;
-        }
-    }
-
+  public void setBar(String bar) {
+    this.bar = bar;
+  }
+}
+{% endhighlight %}
 
 Now, we have to create the specific DAO for this entity. Go into `src/main/java/com/github/caarlos0/dao` and create a `FooDao.java`, with this code:
 
-    public class FooDao extends AbstractDao<Foo> {
-        @Inject
-        public FooDao(Provider<EntityManager> emf) {
-            super(emf, Foo.class);
-        }
-    }
+{% highlight java %}
+public class FooDao extends AbstractDao<Foo> {
+  @Inject
+  public FooDao(Provider<EntityManager> emf) {
+      super(emf, Foo.class);
+  }
+}
+{% endhighlight %}
 
 We also need to setup our `PersistenceModule` to bind this DAO. Open `src/main/java/com/github/caarlos0/dao/inject/PersistenceModule.java` adding the bind to `FooDao` to look like this:
 
-    public class PersistenceModule extends AbstractModule {
+{% highlight java %}
+public class PersistenceModule extends AbstractModule {
 
-        @Override
-        protected void configure() {
-            install(new JpaPersistModule("base")); // base has to be the PU in persistence.xml
+  @Override
+  protected void configure() {
+    install(new JpaPersistModule("base")); // base has to be the PU in persistence.xml
 
-            bind(PersistenceInitializer.class);
+    bind(PersistenceInitializer.class);
 
-            bind(FooDao.class);
-        }
-
-    }
+    bind(FooDao.class);
+  }
+}
+{% endhighlight %}
 
 If you want to change the _Persistence Unit_ name, you will have to do this in the `install(new JpaPersistModule("base"));` changing _base_ to the name that you want, put the same name in `src/main/resources/META-INF/persistence.xml`.
 
 We have to add classes, configure the database and etc in the `src/main/resources/META-INF/persistence.xml` file:
 
-    <?xml version="1.0" encoding="UTF-8"?>
-    <persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
-      <persistence-unit name="base" transaction-type="RESOURCE_LOCAL">
-        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-        <class>com.github.caarlos0.model.Foo</class>
-        <properties>
-          <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/foodb"/>
-          <property name="javax.persistence.jdbc.password" value=""/>
-          <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
-          <property name="javax.persistence.jdbc.user" value="root"/>
-          <property name="eclipselink.ddl-generation" value="create-tables"/>
-        </properties>
-      </persistence-unit>
-    </persistence>
-
+{% highlight xml %}
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+  <persistence-unit name="base" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>com.github.caarlos0.model.Foo</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/foodb"/>
+      <property name="javax.persistence.jdbc.password" value=""/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.user" value="root"/>
+      <property name="eclipselink.ddl-generation" value="create-tables"/>
+    </properties>
+  </persistence-unit>
+</persistence>
+{% endhighlight %}
 
 ### Create the database
 
 Now, we have to create the database in our MySQL:
 
-    [carlos@caarlos-archlinux sample]$ mysql -u root -p
-    mysql> create database foodb;
+{% highlight sh %}
+mysqladmin -u root -p create foodb
+{% endhighlight %}
 
 ### Test it
 
 Now, let's write a test. Open `src/main/java/com/github/caarlos0/App.java` and do some code.
 
-    public class App {
-        public static void main(String[] args) {
-            Injector i = PersistenceHelper.getInjector();
+{% highlight java %}
+public class App {
+  public static void main(String[] args) {
+    Injector i = PersistenceHelper.getInjector();
 
-            FooDao dao = i.getInstance(FooDao.class);
-            Foo foo = new Foo();
-            foo.setBar("Beer!");
-            dao.save(foo);
-        }
-    }
+    FooDao dao = i.getInstance(FooDao.class);
+    Foo foo = new Foo();
+    foo.setBar("Beer!");
+    dao.save(foo);
+  }
+}
+{% endhighlight %}
 
-Run the tests with `mvn exec:java -Dexec.mainClass="com.github.caarlos0.App" -Dexec.classpathScope=runtime` or direct in your IDE.
+Run the tests with
+
+{% highlight sh%}
+mvn exec:java -Dexec.mainClass="com.github.caarlos0.App" -Dexec.classpathScope=runtime
+{% endhighlight %}
+
+or direct in your IDE.
 
 BOOM, it works :)
 

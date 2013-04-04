@@ -35,21 +35,22 @@ In my case, I use all of them.
 
 My `Gemfile` looks like this:
 
+{% highlight ruby %}
+(...)
+group :assets do
+  gem 'sass-rails',   '~> 3.2.3'
+  gem 'coffee-rails', '~> 3.2.1'
+  gem 'therubyracer', :platforms => :ruby
+  gem 'uglifier', '>= 1.0.3'
+  gem 'turbolinks'
+  gem 'jquery-turbolinks'
+  gem 'spinjs-rails'
+end
 
-        (...)
-        group :assets do
-          gem 'sass-rails',   '~> 3.2.3'
-          gem 'coffee-rails', '~> 3.2.1'
-          gem 'therubyracer', :platforms => :ruby
-          gem 'uglifier', '>= 1.0.3'
-          gem 'turbolinks'
-          gem 'jquery-turbolinks'
-          gem 'spinjs-rails'
-        end
-
-        # asset related
-        gem 'jquery-rails'
-        (...)
+# asset related
+gem 'jquery-rails'
+(...)
+{% endhighlight %}
 
 
 You will also need to import them in you `application.js`.
@@ -69,11 +70,13 @@ According to my tests, basically, all `jQuery`events will fire `ajaxStart` and
 will trigger `page:fetch` and `page:change`, an at last `jQuery-ujs` will fire
 `ajax:beforeSend` and `ajax:complete`. So, we will have something like:
 
-      $(document).on 'ajax:before ajaxStart page:fetch', ->
-        # show spin
+{% highlight coffeescript %}
+$(document).on 'ajax:before ajaxStart page:fetch', ->
+  # show spin
 
-      $(document).on 'ajax:complete ajaxComplete page:change', ->
-        # hide spin
+$(document).on 'ajax:complete ajaxComplete page:change', ->
+  # hide spin
+{% endhighlight %}
 
 
 But we also have another problem: if some user interaction fire multiple ajax calls?
@@ -103,126 +106,130 @@ read it, and use the comment box if you have any doubts =)
 
 `ajax.spin.js.coffee` code:
 
-        opts = {
-          lines: 7, # The number of lines to draw
-          length: 6, # The length of each line
-          width: 3, # The line thickness
-          radius: 5, # The radius of the inner circle
-          corners: 1, # Corner roundness (0..1)
-          rotate: 0, # The rotation offset
-          color: '#000', # #rgb or #rrggbb
-          speed: 1.1, # Rounds per second
-          trail: 100, # Afterglow percentage
-          shadow: false, # Whether to render a shadow
-          hwaccel: false, # Whether to use hardware acceleration
-          className: 'spinner', # The CSS class to assign to the spinner
-          zIndex: 2e9, # The z-index (defaults to 2000000000)
-          top: 'auto', # Top position relative to parent in px
-          left: 'auto' # Left position relative to parent in px
-        }
+{% highlight coffeescript %}
+opts = {
+  lines: 7, # The number of lines to draw
+  length: 6, # The length of each line
+  width: 3, # The line thickness
+  radius: 5, # The radius of the inner circle
+  corners: 1, # Corner roundness (0..1)
+  rotate: 0, # The rotation offset
+  color: '#000', # #rgb or #rrggbb
+  speed: 1.1, # Rounds per second
+  trail: 100, # Afterglow percentage
+  shadow: false, # Whether to render a shadow
+  hwaccel: false, # Whether to use hardware acceleration
+  className: 'spinner', # The CSS class to assign to the spinner
+  zIndex: 2e9, # The z-index (defaults to 2000000000)
+  top: 'auto', # Top position relative to parent in px
+  left: 'auto' # Left position relative to parent in px
+}
 
-        # save the lastEvent type that was called
-        lastEvent = undefined
-        # the element where the spinner should appear
-        $n = undefined
+# save the lastEvent type that was called
+lastEvent = undefined
+# the element where the spinner should appear
+$n = undefined
 
-        # I can only pop the $n var when document is ready
-        $(document).ready ->
-          $n = $('.navbar.navbar-static-top')
+# I can only pop the $n var when document is ready
+$(document).ready ->
+  $n = $('.navbar.navbar-static-top')
 
-        # get the event type, ex: a "page:change" will return only 'page'
-        eventType = (event) ->
-          return false if not event
-          type = event.type
-          if type.indexOf(':') > -1
-            type.split(':')[0]
-          else
-            type.match(/[A-Z]?[a-z]+|[0-9]+/g)[0]
+# get the event type, ex: a "page:change" will return only 'page'
+eventType = (event) ->
+  return false if not event
+  type = event.type
+  if type.indexOf(':') > -1
+    type.split(':')[0]
+  else
+    type.match(/[A-Z]?[a-z]+|[0-9]+/g)[0]
 
-        # show the spinner
-        loadState = (event) ->
-          lastEvent = eventType event
-          $n.spin opts
+# show the spinner
+loadState = (event) ->
+  lastEvent = eventType event
+  $n.spin opts
 
-        # hide the spinner
-        doneState = (event) ->
-          if eventType(event) == lastEvent
-            lastEvent = undefined
-            $n.spin false
+# hide the spinner
+doneState = (event) ->
+  if eventType(event) == lastEvent
+    lastEvent = undefined
+    $n.spin false
 
-        # bind some states (will see if it is more needed)
-        $(document).on 'ajax:before ajaxStart page:fetch', (event) ->
-          loadState event
-        $(document).on 'ajax:complete ajaxComplete page:change', (event) ->
-          doneState event
+# bind some states (will see if it is more needed)
+$(document).on 'ajax:before ajaxStart page:fetch', (event) ->
+  loadState event
+$(document).on 'ajax:complete ajaxComplete page:change', (event) ->
+  doneState event
+  {% endhighlight %}
 
 -------------
 
 The compiled `ajax.spin.js` file, for those wo don't use CoffeeScript:
 
-        (function() {
-          var $n, doneState, eventType, lastEvent, loadState, opts;
+{% highlight js %}
+(function() {
+  var $n, doneState, eventType, lastEvent, loadState, opts;
 
-          opts = {
-            lines: 7,
-            length: 6,
-            width: 3,
-            radius: 5,
-            corners: 1,
-            rotate: 0,
-            color: '#000',
-            speed: 1.1,
-            trail: 100,
-            shadow: false,
-            hwaccel: false,
-            className: 'spinner',
-            zIndex: 2e9,
-            top: 'auto',
-            left: 'auto'
-          };
+  opts = {
+    lines: 7,
+    length: 6,
+    width: 3,
+    radius: 5,
+    corners: 1,
+    rotate: 0,
+    color: '#000',
+    speed: 1.1,
+    trail: 100,
+    shadow: false,
+    hwaccel: false,
+    className: 'spinner',
+    zIndex: 2e9,
+    top: 'auto',
+    left: 'auto'
+  };
 
-          lastEvent = void 0;
+  lastEvent = void 0;
 
-          $n = void 0;
+  $n = void 0;
 
-          $(document).ready(function() {
-            return $n = $('.navbar.navbar-static-top');
-          });
+  $(document).ready(function() {
+    return $n = $('.navbar.navbar-static-top');
+  });
 
-          eventType = function(event) {
-            var type;
-            if (!event) {
-              return false;
-            }
-            type = event.type;
-            if (type.indexOf(':') > -1) {
-              return type.split(':')[0];
-            } else {
-              return type.match(/[A-Z]?[a-z]+|[0-9]+/g)[0];
-            }
-          };
+  eventType = function(event) {
+    var type;
+    if (!event) {
+      return false;
+    }
+    type = event.type;
+    if (type.indexOf(':') > -1) {
+      return type.split(':')[0];
+    } else {
+      return type.match(/[A-Z]?[a-z]+|[0-9]+/g)[0];
+    }
+  };
 
-          loadState = function(event) {
-            lastEvent = eventType(event);
-            return $n.spin(opts);
-          };
+  loadState = function(event) {
+    lastEvent = eventType(event);
+    return $n.spin(opts);
+  };
 
-          doneState = function(event) {
-            if (eventType(event) === lastEvent) {
-              lastEvent = void 0;
-              return $n.spin(false);
-            }
-          };
+  doneState = function(event) {
+    if (eventType(event) === lastEvent) {
+      lastEvent = void 0;
+      return $n.spin(false);
+    }
+  };
 
-          $(document).on('ajax:before ajaxStart page:fetch', function(event) {
-            return loadState(event);
-          });
+  $(document).on('ajax:before ajaxStart page:fetch', function(event) {
+    return loadState(event);
+  });
 
-          $(document).on('ajax:complete ajaxComplete page:change', function(event) {
-            return doneState(event);
-          });
+  $(document).on('ajax:complete ajaxComplete page:change', function(event) {
+    return doneState(event);
+  });
 
-        }).call(this);
+}).call(this);
+{% endhighlight %}
 
 Hope it help somebody, enjoy.
 

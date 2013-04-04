@@ -12,7 +12,9 @@ So, you can see this is a good thing, uh? I'll show you the steps needed to acti
 
 If the following command return `1`, your KMS module is already active, and you can go and drink a coffee. Otherwise, goto the next steps.
 
-	$ cat /sys/module/i915/parameters/modeset
+{% highlight sh %}
+cat /sys/module/i915/parameters/modeset
+{% endhighlight %}
 
 ## Install required packages
 
@@ -52,7 +54,9 @@ Create the `/etc/X11/xorg.conf.d/20-intel.conf` file with the following content:
 
 Now, we can regen initframs with
 
-	$ sudo mkinitcpio -p linux
+{% highlight sh %}
+sudo mkinitcpio -p linux
+{% endhighlight %}
 
 ## Reboot
 
@@ -60,8 +64,10 @@ Now, reboot your system, and when it cames up, run the first command again, and 
 
 Also, this is my `lspci`:
 
-	$ lspci | grep -i vga
-		00:02.0 VGA compatible controller: Intel Corporation Core Processor Integrated Graphics Controller (rev 18)
+{% highlight sh %}
+lspci | grep -i vga
+	00:02.0 VGA compatible controller: Intel Corporation Core Processor Integrated Graphics Controller (rev 18)
+{% endhighlight %}
 
 That's it. See ya.
 

@@ -22,17 +22,23 @@ There are 2 ways to get the jar:
 You will have to configure your _App.gwt.xml_ file to _inherit_ the GWT-Bootstrap widget library.
 You can do it like this:
 
-    <inherits name="com.github.gwtbootstrap.Bootstrap"/>
+{% highlight xml %}
+<inherits name="com.github.gwtbootstrap.Bootstrap"/>
+{% endhighlight %}
 
 ## UiBinder usage
 
 Assuming that you're using UIBinder, add the following namespace to the `<ui:UIBinder>` element:
 
-    xmlns:b="urn:import:com.github.gwtbootstrap.client.ui"
+{% highlight xml %}
+xmlns:b="urn:import:com.github.gwtbootstrap.client.ui"
+{% endhighlight %}
 
 Then you can easily use the `b` namespace in your widget design, like `Heading`:
 
-    <b:heading size="2">Hello World GWT-Bootstrap</b:heading>
+{% highlight xml %}
+<b:heading size="2">Hello World GWT-Bootstrap</b:heading>
+{% endhighlight %}
 
 ## Datepicker
 
@@ -40,15 +46,21 @@ We also have the [bootstrap datepicker](https://github.com/eternicode/bootstrap-
 
 Add to your _App.gwt.xml_:
 
-    <inherits name='com.github.gwtbootstrap.datepicker.Datepicker' />
+{% highlight xml %}
+<inherits name='com.github.gwtbootstrap.datepicker.Datepicker' />
+{% endhighlight %}
 
 And in your _Widget.ui.xml_ file:
 
-    xmlns:b2="urn:import:com.github.gwtbootstrap.datepicker.client.ui"
+{% highlight xml %}
+xmlns:b2="urn:import:com.github.gwtbootstrap.datepicker.client.ui"
+{% endhighlight %}
 
 The, just use the widget like this:
 
-    <b2:DateBox format="dd/mm/yyyy" autoClose="true" />
+{% highlight xml %}
+<b2:DateBox format="dd/mm/yyyy" autoClose="true" />
+{% endhighlight %}
 
 
 ## Pros and Cons

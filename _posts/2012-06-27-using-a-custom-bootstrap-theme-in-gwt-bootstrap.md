@@ -8,11 +8,13 @@ First of all, if you haven't done it yet, read
 
 ## Create the GWT-Project
 
-    mvn archetype:generate \
-       -DarchetypeRepository=repo1.maven.org \
-       -DarchetypeGroupId=org.codehaus.mojo \
-       -DarchetypeArtifactId=gwt-maven-plugin \
-       -DarchetypeVersion=2.4.0
+{% highlight sh %}
+mvn archetype:generate \
+   -DarchetypeRepository=repo1.maven.org \
+   -DarchetypeGroupId=org.codehaus.mojo \
+   -DarchetypeArtifactId=gwt-maven-plugin \
+   -DarchetypeVersion=2.4.0
+{% endhighlight %}
 
 I created my project with the following properties:
 
@@ -26,21 +28,25 @@ Now, lets add the `GWT-Bootstrap` dependency to the `pom.xml` file:
 
 #### Add the repository:
 
-    <repositories>
-        <repository>
-            <id>gwt-bootstrap</id>
-            <name>GWT-Bootstrap SNAPSHOTS</name>
-            <url>http://gwtbootstrap.github.com/maven/snapshots</url>
-        </repository>
-    </repositories>
+{% highlight xml %}
+<repositories>
+  <repository>
+    <id>gwt-bootstrap</id>
+    <name>GWT-Bootstrap SNAPSHOTS</name>
+    <url>http://gwtbootstrap.github.com/maven/snapshots</url>
+  </repository>
+</repositories>
+{% endhighlight %}
 
 #### And the dependency itself:
 
-    <dependency>
-        <groupId>com.github.gwtbootstrap</groupId>
-        <artifactId>gwt-bootstrap</artifactId>
-        <version>2.0.4.0-SNAPSHOT</version>
-    </dependency>
+{% highlight xml %}
+<dependency>
+  <groupId>com.github.gwtbootstrap</groupId>
+  <artifactId>gwt-bootstrap</artifactId>
+  <version>2.0.4.0-SNAPSHOT</version>
+</dependency>
+{% endhighlight %}
 
 And then, update your project with a `$ mvn clean install`.
 
@@ -104,44 +110,49 @@ Create a new UiBinder class/xml combo called `ExampleUiBinder`, with the followi
 
 #### ExampleUiBinder.ui.xml:
 
-    <ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
-                 xmlns:g='urn:import:com.google.gwt.user.client.ui'
-                 xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
-        <g:HTMLPanel>
-            <b:Container>
-                <b:Navbar>
-                    <b:Brand>Bootstrap</b:Brand>
-                    <b:Nav>
-                        <b:NavLink>Test</b:NavLink>
-                        <b:NavLink href="http://www.google.com">Another Test</b:NavLink>
-                    </b:Nav>
-                    <b:NavForm size="1"/>
-                    <b:Nav alignment="RIGHT">
-                        <b:NavLink>Test</b:NavLink>
-                    </b:Nav>
-                    <b:NavText alignment="RIGHT">Right</b:NavText>
-                    <b:NavSearch size="2" placeholder="Search" alignment="RIGHT"/>
-                </b:Navbar>
+{% highlight xml %}
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'
+             xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+  <g:HTMLPanel>
+    <b:Container>
+        <b:Navbar>
+          <b:Brand>Bootstrap</b:Brand>
+          <b:Nav>
+            <b:NavLink>Test</b:NavLink>
+            <b:NavLink href="http://www.google.com">Another Test</b:NavLink>
+          </b:Nav>
+          <b:NavForm size="1"/>
+          <b:Nav alignment="RIGHT">
+            <b:NavLink>Test</b:NavLink>
+          </b:Nav>
+          <b:NavText alignment="RIGHT">Right</b:NavText>
+          <b:NavSearch size="2" placeholder="Search" alignment="RIGHT"/>
+      </b:Navbar>
 
-                <b:Hero>
-                    <b:Heading size="1">Hello Custom Theme!</b:Heading>
-                    <b:Button type="WARNING">Warning</b:Button>
-                </b:Hero>
-            </b:Container>
-        </g:HTMLPanel>
-    </ui:UiBinder>
+      <b:Hero>
+        <b:Heading size="1">Hello Custom Theme!</b:Heading>
+        <b:Button type="WARNING">Warning</b:Button>
+      </b:Hero>
+    </b:Container>
+  </g:HTMLPanel>
+</ui:UiBinder>
+{% endhighlight %}
 
 #### ExampleUiBinder.java
-    public class ExampleUiBinder extends Composite {
-        interface ExampleUiBinderUiBinder extends UiBinder<HTMLPanel, ExampleUiBinder> {
-        }
 
-        private static ExampleUiBinderUiBinder ourUiBinder = GWT.create(ExampleUiBinderUiBinder.class);
+{% highlight java %}
+public class ExampleUiBinder extends Composite {
+  interface ExampleUiBinderUiBinder extends UiBinder<HTMLPanel, ExampleUiBinder> {
+  }
 
-        public ExampleUiBinder() {
-            initWidget(ourUiBinder.createAndBindUi(this));
-        }
-    }
+  private static ExampleUiBinderUiBinder ourUiBinder = GWT.create(ExampleUiBinderUiBinder.class);
+
+  public ExampleUiBinder() {
+    initWidget(ourUiBinder.createAndBindUi(this));
+  }
+}
+{% endhighlight %}
 
 At this point, if everything is ok, we will get a window like this:
 
@@ -168,33 +179,38 @@ Assuming that we will only change the CSS file, inside your `resources` file, cr
 As said before, we also need a `Resources` and `Configuration` files. This files must be inside our `resources` folder too. The content is the following:
 
 #### ExampleResources.java
-    package com.github.caarlos0.resources;
 
-    import com.github.gwtbootstrap.client.ui.resources.Resources;
-    import com.google.gwt.resources.client.TextResource;
+{% highlight java %}
+package com.github.caarlos0.resources;
 
-    public interface ExampleResources extends Resources {
-        @Source("css/bootstrap.min.css")
-        TextResource bootstrapCss();
-    }
+import com.github.gwtbootstrap.client.ui.resources.Resources;
+import com.google.gwt.resources.client.TextResource;
+
+public interface ExampleResources extends Resources {
+  @Source("css/bootstrap.min.css")
+  TextResource bootstrapCss();
+}
+{% endhighlight %}
 
 #### ExampleConfigurator.java
-    package com.github.caarlos0.resources;
 
-    import com.github.gwtbootstrap.client.ui.config.Configurator;
-    import com.github.gwtbootstrap.client.ui.resources.Resources;
-    import com.google.gwt.core.client.GWT;
+{% highlight java %}
+package com.github.caarlos0.resources;
 
-    public class ExampleConfigurator implements Configurator {
-        public Resources getResources() {
-            return GWT.create(ExampleResources.class);
-        }
+import com.github.gwtbootstrap.client.ui.config.Configurator;
+import com.github.gwtbootstrap.client.ui.resources.Resources;
+import com.google.gwt.core.client.GWT;
 
-        public boolean hasResponsiveDesign() {
-            return false;
-        }
-    }
+public class ExampleConfigurator implements Configurator {
+  public Resources getResources() {
+    return GWT.create(ExampleResources.class);
+  }
 
+  public boolean hasResponsiveDesign() {
+    return false;
+  }
+}
+{% endhighlight %}
 
 At this point, the structure should be something like this:
 
@@ -213,27 +229,29 @@ At this point, the structure should be something like this:
 
 Now, we have to do a little hack in our `*.gwt.xml`. We will need to replace `com.github.gwtbootstrap.client.ui.config.Configurator` with our Configurator, and setup the resources dir. So, in the end, we will have something like this:
 
-    <?xml version="1.0" encoding="UTF-8"?>
-    <module rename-to='Example'>
-        <inherits name='com.google.gwt.user.User'/>
-        <inherits name='com.google.gwt.junit.JUnit'/>
-        <inherits name='com.google.gwt.user.theme.standard.Standard'/>
-        <inherits name="com.github.gwtbootstrap.Bootstrap"/>
-        <entry-point class='com.github.caarlos0.client.Example'/>
-        <source path='client'/>
-        <source path='shared'/>
+{% highlight xml %}
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='Example'>
+    <inherits name='com.google.gwt.user.User'/>
+    <inherits name='com.google.gwt.junit.JUnit'/>
+    <inherits name='com.google.gwt.user.theme.standard.Standard'/>
+    <inherits name="com.github.gwtbootstrap.Bootstrap"/>
+    <entry-point class='com.github.caarlos0.client.Example'/>
+    <source path='client'/>
+    <source path='shared'/>
 
-        <!--pay attention in this part-->
-        <source path='resources'/>
-        <replace-with class="com.github.caarlos0.resources.ExampleConfigurator">
-            <when-type-is class="com.github.gwtbootstrap.client.ui.config.Configurator"/>
-        </replace-with>
-        <public path="resources">
-            <exclude name="** /*.java"/>
-            <exclude name="** /*.class"/>
-        </public>
+    <!--pay attention in this part-->
+    <source path='resources'/>
+    <replace-with class="com.github.caarlos0.resources.ExampleConfigurator">
+      <when-type-is class="com.github.gwtbootstrap.client.ui.config.Configurator"/>
+    </replace-with>
+    <public path="resources">
+      <exclude name="** /*.java"/>
+      <exclude name="** /*.class"/>
+    </public>
 
-    </module>
+</module>
+{% endhighlight %}
 
 That's it :)
 
