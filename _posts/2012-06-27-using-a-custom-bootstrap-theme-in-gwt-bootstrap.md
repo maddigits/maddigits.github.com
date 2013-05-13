@@ -4,7 +4,7 @@ title: "Using a custom Bootstrap theme with GWT-Bootstrap"
 ---
 
 First of all, if you haven't done it yet, read
-[Getting started with GWT-Bootstrap](/code/2012/06/26/getting-started-with-gwt-bootstrap/).
+[Getting started with GWT-Bootstrap]({% post_url 2012-06-26-getting-started-with-gwt-bootstrap %}).
 
 ## Create the GWT-Project
 
