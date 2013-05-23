@@ -137,6 +137,16 @@ You can setup aliases in git, so get smaller commands and save time. Examples:
     git co https://github.com/caarlos0/up
 
 
+### Copy a file from one branch to another
+
+Useful if you want a file that was introduced or modified in other branch. Example:
+
+
+    git checkout gh-pages
+    git checkout master -- teste.js
+    git commit -m "Update test.js from master"
+
+
 ---
 
 Let's make this list bigger! Have your own tip/trick? Something I forgot to add?
