@@ -147,6 +147,27 @@ Useful if you want a file that was introduced or modified in other branch. Examp
     git commit -m "Update test.js from master"
 
 
+### Log deleted files
+
+> by [Ricardo Walter](https://twitter.com/ricardo_walter)
+
+Show the commit log with the deleted files for each commit:
+
+    git log --diff-filter=D --summary
+
+
+### Delete a branch
+
+Local:
+    
+    git branch -d name
+    git branch -D name # force delete unmerged branch
+    
+Remote:
+
+    git push origin :branchname
+
+
 ---
 
 Let's make this list bigger! Have your own tip/trick? Something I forgot to add?
