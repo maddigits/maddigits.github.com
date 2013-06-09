@@ -94,7 +94,10 @@ as RVM, but I found it a little bit less intrusive. If you want, you can install
 it with brew:
 
 {% highlight sh %}
-brew install rbenv
+brew install rbenv ruby-build
+rbenv install 2.0.0-p195
+rbenv global 2.0.0-p195
+rbenv rehash
 {% endhighlight %}
 
 Be sure to check your `~/.{zsh,bash}rc` file
