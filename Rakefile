@@ -3,7 +3,7 @@ require 'rake'
 require 'yaml'
 require 'time'
 require 'open-uri'
-#require "RMagick"
+require "RMagick"
 
 SOURCE = "."
 CONFIG = {
@@ -46,7 +46,7 @@ end # task :post
 
 desc "Launch preview environment"
 task :preview do
-  system "jekyll --auto --server"
+  system "jekyll --watch serve"
 end # task :preview
 
 desc "Update icons based on gravatar!"
