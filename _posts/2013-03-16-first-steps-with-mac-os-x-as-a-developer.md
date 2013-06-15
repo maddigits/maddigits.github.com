@@ -82,7 +82,7 @@ git clone  https://github.com/caarlos0/dotfiles-mac ~/.dotfiles
 cd ~/.dotfiles
 script/bootstrap
 source ~/.zshrc
-dot
+dot # will install some tools and do some base setup
 {% endhighlight %}
 
 And you should be ready to go.
@@ -133,6 +133,8 @@ brew install pkg-config
 C_INCLUDE_PATH=/usr/local/Cellar/imagemagick/6.8.0-10/include/ImageMagick gem install rmagick
 {% endhighlight %}
 
+**Update:** The `C_INCLUDE` trick seems to not be needed anymore.
+
 And boom! It works =) Pretty tricky.
 
 ## Other tips:
@@ -142,7 +144,11 @@ And boom! It works =) Pretty tricky.
 As suggested in comments and by some friends:
 
 - Install [iTerm2][12], a cool Terminal.app replacement;
-- Install [Alfred][13], a produtivity tool.
+- Install [Alfred][13], a produtivity tool;
+- Install [Disk Inventory X][14], a very good disk analysis tool.
+
+If you want, you can also take a look at my [OSX Settings][15], which
+is already available in my dotfiles.
 
 ****
 
@@ -164,3 +170,6 @@ Cheers!
 [11]: http://www.emoji-cheat-sheet.com
 [12]: http://www.iterm2.com/
 [13]: http://www.alfredapp.com/
+[14]: http://www.derlien.com/
+[15]: https://github.com/caarlos0/dotfiles-mac/blob/master/osx/set-defaults.sh
+
