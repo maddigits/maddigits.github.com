@@ -97,6 +97,11 @@ Let's change Brazil! Thank you all for any help and support!
 
 [#changebrazil](https://twitter.com/search?q=%23changebrazil&src=typd)
 
+### REFUSE/RESIST
+
+<iframe width="560" height="315" class="video" frameborder="0" allowfullscreen
+src="http://www.youtube.com/embed/zn8ndJOIEsI"></iframe>
+
 -------
 
 Special thanks to [Diego Selzlein][nerde], who help improve this text by fixing
