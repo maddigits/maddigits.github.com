@@ -54,7 +54,7 @@
 @import "/_assets/bootstrap/responsive-utilities.less";
 
 // font-awesome
-@import "/_assets/font-awesome.less";
+@import "/_assets/fontawesome/font-awesome.less";
 
 // pygments
 @import "/_assets/pygments.less";
@@ -82,9 +82,8 @@ section.content {
   height: 100%;
   min-height: 100%;
   padding: 10px;
-  font-weight: 100;
-  //letter-spacing: 0.8px;
-  img, .video {
+  .video,
+  img {
     display: block;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -94,16 +93,12 @@ section.content {
   img {
     max-width: 70%;
     max-height: 70%;
-    // box-shadow: 0 0 20px #bbb;
     &.noclip {
       clear: both;
-      // box-shadow: none;
       display: inline-block;
     }
-    // &.noshadow {
-    //   box-shadow: none;
-    // }
   }
+
   h1:first-child {
     margin-top: 20px;
   }
