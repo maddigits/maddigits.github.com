@@ -140,17 +140,17 @@ And boom! It works =) Pretty tricky.
 ## Other tips:
 
 - Everyone likes Emojis. Take this [cheat sheet][11];
-
-As suggested in comments and by some friends:
-
-- Install [iTerm2][12], a cool Terminal.app replacement;
-- Install [Alfred][13], a produtivity tool;
 - Install [Disk Inventory X][14], a very good disk analysis tool;
 - [Hidden OSX Features, tips and tricks][16];
 - The gorgeus [SizeUP][17] window tilling manager for OSX.
 
 If you want, you can also take a look at my [OSX Settings][15], which
 is already available in my dotfiles.
+
+As suggested in comments and by some friends:
+
+- Install [iTerm2][12], a cool Terminal.app replacement;
+- Install [Alfred][13], a produtivity tool.
 
 ****
 
