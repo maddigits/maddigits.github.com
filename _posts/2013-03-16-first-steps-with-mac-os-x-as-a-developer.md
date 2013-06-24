@@ -145,7 +145,9 @@ As suggested in comments and by some friends:
 
 - Install [iTerm2][12], a cool Terminal.app replacement;
 - Install [Alfred][13], a produtivity tool;
-- Install [Disk Inventory X][14], a very good disk analysis tool.
+- Install [Disk Inventory X][14], a very good disk analysis tool;
+- [Hidden OSX Features, tips and tricks][16];
+- The gorgeus [SizeUP][17] window tilling manager for OSX.
 
 If you want, you can also take a look at my [OSX Settings][15], which
 is already available in my dotfiles.
@@ -172,4 +174,6 @@ Cheers!
 [13]: http://www.alfredapp.com/
 [14]: http://www.derlien.com/
 [15]: https://github.com/caarlos0/dotfiles-mac/blob/master/osx/set-defaults.sh
+[16]: http://apple.stackexchange.com/questions/400/please-share-your-hidden-os-x-features-or-tips-and-tricks
+[17]: www.irradiatedsoftware.com/sizeup/
 
