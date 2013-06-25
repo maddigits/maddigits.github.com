@@ -161,6 +161,25 @@ div.navbar a.brand {
   font-weight: 100;
   text-transform: uppercase;
 }
+
+#navbar.navbar {
+  background-color: #fff;
+  .box-shadow(0 0 1px #ccc);
+}
+
+#footer,
+#navbar.navbar {
+  a {
+    color: #555;
+    text-decoration: none;
+    transition: color 0.25s ease-in;
+    -webkit-transition: color 0.25s ease-in;
+    &:hover {
+      color: #307EA9;
+    }
+  }
+}
+
 #footer {
   margin-top: 50px;
   border-top: 1px solid #f5f5f5;
@@ -170,13 +189,6 @@ div.navbar a.brand {
     text-align: center;
     a {
       font-size: 0.8em;
-      color: #555;
-      text-decoration: none;
-      transition: color 0.25s ease-in;
-      -webkit-transition: color 0.25s ease-in;
-      &:hover {
-        color: #307EA9;
-      }
     }
   }
   i.icon {
