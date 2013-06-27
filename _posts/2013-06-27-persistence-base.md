@@ -4,15 +4,15 @@ title: "From zero to a persistent and modular Java project in 5 minutes"
 category: posts
 ---
 
-Some time ago, I [post]({ post_url 2012-06-25-modular-persistence }) here about
+Some time ago, I [posted here]({ post_url 2012-06-25-modular-persistence }) about
 a simple project that I've done in my post-graduation classes. Since I need it
-in other projects, and also some friends end up using it in small projects, I
-decide to evolve it a little bit.
+in other projects, and also some friends ended up using it in small projects, I
+decided to evolve it a little bit.
 
 So, this is just another post (better, I hope) about [that project][1].
 It's basically, a "base" for your Java projects that will somehow need to
 persist data to some database (almost any app). It's baked by Guice, Guava,
-EclipseLink and Apache B-Val, so, you shall have almost everything you need
+EclipseLink and Apache B-Val, so, you must have almost everything you need
 to get started almost instantly (you still need to add the JDBC driver).
 
 In this post, I'll use the version **0.0.5** as base, but it should work
@@ -84,7 +84,7 @@ public class Person extends Bean {
 
 Notice that, since it extends `Bean`, the model already has an `id` and a
 `version` attribute. In current SNAPSHOT, you will also have the
-`TimestampedBean`, which provide `created_at` and `updated_at` attributes plus
+`TimestampedBean`, which provides `created_at` and `updated_at` attributes plus
 the `id` and `version`.
 
 ---
@@ -132,9 +132,9 @@ public class App {
 
 ### Custom Dao
 
-You will probably want to create your own Dao method eventually, instead of
+You will probably want to create your own `Dao` methods eventually, instead of
 just use the Generic ones. You can easily achieve this by creating your own
-Dao interface extending Dao and the specific Dao impl:
+`Dao` interface extending `Dao` and the specific `Dao` impl:
 
 {% highlight java %}
 public interface AnimalDao extends Dao<Animal> {
@@ -174,7 +174,7 @@ And you will be able to call `animalDao.someCustomMethod(animal)` =)
 
 ## WIP
 
-This is a almost-infinite-work-in-progress, so, feel free to made pull-requests,
+This is a almost-infinite-work-in-progress, so, feel free to make pull-requests,
 suggestions and report eventual bugs.
 
 
