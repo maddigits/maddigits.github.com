@@ -189,5 +189,5 @@ part of this post.
 
 ---
 
-Let's make this list bigger! Have your own tip/trick? Something I forgot to add?
-Share it with us!
+***Let's make this list bigger! Have your own tip/trick? Something I forgot to add?
+Share it with us!***
