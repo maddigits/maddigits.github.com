@@ -27,9 +27,13 @@ Let's do this.
 #### See the reference log
 
 This will show the log of your local operations in the git tree, useful to get
-revision code of a specific commit (see next item).
+revision code of a specific action (see next item).
 
     git reflog
+    
+**HEADS UP**: `reflog` will only have the logs of actions in your local repository,
+more specifically, it will log each time the `HEAD` pointer changes, so.
+
 
 #### Get revision code for anything
 
@@ -165,8 +169,23 @@ Local:
     
 Remote:
 
+> by [Ricardo Walter](https://twitter.com/ricardo_walter)
+
     git push origin :branchname
 
+
+### Undo your last commit
+
+> by [Endrigo Antonini](https://github.com/antonini)
+
+If you do a wrong commit, revert it, but maintain the changes in your staging
+area.
+
+    git reset --soft HEAD^
+    
+Just remember: `HEAD^` is a pointer to the parent of current `HEAD`, so, you
+can use `HEAD~3` to go 3 commits back, for example. Also, check the `reflog`
+part of this post.
 
 ---
 
