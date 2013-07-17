@@ -3,9 +3,12 @@ layout: post
 title: "GUnit - Guice and JUnit fall in love"
 ---
 
-Yesterday, I wrote a [small article](http://caarlos0.github.com/code/2012/08/06/guice-and-junit/) talking about Guice and JUnit, so, this time, I'll just say how to use the small lib that I build (not big deal, one class, one annotation =] )
+Yesterday, I wrote a [small article]({ post_url 2012-08-06-guice-and-junit })
+talking about Guice and JUnit, so, this time, I'll just say how to use the
+small lib that I build (not big deal, one class, one annotation =] )
 
-So, I dont push it to maven central yet, so, you will need to do some work to made it work. Yep, you will need to build and install it to your local repo.
+So, I dont push it to maven central yet, so, you will need to do some work to
+made it work. Yep, you will need to build and install it to your local repo.
 
 {% highlight sh %}
 git clone git://github.com/caarlos0/gunit.git
@@ -24,7 +27,9 @@ Now, just add it in your `pom.xml` dependencies:
 </dependency>
 {% endhighlight %}
 
-And follow the instructions code example and the motivation of doing this in [this article](http://caarlos0.github.com/code/2012/08/06/guice-and-junit/), but, basically, your tests will look like this:
+And follow the instructions code example and the motivation of doing
+this in [this article]({ post_url 2012-08-06-guice-and-junit }), but,
+basically, your tests will look like this:
 
 {% highlight java %}
 @RunWith(GuiceTestRunner.class)
