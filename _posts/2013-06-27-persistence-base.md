@@ -4,7 +4,7 @@ title: "From zero to a persistent and modular Java project in 5 minutes"
 category: posts
 ---
 
-Some time ago, I [posted here]({ post_url 2012-06-25-modular-persistence }) about
+Some time ago, I [posted here]({% post_url 2012-06-25-modular-persistence %}) about
 a simple project that I've done in my post-graduation classes. Since I need it
 in other projects, and also some friends ended up using it in small projects, I
 decided to evolve it a little bit.
