@@ -3,7 +3,7 @@ layout: post
 title: "GUnit - Guice and JUnit fall in love"
 ---
 
-Yesterday, I wrote a [small article]({ post_url 2012-08-06-guice-and-junit })
+Yesterday, I wrote a [small article]({% post_url 2012-08-06-guice-and-junit %})
 talking about Guice and JUnit, so, this time, I'll just say how to use the
 small lib that I build (not big deal, one class, one annotation =] )
 
@@ -28,7 +28,7 @@ Now, just add it in your `pom.xml` dependencies:
 {% endhighlight %}
 
 And follow the instructions code example and the motivation of doing
-this in [this article]({ post_url 2012-08-06-guice-and-junit }), but,
+this in [this article]({% post_url 2012-08-06-guice-and-junit %}), but,
 basically, your tests will look like this:
 
 {% highlight java %}
