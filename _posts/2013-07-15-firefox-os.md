@@ -4,10 +4,11 @@ title: "I just got a Firefox OS powered phone"
 category: posts
 ---
 
+[![Keon](http://distilleryimage10.s3.amazonaws.com/6df19a56e50e11e295bf22000a9f390a_7.jpg)](http://instagram.com/p/bXXYdXPXke/)
+
+
 So, Mozilla just gave me the [Geeksphone Keon][keon] with Firefox OS Developer
 Preview, and I decided to drop here some lines about it.
-
-[![Keon](http://distilleryimage10.s3.amazonaws.com/6df19a56e50e11e295bf22000a9f390a_7.jpg)](http://instagram.com/p/bXXYdXPXke/)
 
 First of all, as the name says, it's a Developer Preview. So, a lot of things
 are buggy, others just doesn't exist yet and others of them I don't even know
@@ -35,7 +36,7 @@ GPS, MicroUSB.
 
 > Battery 1580 mAh.
 
-I alos found the touchscreen very hard to use. Sometimes the OS freezes (lock
+I also found the touchscreen very hard to use. Sometimes the OS freezes (lock
 and unlock the screen generally "unfreezes") without any apparent reason.. most
 of times when I'm typing..
 
