@@ -1,7 +1,7 @@
 ---
 layout: post
+cover: "http://f.cl.ly/items/2Z3c2W3t113n1G0K1w2N/branches.png"
 title: "Using git like a PRO"
-category: posts
 ---
 
 Git has a lot of features, and I bet that 90% of who use it (including me)
@@ -186,6 +186,18 @@ area.
 Just remember: `HEAD^` is a pointer to the parent of current `HEAD`, so, you
 can use `HEAD~3` to go 3 commits back, for example. Also, check the `reflog`
 part of this post.
+
+### Remove a file from the last commit
+
+PROTIP: Don't do this if you already pushed the commit.
+
+For example, if you want to remove the `wrongfile.txt`, do:
+
+    git rm wrongfile.txt
+    git commit --amend
+
+Done.
+
 
 ---
 
