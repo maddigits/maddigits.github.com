@@ -62,6 +62,7 @@
 @font-family-sans-serif: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-size-base: 15px;
 @headings-font-weight: 100;
+@navbar-bg: rgba(255, 255, 255, 0.900);
 
 body {
   padding-top: @navbar-height + 10px;
@@ -83,6 +84,15 @@ h2,h3,h4,h5,h6 {
 }
 .lowercase {
   text-transform: lowercase;
+}
+.cover {
+  background: #333 no-repeat center center;
+  height: 200px;
+  width: 100%;
+  margin-top: -8px;
+  .background-size(cover);
+  .box-shadow(inset 3px 3px 20px rgba(0,0,0,.5));
+  margin-bottom: 20px;
 }
 section.content {
   height: 100%;
@@ -172,7 +182,6 @@ div.navbar a.brand {
 }
 
 #navbar.navbar {
-  background-color: #fff;
   .box-shadow(0 0 1px #ccc);
 }
 
