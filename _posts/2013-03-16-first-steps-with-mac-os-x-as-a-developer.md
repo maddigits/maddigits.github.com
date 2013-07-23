@@ -1,6 +1,5 @@
 ---
 layout: post
-cover: "https://photos-4.dropbox.com/t/0/AAB3ljlfL4plRy28_xuU6SLIOQO5jjdb6QolYhr2TwN4mg/12/247142/png/32x32/3/_/1/2/dock.png/lPWnz686zHn8KQXyJ22DbRkjjTTafjUtH5plnVoZRhs?size=1280x960"
 title: "First steps with Mac OS X as a Developer"
 ---
 
