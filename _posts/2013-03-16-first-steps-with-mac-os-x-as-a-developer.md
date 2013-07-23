@@ -1,7 +1,7 @@
 ---
 layout: post
+cover: "https://photos-4.dropbox.com/t/0/AAB3ljlfL4plRy28_xuU6SLIOQO5jjdb6QolYhr2TwN4mg/12/247142/png/32x32/3/_/1/2/dock.png/lPWnz686zHn8KQXyJ22DbRkjjTTafjUtH5plnVoZRhs?size=1280x960"
 title: "First steps with Mac OS X as a Developer"
-category: posts
 ---
 
 So, I just bought my first Mac, and decided to wrote this in order to help
@@ -65,16 +65,18 @@ chsh /bin/zsh
 ## Use some dotfiles
 
 ZSH is pretty powerful and highly customizable. There are a lot of projects
-around the web to achieve an easy start to it. Some examples:
+around the web to achieve an easy start to it.
+
+Some examples:
 
 - [oh-my-zsh][4]
 - [holman/dotfiles][5]
-- my dotfiles for [arch linux][6] and [mac os][7]
+- my dotfiles for [linux][6] and [osx][7]
 
-I've [already wrote about this before][8], if you want to read something about
-it before.
+I've [already wrote about this before][8], in case you want to read something
+about it.
 
-In this example, let's install [my dotfiles for mac][7] (basically, the
+In this example, let's install [my dotfiles for osx][7] (basically, the
 holman's with some custom things):
 
 {% highlight sh %}
@@ -82,7 +84,7 @@ git clone  https://github.com/caarlos0/dotfiles-mac ~/.dotfiles
 cd ~/.dotfiles
 script/bootstrap
 source ~/.zshrc
-dot # will install some tools and do some base setup
+dot # will install some tools and do some basic setup
 {% endhighlight %}
 
 And you should be ready to go.
@@ -117,7 +119,7 @@ Example usage:
 hub clone caarlos0/up
 {% endhighlight %}
 
-Much less typing, imho =)
+Much less typing, IMHO =)
 
 
 ## Install RMagick gem without pain
@@ -133,19 +135,20 @@ brew install pkg-config
 C_INCLUDE_PATH=/usr/local/Cellar/imagemagick/6.8.0-10/include/ImageMagick gem install rmagick
 {% endhighlight %}
 
-**Update:** The `C_INCLUDE` trick seems to not be needed anymore.
-
 And boom! It works =) Pretty tricky.
+
+**Update:** The `C_INCLUDE` trick seems to not be needed anymore.
 
 ## Other tips:
 
 - Everyone likes Emojis. Take this [cheat sheet][11];
-- Install [Disk Inventory X][14], a very good disk analysis tool;
+- [Disk Inventory X][14], a very good disk analysis tool;
 - [Hidden OSX Features, tips and tricks][16];
-- The gorgeus [SizeUP][17] window tilling manager for OSX.
+- [SizeUP][17], a window tilling manager for OSX.
 
 If you want, you can also take a look at my [OSX Settings][15], which
-is already available in my dotfiles.
+is already available in my dotfiles (and you already have if you ran the
+`dot` script).
 
 As suggested in comments and by some friends:
 
@@ -165,7 +168,7 @@ Cheers!
 [4]: https://github.com/robbyrussell/oh-my-zsh
 [5]: https://github.com/holman/dotfiles/
 [6]: https://github.com/caarlos0/dotfiles-linux
-[7]: https://github.com/caarlos0/dotfiles-mac
+[7]: https://github.com/caarlos0/dotfiles-osx
 [8]: /posts/dotfiles-are-meant-to-be-forked/
 [9]: https://github.com/sstephenson/rbenv/
 [10]: https://github.com/defunkt/hub
