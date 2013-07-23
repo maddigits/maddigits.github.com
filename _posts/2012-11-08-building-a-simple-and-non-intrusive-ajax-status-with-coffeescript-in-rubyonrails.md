@@ -1,6 +1,5 @@
 ---
 layout: post
-cover: "http://f.cl.ly/items/0G1T3V1i2X02420J1z3a/bsod.jpg"
 title: "Building a simple and non intrusive AJAX status with CoffeeScript in RubyOnRails"
 ---
 
