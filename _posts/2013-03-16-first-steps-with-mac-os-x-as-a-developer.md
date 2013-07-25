@@ -34,13 +34,13 @@ Install [XCode command line tools][1]. You will always need it anyway.
 [Homebrew][2] is some kind of _ports_ for Mac. As a developer, you should
 install it:
 
-{% highlight sh %}
+{% highlight bash %}
 ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 {% endhighlight %}
 
 So, to install, for example, git:
 
-{% highlight sh %}
+{% highlight bash %}
 brew install git
 {% endhighlight %}
 
@@ -56,7 +56,7 @@ Yep, that easy.
 changed my life. I don't even know how I lived before using it. No, really,
 install it NOW:
 
-{% highlight sh %}
+{% highlight bash %}
 brew install zsh
 chsh /bin/zsh
 {% endhighlight %}
@@ -78,7 +78,7 @@ about it.
 In this example, let's install [my dotfiles for osx][7] (basically, the
 holman's with some custom things):
 
-{% highlight sh %}
+{% highlight bash %}
 git clone  https://github.com/caarlos0/dotfiles-mac ~/.dotfiles
 cd ~/.dotfiles
 script/bootstrap
@@ -94,7 +94,7 @@ And you should be ready to go.
 as RVM, but I found it a little bit less intrusive. If you want, you can install
 it with brew:
 
-{% highlight sh %}
+{% highlight bash %}
 brew install rbenv ruby-build
 rbenv install 2.0.0-p195
 rbenv global 2.0.0-p195
@@ -108,13 +108,13 @@ Be sure to check your `~/.{zsh,bash}rc` file
 [hub][10] is a github command line tool written in Ruby to improve your
 git/github diary use. You can install it with `brew`:
 
-{% highlight sh %}
+{% highlight bash %}
 brew install hub
 {% endhighlight %}
 
 Example usage:
 
-{% highlight sh %}
+{% highlight bash %}
 hub clone caarlos0/up
 {% endhighlight %}
 
@@ -128,7 +128,7 @@ install.
 
 Well, here the steps:
 
-{% highlight sh %}
+{% highlight bash %}
 brew install imagemagick
 brew install pkg-config
 C_INCLUDE_PATH=/usr/local/Cellar/imagemagick/6.8.0-10/include/ImageMagick gem install rmagick

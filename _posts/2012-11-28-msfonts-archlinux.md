@@ -13,7 +13,7 @@ Due to some license or something like this, they removed the fonts from AUR. Yea
 
 So, I just made a simple and small script to download and install it. You can get it in [my github](http://github.com/caarlos0/msfonts), or, simply run:
 
-{% highlight sh %}
+{% highlight bash %}
 curl -L https://github.com/caarlos0/msfonts/raw/master/install.sh | sudo sh
 {% endhighlight %}
 

@@ -22,7 +22,7 @@ GMate is a set of plugins that try to 'transform' gedit in a 'textmate for linux
 
 The installation is pretty simple:
 
-{% highlight sh %}
+{% highlight bash %}
 git clone git://github.com/gmate/gmate.git
 cd gmate
 ./install.sh
@@ -41,19 +41,19 @@ Just follow these steps:
 
 1. Clone the project from github:
 
-{% highlight sh %}
+{% highlight bash %}
 git clone git://github.com/caarlos0/vimfiles.git ~/.vim
 {% endhighlight %}
 
 1. Edit/Create your main `vimrc` file
 
-{% highlight sh %}
+{% highlight bash %}
 vim ~/.vimrc
 {% endhighlight %}
 
 	With the the following content:
 
-{% highlight sh %}
+{% highlight bash %}
 source ~/.vim/vimrc
 colorscheme molokai
 {% endhighlight %}
@@ -62,7 +62,7 @@ colorscheme molokai
 
 1. Update the submodules:
 
-{% highlight sh %}
+{% highlight bash %}
 cd ~/.vim
 git submodule update --init
 {% endhighlight %}

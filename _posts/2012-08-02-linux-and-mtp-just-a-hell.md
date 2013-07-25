@@ -20,7 +20,7 @@ I end up with a tecnical easy solution for arch linux, after follow a thousand t
 
   **PS**: If you have yaourt, you can do all this with one command:
 
-{% highlight sh %}
+{% highlight bash %}
 yaourt -S android-udev gvfs-gphoto2 --noconfirm
 {% endhighlight %}
 

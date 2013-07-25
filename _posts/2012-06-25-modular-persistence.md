@@ -21,7 +21,7 @@ To show hot it works, let's do a little example.
 
 First, clone the repo:
 
-{% highlight sh %}
+{% highlight bash %}
 git clone https://github.com/caarlos0/persistence-base sample
 {% endhighlight %}
 
@@ -107,7 +107,7 @@ We have to add classes, configure the database and etc in the `src/main/resource
 
 Now, we have to create the database in our MySQL:
 
-{% highlight sh %}
+{% highlight bash %}
 mysqladmin -u root -p create foodb
 {% endhighlight %}
 

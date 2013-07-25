@@ -18,7 +18,7 @@ can help you with it. So, let's do it!
 Bundler makes it simple to create the files and folders necessary for for
 building a Gem:
 
-{% highlight sh %}
+{% highlight bash %}
 bundle gem somelibrary
 {% endhighlight %}
 
@@ -41,7 +41,7 @@ But, I usually made some changes to it:
 
 ##### 1. Delete the `version.rb` file and it's parent folder:
 
-{% highlight sh %}
+{% highlight bash %}
 rm -rf lib/somelibrary
 {% endhighlight %}
 
@@ -69,7 +69,7 @@ end
 
 That's easy!
 
-{% highlight sh %}
+{% highlight bash %}
 mkdir -p vendor/assets/{javascripts,stylesheets}
 {% endhighlight %}
 
@@ -99,7 +99,7 @@ release it.
 
 Create a github repository for your gem, and do the basics:
 
-{% highlight sh %}
+{% highlight bash %}
 git init
 git add -A
 git commit -m 'first'
@@ -109,7 +109,7 @@ git push origin master
 
 And then, finally, release it using Rake:
 
-{% highlight sh %}
+{% highlight bash %}
 rake release
 {% endhighlight %}
 

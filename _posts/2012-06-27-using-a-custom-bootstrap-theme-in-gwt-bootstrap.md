@@ -8,7 +8,7 @@ First of all, if you haven't done it yet, read
 
 ## Create the GWT-Project
 
-{% highlight sh %}
+{% highlight bash %}
 mvn archetype:generate \
    -DarchetypeRepository=repo1.maven.org \
    -DarchetypeGroupId=org.codehaus.mojo \

@@ -13,7 +13,7 @@ You will need:
 
 Install everything:
 
-{% highlight sh %}
+{% highlight bash %}
 apt-get install git ssh gitolite git-daemon-run
 {% endhighlight %}
 
@@ -21,26 +21,26 @@ apt-get install git ssh gitolite git-daemon-run
 
 The server needs a public/private key pair. So, you will need to generate it:
 
-{% highlight sh %}
+{% highlight bash %}
 ssh-keygen -t rsa
 {% endhighlight %}
 
 Now, will copy it to `/tmp` folder, we will need it there later.
 
-{% highlight sh %}
+{% highlight bash %}
 cp ~/.ssh/id_rsa.pub /tmp/local.pub
 {% endhighlight %}
 
 ## Setup your git profile
 
-{% highlight sh %}
+{% highlight bash %}
 git config --global user.name "Your Name"
 git config --global user.email your@email.com
 {% endhighlight %}
 
 ## Creating the `git` user:
 
-{% highlight sh %}
+{% highlight bash %}
 sudo adduser --system --shell /bin/bash --gecos 'git version control' --group --disabled-password --home /home/git git
 sudo su git
 echo "PATH=$HOME/bin:$PATH" > ~/.bashrc
@@ -53,13 +53,13 @@ When you run `gl-setup` command, it will open a file in edit mode.. probably wit
 
 Now, go back to the previous user:
 
-{% highlight sh %}
+{% highlight bash %}
 exit
 {% endhighlight %}
 
 Go to some folder, e.g., `~/code`, and clone the configuration gitolite repository:
 
-{% highlight sh %}
+{% highlight bash %}
 git clone git@ubuntu:gitolite-admin.git && cd gitolite-admin
 {% endhighlight %}
 
@@ -77,7 +77,7 @@ In that example, I created a repository called `foo`, with `RW+` access (read an
 
 After doing your changes, commit and push:
 
-{% highlight sh %}
+{% highlight bash %}
 git add -A
 git commit -m 'added repo foo'
 git push origin master
@@ -85,7 +85,7 @@ git push origin master
 
 Now, you will be able to clone the `foo` repo from the configured machines, wich something like:
 
-{% highlight sh %}
+{% highlight bash %}
 git clone git@SERVER:foo.git
 {% endhighlight %}
 

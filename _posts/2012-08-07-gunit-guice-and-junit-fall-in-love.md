@@ -10,7 +10,7 @@ small lib that I build (not big deal, one class, one annotation =] )
 So, I dont push it to maven central yet, so, you will need to do some work to
 made it work. Yep, you will need to build and install it to your local repo.
 
-{% highlight sh %}
+{% highlight bash %}
 git clone git://github.com/caarlos0/gunit.git
 cd gunit
 mvn install
