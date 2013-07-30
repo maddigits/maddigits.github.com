@@ -6,22 +6,12 @@
 
 set -e
 
-export UP_HOME=~/code/ruby/caarlos0.github.com
-export BS_HOME=~/code/js/bootstrap
-export FA_HOME=~/code/js/Font-Awesome
+echo "Updating all submodules..."
+git submodule foreach git pull
 
-echo "updating bootstrap 3..."
-cd $BS_HOME
-git checkout 3.0.0-wip
-git pull origin 3.0.0-wip
-cp -rf less/* $UP_HOME/_assets/bootstrap/less/
-cp -f js/{transition,collapse}.js $UP_HOME/_assets/bootstrap/js/
-
-echo "updating font awesome..."
-cd $FA_HOME
-git pull origin master
-cp -f less/*.less $UP_HOME/_assets/fontawesome/
-cp -rf font/* $UP_HOME/font/
+echo "Updating fonts..."
+rm -rf font/*
+cp -rf _assets/fontawesome/font/* font/
 
 echo "building..."
 cd $UP_HOME
