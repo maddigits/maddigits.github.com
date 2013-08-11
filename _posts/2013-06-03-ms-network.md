@@ -32,14 +32,16 @@ Setup is a little tricky, but I will guide you. You shall have a
 `/etc/cntlm.conf` file, setup the URL, domain, user and exceptions.
 
 After that, you may have to setup the password. I recommend you to
-encrypt it with the following command: 
+encrypt it with the following command:
 
-`sudo cntlm -H -c /etc/cntlm.conf`
+{% highlight bash %}
+sudo cntlm -H -c /etc/cntlm.conf
+{% endhighlight %}
 
 Then put you root password followed by the domain password. Copy the
 given hashes to the `/etc/cntlm.conf` and restart the service with
-`/etc/cntlm restart`, setup your proxy as `127.0.0.1:3128` (8010 
-for SOCKS) and you are ready to go (remember to apply system wide): 
+`/etc/cntlm restart`, setup your proxy as `127.0.0.1:3128` (8010
+for SOCKS) and you are ready to go (remember to apply system wide):
 
 ![proxy setup](http://f.cl.ly/items/0S1N2W1X1Q19250N1F0R/Screenshot%20from%202013-06-03%2013%3A51%3A51.png)
 

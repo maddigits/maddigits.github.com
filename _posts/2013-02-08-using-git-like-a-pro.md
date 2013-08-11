@@ -22,41 +22,55 @@ Let's do this.
 
 ### See who and in which commit each line of a file was changed last time
 
-    git blame path/to/file
+{% highlight bash %}
+git blame path/to/file
+{% endhighlight %}
 
 ### See the reference log
 
 This will show the log of your local operations in the git tree, useful to get
 revision code of a specific action (see next item).
 
-    git reflog
-    
+{% highlight bash %}
+git reflog
+{% endhighlight %}
+
 **HEADS UP**: `reflog` will only have the logs of actions in your local repository,
 more specifically, it will log each time the `HEAD` pointer changes, so.
 
 
 ### Get revision code for anything
 
-    git rev-parse HEAD # last commit
-    git rev-parse HEAD~5 # 5 commits back from last commit
-    git rev-parse develop # last commit from develop branch
+{% highlight bash %}
+git rev-parse HEAD # last commit
+git rev-parse HEAD~5 # 5 commits back from last commit
+git rev-parse develop # last commit from develop branch
+{% endhighlight %}
 
 ### Revert a specific file to a specific commit
 
-    git log path/to/file # to check the revision code
-    git checkout revision_code path/to/file
+{% highlight bash %}
+git log path/to/file # to check the revision code
+git checkout revision_code path/to/file
+{% endhighlight %}
 
 ### Revert a specific file to last commit
 
-    git checkout HEAD path/to/file
+{% highlight bash %}
+git checkout HEAD path/to/file
+{% endhighlight %}
 
 ### Revert a specific file to 3 commits back from last
 
-    git checkout HEAD~3 path/to/file
+{% highlight bash %}
+git checkout HEAD~3 path/to/file
+{% endhighlight %}
 
 ### Get an old version of some file
 
-    git show HEAD~3:path/to/file > path/to/file_3_commits_ago
+{% highlight bash %}
+git show HEAD~3:path/to/file > path/to/file_3_commits_ago
+{% endhighlight %}
 
 ### Shallow clone
 
@@ -70,8 +84,9 @@ would want to send in fixes as patches.
 
 So, if you want only the last revision:
 
-    git clone https://github.com/twitter/bootstrap --depth 1
-
+{% highlight bash %}
+git clone https://github.com/twitter/bootstrap --depth 1
+{% endhighlight %}
 
 This can drastically reduce the clone. The bad thing is that you will have NO
 HISTORY BEFORE THE HEAD WHEN YOU DO THE CLONE.
@@ -82,17 +97,20 @@ This is pretty useful when you're working on something, commit, and them
 realize that it would fit better in another branch (or that you're in the
 wrong branch)... this is how to move it to another branch.
 
-    git branch new
-    git reset --hard HEAD~1 #go back 1 commit, YOU WILL LOST UNCOMMITED CHANGES
-    git checkout new
-
+{% highlight bash %}
+git branch new
+git reset --hard HEAD~1 #go back 1 commit, YOU WILL LOST UNCOMMITED CHANGES
+git checkout new
+{% endhighlight %}
 
 ### Revert your entire tree to the last commit state
 > by [@luizkowalski](https://github.com/luizkowalski)
 
 Useful when you do some crap and want to throw it all away.
 
-    git reset --hard HEAD
+{% highlight bash %}
+git reset --hard HEAD
+{% endhighlight %}
 
 You can also specify something like `HEAD~3` to get back 3 commits from HEAD.
 
@@ -100,7 +118,9 @@ You can also specify something like `HEAD~3` to get back 3 commits from HEAD.
 ### Remove files that have not been added to staging area
 > by [@luizkowalski](https://github.com/luizkowalski)
 
-    git clean -df
+{% highlight bash %}
+git clean -df
+{% endhighlight %}
 
 
 ### Stashing
@@ -110,9 +130,11 @@ You can also specify something like `HEAD~3` to get back 3 commits from HEAD.
 This is useful when you want to switch branches, but don't want to commit a
 half-done work just to get back to it later.
 
-    git stash # save the current state
-    # later...
-    git stash pop # apply the stash to your current HEAD and remove it from your stack.
+{% highlight bash %}
+git stash # save the current state
+# later...
+git stash pop # apply the stash to your current HEAD and remove it from your stack.
+{% endhighlight %}
 
 More info can be found [here](http://git-scm.com/book/en/Git-Tools-Stashing).
 
@@ -123,8 +145,9 @@ More info can be found [here](http://git-scm.com/book/en/Git-Tools-Stashing).
 This will do the merge without creating the "merge commit", acting
 much like SVN.
 
-    git pull --rebase
-
+{% highlight bash %}
+git pull --rebase
+{% endhighlight %}
 
 ### Aliases
 
@@ -132,24 +155,25 @@ much like SVN.
 
 You can setup aliases in git, so get smaller commands and save time. Examples:
 
-    # configuring...
-    git config --global alias.co checkout
-    git config --global alias.s status
+{% highlight bash %}
+# configuring...
+git config --global alias.co checkout
+git config --global alias.s status
 
-    # using
-    git s
-    git co https://github.com/caarlos0/up
-
+# using
+git s
+git co https://github.com/caarlos0/up
+{% endhighlight %}
 
 ### Copy a file from one branch to another
 
 Useful if you want a file that was introduced or modified in other branch. Example:
 
-
-    git checkout gh-pages
-    git checkout master -- teste.js
-    git commit -m "Update test.js from master"
-
+{% highlight bash %}
+git checkout gh-pages
+git checkout master -- teste.js
+git commit -m "Update test.js from master"
+{% endhighlight %}
 
 ### Log deleted files
 
@@ -157,22 +181,26 @@ Useful if you want a file that was introduced or modified in other branch. Examp
 
 Show the commit log with the deleted files for each commit:
 
-    git log --diff-filter=D --summary
-
+{% highlight bash %}
+git log --diff-filter=D --summary
+{% endhighlight %}
 
 ### Delete a branch
 
 Local:
-    
-    git branch -d name
-    git branch -D name # force delete unmerged branch
-    
+
+{% highlight bash %}
+git branch -d name
+git branch -D name # force delete unmerged branch
+{% endhighlight %}
+
 Remote:
 
 > by [Ricardo Walter](https://twitter.com/ricardo_walter)
 
-    git push origin :branchname
-
+{% highlight bash %}
+git push origin :branchname
+{% endhighlight %}
 
 ### Undo your last commit
 
@@ -181,8 +209,10 @@ Remote:
 If you do a wrong commit, revert it, but maintain the changes in your staging
 area.
 
-    git reset --soft HEAD^
-    
+{% highlight bash %}
+git reset --soft HEAD^
+{% endhighlight %}
+
 Just remember: `HEAD^` is a pointer to the parent of current `HEAD`, so, you
 can use `HEAD~3` to go 3 commits back, for example. Also, check the `reflog`
 part of this post.
@@ -193,8 +223,10 @@ PROTIP: Don't do this if you already pushed the commit.
 
 For example, if you want to remove the `wrongfile.txt`, do:
 
-    git rm wrongfile.txt
-    git commit --amend
+{% highlight bash %}
+git rm wrongfile.txt
+git commit --amend
+{% endhighlight %}
 
 Done.
 

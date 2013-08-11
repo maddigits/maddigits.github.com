@@ -20,10 +20,16 @@ and a lot of params to `mvn` executable. I could just put that in my
 sense, since other projects will have other setup.
 
 Another problem, is that lots of times I wanted to run a lot of scripts in one
-line, for example: `./build.sh && ./publish.sh && ./start.sh`. I hate doing
-this thought. So, I believed that creating a `Rakefile` would fit good. But it
-doesn't make any sense to put Ruby code with Java code just for this. Then,
-GNU Make looks a damn good option for me, and start hacking around it.
+line, for example:
+
+{% highlight bash %}
+./build.sh && ./publish.sh && ./start.sh
+{% endhighlight %}
+
+I hate doing this thought. So, I believed that creating a `Rakefile` would fit
+good. But it doesn't make any sense to put Ruby code with Java code just for
+this. Then, GNU Make looks a damn good option for me, and start hacking around
+it.
 
 In first versions, I just put all my code inside the `Makefile` itself, but it
 starts to get big, and I decided to modularize.
@@ -48,15 +54,15 @@ add it to `Makefile`.
 
 The instalation is pretty easy, you can just call:
 
-```sh
+{% highlight bash %}
 wget -qO- http://git.io/63HVSg | bash
-```
+{% endhighlight %}
 
 or, using curl:
 
-```sh
+{% highlight bash %}
 curl -s http://git.io/63HVSg | bash
-```
+{% endhighlight %}
 
 After that, `make newtask` and start building your own scripts. Automate
 everything, put computers to work to you, not the opposite.

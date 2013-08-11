@@ -43,22 +43,24 @@ Create a new Maven project and add the following to your `pom.xml`:
 Nice, you now have almost-all needed dependencies (Guava, EclipseLink, Guice,
 etc). In fact, if you run `mvn dependency:tree`, you will get something like:
 
-    [INFO] com.carlosbecker:persistence-base-example:jar:1.0-SNAPSHOT
-    [INFO] \- com.github.caarlos0:persistence-base:jar:0.0.5:compile
-    [INFO]    +- javax.validation:validation-api:jar:1.0.0.GA:compile
-    [INFO]    +- org.eclipse.persistence:javax.persistence:jar:2.0.3:compile
-    [INFO]    +- org.eclipse.persistence:eclipselink:jar:2.4.0:compile
-    [INFO]    |  \- commonj.sdo:commonj.sdo:jar:2.1.1.v201112051852:compile
-    [INFO]    +- org.glassfish.external:commons-codec-repackaged:jar:3.0:compile
-    [INFO]    +- org.apache.bval:bval-core:jar:0.5:compile
-    [INFO]    |  +- org.apache.commons:commons-lang3:jar:3.1:compile
-    [INFO]    |  \- commons-beanutils:commons-beanutils-core:jar:1.8.3:compile
-    [INFO]    +- org.apache.bval:bval-jsr303:jar:0.5:compile
-    [INFO]    +- com.google.inject:guice:jar:3.0:compile
-    [INFO]    |  +- javax.inject:javax.inject:jar:1:compile
-    [INFO]    |  \- aopalliance:aopalliance:jar:1.0:compile
-    [INFO]    +- com.google.inject.extensions:guice-persist:jar:3.0:compile
-    [INFO]    \- com.google.guava:guava:jar:14.0.1:compile
+{% highlight java %}
+[INFO] com.carlosbecker:persistence-base-example:jar:1.0-SNAPSHOT
+[INFO] \- com.github.caarlos0:persistence-base:jar:0.0.5:compile
+[INFO]    +- javax.validation:validation-api:jar:1.0.0.GA:compile
+[INFO]    +- org.eclipse.persistence:javax.persistence:jar:2.0.3:compile
+[INFO]    +- org.eclipse.persistence:eclipselink:jar:2.4.0:compile
+[INFO]    |  \- commonj.sdo:commonj.sdo:jar:2.1.1.v201112051852:compile
+[INFO]    +- org.glassfish.external:commons-codec-repackaged:jar:3.0:compile
+[INFO]    +- org.apache.bval:bval-core:jar:0.5:compile
+[INFO]    |  +- org.apache.commons:commons-lang3:jar:3.1:compile
+[INFO]    |  \- commons-beanutils:commons-beanutils-core:jar:1.8.3:compile
+[INFO]    +- org.apache.bval:bval-jsr303:jar:0.5:compile
+[INFO]    +- com.google.inject:guice:jar:3.0:compile
+[INFO]    |  +- javax.inject:javax.inject:jar:1:compile
+[INFO]    |  \- aopalliance:aopalliance:jar:1.0:compile
+[INFO]    +- com.google.inject.extensions:guice-persist:jar:3.0:compile
+[INFO]    \- com.google.guava:guava:jar:14.0.1:compile
+{% endhighlight %}
 
 ---
 

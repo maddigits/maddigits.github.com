@@ -18,7 +18,7 @@ I'll show you some cool features that could make you like Guava Libraries even m
 Collection<String> lines = Files.readLines(mytxtFile, Charsets.UTF8);
 {% endhighlight %}
 
-	Simple, uh?
+Simple, uh?
 
 * [Splitters](https://code.google.com/p/guava-libraries/wiki/StringsExplained#Splitter) and [Joinners](https://code.google.com/p/guava-libraries/wiki/StringsExplained#Joiner) - Suppose that our text filed used in the other example contains a lot of columns divided by a pipe (`|`), now, how can we parse it? Simple! Iterate the collection of string provided by `Files.readLines`, and do something like:
 

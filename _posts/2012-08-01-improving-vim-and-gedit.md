@@ -39,28 +39,28 @@ The installation is a little more complex than GMate, but, is not like build a B
 
 Just follow these steps:
 
-1. Clone the project from github:
+#### Clone the project from github:
 
 {% highlight bash %}
 git clone git://github.com/caarlos0/vimfiles.git ~/.vim
 {% endhighlight %}
 
-1. Edit/Create your main `vimrc` file
+####  Edit/Create your main `vimrc` file
 
 {% highlight bash %}
 vim ~/.vimrc
 {% endhighlight %}
 
-	With the the following content:
+With the the following content:
 
 {% highlight bash %}
 source ~/.vim/vimrc
 colorscheme molokai
 {% endhighlight %}
 
-	Then save and exit;
+Then save and exit;
 
-1. Update the submodules:
+#### Update the submodules:
 
 {% highlight bash %}
 cd ~/.vim
