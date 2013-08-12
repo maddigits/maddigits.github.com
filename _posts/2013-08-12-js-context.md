@@ -13,7 +13,7 @@ The key to learn javascript is understanging the following:
 ## **The context only changes inside functions**
 
 You might be asking something like _"but doesn't it changes in ..."_
-**NO**, it don't.
+**NO**, it doesn't.
 
 I could literally just stop writing here, but I will be kind and give you some
 examples.
