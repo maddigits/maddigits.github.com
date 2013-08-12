@@ -43,7 +43,7 @@ We can also encapsulate variables with something like this:
 {% highlight javascript %}
 var global = 100;
 
-var Test = function () {
+var test = function () {
   // new context here
   var local = 2;
 
@@ -72,7 +72,7 @@ var Test = function () {
   }
 }
 
-var test = Test();
+var test = test();
 console.log(test.local); // undefined
 console.log(test.getLocal()); // 2
 console.log(test.setLocal(10)); // called setLocal
