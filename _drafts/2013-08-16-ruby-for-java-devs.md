@@ -13,7 +13,6 @@ category: posts
 >
 > - The examples and explanations are all based on Ruby 2.0.0 MRI.
 
-
 ## Language fundamentals
 
 Just like Java, in Ruby  the memory is managed for you via a Garbage Collector,
@@ -90,8 +89,6 @@ Remember, **everything is an object**.
 
 ## Syntax basics
 
-I still not sure about the order of the chapters.
-
 Java and Ruby syntaxes differ a lot. While Java is extremelly verbose, Ruby
 abuses of tons of syntatic sugar mechanisms to make it looks the less
 verbose and clean as possible. In the next items, I'll try to demonstrate de
@@ -111,10 +108,10 @@ be resolved on the fly;
 
 Having that in mind, let's resume:
 
-- Java: **static** and **strong** typing;
-- Ruby: **dynamic** and **strong** typing.
+- Java have **static** and **strong** typing;
+- Ruby have **dynamic** and **strong** typing.
 
-The syntax to declare variables is simple as defining its name:
+In Ruby, the syntax to declare variables is simple as defining its name:
 
 {% highlight ruby %}
 # ruby
