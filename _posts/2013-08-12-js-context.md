@@ -117,8 +117,8 @@ console.log(obj2.a.b.c.d()); // Object {d: function}
 ----
 
 Yep, that's it. If you want to learn more about Javascript, I strongly
-recommend you to read the "[JavaScript: The Good Parts][book]", by
-Douglas Crockford. It will guide you through some misunderstood
+recommend you to read the "[JavaScript: The Good Parts][book]" book,
+by Douglas Crockford. It will guide you through some misunderstood
 Javascript features in a pretty simple way.
 
 If you have any questions, please, use the comment box below.
