@@ -70,7 +70,7 @@ will try to change the outer function (which in this case is `window`)
 
 In the `undefined` alert example, we are using the `var` keyword, which means
 that we are creating a new variable with the same name of the variable of the
-outer scope (`window`). But, again, **JavaScript hoist variable declarations**,
+outer scope (`window`). But, again, **JavaScript hoists variable declarations**,
 so, the previous code will actually be interpreted like this:
 
 {% highlight javascript %}
