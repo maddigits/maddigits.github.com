@@ -228,4 +228,5 @@ starting to learn erlang now, It's pretty normal made mistakes. The thing is:
 Hope you enjoy Erlang.
 
 
-[book]: http://pragprog.com/book/btlang/seven-languages-in-seven-weeks
+[book]: http://amzn.to/17vnhdb
+

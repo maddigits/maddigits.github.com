@@ -123,5 +123,4 @@ Javascript features in a pretty simple way.
 
 If you have any questions, please, use the comment box below.
 
-[book]: http://www.amazon.com/gp/product/0596517742/ref=as_li_qf_sp_asin_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0596517742&linkCode=as2&tag=carlbeck-20
-
+[book]: http://amzn.to/14ZmSmZ

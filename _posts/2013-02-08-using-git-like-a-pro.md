@@ -230,6 +230,13 @@ git commit --amend
 
 Done.
 
+## Going Further
+
+I **strongly** recommend the reading of the "[Pro Git][book]" book. The book
+will teach tons of things: basics, importing SVN projects, advanced,
+branching, servers, and git internals.
+
+[book]: http://amzn.to/15EiEwD
 
 ---
 

@@ -114,7 +114,7 @@ I would like to, again, recommend this excellent book by Douglas Crockford,
 "[JavaScript: The Good Parts][book]". It will surely help you to
 understand JavaScript and avoid a lot of commom errors.
 
-[book]: http://www.amazon.com/gp/product/0596517742/ref=as_li_qf_sp_asin_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0596517742&linkCode=as2&tag=carlbeck-20
+[book]:http://amzn.to/14ZmSmZ
 
 Happy Coding!
 
