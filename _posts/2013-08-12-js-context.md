@@ -116,9 +116,12 @@ console.log(obj2.a.b.c.d()); // Object {d: function}
 
 ----
 
-Yep, that's it. If you want to learn more about Javascript, I strongly recommend
-you to read the "Javascript: The good parts", by Douglas Crockford. It will
-guide you through some misunderstood Javascript features in a pretty simple
-way.
+Yep, that's it. If you want to learn more about Javascript, I strongly
+recommend you to read the "[JavaScript: The Good Parts][book]", by
+Douglas Crockford. It will guide you through some misunderstood
+Javascript features in a pretty simple way.
 
 If you have any questions, please, use the comment box below.
+
+[book]: http://www.amazon.com/gp/product/0596517742/ref=as_li_qf_sp_asin_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0596517742&linkCode=as2&tag=carlbeck-20
+
