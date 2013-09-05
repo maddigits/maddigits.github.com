@@ -90,7 +90,7 @@ git clone git@SERVER:foo.git
 {% endhighlight %}
 
 
-## Final throughts
+## Final thoughts
 
 In this tutorial, I used a `ubuntu-12.10-beta2` box, but I believe that it works with older versions too.
 
