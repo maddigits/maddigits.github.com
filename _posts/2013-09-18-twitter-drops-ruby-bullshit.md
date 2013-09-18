@@ -8,8 +8,6 @@ This post is about the twitter change from Ruby to Java, some years ago, fact
 that, sadly, still being used by some people to say that Ruby sucks and
 Java is the best language in the world.
 
-![Twitter Logo](https://abs.twimg.com/a/1378977615/images/resources/twitter-bird-white-on-blue.png)
-
 Before you read that, I believe that would be good if you know something about
 me:
 
