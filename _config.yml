@@ -1,8 +1,8 @@
 markdown: rdiscount
+safe: true
+lsi: false
 pygments: true
 permalink: /posts/:title
-rdiscount:
-  extensions: [smart]
 title : Carlos Becker
 production_url : http://carlosbecker.com
 description: "Througths, flamewars, utilities, tutorials, codes, projects and other things by Carlos Alexandro Becker."
