@@ -10,8 +10,8 @@ Java is the best language in the world.
 
 Before you read that, a little background on me would be good:
 
-- Java is the first language I worked with. I started 4 years ago and
-I'm still using it **every day**;
+- Java is the first language I worked with. I started 4 years ago
+and I'm still using it **every day**;
 - No, I don't hate Java, it is just not my favorite language;
 - I started with Ruby about 2 years ago;
 - A lot of friends and coworkers try to troll me with that bullshit about
