@@ -17,7 +17,7 @@ and I'm still using it **every day**;
 - A lot of friends and coworkers try to troll me with that bullshit about
 twitter and others.
 
-Having that in mind, I decided to drop here some lines about this.
+With that in mind, I decided to drop a few lines about this here.
 
 ## Twitter dropped Ruby
 
@@ -25,9 +25,9 @@ Yeah, in the [original post][post] twitter says that they get 3x more
 performance using Lucene and Java. The post is OK. The arguments are right.
 Your interpretation may be wrong.
 
-People like to generalize things. It's like "Twitter says they get more
+People like to generalize things. Like "Twitter says they get more
 performance with Java, so, Ruby sucks", which is not correct. If it was,
-maybe you can also use PHP, since Facebook uses it and it work for them.
+maybe you could also use PHP, since Facebook uses it and it works for them.
 
 ## Scalability isn't everything
 
