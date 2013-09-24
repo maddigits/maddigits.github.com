@@ -94,7 +94,8 @@ So, what's the real concurrency problem with Ruby?
 The main problem is that Ruby uses a Global Interpreter Lock (GIL), which
 means that even if you use multiple threads, there will be only one lock per
 interpreter process. In other hand, Java has a very well tested and stable
-concurrency model with one lock per thread.
+concurrency model with one lock per thread, as well other concurrecy
+models (like Actor model using things like Akka).
 
 ![Ruby GIL](http://i.imgur.com/SnTf2hl.png)
 
@@ -116,7 +117,8 @@ instead of 10 processes with separate memory spaces, the server "clones" the
 process into 10. They share this part of memory, but they ca also modify their
 own memory without affecting other forks.
 
-You can also try jRuby, which has all the advantages of JVM.
+Note that what I said above is about Ruby MRI. You can also try jRuby, which
+has all the advantages of JVM, or even Rubinius.
 
 ## What's the point?
 
