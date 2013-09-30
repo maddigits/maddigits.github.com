@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to enable KMS on i915 GraphicCard (archlinux) - Improving your Graphical Performance with this small tip"
+title: "Enable KMS on i915 GraphicCard"
 ---
 
 Acccording to [Arch Linux wiki](https://wiki.archlinux.org/index.php/Kernel_Mode_Setting), Kernel Mode Setting (KMS) is a method for setting display resolution and depth in the kernel space rather than user space.

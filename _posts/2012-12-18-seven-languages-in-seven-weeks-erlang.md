@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Seven Languages in Seven Weeks -    Erlang"
+title: "Seven Languages in Seven Weeks: Erlang"
 category: posts
 ---
 

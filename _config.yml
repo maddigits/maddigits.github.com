@@ -9,6 +9,7 @@ description: "Througths, flamewars, utilities, tutorials, codes, projects and ot
 disqus_shortname: caarlos0blog
 # analytics: UA-32899481-1
 gauges: 50f1f940613f5d2cfe000026
+exclude: [ Gemfile, Gemfile.lock, Procfile, vendor, gems, node_modules]
 author :
   name : Carlos Alexandro Becker
   github : caarlos0

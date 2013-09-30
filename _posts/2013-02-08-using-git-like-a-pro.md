@@ -1,6 +1,6 @@
 ---
 layout: post
-cover: "http://f.cl.ly/items/2Z3c2W3t113n1G0K1w2N/branches.png"
+cover: "/img/git-pro.png"
 title: "Using git like a PRO"
 ---
 

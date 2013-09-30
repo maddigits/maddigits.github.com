@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "From zero to a persistent and modular Java project in 5 minutes"
+title: "JPA2 with Guice"
 category: posts
 ---
 

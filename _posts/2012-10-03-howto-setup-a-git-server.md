@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Howto setup a git server with gitolite"
+title: "Configuring a git server with gitolite"
 ---
 
 ## Setup

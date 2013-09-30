@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Modular Persistence with JPA2, EclipseLink and Google Guice"
+title: "Modular Persistence"
 
 ---
 Hi everybody!

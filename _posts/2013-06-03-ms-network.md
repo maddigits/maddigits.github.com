@@ -1,7 +1,7 @@
 ---
 layout: post
-cover: "http://f.cl.ly/items/0G1T3V1i2X02420J1z3a/bsod.jpg"
-title: "Surviving in a MS-based corporate network using Linux"
+cover: "/img/bsod.jpg"
+title: "Riding a MS Network with Linux"
 ---
 
 I work in a company that have an enterily MS-based network, which means,

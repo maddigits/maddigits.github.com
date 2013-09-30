@@ -4,7 +4,7 @@ title: "Twitter drops Ruby - The Bullshit"
 category: posts
 ---
 
-This post is about the twitter change from Ruby to Java, some years ago, fact
+This post is about the Twitter change from Ruby to Java, some years ago, fact
 that, sadly, is still being used by some people to say that Ruby sucks and
 Java is the best language in the world.
 
@@ -15,13 +15,13 @@ still using it **every day**;
 - No, I don't hate Java, it is just not my favorite language;
 - I started with Ruby about 2 years ago;
 - A lot of friends and coworkers try to troll me with that bullshit about
-twitter and others.
+Twitter and others.
 
 With that in mind, I decided to drop a few lines about this here.
 
 ## Twitter dropped Ruby
 
-Yeah, in the [original post][post] twitter says that they get 3x more
+Yeah, in the [original post][post] Twitter says that they get 3x more
 performance using Lucene and Java. The post is OK. The arguments are right.
 Your interpretation may be wrong.
 
@@ -55,7 +55,7 @@ What happens is that a lot of republications about that post do.
 
 Usually, they don't even know what they are talking about. They just link
 to that post, talk a lot of bullshit around the subject, and say something
-pretentious, like, "thanks to java twitter handles the U.S. elections", which
+pretentious, like, "thanks to java Twitter handles the U.S. elections", which
 is also usually the title. ~~I'm very inclined to believe that someone is
 paying them to say that.~~
 
@@ -64,18 +64,18 @@ Lucene and refactored their Ruby code - which they said in the post that had
 a huge technical debt - it would be fast enough. Maybe not. We can't be
 sure about it based on assumptions.
 
-## You don't have twitter's problems
+## You don't have Twitter's problems
 
 You probably don't and probably will never have numbers even close to
-twitter's. You probably don't have the same problems. The solutions that
-work for twitter may not work for your application.
+Twitter's. You probably don't have the same problems. The solutions that
+work for Twitter may not work for your application.
 
 ## Java != Java EE
 
 Oracle, obviously, took advantage of this situation to promote their
 technology, Java and Java Enterprise Edition.
 
-The thing is that twitter doesn't use any JEE technology.
+The thing is that Twitter doesn't use any JEE technology.
 They implemented their own "platform", called Blender, using things like Thrift,
 Netty and NIO, as they say in the post:
 
@@ -83,8 +83,8 @@ Netty and NIO, as they say in the post:
 > client server library written in Java that enables the development of a
 > variety of protocol servers and clients quickly and easily.
 
-JEE is heavy and has a lot of features that twitter will never use. Maybe for
-an ERP it could make sense and work pretty well. But not for twitter, not
+JEE is heavy and has a lot of features that Twitter will never use. Maybe for
+an ERP it could make sense and work pretty well. But not for Twitter, not
 for everyone.
 
 ## Let's talk languages
@@ -135,6 +135,6 @@ in some matter, as long as they prove me their point.
 Now, saying that "_[lang X] is better than [lang Y] **because of
 [reason Z]**_" doesn't make any sense.
 
-[post]: https://blog.twitter.com/2011/twitter-search-now-3x-faster
+[post]: https://blog.Twitter.com/2011/Twitter-search-now-3x-faster
 [raphters]: https://github.com/DanielWaterworth/Raphters
 

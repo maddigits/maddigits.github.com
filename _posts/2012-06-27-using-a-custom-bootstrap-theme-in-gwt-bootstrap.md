@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Using a custom Bootstrap theme with GWT-Bootstrap"
+title: "Theming GWT-Bootstrap"
 ---
 
 First of all, if you haven't done it yet, read

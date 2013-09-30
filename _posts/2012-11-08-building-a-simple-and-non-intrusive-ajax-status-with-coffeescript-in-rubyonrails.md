@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Building a simple and non intrusive AJAX status with CoffeeScript in RubyOnRails"
+title: "Simple RoR AJAX Status"
 ---
 
 ## tl;dr

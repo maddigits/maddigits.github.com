@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to easy-install MS Fonts in Arch Linux"
+title: "Easy-install MS Fonts in Arch Linux"
 ---
 
 I just made a all-new fresh installation of archlinux a couple of days ago, and realized that my fonts are tottaly weird in the browser.

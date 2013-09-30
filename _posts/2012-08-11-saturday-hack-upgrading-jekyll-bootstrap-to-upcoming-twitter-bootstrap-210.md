@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Saturday hack: Upgrading Jekyll Bootstrap to upcoming Twitter Bootstrap 2.1.0"
+title: "Upgrading Jekyll Bootstrap"
 ---
 
 As you may know, this blog uses [Jekyll Bootstrap](http://jekyllbootstrap.com) as engine. Yeah, Jekyll Bootstrap uses Twitter-Bootstrap, but, it uses the version 2.0.x (mine is 2.0.4, don't remember if I update or if it hsa like this since the begin of times), and the version 2.1.0 is comming!

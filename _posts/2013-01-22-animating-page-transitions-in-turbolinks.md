@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Animating page transitions in Turbolinks"
+title: "Turbolinks animated page transitions"
 category: posts
 ---
 

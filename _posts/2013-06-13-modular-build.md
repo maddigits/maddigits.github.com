@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Modular Build with Makefile and Bash scripts"
+title: "Automate your Builds"
 category: posts
 ---
 

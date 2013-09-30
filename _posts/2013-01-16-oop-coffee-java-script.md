@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "OOP with Coffee/JavaScript - A beginners guide"
+title: "JavaScript OOP: A beginners guide"
 category: posts
 ---
 
