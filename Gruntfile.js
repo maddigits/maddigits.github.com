@@ -5,7 +5,8 @@ module.exports = function(grunt) {
       dist: {
         src: [
           'bower_components/jquery/jquery.min.js',
-          'bower_components/bootstrap/dist/bootstrap.min.js',
+          'bower_components/bootstrap/js/transition.js',
+          'bower_components/bootstrap/js/collapse.js',
           '_assets/up.js'
         ],
         dest: 'js/up.js'
