@@ -1,10 +1,8 @@
 # [My personal blog](http://carlosbecker.com)
 
-> Deployable on Github Pages
->
-> Dependencies: bundler, npm, imagemagick
+Deployable on Github Pages
 
-
+Dependencies: bundler, npm, imagemagick
 
 ## Setup
 
