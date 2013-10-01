@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "First steps with Mac OS X as a Developer"
+cover: "/img/osx.jpg"
 ---
 
 So, I just bought my first Mac, and decided to wrote this in order to help
