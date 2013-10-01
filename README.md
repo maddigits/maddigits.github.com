@@ -1,10 +1,8 @@
-# Me personal blog
+# [My personal blog](http://carlosbecker.com)
 
-|                |                         |
-| -------------- |:-----------------------:|
-| URL:           | http://carlosbecker.com |
-| Deployable on: | Github Pages            |
-| Dependencies:  | Bundler, npm, bower     |
+> Deployable on Github Pages
+>
+> Dependencies: bundler, npm, imagemagick
 
 
 
