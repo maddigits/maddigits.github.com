@@ -65,6 +65,8 @@
 @code-color: #002b36;
 @code-bg: #f0f0f0;
 @FontAwesomePath: "/css/font";
+@blue: #307ea9;
+@blockquote-border-color: #207ef0;
 
 body {
   padding-top: @navbar-height + 10px;
@@ -133,6 +135,12 @@ article,
     .upper {
       text-transform: uppercase;
     }
+  }
+  blockquote p {
+    font-size: @font-size-base + 2px;
+  }
+  .highlight pre {
+    font-size: @font-size-base - 5px;
   }
   section.byline {
     font-size: 0.8em;
@@ -205,7 +213,7 @@ nav.navbar-blog.navbar {
     transition: color 0.15s ease-in;
     -webkit-transition: color 0.15s ease-in;
     &:hover {
-      color: #307EA9;
+      color: @blue;
     }
   }
 }
