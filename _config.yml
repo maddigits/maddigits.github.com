@@ -5,7 +5,7 @@ pygments: true
 permalink: /posts/:title
 title : Carlos Becker
 production_url : http://carlosbecker.com
-description: "Througths, tutorials, hacks and other things by Carlos Alexandro Becker."
+description: "Thougths, tutorials and hacks by Carlos Alexandro Becker."
 disqus_shortname: caarlos0blog
 # analytics: UA-32899481-1
 gauges: 50f1f940613f5d2cfe000026
