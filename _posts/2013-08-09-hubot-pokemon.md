@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Hubot, our personal pokemon"
+title: "Charmander, our Hubot"
 category: posts
 ---
 
