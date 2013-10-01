@@ -1,7 +1,6 @@
 # Me personal blog
 
-|                |                         |
-| -------------- |:-----------------------:|
+
 | URL:           | http://carlosbecker.com |
 | Deployable on: | Github Pages            |
 | Dependencies:  | Bundler, npm, bower     |
