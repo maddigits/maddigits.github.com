@@ -178,5 +178,5 @@ Cheers!
 [14]: http://www.derlien.com/
 [15]: https://github.com/caarlos0/dotfiles-mac/blob/master/osx/set-defaults.sh
 [16]: http://apple.stackexchange.com/questions/400/please-share-your-hidden-os-x-features-or-tips-and-tricks
-[17]: www.irradiatedsoftware.com/sizeup/
+[17]: http://www.irradiatedsoftware.com/sizeup/
 
