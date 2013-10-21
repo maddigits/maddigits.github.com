@@ -16,8 +16,7 @@ bower install
 ## Watch
 
 ```bash
-grunt watch
-rake preview
+foreman start -f Procfile.dev
 ```
 
 ## Update assets
