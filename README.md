@@ -25,4 +25,3 @@ foreman start -f Procfile.dev
 bower update
 grunt
 ```
-
