@@ -39,17 +39,20 @@ install it:
 ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 {% endhighlight %}
 
-So, to install, for example, git:
+## Install some useful things via brew
 
 {% highlight bash %}
-brew install git
+brew install grc coreutils spark z ack git
 {% endhighlight %}
 
-Yep, that easy.
-
-## Install git
-
-> (read the example given in previous item :smile: )
+- grc is tool to colorize things. You can easily use it by sourcing
+`$(brew --prefix)/etc/grc.bashrc`;
+- coreutils is kinda obvious;
+- spark lets you echo bar charts in your terminal.. might be useful time to time;
+- z shows you the most folders you access most and let's you easily access
+any of them;
+- ack is kinda `grep -ril` but faster;
+- git doesn't need any explanation;
 
 ## Install zsh
 
@@ -139,12 +142,45 @@ And boom! It works =) Pretty tricky.
 
 **Update:** The `C_INCLUDE` trick seems to not be needed anymore.
 
+## Install Homebrew Cask plugin
+
+[Homebrew Cask][cask] let's you install normal apps with brew via command line.
+You will almost-never have to manually download and install apps again.
+
+{% highlight bash %}
+brew tap phinze/homebrew-cask
+brew install brew-cask
+{% endhighlight %}
+
+Then you can install some useful stuff with it:
+
+{% highlight bash %}
+brew cask install caffeine dropbox iterm2 sequel-pro virtualbox vagrant the-unarchiver vlc google-chrome skype transmission dash cloudapp postgres divvy rdio github disk-inventory-x
+{% endhighlight %}
+
+
+Let's made a list:
+
+- Caffeine: let's you prevent your mac from sleep;
+- iterm2: better Terminal.app;
+- sequel-pro: mysql/mariadb gui;
+- vitualbox and vagrant: virtualization tools;
+- the-unarchiver: extract everything;
+- transmission: torrent client;
+- dash: documentation visualizer (for almost every thing ever made);
+- cloudapp: easy file sharing tool;
+- postgres: the very simples postgresql for mac;
+- divvy: tool to manage windows using keyboard;
+- disk-inventory-x: tool to find files that are eating your hd.
+
+The others are probably auto-explanatory.
+
+[cask]: https://github.com/phinze/homebrew-cask
+
 ## Other tips:
 
 - Everyone likes Emojis. Take this [cheat sheet][11];
-- [Disk Inventory X][14], a very good disk analysis tool;
 - [Hidden OSX Features, tips and tricks][16];
-- [SizeUP][17], a window tilling manager for OSX.
 
 If you want, you can also take a look at my [OSX Settings][15], which
 is already available in my dotfiles (and you already have if you ran the
