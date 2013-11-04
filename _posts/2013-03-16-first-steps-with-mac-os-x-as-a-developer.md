@@ -54,6 +54,41 @@ any of them;
 - ack is kinda `grep -ril` but faster;
 - git doesn't need any explanation;
 
+## Install Homebrew Cask plugin
+
+[Homebrew Cask][cask] let's you install normal apps with brew via command line.
+You will almost-never have to manually download and install apps again.
+
+{% highlight bash %}
+brew tap phinze/homebrew-cask
+brew install brew-cask
+{% endhighlight %}
+
+Then you can install some useful stuff with it:
+
+{% highlight bash %}
+brew cask install caffeine dropbox iterm2 sequel-pro virtualbox vagrant the-unarchiver vlc google-chrome skype transmission dash cloudapp postgres divvy rdio github disk-inventory-x
+{% endhighlight %}
+
+
+Let's made a list:
+
+- Caffeine: let's you prevent your mac from sleep;
+- iterm2: better Terminal.app;
+- sequel-pro: mysql/mariadb gui;
+- vitualbox and vagrant: virtualization tools;
+- the-unarchiver: extract everything;
+- transmission: torrent client;
+- dash: documentation visualizer (for almost every thing ever made);
+- cloudapp: easy file sharing tool;
+- postgres: the very simples postgresql for mac;
+- divvy: tool to manage windows using keyboard;
+- disk-inventory-x: tool to find files that are eating your hd.
+
+The others are probably auto-explanatory.
+
+[cask]: https://github.com/phinze/homebrew-cask
+
 ## Install zsh
 
 [ZSH][3] is a pretty powerful shell for *nix systems. As a developer, it just
@@ -141,41 +176,6 @@ C_INCLUDE_PATH=/usr/local/Cellar/imagemagick/6.8.0-10/include/ImageMagick gem in
 And boom! It works =) Pretty tricky.
 
 **Update:** The `C_INCLUDE` trick seems to not be needed anymore.
-
-## Install Homebrew Cask plugin
-
-[Homebrew Cask][cask] let's you install normal apps with brew via command line.
-You will almost-never have to manually download and install apps again.
-
-{% highlight bash %}
-brew tap phinze/homebrew-cask
-brew install brew-cask
-{% endhighlight %}
-
-Then you can install some useful stuff with it:
-
-{% highlight bash %}
-brew cask install caffeine dropbox iterm2 sequel-pro virtualbox vagrant the-unarchiver vlc google-chrome skype transmission dash cloudapp postgres divvy rdio github disk-inventory-x
-{% endhighlight %}
-
-
-Let's made a list:
-
-- Caffeine: let's you prevent your mac from sleep;
-- iterm2: better Terminal.app;
-- sequel-pro: mysql/mariadb gui;
-- vitualbox and vagrant: virtualization tools;
-- the-unarchiver: extract everything;
-- transmission: torrent client;
-- dash: documentation visualizer (for almost every thing ever made);
-- cloudapp: easy file sharing tool;
-- postgres: the very simples postgresql for mac;
-- divvy: tool to manage windows using keyboard;
-- disk-inventory-x: tool to find files that are eating your hd.
-
-The others are probably auto-explanatory.
-
-[cask]: https://github.com/phinze/homebrew-cask
 
 ## Other tips:
 
