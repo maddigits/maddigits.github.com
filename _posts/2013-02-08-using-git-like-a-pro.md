@@ -19,6 +19,8 @@ Let's do this.
 
 ----------
 
+### [Do not rebase commits that have already been pushed to the remote repository](http://git-scm.com/book/en/Git-Branching-Rebasing#The-Perils-of-Rebasing)
+
 
 ### See who and in which commit each line of a file was changed last time
 
@@ -36,7 +38,9 @@ git reflog
 {% endhighlight %}
 
 **HEADS UP**: `reflog` will only have the logs of actions in your local repository,
-more specifically, it will log each time the `HEAD` pointer changes, so.
+more specifically, it will log each time the `HEAD` pointer changes, so, if clone
+a repository right now, the reflog will be empty. Also, the reflog is maintained
+for 30 days by default.
 
 
 ### Get revision code for anything
