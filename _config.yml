@@ -9,7 +9,7 @@ description: "Thougths, tutorials and hacks by Carlos Alexandro Becker."
 disqus_shortname: caarlos0blog
 # analytics: UA-32899481-1
 gauges: 50f1f940613f5d2cfe000026
-exclude: [ Gemfile, Gemfile.lock, gems ]
+exclude: [ Gemfile, Gemfile.lock, gems, _assets, bower_components ]
 author :
   name : Carlos Alexandro Becker
   github : caarlos0

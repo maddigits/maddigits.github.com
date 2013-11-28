@@ -3,7 +3,6 @@ require 'rake'
 require 'yaml'
 require 'time'
 require 'open-uri'
-require 'RMagick'
 require "digest/md5"
 
 SOURCE = "."
@@ -54,6 +53,7 @@ end # task :preview
 
 desc "Update icons based on your gravatar (define author email in _config.yml)!"
 task :icons do
+  require 'RMagick'
   puts "Getting author email from _config.yml..."
   config = YAML.load_file('_config.yml')
   author_email = config['author']['email']
