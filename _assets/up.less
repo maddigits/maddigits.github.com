@@ -12,6 +12,7 @@
 @blue: #307ea9;
 @blockquote-border-color: #207ef0;
 
+
 body {
   padding-top: @navbar-height + 10px;
   line-height: 1.5;
@@ -22,6 +23,10 @@ h1,h2,h3,h4,h5,h6 {
   code {
     text-transform: none;
   }
+}
+#nprogress .bar,
+#nprogress .spinner {
+  z-index: 999999;
 }
 .noborder {
   border: none;
