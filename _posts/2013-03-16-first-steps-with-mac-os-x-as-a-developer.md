@@ -97,7 +97,7 @@ install it NOW:
 
 {% highlight bash %}
 brew install zsh
-chsh /bin/zsh
+chsh -s /bin/zsh
 {% endhighlight %}
 
 ## Use some dotfiles
