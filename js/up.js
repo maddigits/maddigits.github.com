@@ -519,9 +519,10 @@
 
 
 (function() {
-  var CSRFToken, anchoredLink, browserCompatibleDocumentParser, browserIsntBuggy, browserSupportsPushState, browserSupportsTurbolinks, cacheCurrentPage, cacheSize, changePage, constrainPageCacheTo, createDocument, crossOriginLink, currentState, executeScriptTags, extractLink, extractTitleAndBody, fetchHistory, fetchReplacement, handleClick, ignoreClick, initializeTurbolinks, installClickHandlerLast, installDocumentReadyPageEventTriggers, installHistoryChangeHandler, installJqueryAjaxSuccessPageUpdateTrigger, loadedAssets, noTurbolink, nonHtmlLink, nonStandardClick, pageCache, pageChangePrevented, pagesCached, popCookie, processResponse, recallScrollPosition, referer, reflectNewUrl, reflectRedirectedUrl, rememberCurrentState, rememberCurrentUrl, rememberReferer, removeHash, removeHashForIE10compatiblity, removeNoscriptTags, requestMethodIsSafe, resetScrollPosition, targetLink, triggerEvent, visit, xhr, _ref,
+  var CSRFToken, allowLinkExtensions, anchoredLink, browserCompatibleDocumentParser, browserIsntBuggy, browserSupportsCustomEvents, browserSupportsPushState, browserSupportsTurbolinks, cacheCurrentPage, cacheSize, changePage, constrainPageCacheTo, createDocument, crossOriginLink, currentState, executeScriptTags, extractLink, extractTitleAndBody, fetchHistory, fetchReplacement, handleClick, historyStateIsDefined, htmlExtensions, ignoreClick, initializeTurbolinks, installClickHandlerLast, installDocumentReadyPageEventTriggers, installHistoryChangeHandler, installJqueryAjaxSuccessPageUpdateTrigger, loadedAssets, noTurbolink, nonHtmlLink, nonStandardClick, pageCache, pageChangePrevented, pagesCached, popCookie, processResponse, recallScrollPosition, referer, reflectNewUrl, reflectRedirectedUrl, rememberCurrentState, rememberCurrentUrl, rememberReferer, removeHash, removeHashForIE10compatiblity, removeNoscriptTags, requestMethodIsSafe, resetScrollPosition, targetLink, triggerEvent, visit, xhr, _ref,
     __hasProp = {}.hasOwnProperty,
-    __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
+    __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; },
+    __slice = [].slice;
 
   pageCache = {};
 
@@ -530,6 +531,8 @@
   currentState = null;
 
   loadedAssets = null;
+
+  htmlExtensions = ['html'];
 
   referer = null;
 
@@ -610,9 +613,11 @@
     for (key in pageCache) {
       if (!__hasProp.call(pageCache, key)) continue;
       value = pageCache[key];
-      if (key <= currentState.position - limit) {
-        pageCache[key] = null;
+      if (!(key <= currentState.position - limit)) {
+        continue;
       }
+      triggerEvent('page:expire', pageCache[key]);
+      pageCache[key] = null;
     }
   };
 
@@ -622,7 +627,6 @@
     if (csrfToken != null) {
       CSRFToken.update(csrfToken);
     }
-    removeNoscriptTags();
     if (runScripts) {
       executeScriptTags();
     }
@@ -652,13 +656,9 @@
     }
   };
 
-  removeNoscriptTags = function() {
-    var noscript, noscriptTags, _i, _len;
-    noscriptTags = Array.prototype.slice.call(document.body.getElementsByTagName('noscript'));
-    for (_i = 0, _len = noscriptTags.length; _i < _len; _i++) {
-      noscript = noscriptTags[_i];
-      noscript.parentNode.removeChild(noscript);
-    }
+  removeNoscriptTags = function(node) {
+    node.innerHTML = node.innerHTML.replace(/<noscript[\S\s]*?<\/noscript>/ig, '');
+    return node;
   };
 
   reflectNewUrl = function(url) {
@@ -792,7 +792,7 @@
   extractTitleAndBody = function(doc) {
     var title;
     title = doc.querySelector('title');
-    return [title != null ? title.textContent : void 0, doc.body, CSRFToken.get(doc).token, 'runScripts'];
+    return [title != null ? title.textContent : void 0, removeNoscriptTags(doc.body), CSRFToken.get(doc).token, 'runScripts'];
   };
 
   CSRFToken = {
@@ -890,7 +890,7 @@
   nonHtmlLink = function(link) {
     var url;
     url = removeHash(link);
-    return url.match(/\.[a-z]+(\?.*)?$/g) && !url.match(/\.html?(\?.*)?$/g);
+    return url.match(/\.[a-z]+(\?.*)?$/g) && !url.match(new RegExp("\\.(?:" + (htmlExtensions.join('|')) + ")?(\\?.*)?$", 'g'));
   };
 
   noTurbolink = function(link) {
@@ -912,6 +912,16 @@
 
   ignoreClick = function(event, link) {
     return crossOriginLink(link) || anchoredLink(link) || nonHtmlLink(link) || noTurbolink(link) || targetLink(link) || nonStandardClick(event);
+  };
+
+  allowLinkExtensions = function() {
+    var extension, extensions, _i, _len;
+    extensions = 1 <= arguments.length ? __slice.call(arguments, 0) : [];
+    for (_i = 0, _len = extensions.length; _i < _len; _i++) {
+      extension = extensions[_i];
+      htmlExtensions.push(extension);
+    }
+    return htmlExtensions;
   };
 
   installDocumentReadyPageEventTriggers = function() {
@@ -951,7 +961,9 @@
     return window.addEventListener('popstate', installHistoryChangeHandler, false);
   };
 
-  browserSupportsPushState = window.history && window.history.pushState && window.history.replaceState && window.history.state !== void 0;
+  historyStateIsDefined = window.history.state !== void 0 || navigator.userAgent.match(/Firefox\/26/);
+
+  browserSupportsPushState = window.history && window.history.pushState && window.history.replaceState && historyStateIsDefined;
 
   browserIsntBuggy = !navigator.userAgent.match(/CriOS\//);
 
@@ -959,9 +971,12 @@
 
   browserSupportsTurbolinks = browserSupportsPushState && browserIsntBuggy && requestMethodIsSafe;
 
-  installDocumentReadyPageEventTriggers();
+  browserSupportsCustomEvents = document.addEventListener && document.createEvent;
 
-  installJqueryAjaxSuccessPageUpdateTrigger();
+  if (browserSupportsCustomEvents) {
+    installDocumentReadyPageEventTriggers();
+    installJqueryAjaxSuccessPageUpdateTrigger();
+  }
 
   if (browserSupportsTurbolinks) {
     visit = fetchReplacement;
@@ -975,6 +990,7 @@
   this.Turbolinks = {
     visit: visit,
     pagesCached: pagesCached,
+    allowLinkExtensions: allowLinkExtensions,
     supported: browserSupportsTurbolinks
   };
 

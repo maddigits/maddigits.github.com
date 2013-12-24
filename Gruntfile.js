@@ -2,7 +2,10 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     curl: {
-      '_assets/turbolinks.coffee': 'https://raw.github.com/rails/turbolinks/master/lib/assets/javascripts/turbolinks.js.coffee'
+      turbolinks: {
+        src: 'https://raw.github.com/rails/turbolinks/master/lib/assets/javascripts/turbolinks.js.coffee',
+        dest: '_assets/turbolinks.coffee'
+      }
     },
     coffee: {
       compile: {
@@ -14,7 +17,7 @@ module.exports = function(grunt) {
     replace: {
       jqueryGithubFonts: {
         src: ['bower_components/jquery-github/assets/base.css'],
-        overwrite: true,                 // overwrite matched source files
+        overwrite: true,
         replacements: [{
           from: 'url(\'Entypo-webfont',
           to: 'url(\'/css/font/Entypo-webfont'
@@ -32,29 +35,16 @@ module.exports = function(grunt) {
           'bower_components/jquery-github/dist/jquery.github.js',
           '_assets/up.js'
         ],
-        dest: 'js/up.js'
+        dest: 'js/up.min.js'
       }
     },
     uglify: {
       build: {
-        src: 'js/up.js',
+        src: 'js/up.min.js',
         dest: 'js/up.min.js'
       }
     },
     less: {
-      development: {
-        options: {
-          paths: [
-            '_assets/',
-            'bower_components/nprogress/',
-            'bower_components/bootstrap/less/',
-            'bower_components/font-awesome/less/'
-          ]
-        },
-        files: {
-          'css/up.css': '_assets/up.less'
-        }
-      },
       production: {
         options: {
           paths: [
@@ -80,7 +70,6 @@ module.exports = function(grunt) {
         },
       },
       less: {
-        // We watch and compile sass files as normal but don't live reload here
         files: ['_assets/*.less', '_assets/*.css'],
         tasks: ['less'],
       },
@@ -120,5 +109,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-text-replace');
 
   // Default task(s).
-  grunt.registerTask('default', ['replace', 'curl', 'coffee', 'concat', 'uglify', 'less', 'copy']);
+  grunt.registerTask('default', ['curl', 'replace', 'coffee', 'concat', 'uglify', 'less', 'copy']);
 };
