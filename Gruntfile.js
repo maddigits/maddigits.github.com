@@ -1,10 +1,23 @@
 module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+    curl: {
+      turbolinks: {
+        src: 'https://raw.github.com/rails/turbolinks/master/lib/assets/javascripts/turbolinks.js.coffee',
+        dest: '_assets/turbolinks.coffee'
+      }
+    },
+    coffee: {
+      compile: {
+        files: {
+          '_assets/turbolinks.coffee.js': '_assets/turbolinks.coffee'
+        }
+      }
+    },
     replace: {
       jqueryGithubFonts: {
         src: ['bower_components/jquery-github/assets/base.css'],
-        overwrite: true,                 // overwrite matched source files
+        overwrite: true,
         replacements: [{
           from: 'url(\'Entypo-webfont',
           to: 'url(\'/css/font/Entypo-webfont'
@@ -17,15 +30,17 @@ module.exports = function(grunt) {
           'bower_components/jquery/jquery.min.js',
           'bower_components/bootstrap/js/transition.js',
           'bower_components/bootstrap/js/collapse.js',
+          'bower_components/nprogress/nprogress.js',
+          '_assets/turbolinks.coffee.js',
           'bower_components/jquery-github/dist/jquery.github.js',
           '_assets/up.js'
         ],
-        dest: 'js/up.js'
+        dest: 'js/up.min.js'
       }
     },
     uglify: {
       build: {
-        src: 'js/up.js',
+        src: 'js/up.min.js',
         dest: 'js/up.min.js'
       }
     },
@@ -34,6 +49,7 @@ module.exports = function(grunt) {
         options: {
           paths: [
             '_assets/',
+            'bower_components/nprogress/',
             'bower_components/bootstrap/less/',
             'bower_components/font-awesome/less/',
             'bower_components/jquery-github/assets/'
@@ -47,14 +63,13 @@ module.exports = function(grunt) {
     },
     watch: {
       scripts: {
-        files: ['_assets/*.js'],
-        tasks: ['concat', 'uglify'],
+        files: ['_assets/*.js', '_assets/*.coffee'],
+        tasks: ['coffee', 'concat', 'uglify'],
         options: {
           spawn: false,
         },
       },
       less: {
-        // We watch and compile sass files as normal but don't live reload here
         files: ['_assets/*.less', '_assets/*.css'],
         tasks: ['less'],
       },
@@ -89,8 +104,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-coffee');
+  grunt.loadNpmTasks('grunt-curl');
   grunt.loadNpmTasks('grunt-text-replace');
 
   // Default task(s).
-  grunt.registerTask('default', ['replace', 'concat', 'uglify', 'less', 'copy']);
+  grunt.registerTask('default', ['curl', 'replace', 'coffee', 'concat', 'uglify', 'less', 'copy']);
 };
