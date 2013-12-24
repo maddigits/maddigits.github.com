@@ -11,6 +11,16 @@ module.exports = function(grunt) {
         }
       }
     },
+    replace: {
+      jqueryGithubFonts: {
+        src: ['bower_components/jquery-github/assets/base.css'],
+        overwrite: true,                 // overwrite matched source files
+        replacements: [{
+          from: 'url(\'Entypo-webfont',
+          to: 'url(\'/css/font/Entypo-webfont'
+        }]
+      }
+    },
     concat: {
       dist: {
         src: [
@@ -19,6 +29,7 @@ module.exports = function(grunt) {
           'bower_components/bootstrap/js/collapse.js',
           'bower_components/nprogress/nprogress.js',
           '_assets/turbolinks.coffee.js',
+          'bower_components/jquery-github/dist/jquery.github.js',
           '_assets/up.js'
         ],
         dest: 'js/up.js'
@@ -50,7 +61,8 @@ module.exports = function(grunt) {
             '_assets/',
             'bower_components/nprogress/',
             'bower_components/bootstrap/less/',
-            'bower_components/font-awesome/less/'
+            'bower_components/font-awesome/less/',
+            'bower_components/jquery-github/assets/'
           ],
           yuicompress: true
         },
@@ -61,15 +73,15 @@ module.exports = function(grunt) {
     },
     watch: {
       scripts: {
-        files: ['_assets/*.js'],
-        tasks: ['concat', 'uglify'],
+        files: ['_assets/*.js', '_assets/*.coffee'],
+        tasks: ['coffee', 'concat', 'uglify'],
         options: {
           spawn: false,
         },
       },
       less: {
         // We watch and compile sass files as normal but don't live reload here
-        files: ['_assets/*.less'],
+        files: ['_assets/*.less', '_assets/*.css'],
         tasks: ['less'],
       },
     },
@@ -81,6 +93,14 @@ module.exports = function(grunt) {
             flatten: true,
             cwd: 'bower_components/font-awesome/fonts/',
             src: '**',
+            dest: 'css/font/',
+            filter: 'isFile'
+          },
+          {
+            expand: true,
+            flatten: true,
+            cwd: 'bower_components/jquery-github/assets/',
+            src: ['*.eot', '*.svg', '*.ttf', '*.woff'],
             dest: 'css/font/',
             filter: 'isFile'
           }
@@ -97,7 +117,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-coffee');
   grunt.loadNpmTasks('grunt-curl');
+  grunt.loadNpmTasks('grunt-text-replace');
 
   // Default task(s).
-  grunt.registerTask('default', ['curl', 'coffee', 'concat', 'uglify', 'less', 'copy']);
+  grunt.registerTask('default', ['replace', 'curl', 'coffee', 'concat', 'uglify', 'less', 'copy']);
 };

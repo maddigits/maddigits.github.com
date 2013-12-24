@@ -1,5 +1,6 @@
 @import "bootstrap.less";
 @import "/bower_components/font-awesome/less/font-awesome.less";
+@import (less) "/bower_components/jquery-github/assets/base.css";
 @import "/_assets/pygments.less";
 
 // overrides
@@ -42,6 +43,17 @@ h1,h2,h3,h4,h5,h6 {
   background-size: cover;
   .box-shadow(inset 3px 3px 20px rgba(0,0,0,.5));
   margin-bottom: 20px;
+}
+
+.projects {
+  width: 90%;
+  margin: 0 auto;
+  [data-repo] {
+    margin-bottom: 10px;
+  }
+  .github-box .github-box-download {
+    height: 40px !important;
+  }
 }
 
 article,
