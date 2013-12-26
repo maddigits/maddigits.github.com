@@ -1,4 +1,5 @@
-var reloadImages = function() {
+var twttr, reloadImages;
+reloadImages = function() {
   var styles, style, url, _i, _len, _el;
   styles = Array.prototype.slice.call(document.body.querySelectorAll('[style]'));
   for (_i = 0, _len = styles.length; _i < _len; _i++) {
@@ -17,13 +18,19 @@ $(document).on('page:fetch', function() {
   // fixes gauges scroll
   window.onscroll = void 0;
   // fixes twitter button
-  $('script#twitter-wjs').remove();
+  // $('script#twitter-wjs').remove();
 });
+
 $(document).on('page:change', function() {
   NProgress.done();
   // fixes dynamic images (headers)
   reloadImages();
+  // fixes twttr
+  if (twttr) {
+    twttr.widgets.load();
+  }
 });
+
 $(document).on('page:restore', function() {
   NProgress.remove();
 });
