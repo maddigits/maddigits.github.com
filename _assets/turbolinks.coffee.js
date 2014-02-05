@@ -1,12 +1,13 @@
 (function() {
-  var CSRFToken, allowLinkExtensions, anchoredLink, browserCompatibleDocumentParser, browserIsntBuggy, browserSupportsCustomEvents, browserSupportsPushState, browserSupportsTurbolinks, cacheCurrentPage, cacheSize, changePage, constrainPageCacheTo, createDocument, crossOriginLink, currentState, executeScriptTags, extractLink, extractTitleAndBody, fetchHistory, fetchReplacement, handleClick, historyStateIsDefined, htmlExtensions, ignoreClick, initializeTurbolinks, installClickHandlerLast, installDocumentReadyPageEventTriggers, installHistoryChangeHandler, installJqueryAjaxSuccessPageUpdateTrigger, loadedAssets, noTurbolink, nonHtmlLink, nonStandardClick, pageCache, pageChangePrevented, pagesCached, popCookie, processResponse, recallScrollPosition, referer, reflectNewUrl, reflectRedirectedUrl, rememberCurrentState, rememberCurrentUrl, rememberReferer, removeHash, removeHashForIE10compatiblity, removeNoscriptTags, requestMethodIsSafe, resetScrollPosition, targetLink, triggerEvent, visit, xhr, _ref,
-    __hasProp = {}.hasOwnProperty,
+  var CSRFToken, allowLinkExtensions, anchoredLink, browserCompatibleDocumentParser, browserIsntBuggy, browserSupportsCustomEvents, browserSupportsPushState, browserSupportsTurbolinks, bypassOnLoadPopstate, cacheCurrentPage, cacheSize, changePage, constrainPageCacheTo, createDocument, crossOriginLink, currentState, enableTransitionCache, executeScriptTags, extractLink, extractTitleAndBody, fetch, fetchHistory, fetchReplacement, handleClick, historyStateIsDefined, htmlExtensions, ignoreClick, initializeTurbolinks, installClickHandlerLast, installDocumentReadyPageEventTriggers, installHistoryChangeHandler, installJqueryAjaxSuccessPageUpdateTrigger, loadedAssets, noTurbolink, nonHtmlLink, nonStandardClick, pageCache, pageChangePrevented, pagesCached, popCookie, processResponse, recallScrollPosition, referer, reflectNewUrl, reflectRedirectedUrl, rememberCurrentState, rememberCurrentUrl, rememberReferer, removeHash, removeHashForIE10compatibility, removeNoscriptTags, requestMethodIsSafe, resetScrollPosition, targetLink, transitionCacheEnabled, transitionCacheFor, triggerEvent, visit, xhr, _ref,
     __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; },
     __slice = [].slice;
 
   pageCache = {};
 
   cacheSize = 10;
+
+  transitionCacheEnabled = false;
 
   currentState = null;
 
@@ -20,9 +21,39 @@
 
   xhr = null;
 
-  fetchReplacement = function(url) {
+  fetch = function(url) {
+    var cachedPage;
     rememberReferer();
     cacheCurrentPage();
+    reflectNewUrl(url);
+    if (transitionCacheEnabled && (cachedPage = transitionCacheFor(url))) {
+      fetchHistory(cachedPage);
+      return fetchReplacement(url);
+    } else {
+      return fetchReplacement(url, resetScrollPosition);
+    }
+  };
+
+  transitionCacheFor = function(url) {
+    var cachedPage;
+    cachedPage = pageCache[url];
+    if (cachedPage && !cachedPage.transitionCacheDisabled) {
+      return cachedPage;
+    }
+  };
+
+  enableTransitionCache = function(enable) {
+    if (enable == null) {
+      enable = true;
+    }
+    return transitionCacheEnabled = enable;
+  };
+
+  fetchReplacement = function(url, onLoadFunction) {
+    var _this = this;
+    if (onLoadFunction == null) {
+      onLoadFunction = function() {};
+    }
     triggerEvent('page:fetch', {
       url: url
     });
@@ -30,17 +61,16 @@
       xhr.abort();
     }
     xhr = new XMLHttpRequest;
-    xhr.open('GET', removeHashForIE10compatiblity(url), true);
+    xhr.open('GET', removeHashForIE10compatibility(url), true);
     xhr.setRequestHeader('Accept', 'text/html, application/xhtml+xml, application/xml');
     xhr.setRequestHeader('X-XHR-Referer', referer);
     xhr.onload = function() {
       var doc;
       triggerEvent('page:receive');
       if (doc = processResponse()) {
-        reflectNewUrl(url);
         changePage.apply(null, extractTitleAndBody(doc));
         reflectRedirectedUrl();
-        resetScrollPosition();
+        onLoadFunction();
         return triggerEvent('page:load');
       } else {
         return document.location.href = url;
@@ -49,9 +79,6 @@
     xhr.onloadend = function() {
       return xhr = null;
     };
-    xhr.onabort = function() {
-      return rememberCurrentUrl();
-    };
     xhr.onerror = function() {
       return document.location.href = url;
     };
@@ -59,7 +86,6 @@
   };
 
   fetchHistory = function(cachedPage) {
-    cacheCurrentPage();
     if (xhr != null) {
       xhr.abort();
     }
@@ -69,12 +95,14 @@
   };
 
   cacheCurrentPage = function() {
-    pageCache[currentState.position] = {
+    pageCache[currentState.url] = {
       url: document.location.href,
       body: document.body,
       title: document.title,
       positionY: window.pageYOffset,
-      positionX: window.pageXOffset
+      positionX: window.pageXOffset,
+      cachedAt: new Date().getTime(),
+      transitionCacheDisabled: document.querySelector('[data-no-transition-cache]') != null
     };
     return constrainPageCacheTo(cacheSize);
   };
@@ -89,16 +117,23 @@
   };
 
   constrainPageCacheTo = function(limit) {
-    var key, value;
-    for (key in pageCache) {
-      if (!__hasProp.call(pageCache, key)) continue;
-      value = pageCache[key];
-      if (!(key <= currentState.position - limit)) {
+    var cacheTimesRecentFirst, key, pageCacheKeys, _i, _len, _results;
+    pageCacheKeys = Object.keys(pageCache);
+    cacheTimesRecentFirst = pageCacheKeys.map(function(url) {
+      return pageCache[url].cachedAt;
+    }).sort(function(a, b) {
+      return b - a;
+    });
+    _results = [];
+    for (_i = 0, _len = pageCacheKeys.length; _i < _len; _i++) {
+      key = pageCacheKeys[_i];
+      if (!(pageCache[key].cachedAt <= cacheTimesRecentFirst[limit])) {
         continue;
       }
       triggerEvent('page:expire', pageCache[key]);
-      pageCache[key] = null;
+      _results.push(delete pageCache[key]);
     }
+    return _results;
   };
 
   changePage = function(title, body, csrfToken, runScripts) {
@@ -145,7 +180,7 @@
     if (url !== referer) {
       return window.history.pushState({
         turbolinks: true,
-        position: currentState.position + 1
+        url: url
       }, '', url);
     }
   };
@@ -165,7 +200,7 @@
   rememberCurrentUrl = function() {
     return window.history.replaceState({
       turbolinks: true,
-      position: Date.now()
+      url: document.location.href
     }, '', document.location.href);
   };
 
@@ -185,7 +220,7 @@
     }
   };
 
-  removeHashForIE10compatiblity = function(url) {
+  removeHashForIE10compatibility = function(url) {
     return removeHash(url);
   };
 
@@ -404,6 +439,10 @@
     return htmlExtensions;
   };
 
+  bypassOnLoadPopstate = function(fn) {
+    return setTimeout(fn, 500);
+  };
+
   installDocumentReadyPageEventTriggers = function() {
     return document.addEventListener('DOMContentLoaded', (function() {
       triggerEvent('page:change');
@@ -425,7 +464,8 @@
   installHistoryChangeHandler = function(event) {
     var cachedPage, _ref;
     if ((_ref = event.state) != null ? _ref.turbolinks : void 0) {
-      if (cachedPage = pageCache[event.state.position]) {
+      if (cachedPage = pageCache[event.state.url]) {
+        cacheCurrentPage();
         return fetchHistory(cachedPage);
       } else {
         return visit(event.target.location.href);
@@ -438,10 +478,12 @@
     rememberCurrentState();
     createDocument = browserCompatibleDocumentParser();
     document.addEventListener('click', installClickHandlerLast, true);
-    return window.addEventListener('popstate', installHistoryChangeHandler, false);
+    return bypassOnLoadPopstate(function() {
+      return window.addEventListener('popstate', installHistoryChangeHandler, false);
+    });
   };
 
-  historyStateIsDefined = window.history.state !== void 0 || navigator.userAgent.match(/Firefox\/26/);
+  historyStateIsDefined = window.history.state !== void 0 || navigator.userAgent.match(/Firefox\/2[6|7]/);
 
   browserSupportsPushState = window.history && window.history.pushState && window.history.replaceState && historyStateIsDefined;
 
@@ -459,7 +501,7 @@
   }
 
   if (browserSupportsTurbolinks) {
-    visit = fetchReplacement;
+    visit = fetch;
     initializeTurbolinks();
   } else {
     visit = function(url) {
@@ -470,6 +512,7 @@
   this.Turbolinks = {
     visit: visit,
     pagesCached: pagesCached,
+    enableTransitionCache: enableTransitionCache,
     allowLinkExtensions: allowLinkExtensions,
     supported: browserSupportsTurbolinks
   };

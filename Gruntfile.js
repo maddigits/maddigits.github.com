@@ -110,4 +110,5 @@ module.exports = function(grunt) {
 
   // Default task(s).
   grunt.registerTask('default', ['curl', 'replace', 'coffee', 'concat', 'uglify', 'less', 'copy']);
+  grunt.registerTask('build', ['replace', 'coffee', 'concat', 'uglify', 'less', 'copy']);
 };
