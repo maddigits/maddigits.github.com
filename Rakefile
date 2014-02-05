@@ -95,8 +95,9 @@ task :init do
   puts "Downloading and installing required javascript plugins"
   `npm install -g grunt-cli bower`
   `npm install`
+  puts "Downloading Assets..."
   `bower install`
-  puts "Downloading Bootstrap and Font Awesome"
+  puts "Building..."
   `grunt`
 end
 
