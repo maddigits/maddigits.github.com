@@ -7,7 +7,7 @@ cover: "/img/coverage.png"
 
 At the company I work Pull Requests are part of our culture.
 When someone opens a Pull Request, we do Code Review.
-If we think it's ok, we comment "+1", and "-1" otherwise.
+If we think it's ok, we comment "+1", or "-1" otherwise.
 We usually only merge a PR when it has 3 or more "+1" comments.
 
 Part of this review is to check for tests. We used to manually
