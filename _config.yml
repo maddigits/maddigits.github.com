@@ -16,3 +16,7 @@ author :
   twitter : caarlos0
   facebook : caarlos0
   email: caarlos0@gmail.com
+gems:
+  - jekyll-mentions
+  - jemoji
+  - jekyll-redirect-from
