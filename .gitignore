@@ -1,17 +1,5 @@
 _site/*
-_theme_packages/*
-
 Thumbs.db
 .DS_Store
-
 !.gitkeep
-
-.rbenv-version
-.rvmrc
-
 *~
-_assets/bootstrap/tests
-node_modules/
-
-bower_components/
-components/
