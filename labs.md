@@ -2,7 +2,7 @@
 layout: page
 title: Labs
 redirect_from:
-  - /labs
+  - /labs/
 ---
 
 I love to build side projects in my free time. Here is a list of some

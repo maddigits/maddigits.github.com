@@ -2,7 +2,7 @@
 layout: page
 title: Archive
 redirect_from:
-  - /archive
+  - /archive/
 ---
 
 {% for post in site.posts %}

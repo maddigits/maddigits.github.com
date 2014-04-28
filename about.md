@@ -2,7 +2,7 @@
 layout: page
 title: About
 redirect_from:
-  - /about
+  - /about/
 ---
 
 Carlos is a developer from [Marechal Cândido Rondon - PR, Brazil](http://goo.gl/maps/9HZwe),

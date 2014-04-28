@@ -2,7 +2,7 @@
 layout: post
 title: "Getting started with GWT-Bootstrap"
 redirect_from:
-  - /code/2012/06/26/getting-started-with-gwt-bootstrap
+  - /code/2012/06/26/getting-started-with-gwt-bootstrap/
 ---
 
 [GWT-Bootstrap](http://gwtbootstrap.github.com) is a project that aims to provide all the [Twitter Bootstrap](http://twitter.github.com/bootstrap) styles and widgets to GWT applications.
