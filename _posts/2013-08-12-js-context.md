@@ -18,7 +18,7 @@ You might be asking something like _"but doesn't it changes in ..."_
 I could literally just stop writing here, but I will be kind and give you some
 examples.
 
-{% highlight javascript %}
+```javascript
 var global, local;
 
 // the context will change inside the test() function declaration
@@ -36,11 +36,11 @@ console.log(local); // undefined
 console.log(test()); // 2000
 console.log(local); // undefined
 console.log(global); // 100
-{% endhighlight %}
+```
 
 We can also encapsulate variables with something like this:
 
-{% highlight javascript %}
+```javascript
 var global = 100;
 
 var testFn = function () {
@@ -80,13 +80,13 @@ console.log(test.getLocal()); // 10
 console.log(test.inc()); // called inc
 console.log(test.getLocal()); // 110
 
-{% endhighlight %}
+```
 
 ## Just like I said before...
 
 The context **only** changes inside functions.
 
-{% highlight js %}
+```js
 var obj1 = {
   a: {
     b: {
@@ -112,7 +112,7 @@ var obj2 = {
 
 console.log(obj1.a.b.c.d); // Window
 console.log(obj2.a.b.c.d()); // Object {d: function}
-{% endhighlight %}
+```
 
 ----
 

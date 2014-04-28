@@ -13,25 +13,25 @@ One of the principles of Unobtrusive JS is the _"separation of functionality
 
 ##### Wrong:
 
-{% highlight html %}
+```html
 <a href="#" onclick="SomeObj.someAction(2)">Do some action on Obj 2</a>
-{% endhighlight %}
+```
 
 ##### better:
 
-{% highlight html %}
+```html
 <a href="#" class="someaction" data-id="2">Do some action on Obj 2</a>
-{% endhighlight %}
+```
 
 And in our JS file:
 
-{% highlight js %}
+```js
 $(function(){
   $(document).on('click', '.someaction', function(){
     SomeObj.someAction($(this).data('id'))
   })
 }(jQuery));
-{% endhighlight %}
+```
 
 Notice that with this, you don't even need to expose the `someAction` method from
 `SomeObj`, you can do these bindings in the object declaration.
@@ -46,7 +46,7 @@ genarally a dashboard). I commited this mistake too.
 
 > dashboard.html.erb
 
-{% highlight erb %}
+```erb
 <script type="text/javascript">
 Morris.Donut({
   element: "my-chart-placeholder",
@@ -54,7 +54,7 @@ Morris.Donut({
 })
 </script>
 <div id="my-chart-placeholder"></div>
-{% endhighlight %}
+```
 
 As you can see, I'm doing the JS right into the page, so, I can concatenate it
 with a Ruby method call, and get the data without use a Restful call.
@@ -67,14 +67,14 @@ Use data attributes!
 
 > dashboard.html.erb
 
-{% highlight erb %}
+```erb
 <div id="my-chart-placeholder" data-chart="<%= ModelController.chart_data.to_json %>">
 </div>
-{% endhighlight %}
+```
 
 > dashboard.js
 
-{% highlight js %}
+```js
 $(function(){
   var id = "my-chart-placeholder"
   var chart = $("#"+id)
@@ -86,6 +86,6 @@ $(function(){
     })
   }
 }(jQuery))
-{% endhighlight %}
+```
 
 Much better, huh? We now have our presentation and behavior more separated.

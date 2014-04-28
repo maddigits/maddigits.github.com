@@ -13,9 +13,9 @@ Due to some license or something like this, they removed the fonts from AUR. Yea
 
 So, I just made a simple and small script to download and install it. You can get it in [my github](http://github.com/caarlos0/msfonts), or, simply run:
 
-{% highlight bash %}
+```bash
 curl -L https://github.com/caarlos0/msfonts/raw/master/install.sh | sudo sh
-{% endhighlight %}
+```
 
 The script will install git (if you doesn't have it in your path), download fonts to /temp, copy it to the right place and update all font-cache's that I can remember.
 

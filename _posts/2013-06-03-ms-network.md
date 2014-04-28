@@ -1,6 +1,5 @@
 ---
 layout: post
-cover: "/img/bsod.jpg"
 title: "Riding a MS Network with Linux"
 ---
 
@@ -34,9 +33,9 @@ Setup is a little tricky, but I will guide you. You shall have a
 After that, you may have to setup the password. I recommend you to
 encrypt it with the following command:
 
-{% highlight bash %}
+```bash
 sudo cntlm -H -c /etc/cntlm.conf
-{% endhighlight %}
+```
 
 Then put you root password followed by the domain password. Copy the
 given hashes to the `/etc/cntlm.conf` and restart the service with

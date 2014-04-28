@@ -25,25 +25,25 @@ So let's do this.
 
 To explain what it means in JavaScript code, let's do some examples:
 
-{% highlight javascript %}
+```javascript
 var msg = "Hello";
 
 (function () {
   alert(msg);
 })();
-{% endhighlight %}
+```
 
 I believe that it's pretty obvious for everyone here that it will
 alert "Hello". Nice, but what happens now?
 
-{% highlight javascript %}
+```javascript
 var msg = "Hello";
 
 (function () {
   alert(msg);
   var msg = "Bump";
 })();
-{% endhighlight %}
+```
 
 You might be thinking that it would do the same as the previous function,
 or, maybe, that it will alert "Bump". Well, both answers are wrong. It will
@@ -53,14 +53,14 @@ Now you yield "dafuq?".
 So, what just happened here? Simple. **The variable declaration was hoisted**.
 However, if you try something like this instead:
 
-{% highlight javascript %}
+```javascript
 var msg = "Hello";
 
 (function () {
   alert(msg);
   msg = "Bump";
 })();
-{% endhighlight %}
+```
 
 You will see that it works. I'll keep you from all the context explanation
 again, just read my previous post, but, in the `msg = "Bump"` line you're
@@ -73,7 +73,7 @@ that we are creating a new variable with the same name of the variable of the
 outer scope (`window`). But, again, **JavaScript hoists variable declarations**,
 so, the previous code will actually be interpreted like this:
 
-{% highlight javascript %}
+```javascript
 var msg = "Hello";
 
 (function () {
@@ -81,27 +81,27 @@ var msg = "Hello";
   alert(msg);
   msg = "Bump";
 })();
-{% endhighlight %}
+```
 
 So, obviously, in the point where alert is executed, the `msg` variable is,
 indeed, `undefined`. The same _hoisting_ effect happens when you do code like:
 
-{% highlight javascript %}
+```javascript
 var a = 1;
 var b = 2;
 var c = 10;
 var x = 23432;
-{% endhighlight %}
+```
 
 A code like that will actually be interpreted like:
 
-{% highlight javascript %}
+```javascript
 var a, b, c, x;
 a = 1;
 b = 2;
 c = 10;
 x = 23432;
-{% endhighlight %}
+```
 
 ## Avoiding Variable Hoisting Issues
 
@@ -117,4 +117,3 @@ understand JavaScript and avoid a lot of commom errors.
 [book]:http://amzn.to/14ZmSmZ
 
 Happy Coding!
-

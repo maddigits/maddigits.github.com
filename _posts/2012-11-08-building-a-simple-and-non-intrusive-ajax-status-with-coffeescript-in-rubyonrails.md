@@ -35,7 +35,7 @@ In my case, I use all of them.
 
 My `Gemfile` looks like this:
 
-{% highlight ruby %}
+```ruby
 (...)
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -50,7 +50,7 @@ end
 # asset related
 gem 'jquery-rails'
 (...)
-{% endhighlight %}
+```
 
 
 You will also need to import them in you `application.js`.
@@ -70,13 +70,13 @@ According to my tests, basically, all `jQuery`events will fire `ajaxStart` and
 will trigger `page:fetch` and `page:change`, an at last `jQuery-ujs` will fire
 `ajax:beforeSend` and `ajax:complete`. So, we will have something like:
 
-{% highlight coffeescript %}
+```coffeescript
 $(document).on 'ajax:before ajaxStart page:fetch', ->
   # show spin
 
 $(document).on 'ajax:complete ajaxComplete page:change', ->
   # hide spin
-{% endhighlight %}
+```
 
 
 But we also have another problem: if some user interaction fire multiple ajax calls?
@@ -106,7 +106,7 @@ read it, and use the comment box if you have any doubts =)
 
 `ajax.spin.js.coffee` code:
 
-{% highlight coffeescript %}
+```coffeescript
 opts = {
   lines: 7, # The number of lines to draw
   length: 6, # The length of each line
@@ -159,13 +159,13 @@ $(document).on 'ajax:before ajaxStart page:fetch', (event) ->
   loadState event
 $(document).on 'ajax:complete ajaxComplete page:change', (event) ->
   doneState event
-  {% endhighlight %}
+  ```
 
 -------------
 
 The compiled `ajax.spin.js` file, for those wo don't use CoffeeScript:
 
-{% highlight js %}
+```js
 (function() {
   var $n, doneState, eventType, lastEvent, loadState, opts;
 
@@ -229,7 +229,7 @@ The compiled `ajax.spin.js` file, for those wo don't use CoffeeScript:
   });
 
 }).call(this);
-{% endhighlight %}
+```
 
 Hope it help somebody, enjoy.
 

@@ -20,7 +20,7 @@ JavaScript for you.
 In JS, a class is nothing more than a function, since functions (and everything
 in JS) are functions. So, basically, you open a function scope, and start code:
 
-{% highlight js %}
+```js
 function Test() {
   Test.prototype.t = function() {
     alert('test');
@@ -29,7 +29,7 @@ function Test() {
 
 var o = new Test();
 o.t();
-{% endhighlight %}
+```
 
 **What we just done?** We created a scope (`function Test`) and then we add to
 the `prototype` of the scope (which is called `Test`) the function `t`.
@@ -38,14 +38,14 @@ the `prototype` of the scope (which is called `Test`) the function `t`.
 
 This same piece of code, in CoffeeScript:
 
-{% highlight coffeescript %}
+```coffeescript
 class Test
   t: ->
     alert 'test'
 
 o = new Test()
 o.t()
-{% endhighlight %}
+```
 
 
 > [side by side js and coffee][first]
@@ -59,7 +59,7 @@ instance. Let's go to the next level.
 In JS, just like in Java and other languages, the constructor is a method
 with the name of the class and no return:
 
-{% highlight js %}
+```js
 var Test = (function() {
 
   function Test(p) {
@@ -76,14 +76,14 @@ var Test = (function() {
 
 var o = new Test("this!");
 o.t();
-{% endhighlight %}
+```
 
 **Notice**: this time we had to wrap the function context inside an anonymous
 function that "calls itself".
 
 Now, the same example in CoffeeScript:
 
-{% highlight coffeescript %}
+```coffeescript
 class Test
   constructor: (@p) ->
 
@@ -92,7 +92,7 @@ class Test
 
 o = new Test("that!")
 o.t()
-{% endhighlight %}
+```
 
 > [side by side js and coffee][second]
 
@@ -100,7 +100,7 @@ o.t()
 That's pretty cool, but, what if we want a default value to the parameters at
 the constructor? If you code Ruby, just do it in the same way:
 
-{% highlight coffeescript %}
+```coffeescript
 class Test
   constructor: (@p = "what?") ->
 
@@ -112,7 +112,7 @@ o.t()
 
 oo = new Test("this!")
 oo.t()
-{% endhighlight %}
+```
 
 > [side by side js and coffee][third]
 
@@ -133,7 +133,7 @@ to archieve that.
 
 Which basically means that this:
 
-{% highlight coffeescript %}
+```coffeescript
 class Test
   tt = ->
     alert 'tt'
@@ -142,13 +142,13 @@ class Test
     tt()
 
 new Test().t()
-{% endhighlight %}
+```
 
 > [side by side js and coffee][fourth]
 
 while this:
 
-{% highlight coffeescript %}
+```coffeescript
 class Test
 
   ttt: ->
@@ -161,7 +161,7 @@ class Test
     tt()
 
 new Test().t()
-{% endhighlight %}
+```
 
 > [side by side js and coffee][fifth]
 
@@ -177,7 +177,7 @@ Yeah, JS also has inheritance support, even if it much like a hack.
 Archieve that with CoffeeScript is **really** simple, pretty much like Java
 or other language:
 
-{% highlight coffeescript %}
+```coffeescript
 class Test
   t: ->
     alert 'as'
@@ -192,7 +192,7 @@ class TT extends Test
 t = new TT()
 t.tt()
 t.ttt()
-{% endhighlight %}
+```
 
 > [side by side js and coffee][sixth]
 

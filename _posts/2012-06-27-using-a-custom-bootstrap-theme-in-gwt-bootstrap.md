@@ -8,13 +8,13 @@ First of all, if you haven't done it yet, read
 
 ## Create the GWT-Project
 
-{% highlight bash %}
+```bash
 mvn archetype:generate \
    -DarchetypeRepository=repo1.maven.org \
    -DarchetypeGroupId=org.codehaus.mojo \
    -DarchetypeArtifactId=gwt-maven-plugin \
    -DarchetypeVersion=2.4.0
-{% endhighlight %}
+```
 
 I created my project with the following properties:
 
@@ -28,7 +28,7 @@ Now, lets add the `GWT-Bootstrap` dependency to the `pom.xml` file:
 
 #### Add the repository:
 
-{% highlight xml %}
+```xml
 <repositories>
   <repository>
     <id>gwt-bootstrap</id>
@@ -36,17 +36,17 @@ Now, lets add the `GWT-Bootstrap` dependency to the `pom.xml` file:
     <url>http://gwtbootstrap.github.com/maven/snapshots</url>
   </repository>
 </repositories>
-{% endhighlight %}
+```
 
 #### And the dependency itself:
 
-{% highlight xml %}
+```xml
 <dependency>
   <groupId>com.github.gwtbootstrap</groupId>
   <artifactId>gwt-bootstrap</artifactId>
   <version>2.0.4.0-SNAPSHOT</version>
 </dependency>
-{% endhighlight %}
+```
 
 And then, update your project with a `$ mvn clean install`.
 
@@ -110,7 +110,7 @@ Create a new UiBinder class/xml combo called `ExampleUiBinder`, with the followi
 
 #### ExampleUiBinder.ui.xml:
 
-{% highlight xml %}
+```xml
 <ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
              xmlns:g='urn:import:com.google.gwt.user.client.ui'
              xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
@@ -137,11 +137,11 @@ Create a new UiBinder class/xml combo called `ExampleUiBinder`, with the followi
     </b:Container>
   </g:HTMLPanel>
 </ui:UiBinder>
-{% endhighlight %}
+```
 
 #### ExampleUiBinder.java
 
-{% highlight java %}
+```java
 public class ExampleUiBinder extends Composite {
   interface ExampleUiBinderUiBinder extends UiBinder<HTMLPanel, ExampleUiBinder> {
   }
@@ -152,7 +152,7 @@ public class ExampleUiBinder extends Composite {
     initWidget(ourUiBinder.createAndBindUi(this));
   }
 }
-{% endhighlight %}
+```
 
 At this point, if everything is ok, we will get a window like this:
 
@@ -180,7 +180,7 @@ As said before, we also need a `Resources` and `Configuration` files. This files
 
 #### ExampleResources.java
 
-{% highlight java %}
+```java
 package com.github.caarlos0.resources;
 
 import com.github.gwtbootstrap.client.ui.resources.Resources;
@@ -190,11 +190,11 @@ public interface ExampleResources extends Resources {
   @Source("css/bootstrap.min.css")
   TextResource bootstrapCss();
 }
-{% endhighlight %}
+```
 
 #### ExampleConfigurator.java
 
-{% highlight java %}
+```java
 package com.github.caarlos0.resources;
 
 import com.github.gwtbootstrap.client.ui.config.Configurator;
@@ -210,7 +210,7 @@ public class ExampleConfigurator implements Configurator {
     return false;
   }
 }
-{% endhighlight %}
+```
 
 At this point, the structure should be something like this:
 
@@ -229,7 +229,7 @@ At this point, the structure should be something like this:
 
 Now, we have to do a little hack in our `*.gwt.xml`. We will need to replace `com.github.gwtbootstrap.client.ui.config.Configurator` with our Configurator, and setup the resources dir. So, in the end, we will have something like this:
 
-{% highlight xml %}
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <module rename-to='Example'>
     <inherits name='com.google.gwt.user.User'/>
@@ -251,7 +251,7 @@ Now, we have to do a little hack in our `*.gwt.xml`. We will need to replace `co
     </public>
 
 </module>
-{% endhighlight %}
+```
 
 That's it :)
 
@@ -274,7 +274,3 @@ For me, this process always works.
 
 
 #### [Download the code](http://github.com/gwtbootstrap/custom-theme-example)
-
-
-
-

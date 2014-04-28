@@ -19,34 +19,34 @@ I'll describe here my 'steps' to update jekyll to the new version!
 
 First of all, you will need the Node.js Package Manager (NPM), so, install nodejs! In my archlinux box, it was simple like that:
 
-{% highlight bash %}
+```bash
 pacman -Sy nodejs
-{% endhighlight %}
+```
 
 Then, clone the bootstrap repo somewhere:
 
-{% highlight bash %}
+```bash
 git clone https://github.com/twitter/bootstrap.git
 cd bootstrap
-{% endhighlight %}
+```
 
 Also, let's use the correct branch!
 
-{% highlight bash %}
+```bash
 git checkout 2.1.0-wip
-{% endhighlight %}
+```
 
 Ok! Now, we have to install the dependencies to build bootstrap. According to bootstrap github project, we will need recess (a less compiler), uglify-js, and jshint. So, run this:
 
-{% highlight bash %}
+```bash
 sudo npm install recess uglify-js jshint -g
-{% endhighlight %}
+```
 
 Now, the big one! Let's make it!
 
-{% highlight bash %}
+```bash
 make
-{% endhighlight %}
+```
 
 It should provide you a output like this:
 

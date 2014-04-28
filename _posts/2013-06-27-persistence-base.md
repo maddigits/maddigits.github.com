@@ -23,7 +23,7 @@ in further versions.
 
 Create a new Maven project and add the following to your `pom.xml`:
 
-{% highlight xml %}
+```xml
 <dependencies>
     <dependency>
       <groupId>com.github.caarlos0</groupId>
@@ -38,12 +38,12 @@ Create a new Maven project and add the following to your `pom.xml`:
       <url>https://github.com/caarlos0/maven/raw/master/releases</url>
     </repository>
   </repositories>
-{% endhighlight %}
+```
 
 Nice, you now have almost-all needed dependencies (Guava, EclipseLink, Guice,
 etc). In fact, if you run `mvn dependency:tree`, you will get something like:
 
-{% highlight java %}
+```java
 [INFO] com.carlosbecker:persistence-base-example:jar:1.0-SNAPSHOT
 [INFO] \- com.github.caarlos0:persistence-base:jar:0.0.5:compile
 [INFO]    +- javax.validation:validation-api:jar:1.0.0.GA:compile
@@ -60,7 +60,7 @@ etc). In fact, if you run `mvn dependency:tree`, you will get something like:
 [INFO]    |  \- aopalliance:aopalliance:jar:1.0:compile
 [INFO]    +- com.google.inject.extensions:guice-persist:jar:3.0:compile
 [INFO]    \- com.google.guava:guava:jar:14.0.1:compile
-{% endhighlight %}
+```
 
 ---
 
@@ -73,7 +73,7 @@ etc). In fact, if you run `mvn dependency:tree`, you will get something like:
 
 Just for example, I will create a very simple Person model, something like this:
 
-{% highlight java %}
+```java
 @Entity
 public class Person extends Bean {
   private static final long serialVersionUID = 1L;
@@ -82,7 +82,7 @@ public class Person extends Bean {
 
   // getters, setters and etc are hidden to use less space
 }
-{% endhighlight %}
+```
 
 Notice that, since it extends `Bean`, the model already has an `id` and a
 `version` attribute. In current SNAPSHOT, you will also have the
@@ -98,7 +98,7 @@ the `id` and `version`.
 Now, you should be able to bind a `GenericDao` for this Entity. To do that,
 create some class exteding `AbstractPersistentModule`, like the following:
 
-{% highlight java %}
+```java
 public class MainModule extends AbstractPersistentModule {
 
   @Override
@@ -110,12 +110,12 @@ public class MainModule extends AbstractPersistentModule {
     bindGenericDaoFor(Person.class);
   }
 }
-{% endhighlight %}
+```
 
 Now, in your app main class, you should be able to inject the
 `GenericDao<Person>`, like the following:
 
-{% highlight java %}
+```java
 public class App {
 
   @Inject
@@ -130,7 +130,7 @@ public class App {
     daoPerson.save(p);
   }
 }
-{% endhighlight %}
+```
 
 ### Custom Dao
 
@@ -138,7 +138,7 @@ You will probably want to create your own `Dao` methods eventually, instead of
 just use the Generic ones. You can easily achieve this by creating your own
 `Dao` interface extending `Dao` and the specific `Dao` impl:
 
-{% highlight java %}
+```java
 public interface AnimalDao extends Dao<Animal> {
   void somecustomMethod(Animal a);
 }
@@ -148,7 +148,7 @@ public class AnimalDaoImpl extends GenericDao<Animal> implements AnimalDao {
     // impl
   }
 }
-{% endhighlight %}
+```
 
 ---
 
@@ -161,16 +161,16 @@ some weird session issues.
 
 And, of course, you will need to bind it in your module:
 
-{% highlight java %}
+```java
 bind(AnimalDao.class).to(AnimalDaoImpl.class);
-{% endhighlight %}
+```
 
 After that, you can simply inject it whenever you want (repecting Guice,
 obviously) with:
 
-{% highlight java %}
+```java
 @Inject AnimalDao animalDao;
-{% endhighlight %}
+```
 
 And you will be able to call `animalDao.someCustomMethod(animal)` =)
 

@@ -71,12 +71,12 @@ above, `nil` are automagically evaluated to `false`, which also is an object
 That's the behavior I expect from Java. It would be really nice to use Java `null`
 like a object, isn't? Take another Ruby example:
 
-{% highlight ruby %}
+```ruby
 t = nil
 puts t.class # NilClass
 puts t.nil? # true
 puts "t isn't nil" if t # nothing, t is nil
-{% endhighlight %}
+```
 
 
 In Ruby, [every object has a `nil?` method][rdoc_nil], and `nil` also is an
@@ -103,7 +103,7 @@ Well, would be really nice been able to do that. For example, we don't have a
 coalesce method in Java's Object, and I really want it! So, why not been able to
 do something like:
 
-{% highlight java %}
+```java
 class Object
   public static <T> T coalesce(T ...objects) {
     for(T t : objects) if(t != null) return t;
@@ -112,12 +112,12 @@ class Object
 }
 
 Person realPerson = Object.coalesce(person1, person2, person3);
-{% endhighlight %}
+```
 
 We use it a lot in Ruby. We can also "teach" some object a behavior! That's
 awesome. A Ruby example:
 
-{% highlight ruby %}
+```ruby
 class Person
 end
 p = Person.new
@@ -127,7 +127,7 @@ def p.walk
 end
 p.respond_to? 'walk' # true
 p.walk # walking...
-{% endhighlight %}
+```
 
 I really like this behavior, think about the possibilities! For example, we can
 teach a `map` and/or `filter` function for any kind of iterable thing. That's
@@ -143,7 +143,7 @@ awesome!
 If Java also has a `method_missing`, like ruby, you can made an "intelligent"
 `DAO`, like ActiveRecord. For example:
 
-{% highlight java %}
+```java
 public abstract class AbstractDAO<T> implements DAO<T> {
   private static final String FIND_BY = "findBy";
 
@@ -159,7 +159,7 @@ public abstract class AbstractDAO<T> implements DAO<T> {
 
 // somewhere
 personDao.findByName("carlos"); // and methodMissing do the magic
-{% endhighlight %}
+```
 
 You can do a lot of things with that. It's very useful.
 

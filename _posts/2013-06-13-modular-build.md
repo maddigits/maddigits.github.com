@@ -22,9 +22,9 @@ sense, since other projects will have other setup.
 Another problem, is that lots of times I wanted to run a lot of scripts in one
 line, for example:
 
-{% highlight bash %}
+```bash
 ./build.sh && ./publish.sh && ./start.sh
-{% endhighlight %}
+```
 
 I hate doing this thought. So, I believed that creating a `Rakefile` would fit
 good. But it doesn't make any sense to put Ruby code with Java code just for
@@ -54,15 +54,15 @@ add it to `Makefile`.
 
 The instalation is pretty easy, you can just call:
 
-{% highlight bash %}
+```bash
 wget -qO- http://git.io/63HVSg | bash
-{% endhighlight %}
+```
 
 or, using curl:
 
-{% highlight bash %}
+```bash
 curl -s http://git.io/63HVSg | bash
-{% endhighlight %}
+```
 
 After that, `make newtask` and start building your own scripts. Automate
 everything, put computers to work to you, not the opposite.

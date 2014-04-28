@@ -2,7 +2,6 @@
 layout: post
 title: "Spotify for Everyone"
 category: posts
-cover: http://rack.3.mshcdn.com/media/ZgkyMDEzLzEyLzExL2RhL3Nwb3RpZnlnZW5lLmYwMDRlLmpwZwpwCXRodW1iCTEyMDB4NjI3IwplCWpwZw/8497c391/7d0/spotify-generic.jpg
 ---
 
 I personally love Spotify. I can hear music everywhere and even
@@ -51,9 +50,9 @@ to get this working.
 
 Now, back to what really matters: to create the proxy server, run this:
 
-{% highlight bash %}
+```bash
 ssh root@X.X.X.X -NCD 8080
-{% endhighlight %}
+```
 
 Here, X.X.X.X is the IP from the DigitalOcean email. When asked, enter
 also the password provided in the very same email.

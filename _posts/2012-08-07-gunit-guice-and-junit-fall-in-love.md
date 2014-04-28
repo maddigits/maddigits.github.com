@@ -10,28 +10,28 @@ small lib that I build (not big deal, one class, one annotation =] )
 So, I dont push it to maven central yet, so, you will need to do some work to
 made it work. Yep, you will need to build and install it to your local repo.
 
-{% highlight bash %}
+```bash
 git clone git://github.com/caarlos0/gunit.git
 cd gunit
 mvn install
-{% endhighlight %}
+```
 
 Now, just add it in your `pom.xml` dependencies:
 
-{% highlight xml %}
+```xml
 <dependency>
 	<groupId>com.github.caarlos0</groupId>
 	<artifactId>gunit</artifactId>
 	<version>1.0.0</version>
 	<scope>test</scope>
 </dependency>
-{% endhighlight %}
+```
 
 And follow the instructions code example and the motivation of doing
 this in [this article]({% post_url 2012-08-06-guice-and-junit %}), but,
 basically, your tests will look like this:
 
-{% highlight java %}
+```java
 @RunWith(GuiceTestRunner.class)
 @GuiceModules(FooModule.class)
 public class FooTests {
@@ -43,7 +43,7 @@ public class FooTests {
 	  assertTrue(bar.thisShouldReturnTrue());
 	}
 }
-{% endhighlight %}
+```
 
 ## [Get the code](git://github.com/caarlos0/gunit)
 

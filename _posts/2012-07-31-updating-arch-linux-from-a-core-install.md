@@ -25,25 +25,25 @@ Remember, if you get the [new ISO from arch linux site](http://www.archlinux.org
 
 So, after arch installed and loaded, do the following commands:
 
-{% highlight bash %}
+```bash
 pacman -Sy
 rm -rf /var/run /var/lock && pacman -Sf filesystem
-{% endhighlight %}
+```
 
 **Reboot.**
 
-{% highlight bash %}
+```bash
 pacman -S tzdata
 pacman -U http://pkgbuild.com/~allan/glibc-2.16.0-1-i686.pkg.tar.xz
 rm /etc/profile.d/locale.sh
-{% endhighlight %}
+```
 
 In this next accept, when promped to update pacman, say **NO**, and, when promped to any replacement, say **YES**.
 
-{% highlight bash %}
+```bash
 pacman -Su --ignore glibc
 pacman -Su
-{% endhighlight %}
+```
 
 **Reboot** again.
 

@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "First steps with Mac OS X as a Developer"
-cover: "/img/osx.jpg"
 ---
 
 So, I just bought my first Mac, and decided to wrote this in order to help
@@ -35,15 +34,15 @@ Install [XCode command line tools][1]. You will always need it anyway.
 [Homebrew][2] is some kind of _ports_ for Mac. As a developer, you should
 install it:
 
-{% highlight bash %}
+```bash
 ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
-{% endhighlight %}
+```
 
 ## Install some useful things via brew
 
-{% highlight bash %}
+```bash
 brew install grc coreutils spark z ack git
-{% endhighlight %}
+```
 
 - grc is tool to colorize things. You can easily use it by sourcing
 `$(brew --prefix)/etc/grc.bashrc`;
@@ -59,16 +58,16 @@ any of them;
 [Homebrew Cask][cask] let's you install normal apps with brew via command line.
 You will almost-never have to manually download and install apps again.
 
-{% highlight bash %}
+```bash
 brew tap phinze/homebrew-cask
 brew install brew-cask
-{% endhighlight %}
+```
 
 Then you can install some useful stuff with it:
 
-{% highlight bash %}
+```bash
 brew cask install caffeine dropbox iterm2 sequel-pro virtualbox vagrant the-unarchiver vlc google-chrome skype transmission dash cloudapp postgres divvy rdio github disk-inventory-x
-{% endhighlight %}
+```
 
 
 Let's made a list:
@@ -95,10 +94,10 @@ The others are probably auto-explanatory.
 changed my life. I don't even know how I lived before using it. No, really,
 install it NOW:
 
-{% highlight bash %}
+```bash
 brew install zsh
 chsh -s /bin/zsh
-{% endhighlight %}
+```
 
 ## Use some dotfiles
 
@@ -117,13 +116,13 @@ about it.
 In this example, let's install [my dotfiles for osx][7] (basically, the
 holman's with some custom things):
 
-{% highlight bash %}
+```bash
 git clone  https://github.com/caarlos0/dotfiles-mac ~/.dotfiles
 cd ~/.dotfiles
 script/bootstrap
 source ~/.zshrc
 dot # will install some tools and do some basic setup
-{% endhighlight %}
+```
 
 And you should be ready to go.
 
@@ -133,12 +132,12 @@ And you should be ready to go.
 as RVM, but I found it a little bit less intrusive. If you want, you can install
 it with brew:
 
-{% highlight bash %}
+```bash
 brew install rbenv ruby-build
 rbenv install 2.0.0-p195
 rbenv global 2.0.0-p195
 rbenv rehash
-{% endhighlight %}
+```
 
 Be sure to check your `~/.{zsh,bash}rc` file
 
@@ -147,15 +146,15 @@ Be sure to check your `~/.{zsh,bash}rc` file
 [hub][10] is a github command line tool written in Ruby to improve your
 git/github diary use. You can install it with `brew`:
 
-{% highlight bash %}
+```bash
 brew install hub
-{% endhighlight %}
+```
 
 Example usage:
 
-{% highlight bash %}
+```bash
 hub clone caarlos0/up
-{% endhighlight %}
+```
 
 Much less typing, IMHO =)
 
@@ -167,11 +166,11 @@ install.
 
 Well, here the steps:
 
-{% highlight bash %}
+```bash
 brew install imagemagick
 brew install pkg-config
 C_INCLUDE_PATH=/usr/local/Cellar/imagemagick/6.8.0-10/include/ImageMagick gem install rmagick
-{% endhighlight %}
+```
 
 And boom! It works =) Pretty tricky.
 
@@ -215,4 +214,3 @@ Cheers!
 [15]: https://github.com/caarlos0/dotfiles-mac/blob/master/osx/set-defaults.sh
 [16]: http://apple.stackexchange.com/questions/400/please-share-your-hidden-os-x-features-or-tips-and-tricks
 [17]: http://www.irradiatedsoftware.com/sizeup/
-

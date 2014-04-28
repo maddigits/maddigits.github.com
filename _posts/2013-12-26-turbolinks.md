@@ -29,7 +29,7 @@ way.
 So, to get the pure turbolinks file, I used grunt-curl and compiled it to
 javascript using grunt-contrib-coffee:
 
-{% highlight js %}
+```js
 curl: {
   turbolinks: {
     src: 'https://raw.github.com/rails/turbolinks/master/lib/assets/javascripts/turbolinks.js.coffee',
@@ -59,19 +59,19 @@ uglify: {
     dest: 'js/up.min.js'
   }
 }
-{% endhighlight %}
+```
 
 As you can see, I get always the last file from trunk and compile to plain old
 javascript. After that, I also concat it with other js files and uglify the
 result (using grunt-contrib-concat and grunt-contrib-uglify, respectively).
 
-### Dealing with style="background-image: url(image.jpg);"
+### Dealing with `style="background-image: url(image.jpg);"`
 
 For some reason I'm now quite sure, turbolinks mess up with this kind
 of style declaration (which I use in the image headers). The solution I've
 found is kinda weird, but it works:
 
-{% highlight js %}
+```js
 var reloadImages = function() {
   var styles, style, url, _i, _len, _el;
   styles = Array.prototype.slice.call(document.body.querySelectorAll('[style]'));
@@ -88,7 +88,7 @@ var reloadImages = function() {
 $(document).on('page:change', function() {
   reloadImages();
 });
-{% endhighlight %}
+```
 
 ### Dealing with the twitter button
 
@@ -96,7 +96,7 @@ The twitter button adds a script to the head, which turbolinks doesn't replace,
 so, it gets buggy. To fix that I changed a little the
 default button markup:
 
-{% highlight html %}
+```html
 <a  href="https://twitter.com/share" class="twitter-share-button"
 data-lang="en" data-size="large"
 data-url="{% raw %}{{ site.production_url }}{{ page.url }}{% endraw %}"
@@ -114,18 +114,18 @@ data-text="{% raw %}{{ page.title }}{% endraw %}">
   }
 }(document,"script","twitter-wjs");
 </script>
-{% endhighlight %}
+```
 
 And add something at the page change event:
 
-{% highlight js %}
+```js
 var twttr;
 $(document).on('page:change', function() {
   if (twttr) {
     twttr.widgets.load();
   }
 });
-{% endhighlight %}
+```
 
 It was the best solution I've found.
 
@@ -134,7 +134,7 @@ It was the best solution I've found.
 I changed the Disqus scripts to only load the commends when the user
 reach the bottom of the page:
 
-{% highlight html %}
+```html
 <div id="disqus_thread">
   Loading Comments...
 </div>
@@ -160,15 +160,15 @@ reach the bottom of the page:
   };
 </script>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-{% endhighlight %}
+```
 
 But it causes me some trouble with Turbolinks. To fix that, I simply did:
 
-{% highlight js %}
+```js
 $(document).on('page:fetch', function() {
   window.onscroll = void 0;
 });
-{% endhighlight %}
+```
 
 And it worked!
 
@@ -180,7 +180,7 @@ add the import in my less file (with a `(less)` prefix, so it imports it
 as a less file) and mix it up in my js. I also had to bind the events
 to nprogress, like this:
 
-{% highlight js %}
+```js
 $(document).on('page:fetch', function() {
   NProgress.start();
 });
@@ -195,7 +195,7 @@ $(document).on('page:restore', function() {
 
 // hides the spinner
 NProgress.configure({ showSpinner: false });
-{% endhighlight %}
+```
 
 And it was working as expected.
 
@@ -210,4 +210,3 @@ really faster. Hope you like it!
 [rails]: http://rubyonrails.org/
 [blog]: https://github.com/caarlos0/caarlos0.github.com.git
 [commits]: https://github.com/caarlos0/caarlos0.github.com/commit/cb17b421e57aec67f3d7a582696e62d863c3689f
-
