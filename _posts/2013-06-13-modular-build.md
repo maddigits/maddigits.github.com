@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Automate your Builds"
-category: posts
 ---
 
 No one likes to do the same stuff lots of times. Copy a file from here to

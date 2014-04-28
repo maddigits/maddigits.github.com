@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Spotify for Everyone"
-category: posts
 ---
 
 I personally love Spotify. I can hear music everywhere and even

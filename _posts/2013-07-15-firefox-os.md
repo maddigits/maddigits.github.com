@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "I just got a Firefox OS powered phone"
-category: posts
 ---
 
 [![Keon](http://distilleryimage10.s3.amazonaws.com/6df19a56e50e11e295bf22000a9f390a_7.jpg)](http://instagram.com/p/bXXYdXPXke/)

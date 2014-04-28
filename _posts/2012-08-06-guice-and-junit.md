@@ -3,7 +3,7 @@ layout: post
 title: "Guice and JUnit"
 ---
 
-First of all: **Do you use Guice as Depency Injection Container in your Apps? If no, why not?**
+First of all: **Do you use Guice as Depency Injection Container in your Apps? If not, why?**
 
 Well, Guice is a lightweight depency injection container made by Google, for Java 5 and above.
 

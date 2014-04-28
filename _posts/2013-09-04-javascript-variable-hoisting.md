@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Javascript Variable Hoisting"
-category: posts
 ---
 
 > This is article is the second of a serie of `n` articles, where `n` could

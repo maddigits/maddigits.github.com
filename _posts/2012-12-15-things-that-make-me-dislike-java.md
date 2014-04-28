@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Things that make me dislike Java"
-category: posts
 ---
 
 So, I just compiled a little list of things that, I believe, make me dislike

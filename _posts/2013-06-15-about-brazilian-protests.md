@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "About the Brazilian Protests"
-category: posts
 ---
 
 It's now well known in media that, we, brazilian people, were facing our

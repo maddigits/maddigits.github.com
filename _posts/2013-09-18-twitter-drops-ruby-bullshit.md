@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Twitter drops Ruby - The Bullshit"
-category: posts
 ---
 
 This post is about the Twitter change from Ruby to Java, some years ago, fact

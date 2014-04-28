@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "This site is now powered by Turbolinks"
-category: posts
 ---
 
 I think that [turbolinks][turbolinks] is great: it mades it easy to

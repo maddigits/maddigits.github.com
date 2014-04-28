@@ -70,4 +70,3 @@ lspci | grep -i vga
 ```
 
 That's it. See ya.
-

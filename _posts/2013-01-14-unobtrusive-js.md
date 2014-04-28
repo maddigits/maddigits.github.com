@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Unobtrusive JS"
-category: posts
 ---
 
 ![Unobtrusive car repair](http://dl.dropbox.com/u/247142/blog/lol/repair.jpg "Unobtrusive car repair")

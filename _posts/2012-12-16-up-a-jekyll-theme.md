@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "UP: A Jekyll theme"
-category: posts
 ---
 
 After a while using [Jekyll Bootstrap][jekyll_bootstrap], I just realized that it was

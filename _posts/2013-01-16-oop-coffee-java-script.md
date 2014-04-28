@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "JavaScript OOP: A beginners guide"
-category: posts
 ---
 
 Well, there's a lot of tutorials, writings, blog posts, etc in the web

@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Modular Persistence"
-
 ---
 Hi everybody!
 

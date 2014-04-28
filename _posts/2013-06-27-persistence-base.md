@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "JPA2 with Guice"
-category: posts
 ---
 
 Some time ago, I [posted here]({% post_url 2012-06-25-modular-persistence %}) about

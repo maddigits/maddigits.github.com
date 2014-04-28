@@ -31,4 +31,3 @@ Also, you can transfer files via bluetooth (hell slow) or via wireless (using so
 I'll try to mantain this post updated with new info, if you have something to share, please leave a comment.
 
 See ya.
-

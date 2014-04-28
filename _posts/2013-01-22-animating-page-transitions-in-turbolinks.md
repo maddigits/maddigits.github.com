@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Turbolinks animated page transitions"
-category: posts
 ---
 
 Since I've seen the new [Basecamp][base], I fall in love with it.

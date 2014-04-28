@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Gemify your assets"
-category: posts
 ---
 
 Rails 3.1 introduced the asset pipeline, which make it easy to include versioned

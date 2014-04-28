@@ -1,9 +1,7 @@
 ---
 layout: post
 title: "Charmander, our Hubot"
-category: posts
 ---
-
 
 We just started to use the awesome [Github Hubot][hubot], "a customizable
 kegerator-powered life embetterment robot".

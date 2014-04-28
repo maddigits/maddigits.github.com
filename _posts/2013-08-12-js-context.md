@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Javascript Context"
-category: posts
 ---
 
 People make a lot of confusion about Javascript context mechanism. I don't think

@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "PullRequest Coverage Blammer"
-category: posts
 ---
 
 At the [company I work][ca] Pull Requests are part of our culture.

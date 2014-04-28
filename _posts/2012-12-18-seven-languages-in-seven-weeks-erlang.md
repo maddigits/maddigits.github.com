@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Seven Languages in Seven Weeks: Erlang"
-category: posts
 ---
 
 So, I just bought [_"Seven Languages in Seven Weeks"_][book]. I've read the Ruby
@@ -229,4 +228,3 @@ Hope you enjoy Erlang.
 
 
 [book]: http://amzn.to/17vnhdb
-

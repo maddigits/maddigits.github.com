@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Generations War"
-category: posts
 ---
 
 People suddenly start this thing that looks pretty much like a war.
