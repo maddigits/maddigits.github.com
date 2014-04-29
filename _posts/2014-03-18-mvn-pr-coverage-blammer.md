@@ -1,6 +1,8 @@
 ---
 layout: post
-title: "PullRequest Coverage Blammer"
+title: "PullRequest Coverage Blammer Maven Plugin"
+redirect_from:
+  - /posts/mvn-pr-coverage/
 ---
 
 At the [company I work][ca] Pull Requests are part of our culture.
