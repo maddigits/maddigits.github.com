@@ -29,3 +29,16 @@ small.date {
 .github-cards {
   text-align: center;
 }
+
+.avatar {
+  margin: 0 auto;
+  float: none;
+  border: 2px solid #464544;
+  margin-top: 20px;
+}
+.avatar,
+.avatar img {
+  width: 80px;
+  height: 80px;
+  border-radius: 80px;
+}
