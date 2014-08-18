@@ -3,11 +3,15 @@ layout: post
 title: "Install JDK on OSX Yosemite"
 ---
 
-For some reason, Oracle blocked the installers to run only on older OSX
-versions. That surely makes sense, since nobody running Yosemite will ever
-want to write some Java code. Anyway, here is how to fix it:
+![jdk](https://pbs.twimg.com/media/BvWvPoDIQAAjFh6.png)
 
-First, download and open the JDK `.dmg` file, then
+For some reason, Oracle blocked the installers to run only on a fixed OSX
+version range with a nice and explanatory error message. This range doesn't
+include Yosemite, which makes sense, since nobody running Yosemite will ever
+want to write some Java. Anyway, here is how to fix it.
+
+First, download and open the JDK `.dmg` file. Then, unpackage and edit the
+`Distribution` file:
 
 ```sh
 $ pkgutil --expand "/Volumes/JDK 7 Update 67/JDK 7 Update 67.pkg" /tmp/jdk7.unpkg
