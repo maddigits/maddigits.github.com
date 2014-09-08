@@ -3,63 +3,68 @@ layout: post
 title: "Dotfiles Are Meant to Be Forked"
 ---
 
-Well, it been a while since I replaced my old (but gold) bash by the greatest zsh.
+Well, it has been a while since I replaced my old (but gold) bash by the great
+zsh.
 
-Anyway, I have my personal computer and my job computer, and, like every developer,
-I create aliases and scripts for everything I think I could use a lot of times.
+Anyway, I have my personal computer and my job computer, and, like almost every
+developer, I create aliases and scripts for everything I have to do repeatedly.
 
 ![Automate all the things!](http://www.anchor.com.au/blog/wp-content/uploads/2011/08/automate-all-the-things1.png)
 
-Well... you can imagine.. my bashrc had about 300 lines. It was really big. Almost impossible
-to share with others. Bloated. etc...
+Well... you can imagine.. my `.bashrc` had about 300 lines. It was really big.
+Almost impossible to share with others, full of personal data, full of my
+machine specific data, bloated with old things I left behind... well, it was a
+real mess.
 
-Then, I just make a huge step in my life: move to [ZSH][zsh]!
+Then, I decided to make a huge step in my life: move to [ZSH][zsh]!
 
 ## ZSH
 
-According to [Arch Wiki about ZSH][arch_zsh_wiki], _"Zsh is a powerful shell that
-operates as both an interactive shell and as a scripting language interpreter.
-While being compatible with Bash (not by default, only if you issue "emulate sh"),
-it offers many advantages such as: Faster, Improved tab completion, Improved globbing,
-Improved array handling, Fully customisable"_.
+> Zsh is a powerful shell that operates as both an interactive shell and as a
+> scripting language interpreter. While being compatible with Bash (not by
+> default, only if you issue "emulate sh"), it offers many advantages such as:
+> Faster, Improved tab completion, Improved globbing, Improved array handling,
+> Fully customisable.
+>
+> [Arch Wiki about ZSH][arch_zsh_wiki]
 
-But, well, I didn't knew where to start. So, I forked [oh-my-zsh][ohmyzsh] project.
-I've used it for a while, also did a contribution that troll everyone (that's another
-story), but well, it has so many things I didn't use, and it doesn't had a simple
-way to share configuration files across computers.
+But, well, I didn't knew where to start. So, I forked [oh-my-zsh][ohmyzsh]
+project. I've used it for a while, also did some contributions... but well,
+it has so many things I didn't use, and it doesn't had a simple way to share
+configuration files across computers.
 
-Then I see [holman's dotfiles](http://github.com/holman/dotfiles). And it was perfect!
-Except for the fact that it was full of Mac OSX-related things.
+Then I found [holman's dotfiles](http://github.com/holman/dotfiles). And it was
+perfect! Except for the fact that it was full of Mac OS X-related stuff.
 
-So I tweaked, removed, tweaked, cleaned-up, tweaked, etc etc, and there it is, my all-new
-[dotfiles][dotfiles]!
+So I tweaked, removed, tweaked, cleaned-up, tweaked, etc etc, and there it is,
+my all-new [dotfiles][dotfiles]!
+
+They should work with both Linux and OS X (linux lacks a little automation,
+tough), and I tweaked it to fit my taste.
 
 ## so get it, bro
 
-It has some dependencies, basically:
+The installation is pretty straightforward. Just clone it in `~/.dotfiles` and
+run the `script/bootstrap` file. If you found any error, please, open an issue
+so I can fix them.
 
-- rbenv
-- ruby 1.9+
+Also, take a look at the [readme][readme] (pretty simple), it will make it easy
+to you to understand the topics and other features.
 
-So, just follow the [readme][readme] (pretty simple), and, well, it should be working.
+![shell](/public/images/iterm-dotfiles.png)
 
-If you change something (like an alias, for example), you'll not see the changes unless
-you open a new terminal window or call `reload!`.
+If you want, you can also read the
+[holman's post about his dotfiles](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/).
 
-Some cool aliases:
+If you wanna contribute with anything, just issue a pull-request. I'll be glad
+to take a look at it!
 
-- `h` is your `~/` folder;
-- `c` is your `~/code` (change it in `.zshrc` file);
-- `d` is the `~/.dotfiles` folder
+That's all folks, hope to see you soon!
 
-You can run the `alias` to see all avaliable aliases. But, well, take a look inside the folder,
-there is a lot of standalone binaries too!
+---
 
-If you want, you can also read the [holman's post about his dotfiles](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/).
+> This post was last updated in Sep 7, 2014.
 
-If you wanna contribute with anything, made a ass-kicker pull-request. I'll be glad to see it!
-
-That's all folks, hope see you soon!
 
 [dotfiles]: http://github.com/caarlos0/dotfiles
 [readme]: https://github.com/caarlos0/dotfiles#install
