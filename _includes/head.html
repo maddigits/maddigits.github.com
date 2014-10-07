@@ -18,7 +18,7 @@
   {% if page.title == "Home" %}
     <meta name="twitter:title" content="{{ site.title }} &middot; {{ site.tagline }}">
     <meta name="twitter:description" content="{{ site.description }}">
-    <meta name="description" content="{{ site.description }">
+    <meta name="description" content="{{ site.description }}">
   {% else %}
     <meta name="twitter:title" content="{{ page.title }} &middot; {{ site.title }}">
     <meta name="twitter:description" content="{{ content | strip_html | truncatewords: 200 | strip_newlines | escape_once }}">
