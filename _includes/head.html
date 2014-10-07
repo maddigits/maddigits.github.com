@@ -13,6 +13,16 @@
     {% endif %}
   </title>
 
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:creator" content="@caarlos0">
+  {% if page.title == "Home" %}
+    <meta name="twitter:title" content="{{ site.title }} &middot; {{ site.tagline }}">
+  {% else %}
+    <meta name="twitter:title" content="{{ page.title }} &middot; {{ site.title }}">
+  {% endif %}
+  <meta name="twitter:description" content="">
+  <meta name="twitter:url" content="{{ page.url }}">
+
   <!-- CSS -->
   <link rel="stylesheet" href="/public/css/poole.css">
   <link rel="stylesheet" href="/public/css/syntax.css">
