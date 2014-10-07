@@ -1,0 +1,16 @@
+---
+layout: post
+title: "Elections, in Ruby"
+---
+
+Well, last sunday (Oct 5) was the brazilian elections. I was doing nothing, so
+I decided to write a simple ruby script to parse the results and show the
+top 3 candidates.
+
+Besides the reverse clean-code done by the TSE (Superior Electoral Court),
+it was pretty easy:
+
+<script src="https://gist.github.com/caarlos0/88ec017ad687c883581a.js"></script>
+
+Maybe the only interesting thing here is the metaprogramming in the String
+class.
