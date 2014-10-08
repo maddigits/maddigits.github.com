@@ -231,6 +231,18 @@ git rm wrongfile.txt
 git commit --amend
 ```
 
+## Troubleshooting
+
+### `! c15fe9e..eee5f38  feature1 -> origin/feature1  (unable to update local ref)`
+
+This error can vary by remote and branch name. Usually, a clean up will do
+the job just fine:
+
+```sh
+git gc --prune=now
+git remote -v | cut -f1 | uniq | xargs git remote prune
+```
+
 Done.
 
 ## Going Further
