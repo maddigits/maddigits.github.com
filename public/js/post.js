@@ -24,6 +24,7 @@
     createLink(header, id);
   }
   document.addEventListener('DOMContentLoaded', function () {
-    [].forEach.call(document.querySelectorAll('.post h2, .post h3'), execute);
+    if (!document.querySelector('.posts'))
+      [].forEach.call(document.querySelectorAll('.post h2, .post h3'), execute);
   });
 })();
