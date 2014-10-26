@@ -3,6 +3,8 @@ layout: post
 title: "Elections, in Ruby"
 ---
 
+> Updated with second round script in Oct 26, 2014.
+
 Well, last sunday (Oct 5) was the brazilian elections. I was doing nothing, so
 I decided to write a simple ruby script to parse the results and show the
 top 3 candidates.
