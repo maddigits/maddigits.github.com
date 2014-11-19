@@ -3,8 +3,8 @@ layout: post
 title: "Using JUnit Rules to simplify your tests"
 ---
 
-Did you ever wrote JUnit tests exteding a class that does some before and
-after work, so you didn't had to repeat that code in various test classes?
+Did you ever write JUnit tests exteding a class that does some before and
+after work, so you didn't have to repeat that code in various test classes?
 Well, I will not say that you have been doing it wrong, but, sure enough, you
 could do it better. How? Using JUnit Rules!
 
@@ -88,7 +88,7 @@ public class BlahTest {
 
 ### Temporary Folder
 
-Did you ever needed to do some test that uses `File` and/or needed a temporary
+Have you ever needed to do some test that uses `File` and/or needed a temporary
 file/folder? `TemporaryFolder` to the rescue:
 
 ```java
@@ -117,7 +117,7 @@ public class BlahTest {
 	public void testIcon() throws Exception {
 		exception.expect(IllegalArgumentException.class);
 		exception.expectMessage("Dude, this is invalid!");
-		// do something that you expect to thrown an exception...
+		// do something that you expect to throw an exception...
 	}
 }
 ```
@@ -125,7 +125,7 @@ public class BlahTest {
 ## Custom Rules
 
 That's neat, but... what if you need something else... something more "custom"?
-Well, You can implement your own rules by implementing the `TestRule`
+Well, you can implement your own rules by implementing the `TestRule`
 `interface`, for example, a Rule that init Mockito mocks (not very useful):
 
 ```java
@@ -167,8 +167,8 @@ public class BlahTest {
 
 ### External Resources
 
-Returning to the example of this post first paragraph, you can also have custom
-external resources rules by extending the `ExternalResource` class:
+Returning to the example of this post's first paragraph, you can also have
+custom external resources rules by extending the `ExternalResource` class:
 
 ```java
 public class MyServer extends ExternalResource {
