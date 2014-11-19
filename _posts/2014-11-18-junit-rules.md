@@ -6,7 +6,13 @@ title: "Using JUnit Rules to simplify your tests"
 Did you ever wrote JUnit tests exteding a class that does some before and
 after work, so you didn't had to repeat that code in various test classes?
 Well, I will not say that you have been doing it wrong, but, sure enough, you
-could do it better. How? [JUnit Rules][docs]!
+could do it better. How? Using JUnit Rules!
+
+## The Basics
+
+Well, before we learn all that, let's start with the basics, shall we?
+
+### Timeouts
 
 Let's take a simple example: Suppose that you want to set a timeout for all
 test methods in a given class, an easy way to do that is like this:
@@ -44,7 +50,7 @@ public class BlahTest {
 
 Besides that you repeated yourself tons of times, if you want to change
 this timeout, you will have to change it in all methods. There is no need to
-do that. Use the `Timeout` Rule:
+do that. Just use the `Timeout` Rule:
 
 ```java
 public class BlahTest {
@@ -80,6 +86,8 @@ public class BlahTest {
 }
 ```
 
+### Temporary Folder
+
 Did you ever needed to do some test that uses `File` and/or needed a temporary
 file/folder? `TemporaryFolder` to the rescue:
 
@@ -96,7 +104,9 @@ public class BlahTest {
 }
 ```
 
-Ever needed more control on exceptions? Try `ExpectedException` rule:
+### Expected Exceptions
+
+Ever needed more control on exceptions? Try the `ExpectedException` rule:
 
 ```java
 public class BlahTest {
@@ -112,9 +122,11 @@ public class BlahTest {
 }
 ```
 
-That's neat, but if you need something else? Well, You can implement your own
-rules by implementing the `TestRule` `interface`, for example, a Rule that
-init Mockito mocks (not very useful):
+## Custom Rules
+
+That's neat, but... what if you need something else... something more "custom"?
+Well, You can implement your own rules by implementing the `TestRule`
+`interface`, for example, a Rule that init Mockito mocks (not very useful):
 
 ```java
 @RequiredArgsConstructor
@@ -133,7 +145,7 @@ public class MockRule implements TestRule {
 }
 ```
 
-To use it, you just need to declare the rule in your test class:
+To use it, you just need to declare that rule in your test class:
 
 ```java
 public class BlahTest {
@@ -153,8 +165,10 @@ public class BlahTest {
 }
 ```
 
-Returning to the example of this post introduction, you can have custom
-external resources by extending `ExternalResource`:
+### External Resources
+
+Returning to the example of this post first paragraph, you can also have custom
+external resources rules by extending the `ExternalResource` class:
 
 ```java
 public class MyServer extends ExternalResource {
@@ -170,9 +184,10 @@ public class MyServer extends ExternalResource {
 }
 ```
 
-I believe that this made more sense with Integration Tests, though. Also, in
-this case, you would not want it to start and stop the server before and after
-each test method, righ? So, you can use the `@ClassRule` annotation:
+I believe that this makes more sense with Integration Tests, though. Also, in
+this case, you probably would not want/need to start and stop the server
+before and after each test method, righ? So, you can use the `@ClassRule`
+annotation:
 
 ```java
 public class BlahServerTest {
@@ -186,8 +201,10 @@ public class BlahServerTest {
 }
 ```
 
-**Attention**: When you use `@ClassRule`, your rule instance should be `static`,
-just like `@BeforeClass` and `@AfterClass` methods.
+**Attention**: Note that when you use `@ClassRule`, your rule instance should
+be `static`, just like `@BeforeClass` and `@AfterClass` methods.
+
+## Going Further
 
 That's the basics that will save you tons of abstract classes and ugly code. I
 would also recommend you to take a good read at the [junit wiki][docs]. If
