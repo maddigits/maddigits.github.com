@@ -106,7 +106,7 @@ public class BlahTest {
 	@Test
 	public void testIcon() throws Exception {
 		exception.expect(IllegalArgumentException.class);
-    exception.expectMessage("Dude, this is invalid!");
+		exception.expectMessage("Dude, this is invalid!");
 		// do something that you expect to thrown an exception...
 	}
 }
