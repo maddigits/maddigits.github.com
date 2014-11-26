@@ -3,12 +3,13 @@ layout: post
 title: "Notify your team using Telegram"
 ---
 
-In an ideal world, applications will never go down. In the real world, they
-might be. Every second counts when this kind of situation happens.
+In an ideal world, applications will never go down, for example. In the real
+world, shit happens. Every second counts when this happens.
 
-So, in order to be notified as soon as possible, I decided to use
-[Telegram][telegram] to notify my team if something goes **really** wrong -
-which shouldn't happen, ever.
+Let's take the example of a server going down for some reason (which shouldn't
+happen, ever). I want the team to be notified as soon as possible to mitigate
+the issue. To do that in a easy and free way, I decided to use
+[Telegram][telegram].
 
 ### Wait, wait... what is this Telegram thing again?
 
