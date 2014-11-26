@@ -4,7 +4,7 @@ title: "Notify your team using Telegram"
 ---
 
 In an ideal world, applications will never go down, for example. In the real
-world, shit happens. Every second counts when this happens.
+world, shit happens. Every second counts.
 
 Let's take the example of a server going down for some reason (which shouldn't
 happen, ever). I want the team to be notified as soon as possible to mitigate
