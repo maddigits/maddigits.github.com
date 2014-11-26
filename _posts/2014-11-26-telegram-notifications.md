@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Notify that a server is down using Telegram"
+title: "Notify your team using Telegram"
 ---
 
 In an ideal world, applications will never go down. In the real world, they
