@@ -3,7 +3,7 @@ layout: post
 title: "Using JUnit Rules to simplify your tests"
 ---
 
-Have you ever wrote JUnit tests exteding a class that does some before and
+Have you ever wrote JUnit tests extending a class that does some before and
 after work, so you didn't have to repeat that code in various test classes?
 Well, I will not say that you have been doing it wrong, but, sure enough, you
 could do it better. How? Using JUnit Rules!
