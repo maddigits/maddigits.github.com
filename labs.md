@@ -10,7 +10,11 @@ of them, most of them, in Java, Ruby, Shell and JS:
 
 <div class="github-cards">
   <div class="github-card" data-github="gwtbootstrap/gwt-bootstrap"></div>
+  <div class="github-card" data-github="caarlos0/dotfiles"></div>
   <div class="github-card" data-github="caarlos0/nprogress-rails"></div>
+  <div class="github-card" data-github="caarlos0/guice-junit-test-runner"></div>
+  <div class="github-card" data-github="caarlos0/github-integrator"></div>
+  <div class="github-card" data-github="caarlos0/fraas"></div>
   <div class="github-card" data-github="caarlos0/up"></div>
   <div class="github-card" data-github="caarlos0/coverage-maven-plugin"></div>
   <div class="github-card" data-github="caarlos0/turbolinks_transitions"></div>
