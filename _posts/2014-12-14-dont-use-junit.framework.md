@@ -7,8 +7,8 @@ Every once in a while I see somewhere a wrong import to the old, deprecated
 `junit.framework` instead of `org.junit`.
 
 I particularly believe they should remove this package and put it in a
-`junit-compat` jar or something... but, while they didn't do that, we can do
-basically two things:
+`junit-compat` jar or something... but, while they don't do that, we can
+avoid those old imports with 2 basic steps:
 
 ### 1. Replace all old imports with the new imports
 
@@ -28,7 +28,7 @@ The second step is basically to break the build whenever someone try to use
 those old imports. A simple way to do that is using the
 [restrict-maven-plugin](https://github.com/yamanyar/restrict-maven-plugin).
 
-An example of configuration will look like this:
+An example of configuration for maven will look like this:
 
 ```xml
 <plugin>
