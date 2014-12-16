@@ -32,7 +32,7 @@ watch it do the validation for us.
 An simple example of `build.sh` script is:
 
 ```bash
-#!/bin/bash -e
+#!/usr/bin/env bash -eo pipefail
 main() {
   find . -type f -perm +111 -exec shellcheck {} \;
 }
