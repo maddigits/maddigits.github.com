@@ -40,7 +40,7 @@ main() {
 main
 ```
 
-Pretty straightforward to integrate with [travis.ci](http://travis-ci.org) too
+Pretty straightforward to integrate with [travis-ci](http://travis-ci.org) too
 (`.travis.yml`):
 
 ```yaml
@@ -58,7 +58,7 @@ script:
 I'm already using this in my [dotfiles][dotfiles], and found some really stupid
 mistakes to fix. Sure thing, this is an awesome tool!
 
-Wanna see in the so said _real world_? Check my `build.sh`
+Wanna see it in the so said _real world_? Check my `build.sh`
 [here](https://github.com/caarlos0/dotfiles/blob/master/build.sh) and my
 `.travis.yml`
 [here](https://github.com/caarlos0/dotfiles/blob/master/.travis.yml).
