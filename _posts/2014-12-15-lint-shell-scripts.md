@@ -24,7 +24,7 @@ found - _quick and dirty_. You can blame me too.
 So, projects like [bashstyle][bashstyle] are important to set a common sense
 in how to do things using bash. The problem is that it's not automated.
 
-A project that really helps with that is [shellcheck][shellcheck]. It's a
+A project that really helps with that is [shellcheck][shellcheck]. It's an
 executable written in Haskell, which can lint your scripts (in bash, zsh, and
 others). Sure enough, we can put this in a Countinuous Integration system and
 watch it do the validation for us.
