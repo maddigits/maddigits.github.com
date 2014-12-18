@@ -19,25 +19,17 @@ Paraphrasing Uncle Bob:
 
 ** Actually he said that about method sizing, but, I think this fits just fine.
 
-To help with that, I wrote a [small script](https://gist.github.com/caarlos0/9420690)
-to generate a list of the slowest JUnit tests. It should give you some
-direction in where to attack. The script is pretty simple, but it does the job.
+To help with that, I created a [project][project] with scripts that
+can generate a list of the slowest JUnit tests in a project. It should give you
+some insight in where to attack.
 
-```bash
-git clone https://gist.github.com/9420690.git scripts
-scripts/slowest-tests project/folder
-```
+The [project's README][project] is pretty complete and the scripts are really
+simple and easy to use.
 
-You can also generate that list in CSV format by running:
-
-```bash
-scripts/csv-slowest-tests project/folder
-```
-
-More than that, you can use [maven-profiler](https://github.com/takari/maven-profiler)
+Besides that, you can use [maven-profiler](https://github.com/takari/maven-profiler)
 to find other slow parts of your build and fix them.
 
-One last tip: if are having problems with low test coverage in your project,
+One last tip: if you have problems with low test coverage in your project,
 try [coverage-maven-plugin]({% post_url 2014-03-18-mvn-pr-coverage-blammer %}),
 a maven plugin that will blame pull request with coverage bellow a specified
 amount.
@@ -45,4 +37,4 @@ amount.
 That's it for today, happy hacking!
 
 [unit-vs-integration]: https://www.google.com.br/search?q=unit+tests+vs+integration+tests
-[scripts]: https://gist.github.com/caarlos0/9420690
+[project]: https://github.com/caarlos0/junit-slowest-tests
