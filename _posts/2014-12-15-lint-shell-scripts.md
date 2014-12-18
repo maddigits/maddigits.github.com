@@ -32,12 +32,17 @@ watch it do the validation for us.
 An simple example of `build.sh` script is:
 
 ```bash
-#!/usr/bin/env bash -eo pipefail
+#!/bin/bash
+set -eo pipefail
+[[ "${DEBUG:-}" ]] && set -x
+
 main() {
-  find . -type f -perm +111 -exec shellcheck {} \;
+  find . -type f -perm +111 | grep -v "\.git" | while read script; do
+    shellcheck "$script"
+  done
 }
 
-main
+main "$@"
 ```
 
 Pretty straightforward to integrate with [travis-ci](http://travis-ci.org) too
