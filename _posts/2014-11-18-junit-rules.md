@@ -186,7 +186,7 @@ public class MyServer extends ExternalResource {
 
 I believe that this makes more sense with Integration Tests, though. Also, in
 this case, you probably would not want/need to start and stop the server
-before and after each test method, righ? So, you can use the `@ClassRule`
+before and after each test method, right? So, you can use the `@ClassRule`
 annotation:
 
 ```java

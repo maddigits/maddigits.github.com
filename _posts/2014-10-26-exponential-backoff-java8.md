@@ -12,7 +12,7 @@ need to integrate. Sometimes, the service will just refuse the connection,
 without any reason. If I keep pushing, it will, someday, accept it.
 
 So, I used Java 8 Functional Interfaces to implement this in a not-so-ugly way,
-also using a Fibonacci's Sequence to incremente the wait time:
+also using a Fibonacci's Sequence to increment the wait time:
 
 ### The `ExponentialBackOffFunction` Functional Interface:
 

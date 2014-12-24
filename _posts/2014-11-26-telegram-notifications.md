@@ -50,7 +50,7 @@ Sure, you can script it in order to notify you about anything, including some
 business specific things, dependency on third-party systems... well, use your
 imagination.
 
-I also added it to the crontab, so it will run every minute.
+I also added it to the `crontab`, so it will run every minute.
 
 And, sure enough, it works:
 

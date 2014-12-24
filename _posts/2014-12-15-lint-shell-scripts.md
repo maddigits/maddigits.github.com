@@ -18,7 +18,7 @@ I will start this by quoting the [bashstyle][bashstyle]'s readme:
 > glue them together with Bash.
 
 My concern about that is the quality of the code itself. Like JavaScript,
-most people will just google and do what they want in the first way that they
+most people will just Google and do what they want in the first way that they
 found - _quick and dirty_. You can blame me too.
 
 So, projects like [bashstyle][bashstyle] are important to set a common sense
