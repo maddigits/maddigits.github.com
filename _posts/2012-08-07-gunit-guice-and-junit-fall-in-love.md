@@ -8,7 +8,8 @@ talking about Guice and JUnit, so, this time, I'll just say how to use the
 small lib that I build (not big deal, one class, one annotation =] )
 
 So, I dont push it to maven central yet, so, you will need to do some work to
-made it work. Yep, you will need to build and install it to your local repo.
+made it work. Yep, you will need to build and install it to your local
+repository.
 
 ```bash
 git clone git://github.com/caarlos0/gunit.git

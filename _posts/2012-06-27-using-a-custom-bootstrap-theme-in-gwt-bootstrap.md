@@ -52,7 +52,10 @@ And then, update your project with a `$ mvn clean install`.
 
 ## Configure GWT-Bootstrap
 
-In this point, we have to setup the `*.gwt.xml` file and our `UIBinder` XML file. You can follow [getting started tutorial](/code/2012/06/26/getting-started-with-gwt-bootstrap/) to do that in the right way.
+In this point, we have to setup the `*.gwt.xml` file and our `UIBinder` XML
+file. You can follow
+[getting started tutorial](/code/2012/06/26/getting-started-with-gwt-bootstrap/)
+to do that in the right way.
 
 
 ## Get a custom Bootstrap Theme
@@ -60,14 +63,17 @@ In this point, we have to setup the `*.gwt.xml` file and our `UIBinder` XML file
 You can get a custom `bootstrap.min.css` file in several ways:
 
 * Making your own CSS changing the `.less` files and re-generating the files
-* [Customizing your download](http://twitter.github.com/bootstrap/download.html) (Basically the option above in a easy way)
+* [Customizing your download](http://twitter.github.com/bootstrap/download.html)
+(Basically the option above in a easy way)
 * [Downloading it somewhere](https://www.google.com.br/search?q=twitter+bootstrap+themes)
 
-For this example, I'll use [this theme](http://bootswatch.com/slate/). Download the `bootstrap.min.css` from the site.
+For this example, I'll use [this theme](http://bootswatch.com/slate/).
+Download the `bootstrap.min.css` from the site.
 
 ## Clean the example
 
-By default, the Maven GWT Archetype will generate a lot of junk, "by example", for you. You can clean it up.
+By default, the Maven GWT Archetype will generate a lot of junk, "by example",
+for you. You can clean it up.
 
 You can remove:
 
@@ -106,7 +112,8 @@ At this point we will have a structure like this:
 ## Create our example
 
 Now, lets create a UIBinder class to made our amazing test widget!
-Create a new UiBinder class/xml combo called `ExampleUiBinder`, with the following content:
+Create a new UiBinder class/xml combo called `ExampleUiBinder`, with the
+following content:
 
 #### ExampleUiBinder.ui.xml:
 
@@ -143,10 +150,12 @@ Create a new UiBinder class/xml combo called `ExampleUiBinder`, with the followi
 
 ```java
 public class ExampleUiBinder extends Composite {
-  interface ExampleUiBinderUiBinder extends UiBinder<HTMLPanel, ExampleUiBinder> {
+  interface ExampleUiBinderUiBinder
+      extends UiBinder<HTMLPanel, ExampleUiBinder> {
   }
 
-  private static ExampleUiBinderUiBinder ourUiBinder = GWT.create(ExampleUiBinderUiBinder.class);
+  private static ExampleUiBinderUiBinder ourUiBinder =
+      GWT.create(ExampleUiBinderUiBinder.class);
 
   public ExampleUiBinder() {
     initWidget(ourUiBinder.createAndBindUi(this));
@@ -154,17 +163,22 @@ public class ExampleUiBinder extends Composite {
 }
 ```
 
-At this point, if everything is ok, we will get a window like this:
+At this point, if everything is OK, we will get a window like this:
 
-![The no-themed version](http://dl.dropbox.com/u/247142/caarlos0.github.com/Captura%20de%20tela%20de%202012-06-26%2020%3A11%3A18.png)
+![The not themed version](http://dl.dropbox.com/u/247142/caarlos0.github.com/Captura%20de%20tela%20de%202012-06-26%2020%3A11%3A18.png)
 
 ## Hacking
 
-Right now, we will have to write our own `Resources` and `Configuration` classes. I'll advise you that it's a boring thing to do, but the result could be really awesome. So, let's go.
+Right now, we will have to write our own `Resources` and `Configuration`
+classes. I'll advise you that it's a boring thing to do, but the result
+could be really awesome. So, let's go.
 
 ### Dir structure
 
-We will have to create a `resources` folder under the same folder of our `*.gwt.xml` file. Just to you understand better, the folders `client`, `shared`, `server` and `resources` **must be**  in the same hierarchical level, just like this:
+We will have to create a `resources` folder under the same folder of our
+`*.gwt.xml` file. Just to you understand better, the folders `client`,
+`shared`, `server` and `resources` **must be**  in the same hierarchical
+level, just like this:
 
     src/main/java/com/github/caarlos0/
     |-- client
@@ -174,9 +188,12 @@ We will have to create a `resources` folder under the same folder of our `*.gwt.
 
 ### Creating the needed files
 
-Assuming that we will only change the CSS file, inside your `resources` file, create a `css` folder, and paste the `bootstrap.min.css` file downloaded before inside it. Yes, the file name **must** be `bootstrap.min.css`.
+Assuming that we will only change the CSS file, inside your `resources` file,
+create a `css` folder, and paste the `bootstrap.min.css` file downloaded
+before inside it. Yes, the file name **must** be `bootstrap.min.css`.
 
-As said before, we also need a `Resources` and `Configuration` files. This files must be inside our `resources` folder too. The content is the following:
+As said before, we also need a `Resources` and `Configuration` files. This
+files must be inside our `resources` folder too. The content is the following:
 
 #### ExampleResources.java
 
@@ -227,7 +244,9 @@ At this point, the structure should be something like this:
     |-- server
     `-- shared
 
-Now, we have to do a little hack in our `*.gwt.xml`. We will need to replace `com.github.gwtbootstrap.client.ui.config.Configurator` with our Configurator, and setup the resources dir. So, in the end, we will have something like this:
+Now, we have to do a little hack in our `*.gwt.xml`. We will need to replace
+`com.github.gwtbootstrap.client.ui.config.Configurator` with our Configurator,
+and setup the resources dir. So, in the end, we will have something like this:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -259,7 +278,8 @@ That's it :)
 
 ## Considerations
 
-Sometimes GWT caches everything, and seems like it doesn't work. In this cases, do the following:
+Sometimes GWT caches everything, and seems like it doesn't work. In this cases,
+do the following:
 
 * `mvn clean`;
 * Delete the `webapp/Example` folder (in our case, `Example` is the Module name);

@@ -12,7 +12,7 @@ I will describe the steps above.
 
 ### First things first
 
-- This site is [opensource][blog].
+- This site is [OpenSource][blog].
 - I'm using Jekyll alongside with less, bower, grunt and of course,
 node and npm.
 - You can take a look at [these commits][commits] to see what I did.
@@ -61,7 +61,7 @@ uglify: {
 ```
 
 As you can see, I get always the last file from trunk and compile to plain old
-javascript. After that, I also concat it with other js files and uglify the
+JavaScript. After that, I also concatenate it with other JS files and uglify the
 result (using grunt-contrib-concat and grunt-contrib-uglify, respectively).
 
 ### Dealing with `style="background-image: url(image.jpg);"`

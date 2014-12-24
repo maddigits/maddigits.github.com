@@ -5,18 +5,28 @@ title: "Hello World"
 
 Hello everyone :)
 
-I just decided to start posting in my own blog, in english.
-I already have a [blog](http://www.geekvigarista.com) with some friends. The posts are written in portuguese, it's wordpress, and I my last blog was a long time ago (because It's boring post in wordpress).
+I just decided to start posting in my own blog, in English.
+I had a [blog](http://www.geekvigarista.com) with some friends. The posts were
+written in Portuguese, it's Wordpress, and I my last post was a long time ago
+(because it's boring post in wordpress).
 
-I don't realy like wordpress. Yeah, I just don't like it. I think thats is heavy and slow. So, I decided to give a chance to [Jekyll Bootstrap](http://jekyllbootstrap.com/).
+I don't really like Wordpress. Yeah, I just don't like it. I think thats is
+heavy and slow. So, I decided to give a chance to
+[Jekyll Bootstrap](http://jekyllbootstrap.com/).
 
-I'll not blog about "*how to setup jekyll*", you can read it [here](http://jekyllbootstrap.com/).
+I'll not blog about "*how to setup jekyll*", you can read it
+[here](http://jekyllbootstrap.com/).
 
-It's realy simple to configure, put to work, write posts, pages, and I can see the modifications easy in my local server :)
-And yeah, it's realy fast.
+It's realy simple to configure, put to work, write posts, pages, and I can see
+the modifications easy in my local server :)
+And yeah, it's really fast.
 
-In some minutes, I'll update the [twitter bootstrap](http://twitter.github.com/bootstrap) version, hack jekyll to be responsive, clean home listing the lastest posts and setup author and other things.
-It also have built-in support for Disqus and Twitter/G+/Facebook/etc (aka addthis) buttons.
+In a few minutes, I updated the
+[twitter bootstrap](http://twitter.github.com/bootstrap) version, hacked
+Jekyll to be responsive, cleaned home listing the latest posts and setup author
+and other things.
+It also have built-in support for Disqus and Twitter/G+/Facebook/etc
+(aka addthis) buttons.
 
-In short: Jekyll is great, and I realy like it!
+In short: Jekyll is great, and I really like it!
 

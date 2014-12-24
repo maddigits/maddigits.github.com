@@ -22,7 +22,7 @@ now. So, I will guide you through this process.
 ## 1. Get some server
 
 First thing, you need a server in US. I recommend DigitalOceal for
-that. It is really cheap, easy to signup, easy and fast to create
+that. It is really cheap, easy to sign up, easy and fast to create
 and destroy the server.
 
 [Create an account](https://www.digitalocean.com/?refcode=7e8e9efb2f77)
@@ -71,7 +71,7 @@ settings for the browser only.
 Don't forget to check the SOCKSv5 option if asked and to uncheck
 the "Use this proxy server for all protocols" if it is checked.
 
-Now, point to google and search for the term "my ip". You should
+Now, point to Google and search for the term "my ip". You should
 see the IP you received by email.
 
 ## 4. Create the account, finally

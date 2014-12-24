@@ -25,7 +25,7 @@ To show hot it works, let's do a little example.
 
 ### Get the base code
 
-First, clone the repo:
+First, clone the repository:
 
 ```bash
 git clone https://github.com/caarlos0/persistence-base sample
@@ -85,7 +85,8 @@ public class PersistenceModule extends AbstractModule {
 
   @Override
   protected void configure() {
-    install(new JpaPersistModule("base")); // base has to be the PU in persistence.xml
+    // base has to be the PU in persistence.xml
+    install(new JpaPersistModule("base"));
 
     bind(PersistenceInitializer.class);
 
@@ -147,11 +148,13 @@ public class App {
 Run the tests with
 
 ```sh
-mvn exec:java -Dexec.mainClass="com.github.caarlos0.App" -Dexec.classpathScope=runtime
+mvn exec:java \
+  -Dexec.mainClass="com.github.caarlos0.App" \
+  -Dexec.classpathScope=runtime
 ```
 
-or direct in your IDE.
+Or directly in your IDE.
 
 BOOM, it works :)
 
-Good hack.
+Happy hacking.

@@ -111,7 +111,7 @@ someday have to maintain it to debug an error or add new features.
 
 I would like to, again, recommend this excellent book by Douglas Crockford,
 "[JavaScript: The Good Parts][book]". It will surely help you to
-understand JavaScript and avoid a lot of commom errors.
+understand JavaScript and avoid a lot of common errors.
 
 [book]:http://amzn.to/14ZmSmZ
 
