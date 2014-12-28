@@ -26,46 +26,29 @@ in how to do things using bash. The problem is that it's not automated.
 
 A project that really helps with that is [shellcheck][shellcheck]. It's an
 executable written in Haskell, which can lint your scripts (in bash, zsh, and
-others). Sure enough, we can put this in a Countinuous Integration system and
+others). Sure enough, we can put this in a Continuous Integration system and
 watch it do the validation for us.
 
-An simple example of `build.sh` script is:
+To make it easy to integrate [shellcheck][shellcheck] and
+[travis-ci](http://travis-ci.org), I created a project called
+[shell-travis-build](https://github.com/caarlos0/shell-travis-build). It is
+intended to be added as a submodule, like this:
 
 ```bash
-#!/bin/bash
-set -eo pipefail
-[[ "${DEBUG:-}" ]] && set -x
-
-main() {
-  find . -type f -perm +111 | grep -v "\.git" | while read script; do
-    shellcheck "$script"
-  done
-}
-
-main "$@"
+git submodule add https://github.com/caarlos0/shell-travis-build.git build
+cp build/travis.yml.example .travis.yml
 ```
 
-Pretty straightforward to integrate with [travis-ci](http://travis-ci.org) too
-(`.travis.yml`):
-
-```yaml
-language: bash
-install:
-  - wget http://ftp.debian.org/debian/pool/main/s/shellcheck/shellcheck_0.3.4-3_amd64.deb
-  - sudo dpkg -i shellcheck_0.3.4-3_amd64.deb
-script:
-  - ./build.sh
-```
+Travis will always clone a project with its submodules before the build, so,
+it will always work. :beer:
 
 I'm already using this in my [dotfiles][dotfiles], and found some really stupid
 mistakes to fix. Sure thing, this is an awesome tool!
 
-Wanna see it in the so said _real world_? Check my `build.sh`
-[here](https://github.com/caarlos0/dotfiles/blob/master/build.sh) and my
-`.travis.yml`
-[here](https://github.com/caarlos0/dotfiles/blob/master/.travis.yml).
+Wanna see it in the so said _real world_? Check my [dotfiles][dotfiles]
+`build.sh` and `travis.yml` files.
 
-Hope you like it!
+Happy hacking!
 
 [bashstyle]: https://github.com/progrium/bashstyle
 [shellcheck]: https://github.com/koalaman/shellcheck
