@@ -4,6 +4,7 @@ highlighter: pygments
 
 # Permalinks
 permalink: /posts/:title
+timezone: America/Sao_Paulo
 
 # Setup
 title: Carlos Alexandro Becker
@@ -19,13 +20,15 @@ author:
 exclude:
   - Gemfile
   - Gemfile.lock
-
-paginate: 5
-
-# Custom vars
-disqus_shortname: caarlos0blog
+  - bin
 
 gems:
   # - jekyll-mentions
   - jemoji
   - jekyll-redirect-from
+
+paginate: 10
+
+# Custom vars
+disqus_shortname: caarlos0blog
+
