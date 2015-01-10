@@ -27,6 +27,11 @@ gems:
   - jemoji
   - jekyll-redirect-from
 
+
+sass:
+  sass_dir: _scss
+  style: :compressed
+
 paginate: 10
 
 # Custom vars
