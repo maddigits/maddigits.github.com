@@ -2,7 +2,12 @@
 
 main() {
   local today="$(date +%Y-%m-%d)"
-  local title="$(echo "${@// /-}" | tr '[:upper:]' '[:lower:]')"
+  local title="$(
+    echo -n "${@}" | \
+    sed -e 's/[^[:alnum:]]/-/g' | \
+    tr -s '-' | \
+    tr '[:upper:]' '[:lower:]'
+  )"
   local file="_posts/$today-$title.md"
   cat > "$file" <<EOF
 ---
