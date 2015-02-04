@@ -1,7 +1,10 @@
 ---
 layout: post
 title: "Dotfiles Are Meant to Be Forked"
+related_project: caarlos0/dotfiles
 ---
+
+![dotfiles](https://raw.githubusercontent.com/caarlos0/dotfiles/master/screenshot.png)
 
 Well, it has been a while since I replaced my old (but gold) bash by the great
 zsh.
@@ -24,7 +27,7 @@ Then, I decided to make a huge step in my life: move to [ZSH][zsh]!
 > scripting language interpreter. While being compatible with Bash (not by
 > default, only if you issue "emulate sh"), it offers many advantages such as:
 > Faster, Improved tab completion, Improved globbing, Improved array handling,
-> Fully customisable.
+> Fully customizable.
 >
 > [Arch Wiki about ZSH][arch_zsh_wiki]
 
@@ -39,7 +42,7 @@ perfect! Except for the fact that it was full of Mac OS X-related stuff.
 So I tweaked, removed, tweaked, cleaned-up, tweaked, etc etc, and there it is,
 my all-new [dotfiles][dotfiles]!
 
-They should work with both Linux and OS X (linux lacks a little automation,
+They should work with both Linux and OS X (Linux lacks a little automation,
 tough), and I tweaked it to fit my taste.
 
 ## so get it, bro
@@ -48,10 +51,10 @@ The installation is pretty straightforward. Just clone it in `~/.dotfiles` and
 run the `script/bootstrap` file. If you found any error, please, open an issue
 so I can fix them.
 
+{% include project.html %}
+
 Also, take a look at the [readme][readme] (pretty simple), it will make it easy
 to you to understand the topics and other features.
-
-![shell](/public/images/iterm-dotfiles.png)
 
 If you want, you can also read the
 [holman's post about his dotfiles](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/).
@@ -63,7 +66,7 @@ That's all folks, hope to see you soon!
 
 ---
 
-> This post was last updated in Sep 7, 2014.
+> This post was last updated in Feb 4, 2015.
 
 
 [dotfiles]: http://github.com/caarlos0/dotfiles
