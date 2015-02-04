@@ -4,7 +4,7 @@ title: "Integrating Minitest with Shippable"
 ---
 
 I know, everyone uses Travis. I have nothing against it. But in case you
-want to test and/or use [Shippable](https://shippable.com), this might be
+want to test and/or use [Shippable](http://shippable.com), this might be
 just the guide for you. I will also show how to setup that nice tabs
 with the test and coverage reports.
 
