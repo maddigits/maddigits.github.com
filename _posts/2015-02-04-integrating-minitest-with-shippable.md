@@ -62,7 +62,10 @@ The last thing we need is the `spec/spec_helper.rb` file:
 ```ruby
 require "simplecov"
 require "simplecov-csv"
-SimpleCov.formatter = SimpleCov::Formatter::CSVFormatter
+SimpleCov.formatters = [
+  SimpleCov::Formatter::HTMLFormatter,
+  SimpleCov::Formatter::CSVFormatter,
+]
 SimpleCov.coverage_dir(ENV["COVERAGE_REPORTS"])
 SimpleCov.start # you might want to pass 'rails' and/or a block here
 require "minitest/autorun"
