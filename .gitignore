@@ -3,4 +3,6 @@ Thumbs.db
 .DS_Store
 !.gitkeep
 *~
+.ruby-version
+Gemfile.lock
 .sass-cache/
