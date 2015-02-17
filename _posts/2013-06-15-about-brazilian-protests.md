@@ -68,16 +68,6 @@ why we are going to the street next thuesday, 20/jun to protest again about it,
 and **WE WILL NOT STOP UNTIL THEY START TO FIX THIS**. Maybe the army should
 rule for a while.
 
-![it is not the 20 cents][20cents]
-
-> It is not the **20 cents**.
-
-> It is **500** years of governments rapping the people...
-
-> **Marchers** of the entire country, you are **heroes**. We will never let the
-> **accommodated and alienated** people say the opposite.
-
-
 ## Can I help, even if I'm in/from other country?
 
 Yes, you can! As the video says, we are attracting a lot of attention right now,
@@ -108,6 +98,5 @@ some english issues and typo.
 
 [rights]: http://f.cl.ly/items/2z3G3k1c1E0W2W2G2X1d/RIGHTS.jpg
 [map]: https://dl.dropboxusercontent.com/u/247142/caarlos0.github.com/mapa.gif
-[20cents]: https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-prn2/983584_591342270911168_190661950_n.jpg
 [othervideo]: http://www.youtube.com/watch?v=IyiQH4QAbuQ
 [nerde]: https://github.com/nerde

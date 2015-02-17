@@ -66,7 +66,7 @@ are more configurations that I was expecting, and you can connect it through
 
 ### Building an App
 
-I just starting to fix [Wealcash][wealcash] to work with Firefox OS. The work I
+I just starting to fix Wealcash to work with Firefox OS. The work I
 had for Firefox OS specifically was just to create the `manifest.webapp` and
 change the nginx `mime.types` file to deal with it. The rest of the work, is
 just about do the responsiveness right. That's the cool thing about Firefox OS:
@@ -94,7 +94,6 @@ ecosystem, Firefox OS is just open, and doesn't not demand you to learn an
 specific language/framework to build an app, just vanilla HTML, JS and CSS.
 
 
-[wealcash]: http://wealcash.com
 [keon]: http://www.geeksphone.com/
 [ff]: http://forum.geeksphone.com/index.php?topic=5197.0
 [app]: https://marketplace.firefox.com/app/wealcash/

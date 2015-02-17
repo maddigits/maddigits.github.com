@@ -10,8 +10,8 @@ As a developer, the 3 apps I use most: Terminal, Text Editor and Music Player.
 So, in the mac-brave-new-world, I particularly use, in order: The default
 Terminal.app, SublimeText2 and iTunes.
 
-<img src="http://cl.ly/image/1n45013K0V17/Captura%20de%20Tela%202013-03-16%20%C3%A0s%2018.01.29.png"
-class="noshadow" title="Mac OS X Terminal.app">
+<img src="/public/images/first-steps-osx.png" class="noshadow"
+title="Mac OS X Terminal.app" alt="Mac OS X Terminal.app">
 
 SublimeText has his own tips, and I won't write about that. The web is already
 full of them. Go to the wild-web and find the best for you.
@@ -108,7 +108,7 @@ Some examples:
 
 - [oh-my-zsh][4]
 - [holman/dotfiles][5]
-- my dotfiles for [linux][6] and [osx][7]
+- [my dotfiles][7]
 
 I've [already wrote about this before][8], in case you want to read something
 about it.
@@ -117,7 +117,7 @@ In this example, let's install [my dotfiles for osx][7] (basically, the
 holman's with some custom things):
 
 ```bash
-git clone  https://github.com/caarlos0/dotfiles-mac ~/.dotfiles
+git clone  https://github.com/caarlos0/dotfiles ~/.dotfiles
 cd ~/.dotfiles
 script/bootstrap
 source ~/.zshrc
@@ -202,7 +202,6 @@ Cheers!
 [3]: http://www.zsh.org/
 [4]: https://github.com/robbyrussell/oh-my-zsh
 [5]: https://github.com/holman/dotfiles/
-[6]: https://github.com/caarlos0/dotfiles-linux
 [7]: https://github.com/caarlos0/dotfiles-osx
 [8]: /posts/dotfiles-are-meant-to-be-forked/
 [9]: https://github.com/sstephenson/rbenv/

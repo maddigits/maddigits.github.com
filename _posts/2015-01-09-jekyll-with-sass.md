@@ -10,7 +10,7 @@ and wanted to point out the results.
 I'm using some version of [Lanyon](http://lanyon.getpoole.com/) with some
 custom stuff. So, I had 4 CSS files:
 
-![Requests](https://dl.dropboxusercontent.com/u/247142/caarlos0.github.com/Screen%20Shot%202015-01-09%20at%2010.05.14%20PM.png)
+![Requests](/public/images/sass-1.png)
 
 Summing it up, ~22K. It's not a lot, but, thinking about mobile 3G plans
 that are shit (like brazilian ones), why not save some bytes and requests?
@@ -49,7 +49,7 @@ Finally, changed my `_includes/head.html` to import only the new `styles.css`:
 And boom! It worked. With this, my previously four requests of ~22K went
 to one request with 12.8K!
 
-![Request](https://dl.dropboxusercontent.com/u/247142/caarlos0.github.com/Screen%20Shot%202015-01-09%20at%2010.07.00%20PM.png)
+![Request](/public/images/sass-2.png)
 
 Besides that, now I have all the power that
 Sass provides, in my blog, without any hacks. And it works on GitHub pages!

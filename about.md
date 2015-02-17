@@ -26,7 +26,13 @@ photo and lives with her and their Chinchila,
 [Zakk](http://www.youtube.com/watch?v=YtWlIPGpxTc),
 in [Joinville - SC, Brazil](http://goo.gl/maps/9tvI4).
 
-Wanna talk about something? Send him an
-[email](mailto:&#099;&#097;&#097;&#114;&#108;&#111;&#115;&#048;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;).
+He also plays as Defensive End at the [Joinville Gladiators][glads] Football
+team.
+
+![me in a train](/public/images/glads.jpg)
+
+[glads]: http://www.joinvillegladiators.com.br
+
+Wanna talk about something? Send him an [email](mailto:caarlos+blog@gmail.com).
 
 <script src="http://lab.lepture.com/github-cards/widget.js"></script>
