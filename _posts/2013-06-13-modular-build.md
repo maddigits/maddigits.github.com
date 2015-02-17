@@ -15,8 +15,8 @@ coding a bunch of scripts inside it.
 
 I end up with a lot of replicated code. Stupid things like exporting `MAVEN_OPTS`
 and a lot of params to `mvn` executable. I could just put that in my
-**dotfiles-{[linux][dotfiles-linux],[mac][dotfiles-mac]}**, but I it doesn't make
-sense, since other projects will have other setup.
+[dotfiles][dotfiles], but I it doesn't make sense, since other projects
+will have other setup.
 
 Another problem, is that lots of times I wanted to run a lot of scripts in one
 line, for example:
@@ -76,5 +76,4 @@ Happy hacking!
 [modular-build]: http://carlosbecker.com/modular-build/
 [modular-build-repo]: https://github.com/caarlos0/modular-build
 [lucas]: https://github.com/lucasmerencia
-[dotfiles-linux]: https://github.com/caarlos0/dotfiles-linux
-[dotfiles-mac]: https://github.com/caarlos0/dotfiles-mac
+[dotfiles]: https://github.com/caarlos0/dotfiles

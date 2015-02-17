@@ -14,7 +14,7 @@ So, take some pictures, and I'll se you guys later.
 	<tr>
 		<td align="center" style="height:194px;background:url(https://picasaweb.google.com/s/c/transparent_album_background.gif) no-repeat left">
 			<a href="https://picasaweb.google.com/100361324013932739541/JustMarried?authuser=0&amp;feat=embedwebsite">
-				<img src="https://lh3.googleusercontent.com/-QyMSPizvaU4/UG42QwYWHWE/AAAAAAAADSc/WRKALdfYFUQ/s160-c/JustMarried.jpg" width="160" height="160" style="margin:1px 0 0 4px;">
+				<img src="https://lh3.googleusercontent.com/-QyMSPizvaU4/UG42QwYWHWE/AAAAAAAADSc/WRKALdfYFUQ/s160-c/JustMarried.jpg" width="160" height="160" style="margin:1px 0 0 4px;" alt="marriage photos">
 			</a>
 		</td>
 	</tr>

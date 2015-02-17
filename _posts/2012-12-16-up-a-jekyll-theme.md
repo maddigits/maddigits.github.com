@@ -52,8 +52,8 @@ change is the following:
 
 - [_config.yml](https://github.com/caarlos0/up/blob/gh-pages/_config.yml): Put
 your config there, almost everything will be up and running.
-- [about.html](https://github.com/caarlos0/up/blob/gh-pages/about.html): Well, that's
-about you, I would change it if I were you... OH WAIT!
+- [about.html](https://github.com/caarlos0/up/blob/gh-pages/about/index.html):
+Well, that's about you, I would change it if I were you... OH WAIT!
 - [CNAME](https://github.com/caarlos0/up/blob/gh-pages/CNAME): If you're using
 this on GitHub Pages with a custom domain name, you'll want to change this
 to be the domain you're going to use. All that should be in here is a
@@ -89,7 +89,7 @@ I'll be proud to accept your contributions.
 
 ## Licensing
 
-This is [MIT](https://github.com/caarlos0/up/blob/master/LICENSE) with no
+This is [MIT](https://github.com/caarlos0/up/blob/gh-pages/LICENSE) with no
 added caveats, so feel free to use this on your site without linking back to
 me or using a disclaimer or anything silly like that.
 

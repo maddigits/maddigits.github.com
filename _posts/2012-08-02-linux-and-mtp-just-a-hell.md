@@ -23,7 +23,7 @@ thousand tutorials.
 ## The **UGLY** solution
 
 * Get
-[this package (android-udev)](https://aur.archlinux.org/packages.php?ID=51476)
+[this package (android-udev)](https://aur.archlinux.org/packages/android-udev-git/)
 from aur. (it will install libmtpfs and all other deps)
 * Install **gvfs-gphoto2** via pacman.
 * Reboot
