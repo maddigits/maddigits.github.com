@@ -52,12 +52,12 @@ Maybe you don't want to pay for Campfire. There is no problem. You can use tons 
 alternatives.
 
 We are using one called [talker][talker]. It's pretty good and free. If you worry
-about your data, you could install [kandan][kandan] in your server, it even works
+about your data, you could install kandan in your server, it even works
 in [heroku][heroku] if you want to.
 
 There is tons of other hubot compatible chats out there. You might want to take a
 look at them to see which best fit your needs. For the sake of information, we are
-using talker and, except that [it doesn't show us emojis by default][emoji-gist],
+using talker and, except that it doesn't show us emojis by default,
 it is awesome and works well for us.
 
 
@@ -65,6 +65,4 @@ it is awesome and works well for us.
 [hubot-scripts]: https://github.com/github/hubot-scripts
 [hubot-install]: https://github.com/github/hubot/tree/master/docs
 [heroku]: https://heroku.com/
-[kandan]: http://kandanapp.com/
 [talker]: http://talkerapp.com/
-[emoji-gist]: https://gist.github.com/caarlos0/6190280

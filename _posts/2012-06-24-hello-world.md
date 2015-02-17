@@ -6,7 +6,7 @@ title: "Hello World"
 Hello everyone :)
 
 I just decided to start posting in my own blog, in English.
-I had a [blog](http://www.geekvigarista.com) with some friends. The posts were
+I had a blog with some friends. The posts were
 written in Portuguese, it's Wordpress, and I my last post was a long time ago
 (because it's boring post in wordpress).
 
@@ -22,7 +22,7 @@ the modifications easy in my local server :)
 And yeah, it's really fast.
 
 In a few minutes, I updated the
-[twitter bootstrap](http://twitter.github.com/bootstrap) version, hacked
+[twitter bootstrap](http://getbootstrap.com/) version, hacked
 Jekyll to be responsive, cleaned home listing the latest posts and setup author
 and other things.
 It also have built-in support for Disqus and Twitter/G+/Facebook/etc
