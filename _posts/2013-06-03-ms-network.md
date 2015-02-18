@@ -70,8 +70,8 @@ quote"* in the "Compositing & Addressing" tab:
 
 For this -crapy- thing we have a web version available (as well as email),
 but you can also setup this (if you have luck) in pidgin, using pidgin-sipe
-(you can get all the needed packages from apt). You can follow [this](http://mytricks.in/2011/08/microsoft-lync-client-for-linux.html)
-tutorial, skipping the installation (use apt).
+(you can get all the needed packages from apt). You can follow this (link is
+now offline) tutorial, skipping the installation (use apt).
 
 I don't have luck with that, so I still with web version.
 

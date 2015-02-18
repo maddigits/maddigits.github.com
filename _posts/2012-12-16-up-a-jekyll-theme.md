@@ -43,7 +43,7 @@ Up installation is not that hard. Just do this:
 - Clone it: `git clone https://github.com/YOUR-USER/YOUR-USER.github.com`
 - Run the jekyll server in the blog folder: `rake preview`.
 
-You should have a server up and running locally at <http://localhost:4000>.
+You should have a server up and running locally at `http://localhost:4000`.
 
 ## Customization
 
@@ -78,7 +78,7 @@ easier.
 
 All you should have to do is rename your repository on GitHub to be
 `username.github.com`. Since everything is on the `gh-pages` branch, you
-should be able to see your new site at <http://username.github.com>.
+should be able to see your new site at `http://username.github.com`.
 
 ## Contributing
 

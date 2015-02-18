@@ -3,7 +3,7 @@ layout: post
 title: "GWT Bootstrap 2.0.4.0 released"
 ---
 
-For those wo don't know, [GWT-Bootstrap](http://gwtbootstrap.github.com) wants to port the [Twitter Bootstrap]() widgets to GWT compatible and easy to use components/widgets.
+For those wo don't know, [GWT-Bootstrap](http://gwtbootstrap.github.com) wants to port the [Twitter Bootstrap](http://getboostrap.com) widgets to GWT compatible and easy to use components/widgets.
 
 I started this project earlier this year, and we finally released our first version.
 
