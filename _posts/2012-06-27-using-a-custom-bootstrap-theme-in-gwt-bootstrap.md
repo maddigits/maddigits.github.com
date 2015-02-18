@@ -63,7 +63,7 @@ to do that in the right way.
 You can get a custom `bootstrap.min.css` file in several ways:
 
 * Making your own CSS changing the `.less` files and re-generating the files
-* [Customizing your download](getbootstrap.com/customize)
+* [Customizing your download](http://getbootstrap.com/customize)
 (Basically the option above in a easy way)
 * [Downloading it somewhere](https://www.google.com.br/search?q=twitter+bootstrap+themes)
 
