@@ -6,7 +6,7 @@ redirect_from:
 ---
 
 [GWT-Bootstrap](http://gwtbootstrap.github.com) is a project that aims to
-provide all the [Twitter Bootstrap](http://twitter.github.com/bootstrap) styles
+provide all the [Twitter Bootstrap](getbootstrap.com) styles
 and widgets to GWT applications.
 I had this idea in Jan/2012, and it was not a library, initially, I just
 made a simple `InputText` and `Button` widgets as a proof of concept, and then
