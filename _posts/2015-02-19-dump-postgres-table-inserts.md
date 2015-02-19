@@ -21,7 +21,7 @@ Dump an entire database is also boring, and usually takes a lot of time.
 Besides, he only needs one table.
 
 So, I dumped that one table in the form of inserts. `pg_dump`, with some
-parameters, can do that already:
+parameters, can easily do that:
 
 ```sh
 pg_dump \
@@ -34,7 +34,7 @@ pg_dump \
   database-name > table.sql
 ```
 
-So, I just had to send this `table.sql` file somehow to him, and he had to
+So, I just had to send him this `table.sql` file somehow, and he had to
 execute that SQL file in his database, which can be easily done with the `pg`
 command:
 
