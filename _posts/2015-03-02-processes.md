@@ -17,10 +17,11 @@ I recently found which I think applies perfectly to this scenario:
 ![The more corrupt the state, the more numerous the laws. - Tacitus](/public/images/the more corrupt the state the more numerous the laws.jpg)
 
 I think we can interpret this as something like
-"Laws are only needed when values are not present".
 
-Given some thought, that might sound a little harsh, huh?
-Let's explore the subject.
+> Laws are only needed when values are not present.
+
+Given some thought, that might sound a little harsh, but, let's explore
+the subject.
 
 ## Values and Economics
 
@@ -31,7 +32,7 @@ book of laws that no one really knows nor fully understand, full
 of "design flaws" "hacked" to innocent bad people - or worse.
 
 Those laws exist mostly because it's common here to take shortcuts
-to do stuff (like cheating other people).
+to do stuff (like stealing other people).
 Looking for the bright side, people can be really
 creative. The other side is that a lot of people use that
 creativity to do bad things.
@@ -46,16 +47,28 @@ Friedrich Hayek, called
 
 ![Friedrich Hayek](/public/images/von-hayek.jpg)
 
-> (...) De Tocqueville's prediction of the "new kind of servitude" when after having thus successively taken each member of the community in its powerful grasp, and fashioned him at will, the supreme power then extends its arm over the whole community. It covers the surface of society with a network of small complicated rules, minute and uniform, through which the most original minds and the most energetic characters cannot penetrate to rise above the crowd. The will of man is not shattered but softened, bent and guided; men are seldom forced by it to act, but they are constantly restrained from acting. Such a power does not destroy, but it prevents existence; it does not tyrannize, but it compresses, enervates, extinguishes, and stupefies a people, till each nation is reduced to be nothing better than a flock of timid and industrial animals, of which government is the shepherd.
+> (...) De Tocqueville's prediction of the "new kind of servitude" when
+after having thus successively taken each member of the community in its
+powerful grasp, and fashioned him at will, the supreme power then extends
+its arm over the whole community. It covers the surface of society with
+a network of small complicated rules, minute and uniform, through which
+the most original minds and the most energetic characters cannot penetrate
+to rise above the crowd. The will of man is not shattered but softened,
+bent and guided; men are seldom forced by it to act, but they are
+constantly restrained from acting. Such a power does not destroy, but
+it prevents existence; it does not tyrannize, but it compresses,
+enervates, extinguishes, and stupefies a people, till each nation is
+reduced to be nothing better than a flock of timid and industrial
+animals, of which government is the shepherd.
 
-If you ignore the government part, this can be applied to almost anything -
-including industries. An almost endless amount of processes and rules
-that "enslave" the employees in a way that might not look as enslavement
-at all. This is necessary, mostly, because, well... people suck.
+That's exactly what how it feels in Brazil, and,
+if you ignore the government part, this can be applied to almost anything -
+including industry. I worked for a company that make me feel that way too.
+That rules were necessary, mostly, because, well... people suck.
 
 ## The People
 
-It seems obvious to me that we, as an industry, must focus in improve the
+It seems obvious to me that we, as an industry, must focus on improve the
 people, not the process or the tools.
 
 After all, programming is still considered by many people as a creative
@@ -68,9 +81,13 @@ David West also wrote about this in his book,
 He defends that the solution is, in fact, better people. His writing
 is way better than mine, so, I will just quote him:
 
-> "Better people" has been recognized as the most promising silver bullet for addressing the software crisis, and yet almost all of our energy has been spent on creating better tools, methods, and processes instead of better people?
+> "Better people" has been recognized as the most promising silver bullet
+for addressing the software crisis, and yet almost all of our energy has
+been spent on creating better tools, methods, and processes instead of
+better people?
 
-And, well, there is XP.
+And, well, there is XP with pair programming and other techniques that
+are made to, in the end, improve the people.
 
 ## Values, again
 
@@ -87,6 +104,16 @@ commit mistakes like anyone else, to know that, like a musician, you are
 not paid to practice, but to create value to their customers, and,
 maybe more that anything else, to always want to improve as a
 human being and as a professional.
+
+That last one is the most important
+for me, because, if you want to improve, you will find a way to
+acquire knowledge, which is also necessary to be a good professional.
+In this way, if don't have the required knowledge to do some task,
+but have the values, you will find a way. That's better than having
+the knowledge - or worse, believe in that without really having, and
+for example, point fingers to someone else when you do something wrong.
+
+For me it's plain simple: `good values = good people`.
 
 ## Rules... and Scrum
 
@@ -109,7 +136,9 @@ was necessary one time.
 This is nothing more than a "hotfix" to the real problem:
 the team doesn't talk to each other as they should. Remember the very first
 item of the [Agile Manifesto](http://www.agilemanifesto.org/):
-"Individuals and interactions over processes and tools". Scrum is a tool.
+"Individuals and interactions over processes and tools". Scrum is just
+a tool. Focus more on "Individuals and interactions" than
+"processes and tools".
 
 ## The People, again
 
