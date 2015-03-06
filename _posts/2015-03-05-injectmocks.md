@@ -66,7 +66,7 @@ public final class OneTest {
 It works, but it's unnecessary to call the `One` constructor by hand, we can
 just use [`@InjectMocks`][javadoc] instead:
 
-### OneTest.java:
+### OneTest.java (2):
 
 ```java
 public final class OneTest {
