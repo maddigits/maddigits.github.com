@@ -59,3 +59,14 @@ small.date {
 .post h3:hover a {
   display: inline;
 }
+
+.share {
+  small {
+    color: #c0c0c0;
+    font-size: 75%;
+  }
+  iframe {
+    float: right;
+    margin-top: 5px;
+  }
+}
