@@ -10,8 +10,10 @@ iframe.ted {
 }
 
 iframe.video,
+iframe.twitter-tweet,
 img {
-  margin: 0 auto;
+  margin-right: auto !important;
+  margin-left: auto !important;
 }
 
 img.emoji {
