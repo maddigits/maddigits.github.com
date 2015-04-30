@@ -71,7 +71,7 @@ Well, I'm glad you asked:
 docker-compose scale chrome=15 firefox=15
 ```
 
-Around 10 seconds later, 30 selenium instances up and running. **Sweat**.
+Around 10 seconds later, 30 selenium instances up and running. **Sweet**.
 
 ## Let's talk money
 
