@@ -1,6 +1,8 @@
 ---
 layout: post
-title: "Using git like a PRO"
+title: "Git Protips™"
+redirect_from:
+  - /posts/using-git-like-a-pro/
 ---
 
 Git has a lot of features, and I bet that 90% of who use it (including me)
@@ -264,5 +266,5 @@ branching, servers, and git internals.
 
 ---
 
-***Let's make this list bigger! Have your own tip/trick? Something I forgot to add?
-Share it with us!***
+***Let's make this list bigger! Have your own tip/trick? Something I forgot to
+add? Share it with us!***
