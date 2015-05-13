@@ -32,10 +32,10 @@ book of laws that no one really knows nor fully understand, full
 of "design flaws" "hacked" to innocent bad people - or worse.
 
 Those laws exist mostly because it's common here to take shortcuts
-to do stuff (like stealing other people).
+to do stuff (like stealing from other people to "become rich faster").
 Looking for the bright side, people can be really
-creative. The other side is that a lot of people use that
-creativity to do bad things.
+creative. The other side is that a lot of people use all that
+creativity to do bad stuff.
 
 Giving this lack of good citizen
 values in Brazilian culture in general - which is extended to the
@@ -69,7 +69,7 @@ That rules were necessary, mostly, because, well... people suck.
 ## The People
 
 It seems obvious to me that we, as an industry, must focus on improve the
-people, not the process or the tools.
+people, not the processes nor the tools.
 
 After all, programming is still considered by many people as a creative
 process, like an art or a craft. How can an artist or a craftsman do
