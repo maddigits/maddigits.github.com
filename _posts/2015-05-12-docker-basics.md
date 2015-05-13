@@ -67,22 +67,27 @@ operating-system-level virtualization, which is a server virtualization method
 where the kernel of an operating system allows for multiple isolated user
 space instances, instead of just one.
 
-![](/public/images/docker-linux-interfaces.svg)
+![](/public/images/docker-execdriver-diagram.png)
 
-LXC, which is used by Docker, is nothing new. The first commit was made in
+LXC, which was used as default by Docker until version
+[0.9](https://blog.docker.com/2014/03/docker-0-9-introducing-execution-drivers-and-libcontainer/)),
+is nothing new. The first commit was made in
 [Aug 6, 2008](https://github.com/lxc/lxc/commit/5e97c3fcce787a5bc0f8ceef43aa3e05195b480a).
-The thing is that LXC is a little harder to work with, while Docker "abstract"
-a lot of stuff with some "plus", like AuFS.
+The thing is that LXC is a little hard to work with, and Docker
+"abstracted" a lot of stuff with their `libcontainer`, which should allow us
+to, for example, [run Docker on Windows Server](http://www.pcworld.com/article/2834132/microsoft-to-bring-docker-to-windows-server.html)
+in a near future.
 
-> Yeah, what the heck is this AuFS and why should I care?
-
+Another key feature, in my humble opinion, is AuFS.
 AuFS (AnotherUnionFS) is a multi-layered
 filesystem that implements union mount, which basically allows several
 filesystems or directories to be simultaneously mounted and visible through a
-single mount point, appearing to be one filesystem.
+single mount point, appearing to be one filesystem to the end user (in this
+case, us).
 
-With this, if you have 10 VMs based on, let's say, a 1Gb ubuntu server image,
-they will all use only 1Gb, instead of 10Gb like it would with "standard" VMs.
+Supposing you have 10 Docker containers based on, let's say, a 1Gb Sbuntu
+Server image, they will all use only 1Gb plus their specific data,
+instead of 10+Gb like it would use if running on VirtualBox, for example.
 
 So, if you pull, let's say, the `bobrik/image-cleaner` image, you will
 see something like:
@@ -98,7 +103,7 @@ a5b60fe97da5: Download complete
 Status: Downloaded newer image for bobrik/image-cleaner:latest
 ```
 
-Each one of those checksums are nothing but AuFS "layers". So, if I decide to
+Each of those checksums are nothing but AuFS "layers". So, if I decide to
 do another image adding some stuff to this one, I will not have to push the
 entire image, just the "diff"... more or less like a git commit.
 
@@ -106,19 +111,66 @@ Also, `docker pull`?
 
 ### The Docker Registry
 
-Yeah, it pulls images from the Docker registry. Basically, you can push
-and pull containers to/from the Docker registry, something like a "GitHub"
-for Docker container images.
+Yeah, you can push and pull container images to/from the Docker registry,
+which is something like a "GitHub" for Docker container images.
 
 If you look at some public image in the registry, like
 [this one](https://registry.hub.docker.com/u/bobrik/image-cleaner/), for
 example, you will see there is a `Source project page` link, which leads to
 the [GitHub repository](https://github.com/bobrik/docker-image-cleaner)
-of that image, where you can finally see the `Dockerfile` for that image.
+of that specific image, where you can finally see the `Dockerfile` for that
+image.
 
 A Dockerfile is a text file that contains all the commands you would normally
 execute manually in order to build a Docker image. It extends another image,
 which can be a "clean" ubuntu server or really any other image.
+
+The sintax is pretty simple (of course this is a very basic example),
+for example:
+
+```Dockerfile
+FROM busybox
+ENTRYPOINT echo Hello World
+```
+
+You can then build this image, tagging it as `hello-world`:
+
+```sh
+$ docker build -t hello-world .
+Sending build context to Docker daemon 2.048 kB
+Sending build context to Docker daemon
+Step 0 : FROM busybox
+latest: Pulling from busybox
+cf2616975b4a: Pull complete
+6ce2e90b0bc7: Pull complete
+8c2e06607696: Already exists
+Digest: sha256:38a203e1986cf79639cfb9b2e1d6e773de84002feea2d4eb006b52004ee8502d
+Status: Downloaded newer image for busybox:latest
+ ---> 8c2e06607696
+Step 1 : ENTRYPOINT echo Hello World
+ ---> Running in b29590127d4f
+ ---> 7fa687f18c73
+Removing intermediate container b29590127d4f
+Successfully built 7fa687f18c73
+```
+
+Now you can finally run it:
+
+```sh
+$ docker run -t hello-world
+Hello World
+```
+
+If you create a Docker Registry account and if this wasn't a totally useless
+image, you could also push it with something like:
+
+```
+$ docker push caarlos0/hello-world
+```
+
+You can learn more about Dockerfile and the Docker cli
+[here](https://docs.docker.com/reference/builder/)
+and [here](https://docs.docker.com/reference/commandline/cli/).
 
 ### That's all folks!
 
