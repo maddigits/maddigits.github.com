@@ -1,6 +1,8 @@
 ---
 layout: post
-title: "Using git like a PRO"
+title: "Git Protips™"
+redirect_from:
+  - /posts/using-git-like-a-pro/
 ---
 
 Git has a lot of features, and I bet that 90% of who use it (including me)
@@ -231,6 +233,15 @@ git rm wrongfile.txt
 git commit --amend
 ```
 
+### Update submodules to last commit
+
+Instead of `cd`ing each module, `checkout master` and `pull`, in git
+1.8.2 you can simply do this:
+
+```sh
+git submodule update --remote --merge
+```
+
 ## Troubleshooting
 
 ### `! c15fe9e..eee5f38  feature1 -> origin/feature1  (unable to update local ref)`
@@ -255,5 +266,5 @@ branching, servers, and git internals.
 
 ---
 
-***Let's make this list bigger! Have your own tip/trick? Something I forgot to add?
-Share it with us!***
+***Let's make this list bigger! Have your own tip/trick? Something I forgot to
+add? Share it with us!***

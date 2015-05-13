@@ -12,7 +12,7 @@
   function createLink(header, id) {
     var link = document.createElement('a');
     link.href = '#' + id;
-    link.innerText = '¶';
+    link.innerText = link.text = '¶';
     header.appendChild(link);
   }
 

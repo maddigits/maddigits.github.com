@@ -113,7 +113,7 @@ to a lot of CPU idle time.
 The good part is that some Ruby application servers, like unicorn, rely on
 unix process forking to achieve concurrency. Basically, it means that
 instead of 10 processes with separate memory spaces, the server "clones" the
-process into 10. They share this part of memory, but they ca also modify their
+process into 10. They share this part of memory, but they can also modify their
 own memory without affecting other forks.
 
 Note that what I said above is about Ruby MRI. You can also try jRuby, which
