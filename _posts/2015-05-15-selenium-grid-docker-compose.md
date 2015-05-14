@@ -83,7 +83,8 @@ VPC.
 With this changes, we dropped our monthly EC2 billing related to Selenium
 by ~**77%**! Ok, ok, we have also changed the main OS where the tests run on.
 Well, even if the instances were already running on Linux boxes before, it
-would still be something a cut of ~**57%**.
+would still be something a cut of ~**57%**. And I'm not even counting
+the EBS volumes!
 
 ![ec2 values](/public/images/docker-selenium-ec2-values.png)
 
