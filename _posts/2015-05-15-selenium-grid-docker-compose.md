@@ -81,16 +81,20 @@ The objective was to decrease our costs with EC2 instances in our development
 VPC.
 
 With this changes, we dropped our monthly EC2 billing related to Selenium
-by ~**77%**! Ok, ok, we have also changed the main OS where the tests run on.
-Well, even if the instances were already running on Linux boxes before, it
-would still be something a cut of ~**57%**. And I'm not even counting
-the EBS volumes!
+by ~**77%**! Ok, ok, we have also changed the main OS where Selenium runs.
+Well, even if the instances were already Linux boxes before, it
+would still be a cut of ~**57%**:
 
 ![ec2 values](/public/images/docker-selenium-ec2-values.png)
 
+It is also important to notice that we pay the Amazon bill in USD, and we pay
+around BRL 4.5 per USD. So, USD 1161 costs us around BRL 5224.5, which can
+buy here 411.5L of beer (BRL 12.694/L).
+
 Well, **MISSION ACCOMPLISHED**.
 
-> 50% usage is because we only use them about 12 hours per day (business hours,
+> Using BRL 12.694 per liter.
+> 50% usage because we only use them about 12 hours per day (business hours,
 give or take).
 
 ## Try it out
@@ -145,6 +149,8 @@ Some people don't yet trust Docker enough to put it in production, or are
 scared of it because of the lack of knowledge. I can only suggest you to
 start testing it in development machines, CI environments and so forth. It is
 safe and you will surely learn a lot (and love almost every second of it).
+You can also read my
+[previous post about how Docker works]({% post_url 2015-05-12-docker-basics %}).
 
 The best part: need more speed? Just change the instance type and let
 docker-compose scale it up!
