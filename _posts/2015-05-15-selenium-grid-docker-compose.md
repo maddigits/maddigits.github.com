@@ -88,12 +88,11 @@ would still be a cut of ~**57%**:
 ![ec2 values](/public/images/docker-selenium-ec2-values.png)
 
 It is also important to notice that we pay the Amazon bill in USD, and we pay
-around BRL 4.5 per USD. So, USD 1161 costs us around BRL 5224.5, which can
-buy here 411.5L of beer (BRL 12.694/L).
+around BRL 4.5 per USD. That said, USD 1161 costs us around BRL 5224.5, which can
+buy here ~411L of beer (using BRL ~12.69/L).
 
 Well, **MISSION ACCOMPLISHED**.
 
-> Using BRL 12.694 per liter.
 > 50% usage because we only use them about 12 hours per day (business hours,
 give or take).
 
