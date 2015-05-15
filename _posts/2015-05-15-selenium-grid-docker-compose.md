@@ -105,9 +105,8 @@ can easily put a selenium grid up and running.
 To test that, you can start a fresh linux machine (or not, your call) and hit:
 
 ```sh
-git clone https://github.com/caarlos0/selenium-grid-on-docker.git && \
-  cd selenium-grid-on-docker && \
-  sudo ./install.sh
+git clone https://github.com/caarlos0/selenium-grid-on-docker-example.git grid && \
+  cd grid && sudo ./install.sh
 ```
 
 This will download the scripts and install docker and docker compose. When you
