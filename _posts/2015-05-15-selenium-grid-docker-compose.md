@@ -132,9 +132,9 @@ scale things up with:
 ```
 
 This will scale the grid to 10 Chrome containers and 10 Firefox containers
-(be advised that it will eat a lot memory - it's 10 browsers, after all).
+(be advised that it will eat a lot memory - it's 20 browsers, after all).
 
-On my Mac, I scaled it to 4 Chrome and 4 Firefox instances, it looked like:
+On my Mac, I scaled it to 4 Chrome and 4 Firefox instances, and it works:
 
 ![Running 4 Firefox and 4 Chrome instances on my laptop](/public/images/docker-on-my-machine-scale-4.png)
 
