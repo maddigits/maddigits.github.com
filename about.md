@@ -19,14 +19,14 @@ hacking on [open source](https://github.com/caarlos0)
 and learning new things. He has proficiency in Ruby and Java, but also
 know some other languages, with special interest in _functional_ ones.
 
-![me and my wife](/public/images/about.jpg)
+![me and my wife in Foz do Iguaçu Falls](/public/images/about.jpg)
 
 He's married with this [beautiful girl](http://twitter.com/carinemeyer) in the
 photo and lives with her and their Chinchila,
 [Zakk](http://www.youtube.com/watch?v=YtWlIPGpxTc),
 in [Joinville - SC, Brazil](http://goo.gl/maps/9tvI4).
 
-He also plays as Defensive End at the [Joinville Gladiators][glads] Football
+He also plays as Defensive End in the [Joinville Gladiators][glads] Football
 team.
 
 ![me in a train](/public/images/glads.jpg)
