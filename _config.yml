@@ -7,11 +7,10 @@ permalink: /posts/:title
 timezone: America/Sao_Paulo
 
 # Setup
-title: Carlos Becker
-tagline: ''
+title: Carlos Alexandro Becker
 description: 'Software development and related stuff, by Carlos A. Becker'
-url: http://carlosbecker.com
-tracking_code: 'UA-50435491-1'
+baseurl:     ''
+url:         'http://carlosbecker.com'
 
 author:
   name: 'Carlos Alexandro Becker'
@@ -30,11 +29,19 @@ gems:
 
 sass:
   sass_dir: _scss
-  style: :compressed
+  compressed: true
 
-paginate: 5
+paginate: 3
 
 # Custom vars
+show_related_posts: true
+animated: true
+
+# Social icons
+show_social_icons: true
+github_username: caarlos0
+twitter_username: caarlos0
+
 google_analytics: UA-50435491-1
 disqus_shortname: caarlos0blog
 

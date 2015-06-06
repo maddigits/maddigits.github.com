@@ -161,19 +161,6 @@ table {
   color: #333;
 }
 
-.post-footer {
-  @extend .italic;
-
-  margin-top: .75rem;
-  text-align: center;
-}
-
-.post-footer .avatar {
-  margin: 2rem 0;
-  width: 100px;
-  border-radius: 50%;
-}
-
 .pagination,
 .button {
   font-size: 1rem;
@@ -487,7 +474,7 @@ h6,
 }
 
 .share-page {
-  font-size:  0.65em;  
+  font-size:  0.65em;
   padding: 2em 0 0 0;
 }
 

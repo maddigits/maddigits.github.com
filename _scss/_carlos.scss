@@ -1,0 +1,58 @@
+// img {
+//   max-width: 100%;
+//   max-heigth: 400px;
+//   position: relative;
+// }
+
+// iframe.video,
+// iframe.ted {
+//   display: block;
+// }
+
+// iframe.video,
+// iframe.twitter-tweet,
+// img {
+//   margin-right: auto !important;
+//   margin-left: auto !important;
+// }
+
+// img.emoji {
+//   margin: 0;
+//   padding: 0;
+//   border: 0;
+//   display: inline;
+//   border-radius: 0;
+// }
+
+.github-cards {
+  text-align: center;
+}
+
+// .post {
+//   h2,
+//   h3 {
+//     a {
+//       display: none;
+//       margin-left: 10px;
+//       text-decoration: none;
+//     }
+//     &:hover a {
+//       display: inline;
+//     }
+//   }
+// }
+
+.share {
+  border-top: 1px solid #bbb;
+  border-bottom: 1px solid #bbb;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  small {
+    color: #c0c0c0;
+    font-size: 60%;
+  }
+  iframe {
+    float: right;
+    margin-top: 5px;
+  }
+}
