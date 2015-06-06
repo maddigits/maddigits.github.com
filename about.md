@@ -1,8 +1,7 @@
 ---
 layout: page
 title: About
-redirect_from:
-  - /about/
+permalink: /about/
 ---
 
 Carlos is a developer from

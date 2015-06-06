@@ -16,6 +16,7 @@ tracking_code: 'UA-50435491-1'
 author:
   name: 'Carlos Alexandro Becker'
   url: https://twitter.com/caarlos0
+  email: caarlos0+formspree@gmail.com
 
 exclude:
   - Gemfile
@@ -34,5 +35,6 @@ sass:
 paginate: 5
 
 # Custom vars
+google_analytics: UA-50435491-1
 disqus_shortname: caarlos0blog
 
