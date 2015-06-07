@@ -1,21 +1,13 @@
-// img {
-//   max-width: 100%;
-//   max-heigth: 400px;
-//   position: relative;
-// }
-
-// iframe.video,
-// iframe.ted {
-//   display: block;
-// }
-
-// iframe.video,
-// iframe.twitter-tweet,
-// img {
-//   margin-right: auto !important;
-//   margin-left: auto !important;
-// }
-
+.post-content {
+  iframe.video,
+  iframe.ted,
+  iframe.twitter-tweet,
+  img {
+    margin: 20px 0;
+    border-radius: 3px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.9);
+  }
+}
 // img.emoji {
 //   margin: 0;
 //   padding: 0;
@@ -26,33 +18,4 @@
 
 .github-cards {
   text-align: center;
-}
-
-// .post {
-//   h2,
-//   h3 {
-//     a {
-//       display: none;
-//       margin-left: 10px;
-//       text-decoration: none;
-//     }
-//     &:hover a {
-//       display: inline;
-//     }
-//   }
-// }
-
-.share {
-  border-top: 1px solid #bbb;
-  border-bottom: 1px solid #bbb;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  small {
-    color: #c0c0c0;
-    font-size: 60%;
-  }
-  iframe {
-    float: right;
-    margin-top: 5px;
-  }
 }
