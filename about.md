@@ -1,8 +1,7 @@
 ---
 layout: page
 title: About
-redirect_from:
-  - /about/
+permalink: /about/
 ---
 
 Carlos is a developer from
@@ -33,6 +32,6 @@ team.
 
 [glads]: http://www.joinvillegladiators.com.br
 
-Wanna talk about something? Send him an [email](mailto:caarlos+blog@gmail.com).
+Wanna talk about something? [Contact him](/contact).
 
 <script src="http://lab.lepture.com/github-cards/widget.js"></script>

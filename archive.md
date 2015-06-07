@@ -1,8 +1,7 @@
 ---
 layout: page
 title: Archive
-redirect_from:
-  - /archive/
+permalink: /archive/
 ---
 
 {% for post in site.posts  %}

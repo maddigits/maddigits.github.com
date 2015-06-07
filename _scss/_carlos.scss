@@ -1,0 +1,21 @@
+.post-content {
+  iframe.video,
+  iframe.ted,
+  iframe.twitter-tweet,
+  img {
+    margin: 20px 0;
+    border-radius: 3px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.9);
+  }
+}
+// img.emoji {
+//   margin: 0;
+//   padding: 0;
+//   border: 0;
+//   display: inline;
+//   border-radius: 0;
+// }
+
+.github-cards {
+  text-align: center;
+}
