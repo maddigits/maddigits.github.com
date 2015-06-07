@@ -8,13 +8,10 @@
     box-shadow: 0 0 6px rgba(0,0,0,0.9);
   }
 }
-// img.emoji {
-//   margin: 0;
-//   padding: 0;
-//   border: 0;
-//   display: inline;
-//   border-radius: 0;
-// }
+img.emoji {
+  box-shadow: none;
+  margin: 0;
+}
 
 .github-cards {
   text-align: center;
