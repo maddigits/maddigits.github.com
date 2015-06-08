@@ -11,7 +11,10 @@ Before we start, I should familiarize you with antigen.
 an eternity to load. I saw an attempt to re-write Antigen in Haskell, but
 I always believed that Antigen does too much, so I decided that it would be
 a nice thing to play with. And I also wanted to learn Go... so... there it is:
-[Antibody](http://github.com/caarlos0/antibody)
+[Antibody][antibody]
+
+[antigen]: http://github.com/zsh-users/antigen
+[antibody]: http://github.com/caarlos0/antibody
 
 ## The "strange at first sight"
 
