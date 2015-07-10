@@ -186,6 +186,19 @@ This two actions might have no effect in this particular example, but I decided
 to leave them there as an idea of what you can do in the so-called
 "real world apps".
 
+You can also, of course, compile your app outside the container and just
+`ADD` the binary to it. To do that you need to pay attention and compile it
+for the same `ARCH` and `OS`, like, and, of course, have the right Go
+installed:
+
+```sh
+$ GOARCH=i386 GOOS=linux go build
+```
+
+The downside of this approach is that Docker Hub will not be able to
+automatically build this, if you don't care about that (pushing containers by
+hand), go for it.
+
 As a final **PROTIP™**, pay attention to what you `ADD` to your image. You
 might want to remove the `.git` folder, binaries, unused files and everything
 you don't need. You can do this using a `.dockerignore` file.
