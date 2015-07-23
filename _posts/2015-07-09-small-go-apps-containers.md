@@ -62,7 +62,7 @@ community, mainly, because its image is only 5MB in size:
 We could probably use
 [kiasaki/alpine-golang](https://github.com/kiasaki/docker-alpine-golang),
 but, seems like it still bundling Go 1.3, and, because I wanted to use Go 1.4+,
-I created a new image, based on kiasaki's image, but with Go 1.4.4.
+I created a new image, based on kiasaki's image, but with Go 1.4.2.
 [[source](https://github.com/caarlos0/docker-alpine-go)]
 
 Using my image, the `Dockerfile` may look like this:
