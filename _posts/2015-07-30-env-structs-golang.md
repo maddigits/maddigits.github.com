@@ -38,7 +38,7 @@ import (
 
 type Config struct {
     Home         string `env:"HOME"`
-    Port         int    `env:"PORT" default:"3000"`
+    Port         int    `env:"PORT" envDefault:"3000"`
     IsProduction bool   `env:"PRODUCTION"`
 }
 
