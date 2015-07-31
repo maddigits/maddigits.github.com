@@ -52,7 +52,8 @@ func main() {
 The lib, of course, is OpenSource.
 
 - You can grab the source [here](https://github.com/caarlos0/env);
-- Docs are available [here](http://godoc.org/github.com/caarlos0/env).
+- Docs are available [here](http://godoc.org/github.com/caarlos0/env);
+- I also posted this in [reddit](http://redd.it/3f81v5).
 
 That's all for today!
 
