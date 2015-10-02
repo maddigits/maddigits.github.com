@@ -31,4 +31,4 @@ team.
 [glads]: http://www.joinvillegladiators.com.br
 
 Wanna talk about something? Want to hire me? Looking for a consultant?
-[Send me an email!](/contact)
+[**Contact me**](/contact).
