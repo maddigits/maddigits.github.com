@@ -72,7 +72,7 @@ not the job of static imports to fix it. Probably your design is just bad.
 
 I'm not the only one who believe in this:
 
-- There is a [checkstyle has a rule for it][check-rule];
+- There is a [checkstyle rule for it][check-rule];
 - [Java Documentation about static imports][java-static-import].
 
 Check this out:
