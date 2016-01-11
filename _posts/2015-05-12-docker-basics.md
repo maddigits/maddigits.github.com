@@ -85,7 +85,7 @@ filesystems or directories to be simultaneously mounted and visible through a
 single mount point, appearing to be one filesystem to the end user (in this
 case, us).
 
-Supposing you have 10 Docker containers based on, let's say, a 1Gb Sbuntu
+Supposing you have 10 Docker containers based on, let's say, a 1Gb Ubuntu
 Server image, they will all use only 1Gb plus their specific data,
 instead of 10+Gb like it would use if running on VirtualBox, for example.
 
