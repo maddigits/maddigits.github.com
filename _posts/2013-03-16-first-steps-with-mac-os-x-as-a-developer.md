@@ -59,7 +59,7 @@ any of them;
 You will almost-never have to manually download and install apps again.
 
 ```bash
-brew tap phinze/homebrew-cask
+brew tap caskroom/homebrew-cask
 brew install brew-cask
 ```
 
