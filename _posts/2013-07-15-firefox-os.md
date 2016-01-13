@@ -3,8 +3,7 @@ layout: post
 title: "I just got a Firefox OS powered phone"
 ---
 
-[![Keon](http://distilleryimage10.s3.amazonaws.com/6df19a56e50e11e295bf22000a9f390a_7.jpg)](http://instagram.com/p/bXXYdXPXke/)
-
+![Keon](https://igcdn-photos-g-a.akamaihd.net/hphotos-ak-xfa1/t51.2885-15/e15/11262604_796197593809214_411875016_n.jpg "The Geeksphone Keon phone I got from Mozilla")
 
 So, Mozilla just gave me the [Geeksphone Keon][keon] with Firefox OS Developer
 Preview, and I decided to drop here some lines about it.

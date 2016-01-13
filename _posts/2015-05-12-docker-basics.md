@@ -55,7 +55,7 @@ that CI companies are using Docker to "isolate" and distribute the builds.
 I will assume that you are familiar with the "default" virtualization
 softwares, like, let's say, VirtualBox. This is how they work:
 
-![](/public/images/type-2-hypervisor.jpg)
+!["How a Type-2 Hypervisor Works"](/public/images/type-2-hypervisor.jpg)
 
 Basically, each new VM you need to run will run isolated and load up the
 entire "guest" OS, using the "host" hardware through the "Hypervisor".
@@ -67,7 +67,7 @@ operating-system-level virtualization, which is a server virtualization method
 where the kernel of an operating system allows for multiple isolated user
 space instances, instead of just one.
 
-![](/public/images/docker-execdriver-diagram.png)
+!["How Docker works"](/public/images/docker-execdriver-diagram.png)
 
 LXC, which was used as default by Docker until version
 [0.9](https://blog.docker.com/2014/03/docker-0-9-introducing-execution-drivers-and-libcontainer/)),

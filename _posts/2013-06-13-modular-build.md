@@ -34,7 +34,7 @@ In first versions, I just put all my code inside the `Makefile` itself, but it
 starts to get big, and I decided to modularize.
 
 So, I created the [modular-build project][modular-build] with some
-[@lucasmerencia][lucas] contributions and ideas.
+[@merencia][lucas] contributions and ideas.
 
 ## modular-build
 
@@ -75,5 +75,5 @@ Happy hacking!
 
 [modular-build]: http://carlosbecker.com/modular-build/
 [modular-build-repo]: https://github.com/caarlos0/modular-build
-[lucas]: https://github.com/lucasmerencia
+[lucas]: https://github.com/merencia
 [dotfiles]: https://github.com/caarlos0/dotfiles
