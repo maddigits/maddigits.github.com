@@ -16,7 +16,7 @@ Bundler makes it simple to create the files and folders necessary for for
 building a Gem:
 
 ```console
-bundle gem somelibrary
+$ bundle gem somelibrary
 ```
 
 This command will create basically the following tree:
