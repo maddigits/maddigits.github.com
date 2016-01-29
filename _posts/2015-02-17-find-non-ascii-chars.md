@@ -24,6 +24,7 @@ So, using `grep`, I created the [`nonascii` function][commit]:
 
 
 ```bash
+#!/bin/bash
 nonascii() {
  LANG=C grep --color=always '[^ -~]\+';
 }

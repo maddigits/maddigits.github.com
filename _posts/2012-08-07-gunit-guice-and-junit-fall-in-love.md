@@ -11,10 +11,10 @@ So, I dont push it to maven central yet, so, you will need to do some work to
 made it work. Yep, you will need to build and install it to your local
 repository.
 
-```bash
-git clone git://github.com/caarlos0/gunit.git
-cd gunit
-mvn install
+```console
+$ git clone git://github.com/caarlos0/gunit.git
+$ cd gunit
+$ mvn install
 ```
 
 Now, just add it in your `pom.xml` dependencies:

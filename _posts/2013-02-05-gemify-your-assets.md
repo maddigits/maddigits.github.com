@@ -15,31 +15,33 @@ can help you with it. So, let's do it!
 Bundler makes it simple to create the files and folders necessary for for
 building a Gem:
 
-```bash
+```console
 bundle gem somelibrary
 ```
 
 This command will create basically the following tree:
 
 
-    somelibrary
-    ├── Gemfile
-    ├── lib
-    │   ├── somelibrary
-    │   │   └── version.rb
-    │   └── somelibrary.rb
-    ├── LICENSE.txt
-    ├── Rakefile
-    ├── README.md
-    └── somelibrary.gemspec
-
+```console
+$ tree
+somelibrary
+├── Gemfile
+├── lib
+│   ├── somelibrary
+│   │   └── version.rb
+│   └── somelibrary.rb
+├── LICENSE.txt
+├── Rakefile
+├── README.md
+└── somelibrary.gemspec
+```
 
 But, I usually made some changes to it:
 
 ##### 1. Delete the `version.rb` file and it's parent folder:
 
-```bash
-rm -rf lib/somelibrary
+```console
+$ rm -rf lib/somelibrary
 ```
 
 > **Heads up:** Don't forget to change the `lib/someligrary.rb` and
@@ -66,8 +68,8 @@ end
 
 That's easy!
 
-```bash
-mkdir -p vendor/assets/{javascripts,stylesheets}
+```console
+$ mkdir -p vendor/assets/{javascripts,stylesheets}
 ```
 
 ## 3. Copy the assets to the folders
@@ -96,18 +98,18 @@ release it.
 
 Create a github repository for your gem, and do the basics:
 
-```bash
-git init
-git add -A
-git commit -m 'first'
-git remote add https://github.com/USER/REPO
-git push origin master
+```console
+$ git init
+$ git add -A
+$ git commit -m 'first'
+$ git remote add https://github.com/USER/REPO
+$ git push origin master
 ```
 
 And then, finally, release it using Rake:
 
-```bash
-rake release
+```console
+$ rake release
 ```
 
 This will create a tag for the version specified in your gemspec, push it to

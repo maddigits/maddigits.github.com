@@ -21,8 +21,8 @@ will have other setup.
 Another problem, is that lots of times I wanted to run a lot of scripts in one
 line, for example:
 
-```bash
-./build.sh && ./publish.sh && ./start.sh
+```console
+$ ./build.sh && ./publish.sh && ./start.sh
 ```
 
 I hate doing this thought. So, I believed that creating a `Rakefile` would fit
@@ -53,14 +53,14 @@ add it to `Makefile`.
 
 The instalation is pretty easy, you can just call:
 
-```bash
-wget -qO- http://git.io/63HVSg | bash
+```console
+$ wget -qO- http://git.io/63HVSg | bash
 ```
 
 or, using curl:
 
-```bash
-curl -s http://git.io/63HVSg | bash
+```console
+$ curl -s http://git.io/63HVSg | bash
 ```
 
 After that, `make newtask` and start building your own scripts. Automate

@@ -34,9 +34,9 @@ To make it easy to integrate [shellcheck][shellcheck] and
 [shell-travis-build](https://github.com/caarlos0/shell-travis-build). It is
 intended to be added as a submodule, like this:
 
-```bash
-git submodule add https://github.com/caarlos0/shell-travis-build.git build
-cp build/travis.yml.example .travis.yml
+```console
+$ git submodule add https://github.com/caarlos0/shell-travis-build.git build
+$ cp build/travis.yml.example .travis.yml
 ```
 
 Travis will always clone a project with its submodules before the build, so,

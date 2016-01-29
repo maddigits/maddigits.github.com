@@ -13,38 +13,38 @@ You will need:
 
 Install everything:
 
-```bash
-apt-get install git ssh gitolite git-daemon-run
+```console
+$ apt-get install git ssh gitolite git-daemon-run
 ```
 
 ## Generate a SSH key pair
 
 The server needs a public/private key pair. So, you will need to generate it:
 
-```bash
-ssh-keygen -t rsa
+```console
+$ ssh-keygen -t rsa
 ```
 
 Now, will copy it to `/tmp` folder, we will need it there later.
 
-```bash
-cp ~/.ssh/id_rsa.pub /tmp/local.pub
+```console
+$ cp ~/.ssh/id_rsa.pub /tmp/local.pub
 ```
 
 ## Setup your git profile
 
-```bash
-git config --global user.name "Your Name"
-git config --global user.email your@email.com
+```console
+$ git config --global user.name "Your Name"
+$ git config --global user.email your@email.com
 ```
 
 ## Creating the `git` user:
 
-```bash
-sudo adduser --system --shell /bin/bash --gecos 'git version control' --group --disabled-password --home /home/git git
-sudo su git
-echo "PATH=$HOME/bin:$PATH" > ~/.bashrc
-gl-setup /tmp/local.pub
+```console
+$ sudo adduser --system --shell /bin/bash --gecos 'git version control' --group --disabled-password --home /home/git git
+$ sudo su git
+$ echo "PATH=$HOME/bin:$PATH" > ~/.bashrc
+$ gl-setup /tmp/local.pub
 ```
 
 When you run `gl-setup` command, it will open a file in edit mode.. probably with `vim`. We don't need to change anything here right now. Just save and exit (press `ESC` and type `:wq!`).
@@ -53,14 +53,14 @@ When you run `gl-setup` command, it will open a file in edit mode.. probably wit
 
 Now, go back to the previous user:
 
-```bash
-exit
+```console
+$ exit
 ```
 
 Go to some folder, e.g., `~/code`, and clone the configuration gitolite repository:
 
-```bash
-git clone git@ubuntu:gitolite-admin.git && cd gitolite-admin
+```console
+$ git clone git@ubuntu:gitolite-admin.git && cd gitolite-admin
 ```
 
 Take a look the `conf/gitolite.conf` file. In this file you will be able to configure groups, users and their access to repositories. By example:
@@ -77,16 +77,16 @@ In that example, I created a repository called `foo`, with `RW+` access (read an
 
 After doing your changes, commit and push:
 
-```bash
-git add -A
-git commit -m 'added repo foo'
-git push origin master
+```console
+$ git add -A
+$ git commit -m 'added repo foo'
+$ git push origin master
 ```
 
 Now, you will be able to clone the `foo` repo from the configured machines, wich something like:
 
-```bash
-git clone git@SERVER:foo.git
+```console
+$ git clone git@SERVER:foo.git
 ```
 
 

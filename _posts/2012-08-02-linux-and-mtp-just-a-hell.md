@@ -30,8 +30,8 @@ from aur. (it will install libmtpfs and all other deps)
 
   **PS**: If you have yaourt, you can do all this with one command:
 
-```bash
-yaourt -S android-udev gvfs-gphoto2 --noconfirm
+```console
+$ yaourt -S android-udev gvfs-gphoto2 --noconfirm
 ```
 
 Then, if you have some luck, you can connect you device via some media player

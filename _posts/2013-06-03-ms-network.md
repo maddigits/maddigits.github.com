@@ -33,8 +33,8 @@ Setup is a little tricky, but I will guide you. You shall have a
 After that, you may have to setup the password. I recommend you to
 encrypt it with the following command:
 
-```bash
-sudo cntlm -H -c /etc/cntlm.conf
+```console
+$ sudo cntlm -H -c /etc/cntlm.conf
 ```
 
 Then put you root password followed by the domain password. Copy the
