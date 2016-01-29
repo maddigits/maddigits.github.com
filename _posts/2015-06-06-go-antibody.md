@@ -134,7 +134,7 @@ func ProcessStdin(stdin io.Reader, home string) {
 I found this very simple to use compared with other languages. Oh, did I
 mention the ability to send messages through `channels`? It kind of make me
 remember
-[Erlang's message passing](http://www.erlang.org/doc/getting_started/conc_prog.html).
+[Erlang's message passing](http://erlang.org/doc/getting_started/conc_prog.html).
 
 ## So, What's next?
 
