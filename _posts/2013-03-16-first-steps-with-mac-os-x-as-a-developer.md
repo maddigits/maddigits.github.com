@@ -34,14 +34,14 @@ Install [XCode command line tools][1]. You will always need it anyway.
 [Homebrew][2] is some kind of _ports_ for Mac. As a developer, you should
 install it:
 
-```bash
-ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+```console
+$ ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 ```
 
 ## Install some useful things via brew
 
-```bash
-brew install grc coreutils spark z ack git
+```console
+$ brew install grc coreutils spark z ack git
 ```
 
 - grc is tool to colorize things. You can easily use it by sourcing
@@ -58,15 +58,15 @@ any of them;
 [Homebrew Cask][cask] let's you install normal apps with brew via command line.
 You will almost-never have to manually download and install apps again.
 
-```bash
-brew tap caskroom/homebrew-cask
-brew install brew-cask
+```console
+$ brew tap caskroom/homebrew-cask
+$ brew install brew-cask
 ```
 
 Then you can install some useful stuff with it:
 
-```bash
-brew cask install caffeine dropbox iterm2 sequel-pro virtualbox vagrant the-unarchiver vlc google-chrome skype transmission dash cloudapp postgres divvy rdio github disk-inventory-x
+```console
+$ brew cask install caffeine dropbox iterm2 sequel-pro virtualbox vagrant the-unarchiver vlc google-chrome skype transmission dash cloudapp postgres divvy rdio github disk-inventory-x
 ```
 
 
@@ -90,13 +90,13 @@ The others are probably auto-explanatory.
 
 ## Install zsh
 
-[ZSH][3] is a pretty powerful shell for *nix systems. As a developer, it just
+[ZSH][3] is a pretty powerful shell for \*nix systems. As a developer, it just
 changed my life. I don't even know how I lived before using it. No, really,
 install it NOW:
 
-```bash
-brew install zsh
-chsh -s /bin/zsh
+```console
+$ brew install zsh
+$ chsh -s /bin/zsh
 ```
 
 ## Use some dotfiles
@@ -108,7 +108,7 @@ Some examples:
 
 - [oh-my-zsh][4]
 - [holman/dotfiles][5]
-- [my dotfiles][7]
+- [my dotfiles][7] (which actually do most of this stuff for me)
 
 I've [already wrote about this before][8], in case you want to read something
 about it.
@@ -116,12 +116,12 @@ about it.
 In this example, let's install [my dotfiles for osx][7] (basically, the
 holman's with some custom things):
 
-```bash
-git clone  https://github.com/caarlos0/dotfiles ~/.dotfiles
-cd ~/.dotfiles
-script/bootstrap
-source ~/.zshrc
-dot # will install some tools and do some basic setup
+```console
+$ git clone  https://github.com/caarlos0/dotfiles ~/.dotfiles
+$ cd ~/.dotfiles
+$ script/bootstrap
+$ source ~/.zshrc
+$ dot_update # will install some tools and do some basic setup
 ```
 
 And you should be ready to go.
@@ -132,11 +132,11 @@ And you should be ready to go.
 as RVM, but I found it a little bit less intrusive. If you want, you can install
 it with brew:
 
-```bash
-brew install rbenv ruby-build
-rbenv install 2.0.0-p195
-rbenv global 2.0.0-p195
-rbenv rehash
+```console
+$ brew install rbenv ruby-build
+$ rbenv install 2.0.0-p195
+$ rbenv global 2.0.0-p195
+$ rbenv rehash
 ```
 
 Be sure to check your `~/.{zsh,bash}rc` file
@@ -146,14 +146,14 @@ Be sure to check your `~/.{zsh,bash}rc` file
 [hub][10] is a github command line tool written in Ruby to improve your
 git/github diary use. You can install it with `brew`:
 
-```bash
-brew install hub
+```console
+$ brew install hub
 ```
 
 Example usage:
 
-```bash
-hub clone caarlos0/up
+```console
+$ hub clone caarlos0/up
 ```
 
 Much less typing, IMHO =)
@@ -166,10 +166,10 @@ install.
 
 Well, here the steps:
 
-```bash
-brew install imagemagick
-brew install pkg-config
-C_INCLUDE_PATH=/usr/local/Cellar/imagemagick/6.8.0-10/include/ImageMagick gem install rmagick
+```console
+$ brew install imagemagick
+$ brew install pkg-config
+$ C_INCLUDE_PATH=/usr/local/Cellar/imagemagick/6.8.0-10/include/ImageMagick gem install rmagick
 ```
 
 And boom! It works =) Pretty tricky.

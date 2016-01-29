@@ -8,8 +8,8 @@ First of all, if you haven't done it yet, read
 
 ## Create the GWT-Project
 
-```bash
-mvn archetype:generate \
+```console
+$ mvn archetype:generate \
    -DarchetypeRepository=repo1.maven.org \
    -DarchetypeGroupId=org.codehaus.mojo \
    -DarchetypeArtifactId=gwt-maven-plugin \
@@ -86,28 +86,31 @@ You can remove:
 
 At this point we will have a structure like this:
 
-    |-- src
-    |   |-- main
-    |   |   |-- java
-    |   |   |   `-- com
-    |   |   |       `-- github
-    |   |   |           `-- caarlos0
-    |   |   |               |-- client
-    |   |   |               |   |-- Example.java
-    |   |   |               |-- server
-    |   |   |               `-- shared
-    |   |   |-- resources
-    |   |   |   `-- com
-    |   |   |       `-- github
-    |   |   |           `-- caarlos0
-    |   |   |               `-- Example.gwt.xml
-    |   |   `-- webapp
-    |   |       |-- Example.css
-    |   |       |-- Example.html
-    |   |       `-- WEB-INF
-    |   |           `-- web.xml
-    |   `-- test
-    `-- target
+```console
+$ tree
+|-- src
+|   |-- main
+|   |   |-- java
+|   |   |   `-- com
+|   |   |       `-- github
+|   |   |           `-- caarlos0
+|   |   |               |-- client
+|   |   |               |   |-- Example.java
+|   |   |               |-- server
+|   |   |               `-- shared
+|   |   |-- resources
+|   |   |   `-- com
+|   |   |       `-- github
+|   |   |           `-- caarlos0
+|   |   |               `-- Example.gwt.xml
+|   |   `-- webapp
+|   |       |-- Example.css
+|   |       |-- Example.html
+|   |       `-- WEB-INF
+|   |           `-- web.xml
+|   `-- test
+`-- target
+```
 
 ## Create our example
 
@@ -180,11 +183,14 @@ We will have to create a `resources` folder under the same folder of our
 `shared`, `server` and `resources` **must be**  in the same hierarchical
 level, just like this:
 
-    src/main/java/com/github/caarlos0/
-    |-- client
-    |-- resources
-    |-- server
-    `-- shared
+```console
+$ tree
+src/main/java/com/github/caarlos0/
+|-- client
+|-- resources
+|-- server
+`-- shared
+```
 
 ### Creating the needed files
 
@@ -231,18 +237,21 @@ public class ExampleConfigurator implements Configurator {
 
 At this point, the structure should be something like this:
 
-    src/main/java/com/github/caarlos0/
-    |-- client
-    |   |-- Example.java
-    |   |-- ExampleUiBinder.java
-    |   |-- ExampleUiBinder.ui.xml
-    |-- resources
-    |   |-- css
-    |   |   `-- bootstrap.min.css
-    |   |-- ExampleConfigurator.java
-    |   `-- ExampleResources.java
-    |-- server
-    `-- shared
+```console
+$ tree
+src/main/java/com/github/caarlos0/
+|-- client
+|   |-- Example.java
+|   |-- ExampleUiBinder.java
+|   |-- ExampleUiBinder.ui.xml
+|-- resources
+|   |-- css
+|   |   `-- bootstrap.min.css
+|   |-- ExampleConfigurator.java
+|   `-- ExampleResources.java
+|-- server
+`-- shared
+```
 
 Now, we have to do a little hack in our `*.gwt.xml`. We will need to replace
 `com.github.gwtbootstrap.client.ui.config.Configurator` with our Configurator,

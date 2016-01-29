@@ -38,7 +38,7 @@ func main() {
 
 If we compile this file, the binary will have 5.5MB:
 
-```sh
+```console
 $ go build
 $ du -h example
 5.5M	example
@@ -77,7 +77,7 @@ ENTRYPOINT ["/gopath/bin/app"]
 
 Now let's build it:
 
-```sh
+```console
 $ docker build -t caarlos0/example-small .
 # ...
 $ docker images
@@ -135,7 +135,7 @@ ENTRYPOINT ["/gopath/bin/app"]
 
 And, vòilá:
 
-```sh
+```console
 $ docker images
 REPOSITORY                 TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
 example-smaller            latest              6c4f2066e02e        9 seconds ago       11.43 MB
@@ -191,7 +191,7 @@ You can also, of course, compile your app outside the container and just
 for the same `ARCH` and `OS`, like, and, of course, have the right Go
 installed:
 
-```sh
+```console
 $ GOARCH=i386 GOOS=linux go build
 ```
 

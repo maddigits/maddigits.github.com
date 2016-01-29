@@ -28,8 +28,8 @@ textmate for linux'.
 
 The installation is pretty simple:
 
-```bash
-git clone git://github.com/gmate/gmate.git
+```console
+$ git clone git://github.com/gmate/gmate.git
 cd gmate
 ./install.sh
 ```
@@ -52,14 +52,14 @@ Just follow these steps:
 
 #### Clone the project from github:
 
-```bash
-git clone git://github.com/caarlos0/vimfiles.git ~/.vim
+```console
+$ git clone git://github.com/caarlos0/vimfiles.git ~/.vim
 ```
 
 ####  Edit/Create your main `vimrc` file
 
-```bash
-vim ~/.vimrc
+```console
+$ vim ~/.vimrc
 ```
 
 With the the following content:
@@ -73,9 +73,9 @@ Then save and exit;
 
 #### Update the submodules:
 
-```bash
-cd ~/.vim
-git submodule update --init
+```console
+$ cd ~/.vim
+$ git submodule update --init
 ```
 
 Done. Now, do your own tests and made your choice. I prefer VIm :)

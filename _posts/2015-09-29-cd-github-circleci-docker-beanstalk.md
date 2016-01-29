@@ -9,7 +9,7 @@ This is just a quick overview of how I did it in [antibody's homepage][1].
 
 The site has a very simple `index.html` plus a
 service that can discover and download the latest
-[antibody](https://github.com/caarlos0/antibody) version from GitHub
+[antibody](https://github.com/getantibody/antibody) version from GitHub
 releases. Not sure how relevant this is, but the service is written in Go.
 
 Currently, every commit pushed to the `master` branch of the site repo will be
@@ -31,7 +31,7 @@ it:
 FROM alpine:3.2
 
 ENV GOPATH=/gopath \
-  SRC=/gopath/src/github.com/caarlos0/getantibody
+  SRC=/gopath/src/github.com/getantibody/getantibody
 
 WORKDIR $SRC
 ADD . $SRC
@@ -163,8 +163,8 @@ BTW: I'm using AWS free tier for the app, so, yup, it's free... at least for
 now.
 
 Last but not least, you can see the entire source code
-[here](https://github.com/caarlos0/getantibody).
+[here](https://github.com/getantibody/getantibody).
 
 Cheers! :beers:
 
-[1]: http://antibody.elasticbeanstalk.com/
+[1]: http://getantibody.github.io/

@@ -38,7 +38,7 @@ them. It supports these platforms:
 
 And it's damn easy to use:
 
-```sh
+```console
 $ go get github.com/mitchellh/gox
 $ gox -build-toolchain
 $ gox

@@ -22,13 +22,13 @@ using VNC to _"see what's happening there"_. You can check them out in their
 Basically, I created a `c3.4xlarge` EC2 machine and installed both
 Docker and docker-compose, following their respective README's:
 
-```sh
+```console
 # install docker:
-wget -qO- https://get.docker.com/ | sh
+$ wget -qO- https://get.docker.com/ | sh
 
 # install docker-compose:
-curl -L https://github.com/docker/compose/releases/download/1.2.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
-chmod +x /usr/local/bin/docker-compose
+$ curl -L https://github.com/docker/compose/releases/download/1.2.0/docker-compose-`uname -s`-`uname -m` > $ /usr/local/bin/docker-compose
+$ chmod +x /usr/local/bin/docker-compose
 ```
 
 With docker up and running, I created a simple `docker-compose.yml` file, which
@@ -56,8 +56,8 @@ more about it.
 
 Now, we can start the service running:
 
-```sh
-docker-compose up
+```console
+$ docker-compose up
 ```
 
 After that, it is just a matter of telling the selenium test runner to connect
@@ -67,8 +67,8 @@ But, well, we had 30 machines before... now I only have 2 selenium instances
 running (one with Firefox and the other with Chrome). How can I fix that?
 Well, I'm glad you asked:
 
-```sh
-docker-compose scale chrome=15 firefox=15
+```console
+$ docker-compose scale chrome=15 firefox=15
 ```
 
 Around 10 seconds later, 30 selenium instances up and running. **Sweet**.
@@ -104,8 +104,8 @@ can easily put a selenium grid up and running.
 
 To test that, you can start a fresh linux machine (or not, your call) and hit:
 
-```sh
-git clone https://github.com/caarlos0/selenium-grid-on-docker-example.git grid && \
+```console
+$ git clone https://github.com/caarlos0/selenium-grid-on-docker-example.git grid && \
   cd grid && sudo ./install.sh
 ```
 
@@ -113,21 +113,21 @@ This will download the scripts and install docker and docker compose. When you
 install Docker, it will suggest you to add your user to the `docker` group.
 You should really do that. I help you, it's something like this:
 
-```sh
-sudo usermod -aG docker your-username
+```console
+$ sudo usermod -aG docker your-username
 ```
 
 Now, let's put it to run:
 
-```sh
-./run.sh
+```console
+$ ./run.sh
 ```
 
 This command will pull and run 3 containers: hub, firefox and chrome. You can
 scale things up with:
 
-```sh
-./scale.sh 10
+```console
+$ ./scale.sh 10
 ```
 
 This will scale the grid to 10 Chrome containers and 10 Firefox containers

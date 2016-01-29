@@ -21,33 +21,33 @@ I'll describe here my 'steps' to update jekyll to the new version!
 
 First of all, you will need the Node.js Package Manager (NPM), so, install nodejs! In my archlinux box, it was simple like that:
 
-```bash
-pacman -Sy nodejs
+```console
+$ pacman -Sy nodejs
 ```
 
 Then, clone the bootstrap repo somewhere:
 
-```bash
-git clone https://github.com/twitter/bootstrap.git
-cd bootstrap
+```console
+$ git clone https://github.com/twitter/bootstrap.git
+$ cd bootstrap
 ```
 
 Also, let's use the correct branch!
 
-```bash
-git checkout 2.1.0-wip
+```console
+$ git checkout 2.1.0-wip
 ```
 
 Ok! Now, we have to install the dependencies to build bootstrap. According to bootstrap github project, we will need recess (a less compiler), uglify-js, and jshint. So, run this:
 
-```bash
-sudo npm install recess uglify-js jshint -g
+```console
+$ sudo npm install recess uglify-js jshint -g
 ```
 
 Now, the big one! Let's make it!
 
-```bash
-make
+```console
+$ make
 ```
 
 It should provide you a output like this:
@@ -100,4 +100,3 @@ So, test it, and tell me what you got :)
 I also do a lot of other hacks, using `docs.css` file as example, tweak footer, [about](/about) page and other things...
 
 Cheers!
-

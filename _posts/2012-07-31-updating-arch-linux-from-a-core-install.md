@@ -37,25 +37,25 @@ everything gonna be OK without any hacks.
 
 So, after arch installed and loaded, do the following commands:
 
-```bash
-pacman -Sy
-rm -rf /var/run /var/lock && pacman -Sf filesystem
+```console
+$ pacman -Sy
+$ rm -rf /var/run /var/lock && pacman -Sf filesystem
 ```
 
 **Reboot.**
 
-```bash
-pacman -S tzdata
-pacman -U http://pkgbuild.com/~allan/glibc-2.16.0-1-i686.pkg.tar.xz
-rm /etc/profile.d/locale.sh
+```console
+$ pacman -S tzdata
+$ pacman -U http://pkgbuild.com/~allan/glibc-2.16.0-1-i686.pkg.tar.xz
+$ rm /etc/profile.d/locale.sh
 ```
 
 In this next accept, when promped to update pacman, say **NO**, and, when
 prompted to any replacement, say **YES**.
 
-```bash
-pacman -Su --ignore glibc
-pacman -Su
+```console
+$ pacman -Su --ignore glibc
+$ pacman -Su
 ```
 
 **Reboot** again.

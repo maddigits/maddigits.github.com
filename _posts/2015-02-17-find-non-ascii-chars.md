@@ -23,7 +23,8 @@ as you can see in this [pull request][pr].
 So, using `grep`, I created the [`nonascii` function][commit]:
 
 
-```sh
+```bash
+#!/bin/bash
 nonascii() {
  LANG=C grep --color=always '[^ -~]\+';
 }
@@ -31,9 +32,8 @@ nonascii() {
 
 The usage is simple:
 
-```sh
-~/.dotfiles master
-❯ cat osx/set-defaults.sh | nonascii
+```console
+$ cat osx/set-defaults.sh | nonascii
 # Don’t animate opening applications from the Dock
 # Don’t prompt for confirmation before downloading
 # Add the keyboard shortcut ⌘ + Enter to send an email in Mail.app

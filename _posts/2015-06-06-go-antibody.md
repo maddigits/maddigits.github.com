@@ -97,8 +97,8 @@ But, the nicest thing I played with until now surely is `goroutines`.
 A `goroutine` is basically a lightweight thread of execution. I used it
 to support a list of bundles coming from `STDIN` (like Antigen does):
 
-```sh
-antibody apply < bundles.txt
+```console
+$ antibody apply < bundles.txt
 ```
 
 So, given that `bundles.txt` contains a valid list of plugins, it will load all
@@ -134,7 +134,7 @@ func ProcessStdin(stdin io.Reader, home string) {
 I found this very simple to use compared with other languages. Oh, did I
 mention the ability to send messages through `channels`? It kind of make me
 remember
-[Erlang's message passing](http://www.erlang.org/doc/getting_started/conc_prog.html).
+[Erlang's message passing](http://erlang.org/doc/getting_started/conc_prog.html).
 
 ## So, What's next?
 

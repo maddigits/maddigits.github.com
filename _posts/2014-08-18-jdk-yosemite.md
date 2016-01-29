@@ -13,7 +13,7 @@ want to write some Java. Anyway, here is how to fix it.
 First, download and open the JDK `.dmg` file. Then, unpackage and edit the
 `Distribution` file:
 
-```sh
+```console
 $ pkgutil --expand "/Volumes/JDK 7 Update 67/JDK 7 Update 67.pkg" /tmp/jdk7.unpkg
 $ cd /tmp/jdk7.unpkg
 $ vim Distribution
@@ -47,7 +47,7 @@ function pm_install_check() {
 
 Then, just package and run the installer with:
 
-```sh
+```console
 $ pkgutil --flatten /tmp/jdk7.unpkg /tmp/jdk7.pkg
 $ open /tmp/jdk7.pkg
 ```
@@ -56,7 +56,7 @@ The JDKs will be installed in the `/Library/Java/JavaVirtualMachines/` folder.
 
 You can also clean up your mess:
 
-```sh
+```console
 $ rm -rf /tmp/jdk7.*pkg
 ```
 

@@ -49,8 +49,8 @@ to get this working.
 
 Now, back to what really matters: to create the proxy server, run this:
 
-```bash
-ssh root@X.X.X.X -NCD 8080
+```console
+$ ssh root@X.X.X.X -NCD 8080
 ```
 
 Here, X.X.X.X is the IP from the DigitalOcean email. When asked, enter
