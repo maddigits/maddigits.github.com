@@ -10,7 +10,7 @@ Feel free to leave yours in the comments!
 
 ### Stop all containers
 
-```sh
+```console
 $ docker stop $(docker ps -qa)
 ```
 
@@ -21,7 +21,7 @@ You can also `kill` all running containers instead of stop them.
 
 ### Delete all stopped containers
 
-```sh
+```console
 $ docker rm $(docker ps -qa -f="exited=0")
 ```
 
@@ -35,7 +35,7 @@ machine which is now running out of disk space.
 
 ### Delete all images
 
-```sh
+```console
 $ docker rmi -f $(docker images -q)
 ```
 
@@ -44,8 +44,8 @@ $ docker rmi -f $(docker images -q)
 
 ### Delete unused images
 
-```sh
-docker run --rm -v /var/run/docker.sock:/var/run/docker.sock bobrik/image-cleaner
+```console
+$ docker run --rm -v /var/run/docker.sock:/var/run/docker.sock bobrik/image-cleaner
 ```
 
 - [Read more](https://github.com/bobrik/docker-image-cleaner)

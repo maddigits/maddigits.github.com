@@ -92,7 +92,7 @@ instead of 10+Gb like it would use if running on VirtualBox, for example.
 So, if you pull, let's say, the `bobrik/image-cleaner` image, you will
 see something like:
 
-```sh
+```console
 $ docker pull bobrik/image-cleaner
 Pulling repository bobrik/image-cleaner
 28b7cd17052f: Download complete
@@ -135,7 +135,7 @@ ENTRYPOINT echo Hello World
 
 You can then build this image, tagging it as `hello-world`:
 
-```sh
+```console
 $ docker build -t hello-world .
 Sending build context to Docker daemon 2.048 kB
 Sending build context to Docker daemon
@@ -156,7 +156,7 @@ Successfully built 7fa687f18c73
 
 Now you can finally run it:
 
-```sh
+```console
 $ docker run -t hello-world
 Hello World
 ```

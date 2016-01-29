@@ -26,7 +26,7 @@ First, install the [telegram-client][tg] following their README.
 
 Then, write your script. Mine looks like this:
 
-```sh
+```bash
 #!/bin/bash
 TG=/opt/tg
 

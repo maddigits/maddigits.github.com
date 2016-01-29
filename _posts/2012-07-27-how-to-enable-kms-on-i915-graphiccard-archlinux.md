@@ -20,8 +20,8 @@ activate this for my GraphicCard.
 If the following command return `1`, your KMS module is already active, and you
 can go and drink a coffee. Otherwise, goto the next steps.
 
-```bash
-cat /sys/module/i915/parameters/modeset
+```console
+$ cat /sys/module/i915/parameters/modeset
 ```
 
 ## Install required packages
@@ -35,8 +35,8 @@ Before continue, be sure that the following packages are installed:
 
 You can install it in a archlinux box with
 
-```sh
-pacman -Sy xf86-video-{fbdev,intel,vesa}
+```console
+$ pacman -Sy xf86-video-{fbdev,intel,vesa}
 ```
 
 ## Edit files
@@ -68,8 +68,8 @@ Create the `/etc/X11/xorg.conf.d/20-intel.conf` file with the following content:
 
 Now, we can regen initframs with
 
-```bash
-sudo mkinitcpio -p linux
+```console
+$ sudo mkinitcpio -p linux
 ```
 
 ## Reboot
@@ -79,8 +79,8 @@ and see if it returns `1` this time.
 
 Also, this is my `lspci`:
 
-```bash
-lspci | grep -i vga
+```console
+$ lspci | grep -i vga
 	00:02.0 VGA compatible controller: Intel Corporation Core Processor Integrated Graphics Controller (rev 18)
 ```
 

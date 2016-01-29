@@ -25,8 +25,8 @@ Let's do this.
 
 ### See who and in which commit each line of a file was changed last time
 
-```bash
-git blame path/to/file
+```console
+$ git blame path/to/file
 ```
 
 ### See the reference log
@@ -34,8 +34,8 @@ git blame path/to/file
 This will show the log of your local operations in the git tree, useful to get
 revision code of a specific action (see next item).
 
-```bash
-git reflog
+```console
+$ git reflog
 ```
 
 **HEADS UP**: `reflog` will only have the logs of actions in your local repository,
@@ -46,35 +46,35 @@ for 30 days by default.
 
 ### Get revision code for anything
 
-```bash
-git rev-parse HEAD # last commit
-git rev-parse HEAD~5 # 5 commits back from last commit
-git rev-parse develop # last commit from develop branch
+```console
+$ git rev-parse HEAD # last commit
+$ git rev-parse HEAD~5 # 5 commits back from last commit
+$ git rev-parse develop # last commit from develop branch
 ```
 
 ### Revert a specific file to a specific commit
 
-```bash
-git log path/to/file # to check the revision code
-git checkout revision_code path/to/file
+```console
+$ git log path/to/file # to check the revision code
+$ git checkout revision_code path/to/file
 ```
 
 ### Revert a specific file to last commit
 
-```bash
-git checkout HEAD path/to/file
+```console
+$ git checkout HEAD path/to/file
 ```
 
 ### Revert a specific file to 3 commits back from last
 
-```bash
-git checkout HEAD~3 path/to/file
+```console
+$ git checkout HEAD~3 path/to/file
 ```
 
 ### Get an old version of some file
 
-```bash
-git show HEAD~3:path/to/file > path/to/file_3_commits_ago
+```console
+$ git show HEAD~3:path/to/file > path/to/file_3_commits_ago
 ```
 
 ### Shallow clone
@@ -89,8 +89,8 @@ would want to send in fixes as patches.
 
 So, if you want only the last revision:
 
-```bash
-git clone https://github.com/twitter/bootstrap --depth 1
+```console
+$ git clone https://github.com/twitter/bootstrap --depth 1
 ```
 
 This can drastically reduce the clone. The bad thing is that you will have NO
@@ -102,10 +102,10 @@ This is pretty useful when you're working on something, commit, and them
 realize that it would fit better in another branch (or that you're in the
 wrong branch)... this is how to move it to another branch.
 
-```bash
-git branch new
-git reset --hard HEAD~1 #go back 1 commit, YOU WILL LOST UNCOMMITED CHANGES
-git checkout new
+```console
+$ git branch new
+$ git reset --hard HEAD~1 #go back 1 commit, YOU WILL LOST UNCOMMITED CHANGES
+$ git checkout new
 ```
 
 ### Revert your entire tree to the last commit state
@@ -113,20 +113,18 @@ git checkout new
 
 Useful when you do some crap and want to throw it all away.
 
-```bash
-git reset --hard HEAD
+```console
+$ git reset --hard HEAD
 ```
 
 You can also specify something like `HEAD~3` to get back 3 commits from HEAD.
 
-
 ### Remove files that have not been added to staging area
 > by [@luizkowalski](https://github.com/luizkowalski)
 
-```bash
-git clean -df
+```console
+$ git clean -df
 ```
-
 
 ### Stashing
 
@@ -135,10 +133,10 @@ git clean -df
 This is useful when you want to switch branches, but don't want to commit a
 half-done work just to get back to it later.
 
-```bash
-git stash # save the current state
+```console
+$ git stash # save the current state
 # later...
-git stash pop # apply the stash to your current HEAD and remove it from your stack.
+$ git stash pop # apply the stash to your current HEAD and remove it from your stack.
 ```
 
 More info can be found [here](http://git-scm.com/book/en/Git-Tools-Stashing).
@@ -150,8 +148,8 @@ More info can be found [here](http://git-scm.com/book/en/Git-Tools-Stashing).
 This will do the merge without creating the "merge commit", acting
 much like SVN.
 
-```bash
-git pull --rebase
+```console
+$ git pull --rebase
 ```
 
 ### Aliases
@@ -160,24 +158,24 @@ git pull --rebase
 
 You can setup aliases in git, so get smaller commands and save time. Examples:
 
-```bash
+```console
 # configuring...
-git config --global alias.co checkout
-git config --global alias.s status
+$ git config --global alias.co checkout
+$ git config --global alias.s status
 
 # using
-git s
-git co https://github.com/caarlos0/up
+$ git s
+$ git co https://github.com/caarlos0/up
 ```
 
 ### Copy a file from one branch to another
 
 Useful if you want a file that was introduced or modified in other branch. Example:
 
-```bash
-git checkout gh-pages
-git checkout master -- teste.js
-git commit -m "Update test.js from master"
+```console
+$ git checkout gh-pages
+$ git checkout master -- teste.js
+$ git commit -m "Update test.js from master"
 ```
 
 ### Log deleted files
@@ -186,25 +184,25 @@ git commit -m "Update test.js from master"
 
 Show the commit log with the deleted files for each commit:
 
-```bash
-git log --diff-filter=D --summary
+```console
+$ git log --diff-filter=D --summary
 ```
 
 ### Delete a branch
 
 Local:
 
-```bash
-git branch -d name
-git branch -D name # force delete unmerged branch
+```console
+$ git branch -d name
+$ git branch -D name # force delete unmerged branch
 ```
 
 Remote:
 
 > by [Ricardo Walter](https://twitter.com/ricardo_walter)
 
-```bash
-git push origin :branchname
+```console
+$ git push origin :branchname
 ```
 
 ### Undo your last commit
@@ -214,8 +212,8 @@ git push origin :branchname
 If you do a wrong commit, revert it, but maintain the changes in your staging
 area.
 
-```bash
-git reset --soft HEAD^
+```console
+$ git reset --soft HEAD^
 ```
 
 Just remember: `HEAD^` is a pointer to the parent of current `HEAD`, so, you
@@ -228,9 +226,9 @@ PROTIP: Don't do this if you already pushed the commit.
 
 For example, if you want to remove the `wrongfile.txt`, do:
 
-```bash
-git rm wrongfile.txt
-git commit --amend
+```console
+$ git rm wrongfile.txt
+$ git commit --amend
 ```
 
 ### Update submodules to last commit
@@ -238,8 +236,8 @@ git commit --amend
 Instead of `cd`ing each module, `checkout master` and `pull`, in git
 1.8.2 you can simply do this:
 
-```sh
-git submodule update --remote --merge
+```console
+$ git submodule update --remote --merge
 ```
 
 ## Troubleshooting
@@ -249,9 +247,9 @@ git submodule update --remote --merge
 This error can vary by remote and branch name. Usually, a clean up will do
 the job just fine:
 
-```sh
-git gc --prune=now
-git remote -v | cut -f1 | uniq | xargs git remote prune
+```console
+$ git gc --prune=now
+$ git remote -v | cut -f1 | uniq | xargs git remote prune
 ```
 
 Done.

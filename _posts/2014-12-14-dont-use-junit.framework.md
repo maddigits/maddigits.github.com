@@ -14,7 +14,7 @@ avoid those old imports with 2 basic steps:
 
 This is pretty straightforward with a simple bash script:
 
-```sh
+```bash
 #!/bin/bash
 for file in $(git grep --break --heading "import junit." | grep java); do
   sed -i.bak s/junit.framework/org.junit/g $file
@@ -55,4 +55,3 @@ An example of configuration for maven will look like this:
 Sure it is a simple issue, which might never cause you problems, but, if one day
 the Junit team remove the old packages (probably soon), you will have a
 headache. Besides that, writing new code using deprecated classes?
-
