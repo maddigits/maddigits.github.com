@@ -231,7 +231,7 @@ it was you (`git blame coffee.rb`). And he knows where you live.
 Why is he mad?
 
 Because he spent 3 hours refactoring the code to finally being able to
-implement his feature in a descent way, while he could have done that in 30
+implement his feature in a decent way, while he could have done that in 30
 minutes **if the previous guys weren't lazy**.
 
 Do you want to be the "Programmer X" in this case? Do you want to be one of the
