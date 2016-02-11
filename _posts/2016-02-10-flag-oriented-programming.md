@@ -49,7 +49,7 @@ Coffee.new(:large).make(true)
 So, what's wrong?
 
 At the first sight, you might think it is OK: "Just a single flag. This
-wouldn't hurt nobody..."
+wouldn't hurt anybody..."
 
 The problem is that, later on, someone else will like to add another feature,
 for example, whether to add or not sugar...
@@ -205,8 +205,8 @@ programmer shouldn't have added more flags.
 
 Yeah, maybe... but... **humans**... right?
 
-We often do what we know is not the right thing because... _reasons_. I have no
-intend in entering in the psychology aspect of this, but I do recommend
+We often do what we know is not the right thing because... _reasons_. I have
+no intend to approach the psychology aspect of this, but I do recommend
 [this book][irrational], if you want to learn something about it.
 
 The big question is: will you trust that, given a method with one flag already,
