@@ -49,10 +49,10 @@ Coffee.new(:large).make(true)
 So, what's wrong?
 
 At the first sight, you might think it is OK: "Just a single flag. This
-wouldn't hurt nobody..."
+wouldn't hurt anybody..."
 
 The problem is that, later on, someone else will like to add another feature,
-for example, wether to add or not sugar...
+for example, whether to add or not sugar...
 
 ```ruby
 class Coffee
@@ -205,8 +205,8 @@ programmer shouldn't have added more flags.
 
 Yeah, maybe... but... **humans**... right?
 
-We often do what we know is not the right thing because... _reasons_. I have no
-intend in entering in the psychology aspect of this, but I do recommend
+We often do what we know is not the right thing because... _reasons_. I have
+no intend to approach the psychology aspect of this, but I do recommend
 [this book][irrational], if you want to learn something about it.
 
 The big question is: will you trust that, given a method with one flag already,
@@ -217,7 +217,7 @@ I'm sorry, but I believe it is more likely to happen this way:
 - Programmer X (the next guy - given `next = n`), arrives late at the office
 because of a flat tire - not very happy already;
 - Programmer X needs to add another feature to the coffee making class,
-let's say, wether or not to add cinnamon, of course, as fast as possible;
+let's say, whether or not to add cinnamon, of course, as fast as possible;
 - Programmer X opens the `Coffee.rb` file, takes a look around and start
 cursing someone - because he couldn't stand to look at that hundred `if`
 statements;
