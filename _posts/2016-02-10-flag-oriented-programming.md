@@ -52,7 +52,7 @@ At the first sight, you might think it is OK: "Just a single flag. This
 wouldn't hurt nobody..."
 
 The problem is that, later on, someone else will like to add another feature,
-for example, wether to add or not sugar...
+for example, whether to add or not sugar...
 
 ```ruby
 class Coffee
@@ -217,7 +217,7 @@ I'm sorry, but I believe it is more likely to happen this way:
 - Programmer X (the next guy - given `next = n`), arrives late at the office
 because of a flat tire - not very happy already;
 - Programmer X needs to add another feature to the coffee making class,
-let's say, wether or not to add cinnamon, of course, as fast as possible;
+let's say, whether or not to add cinnamon, of course, as fast as possible;
 - Programmer X opens the `Coffee.rb` file, takes a look around and start
 cursing someone - because he couldn't stand to look at that hundred `if`
 statements;
