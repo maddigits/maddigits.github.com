@@ -240,9 +240,26 @@ Instead of `cd`ing each module, `checkout master` and `pull`, in git
 $ git submodule update --remote --merge
 ```
 
+### Apply a patch to another file
+
+> by [Aurelio Jargas](https://github.com/aureliojargas)
+
+This is useful if you have a file in two different repos for
+whatever reason, or if you have 2 very similar files in the
+same repo:
+
+```console
+$ git diff HEAD^ -- hello.test > /tmp/patch
+$ patch -p1 hi.test /tmp/patch
+```
+
 ## Troubleshooting
 
-### `! c15fe9e..eee5f38  feature1 -> origin/feature1  (unable to update local ref)`
+### Unable to update local ref
+
+```console
+! c15fe9e..eee5f38  feature1 -> origin/feature1  (unable to update local ref)`
+```
 
 This error can vary by remote and branch name. Usually, a clean up will do
 the job just fine:
