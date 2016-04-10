@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "I speed up my ZSH load"
+title: "Speeding up my ZSH load"
 ---
 
 This is the story on how I speed up my terminal load time.
