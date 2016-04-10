@@ -17,8 +17,8 @@ almost 10 seconds to load. To address that issue, I created
 Today, I decided to go and figure out why. The first step was to gather data
 on why it was so slow:
 
-```console
-$ for i in $(seq 1 10); do /usr/bin/time zsh -i -c exit; done
+```sh
+for i in $(seq 1 10); do /usr/bin/time zsh -i -c exit; done
   1.11 real         0.48 user         0.57 sys
   0.82 real         0.47 user         0.42 sys
   0.83 real         0.47 user         0.43 sys
@@ -59,8 +59,8 @@ simplified some `PATH` changes (e.g. replacing to `export`s with one).
 
 Then, I measured it again:
 
-```console
-$ for i in $(seq 1 10); do /usr/bin/time zsh -i -c exit; done
+```sh
+for i in $(seq 1 10); do /usr/bin/time zsh -i -c exit; done
   0.73 real         0.43 user         0.35 sys
   0.72 real         0.42 user         0.34 sys
   1.10 real         0.43 user         0.35 sys
@@ -87,8 +87,8 @@ It turn out I had a lot of them. I fixed them by doing stuff like:
 
 And, measuring again:
 
-```console
-$ for i in $(seq 1 10); do /usr/bin/time zsh -i -c exit; done
+```sh
+for i in $(seq 1 10); do /usr/bin/time zsh -i -c exit; done
   0.43 real         0.22 user         0.25 sys
   0.42 real         0.22 user         0.24 sys
   0.40 real         0.21 user         0.23 sys
@@ -110,7 +110,7 @@ to check if it exists and also some duplicated zsh completion code.
 
 Fixed those issues and measuring again gave me this numbers:
 
-```console
+```sh
 for i in $(seq 1 10); do /usr/bin/time zsh -i -c exit; done
   0.78 real         0.14 user         0.14 sys
   0.26 real         0.14 user         0.13 sys
@@ -144,7 +144,7 @@ and changed it a little to work on OSX, here is what I got:
 
 And, measuring again:
 
-```console
+```sh
 for i in $(seq 1 10); do /usr/bin/time zsh -i -c exit; done
   0.28 real         0.13 user         0.14 sys
   0.26 real         0.12 user         0.14 sys
