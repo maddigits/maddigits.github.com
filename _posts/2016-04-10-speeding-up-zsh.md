@@ -171,3 +171,8 @@ Oh, I also graphed all these things (with 100 executions in a fresh shell):
 For reference,
 [here](https://docs.google.com/spreadsheets/d/150esx1EvZSqSH6JbRiPjK5pPHYUMsD7yiwSvDCzoS0U)
 is the table of mins, maxs, medians and modes for all of them too.
+
+Also, here are the pull requests that did those changes:
+
+- https://github.com/caarlos0/dotfiles/pull/189
+- https://github.com/caarlos0/dotfiles/pull/190
