@@ -174,5 +174,5 @@ is the table of mins, maxs, medians and modes for all of them too.
 
 Also, here are the pull requests that did those changes:
 
-- https://github.com/caarlos0/dotfiles/pull/189
-- https://github.com/caarlos0/dotfiles/pull/190
+- [#189](https://github.com/caarlos0/dotfiles/pull/189)
+- [#190](https://github.com/caarlos0/dotfiles/pull/190)
