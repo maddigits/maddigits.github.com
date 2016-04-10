@@ -22,10 +22,9 @@ exclude:
   - bin
 
 gems:
-  # - jekyll-mentions
+  - jekyll-paginate
   - jemoji
   - jekyll-redirect-from
-
 sass:
   sass_dir: _scss
   compressed: true
@@ -43,4 +42,3 @@ twitter_username: caarlos0
 
 google_analytics: UA-50435491-1
 disqus_shortname: caarlos0blog
-
