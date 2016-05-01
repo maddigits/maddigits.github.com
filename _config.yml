@@ -6,15 +6,15 @@ permalink: /posts/:title
 timezone: America/Sao_Paulo
 
 # Setup
-title: Carlos Alexandro Becker
-description: 'Software development and related stuff, by Carlos A. Becker'
-baseurl:     ''
-url:         'http://carlosbecker.com'
+title: Mad Digits
+description: 'Have less - Be more'
+baseurl:     'https://maddigits.github.io'
+url:         'https://maddigits.github.io'
 
 author:
-  name: 'Carlos Alexandro Becker'
-  url: https://twitter.com/caarlos0
-  email: caarlos0+formspree@gmail.com
+  name: 'Hatem Hidouri'
+  #url: https://twitter.com/caarlos0
+  email: t1mamyth@gmail.com
 
 exclude:
   - Gemfile
@@ -36,9 +36,9 @@ show_related_posts: true
 animated: true
 
 # Social icons
-show_social_icons: true
-github_username: caarlos0
-twitter_username: caarlos0
+#show_social_icons: true
+#github_username: caarlos0
+#twitter_username: caarlos0
 
-google_analytics: UA-50435491-1
-disqus_shortname: caarlos0blog
+#google_analytics: UA-50435491-1
+#disqus_shortname: caarlos0blog
