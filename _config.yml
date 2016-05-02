@@ -13,7 +13,7 @@ url:         'https://maddigits.github.io'
 
 author:
   name: 'Hatem Hidouri'
-  #url: https://twitter.com/caarlos0
+  url: https://www.facebook.com/t1mamyth
   email: t1mamyth@gmail.com
 
 exclude:
@@ -29,16 +29,16 @@ sass:
   sass_dir: _scss
   compressed: true
 
-paginate: 3
+paginate: 5
 
 # Custom vars
 show_related_posts: true
 animated: true
 
 # Social icons
-#show_social_icons: true
-#github_username: caarlos0
-#twitter_username: caarlos0
+show_social_icons: true
+github_username: maddigits
+twitter_username: t1mamyth
 
 #google_analytics: UA-50435491-1
 #disqus_shortname: caarlos0blog
