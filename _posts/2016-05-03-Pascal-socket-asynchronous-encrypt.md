@@ -1,7 +1,7 @@
 ---
-published: false
+layout: post
+title: "Pascal: Asynchronous Socket Programming with Encryption / Decryption"
 ---
-## Pascal: Asynchronous Socket Programming with Encryption / Decryption
 
 **Blowfish, the cryptography unit**
 See documentation [here](http://www.freepascal.org/docs-html/fcl/blowfish/index.html)
