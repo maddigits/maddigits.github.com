@@ -37,8 +37,8 @@ animated: true
 
 # Social icons
 show_social_icons: true
-github_username: maddigits
+github_username: 
 facebook_username: t1mamyth
 
 #google_analytics: UA-50435491-1
-#disqus_shortname: caarlos0blog
+disqus_shortname: t1mamyth
