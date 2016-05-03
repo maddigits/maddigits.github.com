@@ -56,6 +56,8 @@ Explanations per curly brackets:
 **fcl-net, the undocumented treasure**
 
 This package offers a lot of networking things: asychronous socket, dns resolver, HTTP servlet, socket streams, etc. We would concentrate only on the asychronous socket (and implicitly, socket streams). At first glance, it looks uneasy to use. I have to dig in the sources to see how it works and guess how to use it. We will implement a server with multiple client support. To stay focus, the client will only connect, send a 'hello' message, then disconnects. The server would display notification for an incoming connection, the message sent by the client, and when the client disconnects. The server can only be terminated with Ctrl+C. Jump in to the server code:
+
+
 {% highlight pascal %}	
 {$mode objfpc}{$H+}  
 uses  
@@ -155,6 +157,8 @@ end.
 - Main program. Create event loop object for the server, creates the server, assigning event loop and port to listen, and ready to accept connections...
 
 For the client:
+
+
 {% highlight pascal %}
 	{$mode objfpc}{$H+}  
   
