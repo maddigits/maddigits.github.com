@@ -8,7 +8,7 @@ See documentation [here](http://www.freepascal.org/docs-html/fcl/blowfish/index.
 
 This unit implements encryption / decryption classes with keys, and is able to apply it on any TStream descendant. For easiness, we'll use TStringStream for the example. On to the code:
 
-{% highlight delphi %}	
+{% highlight pascal %}	
     {$mode objfpc}{$H+}    
 uses  
   Classes,  
@@ -43,6 +43,7 @@ begin
   s2.Free;  
 end.
 {% endhighlight %}
+
 Explanations per curly brackets:
 
 - First, we prepare the key (key) and data to be encrypted (value)
@@ -53,6 +54,7 @@ Explanations per curly brackets:
 - Next, read the data and output it. You'll see it's the original 'this is a string'
 
 **fcl-net, the undocumented treasure**
+
 This package offers a lot of networking things: asychronous socket, dns resolver, HTTP servlet, socket streams, etc. We would concentrate only on the asychronous socket (and implicitly, socket streams). At first glance, it looks uneasy to use. I have to dig in the sources to see how it works and guess how to use it. We will implement a server with multiple client support. To stay focus, the client will only connect, send a 'hello' message, then disconnects. The server would display notification for an incoming connection, the message sent by the client, and when the client disconnects. The server can only be terminated with Ctrl+C. Jump in to the server code:
 {% highlight pascal %}	
 {$mode objfpc}{$H+}  
@@ -141,6 +143,7 @@ begin
   ServerEventLoop.Free;  
 end.
 {% endhighlight %}
+
 - We will need each client to be handled in its own thread, so we need cthreads unit for *nix OSes
 - The client handler thread, it would work on the given client socket stream
 - The server, we will create an override constructor to hook when a client connects
@@ -152,6 +155,7 @@ end.
 - Main program. Create event loop object for the server, creates the server, assigning event loop and port to listen, and ready to accept connections...
 
 For the client:
+{% highlight pascal %}
 	{$mode objfpc}{$H+}  
   
 uses  
@@ -171,7 +175,9 @@ begin
     Active := false;  
   end;  
   ClientEventLoop.Free;  
-end.  
+end.
+{% endhighlight %}
+
 Not numbered since it's only a single main code block. First it creates event loop for the client, create the client, assigning event loop, host and port of the server to connect, activate the connection, send a 'Hello' message to the server and disconnects.
 
 
